@@ -1,0 +1,941 @@
+<title>The Credit Lane — Loan Products</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  :root{
+    --navy-900:#12154a;
+    --navy-800:#1c2170;
+    --navy-700:#272d8f;
+    --cyan:#17c3e6;
+    --cyan-deep:#0d9fbf;
+    --red:#e0242c;
+    --red-deep:#b71c22;
+    --paper:#ffffff;
+    --paper-2:#f3f4fa;
+    --ink:#171a4d;
+    --ink-2:#3c4170;
+    --slate:#666c8f;
+    --line:rgba(23,26,77,0.12);
+    --good:#1f9d55;
+    --star:#f5a623;
+    --card:#ffffff;
+    --shadow:0 1px 2px rgba(23,26,77,0.06), 0 10px 28px -14px rgba(23,26,77,0.28);
+    --radius:8px;
+    --serif: "Iowan Old Style", "Sitka Text", Georgia, "Noto Serif", serif;
+    --sans: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  }
+  :root[data-theme="dark"]{
+    --navy-900:#0a0c2e; --navy-800:#12154a; --navy-700:#1c2170;
+    --cyan:#3fd6f2; --cyan-deep:#17c3e6;
+    --red:#ff4550; --red-deep:#e0242c;
+    --paper:#0a0c22; --paper-2:#10132e;
+    --ink:#e8eaf7; --ink-2:#c2c6e6; --slate:#9298c2;
+    --line:rgba(232,234,247,0.14);
+    --card:#12153a;
+    --good:#4ac97f; --star:#f7b955;
+    --shadow:0 1px 2px rgba(0,0,0,0.4), 0 14px 32px -16px rgba(0,0,0,0.7);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --navy-900:#0a0c2e; --navy-800:#12154a; --navy-700:#1c2170;
+      --cyan:#3fd6f2; --cyan-deep:#17c3e6;
+      --red:#ff4550; --red-deep:#e0242c;
+      --paper:#0a0c22; --paper-2:#10132e;
+      --ink:#e8eaf7; --ink-2:#c2c6e6; --slate:#9298c2;
+      --line:rgba(232,234,247,0.14);
+      --card:#12153a;
+      --good:#4ac97f; --star:#f7b955;
+      --shadow:0 1px 2px rgba(0,0,0,0.4), 0 14px 32px -16px rgba(0,0,0,0.7);
+    }
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:var(--paper); color:var(--ink); font-family:var(--sans); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:var(--serif); font-weight:600; text-wrap:balance; margin:0; color:var(--ink);}
+  a{color:inherit; text-decoration:none;}
+  ::selection{background:var(--cyan); color:var(--navy-900);}
+  :focus-visible{outline:2px solid var(--cyan); outline-offset:2px;}
+  .container{max-width:1080px; margin:0 auto; padding:0 28px;}
+  .narrow{max-width:760px;}
+  @media (max-width:640px){ .container{padding:0 18px;} }
+
+  /* ============ TOP NAV ============ */
+  .topnav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 28px; border-bottom:1px solid var(--line); background:var(--paper);
+    position:sticky; top:0; z-index:60;
+  }
+  .logo{display:flex; align-items:center; gap:10px;}
+  .logo .mark{
+    width:38px; height:38px; border-radius:6px; background:var(--navy-900);
+    display:flex; align-items:center; justify-content:center; color:#fff;
+    font-family:var(--serif); font-weight:700; font-size:1.05rem; border:1.5px solid var(--cyan);
+  }
+  .logo .wordmark{font-family:var(--serif); font-weight:700; font-size:1.08rem; color:var(--ink);}
+  .logo .wordmark b{color:var(--navy-800);}
+  :root[data-theme="dark"] .logo .wordmark b{color:var(--cyan);}
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo .wordmark b{color:var(--cyan);}}
+
+  .navlinks{display:flex; align-items:center; gap:30px; font-size:0.92rem; font-weight:600; color:var(--ink-2);}
+  .navlinks a:hover{color:var(--cyan-deep);}
+  .navlinks .current{color:var(--cyan-deep);}
+  .navdrop{position:relative;}
+  .navdrop > span{display:inline-flex; align-items:center; gap:5px; cursor:pointer;}
+  .navdrop > span::after{content:"▾"; font-size:0.7em;}
+  .navdrop-panel{
+    position:absolute; top:calc(100% + 14px); left:50%; transform:translateX(-50%);
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow);
+    width:340px; max-height:0; overflow:hidden; opacity:0; transition:max-height .18s ease, opacity .18s ease;
+    padding:0 6px;
+  }
+  .navdrop:hover .navdrop-panel, .navdrop:focus-within .navdrop-panel{max-height:420px; opacity:1; padding:8px 6px;}
+  .navdrop-panel a{display:flex; gap:8px; align-items:baseline; padding:8px 10px; font-size:0.82rem; font-weight:500; color:var(--ink-2); border-radius:5px;}
+  .navdrop-panel a:hover{background:var(--paper-2); color:var(--ink);}
+  .navdrop-panel a .n{font-family:var(--mono); color:var(--cyan-deep); font-size:0.72rem;}
+  .navdrop-panel a.active{background:var(--paper-2); color:var(--navy-800); font-weight:700;}
+  @media (max-width:900px){ .navlinks{display:none;} }
+
+  /* ============ BANNER ============ */
+  .banner{
+    position:relative; overflow:hidden; color:#fff;
+    background:linear-gradient(115deg, var(--navy-900) 0%, var(--navy-800) 55%, var(--navy-700) 100%);
+  }
+  .banner-inner{
+    display:grid; grid-template-columns:1fr 320px; align-items:center; gap:20px;
+    padding:52px 28px 40px; max-width:1080px; margin:0 auto; position:relative; z-index:2;
+  }
+  @media (max-width:800px){ .banner-inner{grid-template-columns:1fr; padding:36px 18px 28px;} .banner-art{display:none;} }
+  .crumb{font-family:var(--mono); font-size:0.72rem; letter-spacing:0.04em; color:#9fb0e8; margin-bottom:14px;}
+  .crumb span{color:#fff;}
+  .banner h1{color:#fff; font-size:clamp(1.7rem,3vw,2.5rem); line-height:1.14; max-width:18ch;}
+  .banner .sub{color:#c7cdec; font-size:1.02rem; max-width:48ch; margin-top:12px;}
+  .banner .tag{
+    display:inline-block; margin-top:16px; font-family:var(--mono); font-size:0.78rem; font-weight:700;
+    color:var(--cyan); letter-spacing:0.02em;
+  }
+  .banner-art{display:flex; align-items:center; justify-content:center;}
+  .banner-art svg{width:100%; max-width:280px; opacity:0.92;}
+
+  .subnav{
+    background:var(--navy-900); border-top:1px solid rgba(255,255,255,0.12);
+    position:sticky; top:65px; z-index:55;
+  }
+  .subnav-inner{
+    display:flex; align-items:center; justify-content:space-between; max-width:1080px; margin:0 auto; padding:0 28px;
+  }
+  @media (max-width:640px){ .subnav-inner{padding:0 12px;} }
+  .subnav-tabs{display:flex;}
+  .subnav-tabs a{
+    padding:15px 18px; font-size:0.87rem; font-weight:600; color:#b9c1ea; border-bottom:2px solid transparent; white-space:nowrap;
+  }
+  .subnav-tabs a:hover{color:#fff;}
+  .subnav-tabs a.active{color:#fff; border-bottom-color:var(--cyan);}
+  .apply-btn{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--red); color:#fff; font-weight:700; font-size:0.88rem;
+    padding:13px 22px; margin:8px 0;
+  }
+  .apply-btn:hover{background:var(--red-deep);}
+  @media (max-width:640px){ .subnav-tabs{overflow-x:auto;} }
+
+  .stat-strip{display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid rgba(255,255,255,0.14); position:relative; z-index:2;}
+  .stat-strip .container{display:grid; grid-template-columns:repeat(3,1fr); max-width:1080px;}
+  .stat{padding:16px 18px 22px 0; border-right:1px solid rgba(255,255,255,0.14);}
+  .stat:last-child{border-right:none;}
+  .stat .v{font-family:var(--mono); font-variant-numeric:tabular-nums; font-size:1.4rem; color:#fff; font-weight:700;}
+  .stat .k{font-size:0.76rem; color:#a9b2de; margin-top:3px;}
+  @media (max-width:640px){ .stat{padding:14px 12px 18px;} .stat .v{font-size:1.1rem;} }
+
+  /* ============ SECTIONS ============ */
+  section.block{padding:48px 0; border-bottom:1px solid var(--line);}
+  .block-head{margin-bottom:22px;}
+  .block-head .tag{font-family:var(--mono); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--cyan-deep);}
+  .block-head h2{font-size:1.5rem; margin-top:6px;}
+
+  .brief p{font-size:0.98rem; color:var(--ink-2); max-width:68ch;}
+  .brief p + p{margin-top:14px;}
+
+  .who-intro{font-size:0.98rem; color:var(--ink-2); max-width:64ch; margin-bottom:16px;}
+  .who-summary{display:flex; flex-direction:column; gap:6px; margin-bottom:20px; padding:14px 16px; border-left:3px solid var(--cyan); background:var(--paper-2); border-radius:0 6px 6px 0;}
+  .who-summary div{font-size:0.9rem; color:var(--ink-2);}
+  .who-summary b{color:var(--ink);}
+  .qualify-list{list-style:none; margin:0; padding:0; display:grid; gap:10px;}
+  .qualify-list li{display:flex; gap:10px; align-items:flex-start; font-size:0.93rem; color:var(--ink-2);}
+  .qualify-list li::before{content:"✓"; color:var(--good); font-weight:700; font-family:var(--mono); flex-shrink:0;}
+
+  .feature-list{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:14px 28px;}
+  @media (max-width:640px){ .feature-list{grid-template-columns:1fr;} }
+  .feature-list li{display:flex; gap:12px; align-items:flex-start;}
+  .feature-list .fi{
+    width:30px; height:30px; border-radius:6px; background:var(--navy-900); color:var(--cyan); flex-shrink:0;
+    display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-size:0.7rem; font-weight:700;
+  }
+  .feature-list h3{font-size:0.95rem; font-family:var(--sans); font-weight:700;}
+  .feature-list p{font-size:0.85rem; color:var(--slate); margin:3px 0 0;}
+
+  .route{position:relative;}
+  .route-step{display:grid; grid-template-columns:44px 1fr; gap:16px; padding-bottom:24px; position:relative;}
+  .route-step:last-child{padding-bottom:0;}
+  .route-step::before{content:""; position:absolute; left:21px; top:34px; bottom:0; width:1px; background:var(--line);}
+  .route-step:last-child::before{display:none;}
+  .marker{
+    width:42px; height:42px; border-radius:8px; background:var(--navy-900); color:var(--cyan);
+    display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-weight:700; font-size:0.85rem; z-index:1;
+  }
+  .route-step h3{font-size:0.96rem; font-family:var(--sans); font-weight:700;}
+  .route-step p{font-size:0.87rem; color:var(--slate); margin:4px 0 0;}
+
+  /* ---- calculator ---- */
+  .calc-lede{font-size:0.95rem; color:var(--slate); margin-bottom:22px;}
+  .calc-box{display:grid; grid-template-columns:1fr 260px; gap:0; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:var(--card);}
+  @media (max-width:720px){ .calc-box{grid-template-columns:1fr;} }
+  .calc-inputs{padding:26px 26px;}
+  .calc-field{margin-bottom:20px;}
+  .calc-field:last-child{margin-bottom:0;}
+  .calc-field label{display:flex; justify-content:space-between; font-size:0.82rem; font-weight:600; color:var(--ink-2); margin-bottom:8px;}
+  .calc-field label .out{font-family:var(--mono); color:var(--navy-800); font-weight:700;}
+  :root[data-theme="dark"] .calc-field label .out{color:var(--cyan);}
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .calc-field label .out{color:var(--cyan);}}
+  .calc-field input[type="range"]{width:100%; accent-color:var(--cyan-deep);}
+  .calc-field input[type="number"]{
+    width:100%; padding:9px 10px; border:1px solid var(--line); border-radius:6px; background:var(--paper);
+    color:var(--ink); font-family:var(--mono); font-size:0.9rem;
+  }
+  .calc-out{background:var(--navy-900); color:#fff; padding:26px 22px; display:flex; flex-direction:column; justify-content:center; gap:18px;}
+  .calc-out .row{display:flex; flex-direction:column; gap:2px;}
+  .calc-out .row .l{font-size:0.72rem; color:#a9b2de; text-transform:uppercase; letter-spacing:0.06em;}
+  .calc-out .row .v{font-family:var(--mono); font-variant-numeric:tabular-nums; font-size:1.3rem; font-weight:700;}
+  .calc-out .row.hi .v{color:var(--cyan);}
+  .calc-bar{height:8px; border-radius:4px; overflow:hidden; display:flex; margin-top:4px;}
+  .calc-bar span{display:block; height:100%;}
+  .calc-note{padding:12px 26px; font-size:0.76rem; color:var(--slate); border-top:1px solid var(--line); grid-column:1/-1;}
+
+  /* ---- social proof ---- */
+  .rating-summary{display:flex; align-items:center; gap:16px; margin-bottom:24px; flex-wrap:wrap;}
+  .rating-summary .score{font-family:var(--serif); font-size:2.4rem; font-weight:700; color:var(--ink);}
+  .stars{color:var(--star); font-size:1.05rem; letter-spacing:1px;}
+  .rating-summary .meta{font-size:0.82rem; color:var(--slate);}
+  .review-grid{display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px;}
+  @media (max-width:800px){ .review-grid{grid-template-columns:1fr;} }
+  .review-card{border:1px solid var(--line); border-radius:var(--radius); padding:18px; background:var(--card);}
+  .review-card .who{display:flex; align-items:center; gap:10px; margin-bottom:8px;}
+  .review-card .avatar{
+    width:34px; height:34px; border-radius:50%; background:var(--navy-800); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.85rem;
+  }
+  .review-card .name{font-size:0.86rem; font-weight:700; color:var(--ink);}
+  .review-card .city{font-size:0.74rem; color:var(--slate);}
+  .review-card .stars{font-size:0.85rem; margin-bottom:8px;}
+  .review-card p{font-size:0.86rem; color:var(--ink-2); margin:0;}
+
+  /* ---- faq ---- */
+  .faq details{border-bottom:1px solid var(--line); padding:14px 0;}
+  .faq summary{cursor:pointer; font-weight:600; font-size:0.95rem; list-style:none; display:flex; justify-content:space-between; gap:12px;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{content:"+"; font-family:var(--mono); color:var(--cyan-deep); font-weight:400; font-size:1.1rem;}
+  .faq details[open] summary::after{content:"–";}
+  .faq p{font-size:0.88rem; color:var(--slate); margin:10px 0 0; max-width:66ch;}
+
+  /* ---- lead form ---- */
+  .lead-section{background:var(--paper-2);}
+  .lead-grid{display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:start;}
+  @media (max-width:800px){ .lead-grid{grid-template-columns:1fr;} }
+  .lead-copy h2{font-size:1.5rem;}
+  .lead-copy p{color:var(--slate); font-size:0.92rem; margin-top:10px; max-width:40ch;}
+  .lead-copy .trust-mini{margin-top:22px; display:flex; flex-direction:column; gap:10px;}
+  .lead-copy .trust-mini div{display:flex; gap:8px; align-items:center; font-size:0.85rem; color:var(--ink-2);}
+  .lead-copy .trust-mini .dot{width:5px;height:5px;border-radius:50%;background:var(--good);}
+  form.lead-form{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:26px; box-shadow:var(--shadow);}
+  .f-row{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px;}
+  @media (max-width:480px){ .f-row{grid-template-columns:1fr;} }
+  .f-field{display:flex; flex-direction:column; gap:6px; margin-bottom:14px;}
+  .f-field label{font-size:0.78rem; font-weight:600; color:var(--ink-2);}
+  .f-field input, .f-field select{
+    padding:11px 12px; border:1px solid var(--line); border-radius:6px; background:var(--paper); color:var(--ink); font-size:0.9rem; font-family:var(--sans);
+  }
+  .f-consent{display:flex; gap:9px; align-items:flex-start; font-size:0.76rem; color:var(--slate); margin:6px 0 18px;}
+  .f-consent input{margin-top:3px;}
+  .lead-submit{
+    width:100%; padding:14px; background:var(--red); color:#fff; font-weight:700; font-size:0.95rem; border:none; border-radius:6px; cursor:pointer;
+  }
+  .lead-submit:hover{background:var(--red-deep);}
+
+  /* ---- footer ---- */
+  footer{background:var(--navy-900); color:#c7cdec; padding:52px 0 26px;}
+  .foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:30px; padding-bottom:34px; border-bottom:1px solid rgba(255,255,255,0.12);}
+  @media (max-width:720px){ .foot-grid{grid-template-columns:1fr 1fr;} }
+  .foot-brand{font-family:var(--serif); font-weight:700; font-size:1.15rem; color:#fff;}
+  .foot-grid p{font-size:0.84rem; color:#9aa2d0; margin-top:10px; max-width:32ch;}
+  .foot-col h4{font-size:0.76rem; letter-spacing:0.08em; text-transform:uppercase; color:#7d86bd; margin-bottom:12px;}
+  .foot-col a{display:block; font-size:0.85rem; color:#c7cdec; margin-bottom:9px;}
+  .foot-col a:hover{color:var(--cyan);}
+  .foot-bottom{display:flex; justify-content:space-between; align-items:center; padding-top:20px; font-size:0.78rem; color:#7d86bd; flex-wrap:wrap; gap:10px;}
+  .foot-badges{display:flex; gap:18px; flex-wrap:wrap;}
+  .foot-badges span{display:flex; align-items:center; gap:6px;}
+  .foot-badges .dot{width:4px;height:4px;border-radius:50%;background:var(--good);}
+
+  /* ---- whatsapp fab ---- */
+  .wa-fab{
+    position:fixed; right:22px; bottom:22px; z-index:80;
+    width:56px; height:56px; border-radius:50%; background:#25d366;
+    display:flex; align-items:center; justify-content:center; box-shadow:0 6px 20px rgba(0,0,0,0.3);
+    border:none; cursor:pointer;
+  }
+  .wa-fab:hover{background:#1ebe5a;}
+  .wa-fab svg{width:28px; height:28px;}
+  @media (max-width:640px){ .wa-fab{right:16px; bottom:16px; width:52px; height:52px;} }
+</style>
+
+<nav class="topnav">
+  <a class="logo" href="#" style="display:flex;">
+    <span class="mark">CL</span>
+    <span class="wordmark">The <b>Credit Lane</b></span>
+  </a>
+  <div class="navlinks">
+    <a href="#">Home</a>
+    <a href="#">About Us</a>
+    <div class="navdrop">
+      <span class="current">Loans</span>
+      <div class="navdrop-panel" id="navDropPanel"></div>
+    </div>
+    <a href="#">Equity</a>
+    <a href="#">Incentives</a>
+    <a href="#">Contact Us</a>
+  </div>
+</nav>
+
+<header class="banner">
+  <div class="banner-inner">
+    <div>
+      <div class="crumb">Home / Loans / <span id="crumbName"></span></div>
+      <h1 id="bHeadline"></h1>
+      <p class="sub" id="bSub"></p>
+      <div class="tag" id="bTag"></div>
+    </div>
+    <div class="banner-art" id="bannerArt"></div>
+  </div>
+  <div class="stat-strip"><div class="container" id="statStrip"></div></div>
+</header>
+
+<div class="subnav">
+  <div class="subnav-inner">
+    <div class="subnav-tabs">
+      <a href="#overview" class="active" data-tab="overview">Overview</a>
+      <a href="#calculator" data-tab="calculator">Calculator</a>
+      <a href="#reviews" data-tab="reviews">Reviews</a>
+      <a href="#faqs" data-tab="faqs">FAQs</a>
+    </div>
+    <a class="apply-btn" href="#apply">Apply Loan →</a>
+  </div>
+</div>
+
+<main id="main" class="container narrow"></main>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">The Credit Lane</div>
+        <p>Loan consultancy &amp; corporate finance advisory serving Ghaziabad and Delhi NCR — Loans, Equity and Government Incentive facilitation under one roof.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Loans</h4>
+        <a href="#unsecured-business-loan">Business Loan &amp; DOD</a>
+        <a href="#machine-loan-sidbi">Machine Loan (SIDBI)</a>
+        <a href="#invoice-finance">Invoice Finance</a>
+        <a href="#npa-funding">NPA Funding</a>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="#">About Us</a>
+        <a href="#">Equity Advisory</a>
+        <a href="#">Govt. Incentives</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h4>Reach Us</h4>
+        <a href="#">Ghaziabad, Delhi NCR</a>
+        <a href="#">hello@thecreditlane.in</a>
+        <a href="#">+91 90000 00000</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 The Credit Lane. All rights reserved.</span>
+      <div class="foot-badges">
+        <span><span class="dot"></span>RBI guideline-aligned process</span>
+        <span><span class="dot"></span>Data handled under NDA</span>
+        <span><span class="dot"></span>No upfront advisory fee</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="wa-fab" title="Chat with us on WhatsApp" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" fill="none"><path d="M16 4C9.4 4 4 9.4 4 16c0 2.4.7 4.6 1.9 6.5L4 28l5.7-1.8C11.5 27.4 13.7 28 16 28c6.6 0 12-5.4 12-12S22.6 4 16 4z" fill="#fff"/><path d="M22.1 19.1c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1.1-1 1.3-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.1.2 2.1 3.3 5.2 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3z" fill="#25d366"/></svg>
+</button>
+
+<script>
+const fmtINR = n => "₹" + Math.round(n).toLocaleString("en-IN");
+const cr = n => n>=10000000 ? (n/10000000).toFixed(n%10000000===0?0:1)+"Cr" : (n/100000).toFixed(1)+"L";
+
+function blueprint(glyph){
+  return `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0H0V20" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    </pattern></defs>
+    <rect width="200" height="200" fill="url(#grid)"/>
+    <circle cx="100" cy="100" r="82" fill="none" stroke="rgba(23,195,230,0.25)" stroke-width="1" stroke-dasharray="3 4"/>
+    <g stroke="#17c3e6" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round">${glyph}</g>
+  </svg>`;
+}
+const GLYPHS = {
+  "unsecured-business-loan": `<circle cx="100" cy="100" r="42"/><path d="M100 66a34 34 0 1 1-24 10" marker-end="url(#a)"/><path d="M76 76l0-14 14 4" fill="none"/><text x="100" y="112" font-size="34" fill="#17c3e6" stroke="none" text-anchor="middle" font-family="ui-monospace">₹</text>`,
+  "commercial-industrial-purchase": `<rect x="55" y="80" width="90" height="70" rx="2"/><path d="M55 80l45-32 45 32"/><rect x="90" y="112" width="20" height="38"/><line x1="70" y1="95" x2="70" y2="105"/><line x1="130" y1="95" x2="130" y2="105"/>`,
+  "machine-loan-sidbi": `<circle cx="100" cy="100" r="30"/><circle cx="100" cy="100" r="10"/><path d="M100 62v14M100 124v14M62 100h14M124 100h14M75 75l10 10M115 115l10 10M75 125l10-10M115 85l10-10"/>`,
+  "machine-loan-bank": `<circle cx="100" cy="95" r="26"/><circle cx="100" cy="95" r="8"/><path d="M100 61v12M100 117v12M66 95h12M122 95h12"/><rect x="60" y="140" width="80" height="8"/><path d="M70 140v-8h60v8"/>`,
+  "invoice-finance": `<rect x="62" y="52" width="76" height="96" rx="2"/><path d="M62 52l20 0 0 20-20 0z"/><line x1="76" y1="90" x2="124" y2="90"/><line x1="76" y1="104" x2="124" y2="104"/><line x1="76" y1="118" x2="108" y2="118"/><path d="M148 100l16 0m0 0l-8-8m8 8l-8 8" stroke-width="2.4"/>`,
+  "school-college-funding": `<path d="M100 60L45 84l55 24 55-24z"/><path d="M70 96v26c0 8 14 16 30 16s30-8 30-16V96"/><line x1="155" y1="84" x2="155" y2="118"/>`,
+  "builder-real-estate-funding": `<line x1="70" y1="150" x2="70" y2="55"/><line x1="70" y1="60" x2="140" y2="60"/><line x1="130" y1="60" x2="130" y2="90"/><path d="M126 90h8l-4 8z"/><rect x="55" y="130" width="26" height="20"/><rect x="86" y="112" width="26" height="38"/><rect x="117" y="122" width="26" height="28"/>`,
+  "hospital-funding": `<rect x="58" y="70" width="84" height="80"/><line x1="100" y1="88" x2="100" y2="116"/><line x1="86" y1="102" x2="114" y2="102"/><line x1="70" y1="150" x2="70" y2="130"/><line x1="130" y1="150" x2="130" y2="130"/>`,
+  "hotel-resort-funding": `<rect x="60" y="76" width="80" height="74"/><line x1="76" y1="92" x2="86" y2="92"/><line x1="76" y1="108" x2="86" y2="108"/><line x1="76" y1="124" x2="86" y2="124"/><line x1="114" y1="92" x2="124" y2="92"/><line x1="114" y1="108" x2="124" y2="108"/><path d="M50 150q12-10 24 0t24 0 24 0 24 0"/><circle cx="150" cy="62" r="12"/>`,
+  "npa-funding": `<circle cx="100" cy="100" r="46"/><path d="M78 92l16 16 30-30"/><path d="M100 54v10M100 136v10M54 100h10M136 100h10"/>`,
+  "infra-companies-funding": `<path d="M50 140h100"/><path d="M60 140V110l20-20 20 20v30"/><path d="M100 140v-40l20-16 20 16v40"/><line x1="150" y1="140" x2="150" y2="84"/><path d="M144 90h12l-6-10z"/>`,
+  "venture-funding": `<path d="M60 140h80"/><rect x="66" y="112" width="14" height="28"/><rect x="86" y="96" width="14" height="44"/><rect x="106" y="76" width="14" height="64"/><path d="M126 66l16-16 0 12 -12 0z"/><line x1="126" y1="66" x2="142" y2="50"/>`
+};
+
+const PRODUCTS = [
+{
+  id:"unsecured-business-loan", eyebrow:"Loans / Working Capital",
+  name:"Unsecured Business Loan & DOD Limit",
+  headline:"Working Capital, Without Pledging Collateral",
+  sub:"Unsecured term loans and drop-line overdraft limits sized to your GST turnover — in-principle approval in as little as 24 hours.",
+  tag:"#FundedOnYourTurnover",
+  stats:[["₹5L – ₹5Cr","Loan amount"],["14% – 26% p.a.","Interest rate*"],["12 – 60 mo","Tenure"]],
+  statNote:"*Unsecured NBFC pricing. CGTMSE-backed schemes can bring eligible borrowers down to 10.5–13% p.a.",
+  brief:["An unsecured business loan gives your company working capital without pledging property, machinery or inventory — sanctioned on the strength of your GST turnover, banking conduct and credit history rather than a fixed asset.","Because no collateral backs the exposure, pricing runs higher than secured credit: unsecured NBFC loans in the current market typically fall between 14% and 26% per annum, though government-backed CGTMSE schemes can bring select borrowers down to 10.5–13%.","A drop-line overdraft (DOD) limit works alongside or instead of a term loan — you draw only what you need against a sanctioned ceiling, and interest accrues solely on the drawn balance, which keeps carrying cost low for seasonal cash gaps."],
+  whoIntro:"This product fits businesses that value speed and flexibility over chasing the lowest possible rate.",
+  whoSummary:["Best for: established firms needing fast, asset-free working capital.","Think twice if: you can pledge property or machinery for a materially lower secured rate."],
+  qualify:["Business vintage of 2+ years with stable GST filings","Need working capital for inventory, payroll or short-term cash gaps","Want to avoid mortgaging property or machinery","Existing bank relationship but no fresh collateral to offer"],
+  features:[["01","No collateral required","Sanctioned purely against turnover, banking and credit profile."],["02","Drop-line overdraft option","Interest charged only on the amount drawn, not the full limit."],["03","Multi-lender comparison","Your file is run across 15+ banks and NBFCs for the sharpest rate."],["04","CGTMSE eligibility check","We check government-backed guarantee schemes that can cut your rate."]],
+  process:[["Document pickup","Share GST, bank and ITR data — digitised the same day."],["Lender matching","Your file is matched against live rate cards from our panel."],["Sanction & terms","Compare 2–3 sanction letters side by side before you choose."],["Disbursal","Funds credited directly to your current account."]],
+  calcType:"emi", calcDefaults:{principal:2000000, rate:18, years:3, minP:200000, maxP:5000000000/100, minR:10.5, maxR:26, minY:1, maxY:5},
+  reviews:{rating:4.6, count:212, items:[
+    ["Ankit Verma","Ghaziabad","We needed ₹80L before the festive season with no time to mortgage anything. Sanction letter in three days."],
+    ["Priya Sharma","Noida","Compared quotes from four lenders side by side — ended up 3% cheaper than my bank's first offer."],
+    ["Ravi Kant","Sahibabad","The DOD limit meant I stopped paying interest on money I wasn't even using."]
+  ]},
+  faqs:[["Is any collateral needed at all?","No. Sanction is based on turnover, banking conduct and credit score — not fixed assets."],["How is a DOD limit different from a term loan?","A term loan disburses the full amount upfront with fixed EMIs. A DOD limit is a revolving line — you draw and repay within the limit and pay interest only on the utilised amount."],["What CIBIL score is typically required?","700+ is preferred by most lenders, though a strong banking profile can offset a slightly lower score."],["Can I get a lower rate through a government scheme?","CGTMSE-backed schemes can bring eligible MSME borrowers down to roughly 10.5–13% p.a. — we check this alongside your standard application."]]
+},
+{
+  id:"commercial-industrial-purchase", eyebrow:"Loans / Property",
+  name:"Commercial or Industrial Purchase Loan",
+  headline:"Own the Premises You Currently Rent",
+  sub:"Structured finance to purchase commercial shops, offices or industrial plots — repaid over a tenure that matches your business cycle.",
+  tag:"#StopPayingSomeoneElsesEMI",
+  stats:[["50% – 75%","Loan-to-value"],["8.5% – 14% p.a.","Interest rate*"],["Up to 15 yrs","Tenure"]],
+  statNote:"*Public/private banks typically price 8.5–11%; NBFCs and HFCs 10–14%, depending on profile and property type.",
+  brief:["A commercial or industrial purchase loan lets a business acquire operating premises without depleting working capital, with the property itself serving as security.","Loan-to-value generally runs 50–75% of the registered property value, with banks pricing at the lower end (around 8.5–11% p.a.) and NBFCs typically 10–14% depending on borrower profile, property type and loan size.","Because tenure can stretch to 15 years, EMIs are often lower than the rent a business would otherwise pay — converting a recurring cost into a growing asset."],
+  whoIntro:"Best suited to businesses ready to trade a long-term EMI for ownership of the space they operate from.",
+  whoSummary:["Best for: businesses currently renting premises, ready to own instead.","Think twice if: you need the property's full value unlocked quickly — LTV caps at 75%."],
+  qualify:["Currently paying rent for business premises and want to own instead","Buying an industrial plot or shed to relocate or expand operations","Need a loan structured against both business and property cash flows","Looking to free up working capital instead of paying cash for property"],
+  features:[["01","High loan-to-value","Finance up to 75% of the registered property value."],["02","Balance transfer support","Move an existing commercial property loan to a lower rate."],["03","Flexible end-use","Applies to shops, showrooms, offices, warehouses and industrial plots."],["04","Co-applicant structuring","Combine promoter and firm income to maximise eligibility."]],
+  process:[["Property vetting","Legal team checks title, encumbrance and zoning before you commit."],["Valuation","Empanelled valuers assess fair market value for loan sizing."],["Sanction","Lender issues terms based on property value and business income."],["Registration & disbursal","Funds released in sync with registration and legal formalities."]],
+  calcType:"emi", calcDefaults:{principal:10000000, rate:11, years:10, minP:2000000, maxP:100000000, minR:8.5, maxR:14, minY:3, maxY:15},
+  reviews:{rating:4.7, count:158, items:[
+    ["Sanjay Gupta","Loni","Buying our shed outright would have locked up all our capital. This let us keep working capital free."],
+    ["Meena Aggarwal","Ghaziabad","EMI came in lower than the rent we were paying for the same shop. Should have done this years ago."],
+    ["Deepak Chawla","Modinagar","The legal vetting caught a title issue our own lawyer missed. Saved us a bad purchase."]
+  ]},
+  faqs:[["Can I include renovation cost in the loan?","Yes, most lenders allow a top-up for fit-out or renovation once the base purchase loan is sanctioned."],["Is a co-applicant mandatory?","Not mandatory, but adding a co-applicant (partner/promoter) often improves eligibility and rate."],["What happens if the property has unclear title?","We flag title issues during legal vetting before applying — resolving these upfront avoids sanction delays later."],["Bank or NBFC — which is cheaper?","Banks are typically cheaper (8.5–11%) but slower and stricter on documentation; NBFCs move faster at 10–14%. We benchmark both before you decide."]]
+},
+{
+  id:"machine-loan-sidbi", eyebrow:"Loans / Machinery",
+  name:"Machine Loan from SIDBI",
+  headline:"Machinery Finance on SIDBI's SME-First Terms",
+  sub:"Access SIDBI's SPEED and SPEED Plus machinery schemes — built specifically for MSMEs, with pricing banks rarely match.",
+  tag:"#BuiltForMSMEs",
+  stats:[["8.80% – 10.50% p.a.","Interest rate (SPEED Plus)"],["Up to 100%","Machine cost financed"],["2 – 5 yrs","Tenure"]],
+  statNote:"Rates and financing % per SIDBI's SPEED / SPEED Plus schemes; internal rating-based, subject to change.",
+  brief:["SIDBI runs machinery finance as part of its core MSME mandate through the SPEED and SPEED Plus schemes, which fund up to 100% of machinery cost — up to ₹1 crore for new borrowers and ₹2–3 crore for existing SIDBI customers.","Pricing reflects that mandate: SPEED Plus carries interest of roughly 8.80–10.50% per annum based on internal rating, meaningfully below what a general-purpose bank loan typically offers for a comparable profile.","Because SIDBI schemes are frequently paired with state incentive programmes, we cross-check your eligibility for a capital subsidy at the same time as filing the loan — often reducing the effective cost of the machine further."],
+  whoIntro:"Purpose-built for registered MSMEs buying new machinery who want scheme-linked pricing rather than standard bank rates.",
+  whoSummary:["Best for: Udyam-registered MSMEs buying new or upgraded machinery.","Think twice if: your unit isn't manufacturing/processing-classified — scheme eligibility varies by activity."],
+  qualify:["Registered MSME looking to buy new or upgrade existing machinery","Want scheme-linked pricing rather than standard bank rates","Manufacturing or processing unit expanding capacity","Prefer a lender specialising in SME machinery finance"],
+  features:[["01","MSME-first pricing","SIDBI's mandate is SME lending, reflected in preferential 8.8–10.5% rates."],["02","Up to 100% funding","Machinery cost financed in full for eligible new borrowers up to ₹1Cr."],["03","Scheme stacking","We check TUS/MSME subsidy eligibility alongside the loan for compounded savings."],["04","Vendor-direct disbursal","Payment made directly to the machine supplier against invoice."]],
+  process:[["Scheme mapping","We identify whether SPEED or SPEED Plus fits your machine category and unit size."],["Application filing","Documentation compiled and filed through our SIDBI channel."],["Technical appraisal","SIDBI reviews the machine specification and vendor credentials."],["Sanction & vendor payment","Approved amount paid directly against the vendor invoice."]],
+  calcType:"emi", calcDefaults:{principal:5000000, rate:9.5, years:5, minP:500000, maxP:30000000, minR:8.8, maxR:10.5, minY:2, maxY:5},
+  reviews:{rating:4.8, count:96, items:[
+    ["Harish Bansal","Ghaziabad","Our bank quoted 2 points higher than what SIDBI sanctioned for the same CNC machine."],
+    ["Sunita Rathi","Sahibabad","Didn't know SPEED Plus existed until Credit Lane flagged it — funded 100% of our machine cost."],
+    ["Vikram Oberoi","Loni","Scheme mapping saved us weeks of applying to the wrong SIDBI product."]
+  ]},
+  faqs:[["Can this be used for second-hand machinery?","Select schemes allow it, subject to valuation and residual life certification — we confirm scheme-specific rules during mapping."],["Is SIDBI finance only for manufacturing units?","Primarily manufacturing and allied processing units, though eligibility varies by scheme — we verify this against your unit's activity code."],["How does this differ from a bank machine loan?","SIDBI's mandate is dedicated MSME lending, which means sharper pricing (8.8–10.5% vs 9–13% at banks) and higher LTV for a comparable profile."],["What's the difference between SPEED and SPEED Plus?","SPEED funds up to ₹1Cr for new borrowers at ~9.25–10% p.a.; SPEED Plus extends financing to ₹2–3Cr at a marginally lower 8.80–10.50% band for stronger-rated borrowers."]]
+},
+{
+  id:"machine-loan-bank", eyebrow:"Loans / Machinery",
+  name:"Machine Loan from Bank",
+  headline:"Bank-Funded Machinery Loans, on Your Existing Relationship",
+  sub:"When you'd rather finance new machinery through your existing bank, we structure the file and negotiate terms on your behalf.",
+  tag:"#YourBankCanDoBetter",
+  stats:[["9% – 13% p.a.","Interest rate"],["Up to 80%","Machine cost financed"],["3 – 7 yrs","Tenure"]],
+  statNote:"Typical secured machinery loan pricing from scheduled banks; final rate depends on relationship and credit profile.",
+  brief:["A standard bank machine loan is often the fastest route when a business already holds a banking relationship, since much of the KYC and credit assessment reuses existing records.","Pricing typically runs 9–13% per annum, secured against the machinery itself, with up to 80% of invoice value financed and tenure stretching 3–7 years depending on the asset's useful life.","Where this route differs from SIDBI or scheme-linked finance is flexibility — banks can structure tenure, moratorium and repayment around your specific cash flow rather than a fixed scheme template."],
+  whoIntro:"Fits businesses that want to keep financing within an existing bank relationship rather than route through a scheme.",
+  whoSummary:["Best for: businesses with an existing bank relationship wanting a faster, familiar process.","Think twice if: you qualify for SIDBI's SPEED scheme — that route is usually cheaper."],
+  qualify:["Have an existing current account or credit relationship with a bank","Prefer a single-bank relationship over multi-lender scheme routes","Buying machinery where SIDBI scheme criteria don't apply","Need faster turnaround using an existing banking file"],
+  features:[["01","Relationship-based pricing","Leverages your existing banking history to negotiate rate and tenure."],["02","Broad machine coverage","Applicable across manufacturing, printing, textile, food-processing and more."],["03","Moratorium structuring","Repayment holiday negotiated for machines with a commissioning lag."],["04","Multi-bank rate check","We benchmark your primary bank's offer against 3–4 alternatives before you sign."]],
+  process:[["Rate benchmarking","We pull comparative quotes from your bank and 3 alternatives."],["File preparation","Financials and machine specs compiled into the lender's format."],["Sanction","Bank issues terms; we negotiate rate, tenure and moratorium if needed."],["Disbursal","Payment released to vendor on invoice, machine delivery confirmed."]],
+  calcType:"emi", calcDefaults:{principal:4000000, rate:11, years:5, minP:500000, maxP:20000000, minR:9, maxR:13, minY:3, maxY:7},
+  reviews:{rating:4.5, count:134, items:[
+    ["Manoj Tyagi","Sahibabad","Assumed my bank's first quote was final — Credit Lane got them to revise it once they saw a competing offer."],
+    ["Reena Malhotra","Ghaziabad","Moratorium structuring meant we didn't pay EMI until the machine was actually running."],
+    ["Ashok Jindal","Modinagar","Filed with my existing bank but they still shopped three other lenders — worth it."]
+  ]},
+  faqs:[["Does staying with my existing bank guarantee the best rate?","Not automatically — we still benchmark against other lenders, and use competing offers to negotiate your bank's terms."],["Can I get a moratorium before EMIs start?","Yes, particularly if the machine needs installation or commissioning time before it generates revenue."],["What if my bank rejects the file?","We re-route the same file to an alternate bank or NBFC in our panel without restarting documentation from scratch."],["How does this compare with SIDBI's rates?","SIDBI's SPEED/SPEED Plus schemes (8.8–10.5%) typically undercut standard bank machine loans (9–13%) for eligible MSMEs — we check SIDBI eligibility first."]]
+},
+{
+  id:"invoice-finance", eyebrow:"Loans / Trade Finance",
+  name:"Sale Invoice Finance / Purchase Invoice Finance",
+  headline:"Unlock Cash Tied Up in Unpaid Invoices",
+  sub:"Convert receivables into immediate working capital, or finance purchases against upcoming payables — without waiting out your buyer's credit cycle.",
+  tag:"#DontWaitToGetPaid",
+  stats:[["75% – 90%","Of invoice value advanced"],["From 12% p.a.","Discounting cost*"],["24 – 72 hrs","Funds against invoice"]],
+  statNote:"*Discounting typically priced 1.5–3% per month of invoice value depending on buyer credit strength and tenor.",
+  brief:["Sale invoice finance advances cash against confirmed receivables, letting a business collect early instead of waiting out a buyer's payment cycle — particularly useful when selling to large corporates with long standard credit terms.","Advances typically run 75–90% of invoice value, with the discounting cost priced at roughly 1.5–3% per month depending on your buyer's credit strength — cheaper than most unsecured working capital because the receivable itself is the security.","Purchase invoice finance works in reverse, funding payment to your suppliers against a confirmed purchase order, which helps maintain supplier relationships and unlock early-payment discounts."],
+  whoIntro:"Fits businesses selling on credit terms to reputable buyers, where the payment gap — not creditworthiness — is the constraint.",
+  whoSummary:["Best for: B2B sellers with 30–90 day buyer credit terms and strong receivables.","Think twice if: your buyers are small/unrated — pricing depends heavily on buyer credit quality."],
+  qualify:["Selling to large corporates or PSUs on 30–90 day credit terms","Cash flow is stretched between delivery and payment realisation","Need to pay suppliers before your own receivables come in","Want financing tied to transactions, not a fixed term loan"],
+  features:[["01","Receivables unlocked fast","Advance released within 24–72 hours of invoice acceptance."],["02","Buyer-credit based pricing","Rate often reflects your buyer's credit strength, not just yours."],["03","Purchase-side cover","Finance supplier payments against confirmed purchase orders."],["04","Revolving structure","Repeat draws as new invoices are raised, without fresh sanction each time."]],
+  process:[["Invoice/PO review","We assess buyer credit quality and invoice authenticity."],["Facility sanction","A revolving limit is set based on projected monthly invoice volume."],["Draw-down","Submit invoices as raised; funds advanced within days."],["Settlement","Facility is repaid as the buyer/you settle the underlying invoice."]],
+  calcType:"invoice", calcDefaults:{invoiceValue:1000000, advancePct:85, monthlyRate:2, days:60},
+  reviews:{rating:4.7, count:87, items:[
+    ["Nitin Sabharwal","Noida","Our biggest client pays on a strict 75-day cycle. This closed the gap so we stopped delaying our own supplier payments."],
+    ["Kavita Bhalla","Ghaziabad","85% advance within two days of raising the invoice — genuinely changed how we manage cash flow."],
+    ["Rajeev Malik","Sahibabad","Purchase invoice financing let us take an early-payment discount from our steel supplier for the first time."]
+  ]},
+  faqs:[["Does my buyer need to be involved in the process?","Some structures require buyer acknowledgement of the invoice; others don't — we confirm which applies to your buyer base."],["Is this the same as a cash credit limit?","No — it's transaction-linked and tied to specific invoices/POs, rather than a general-purpose revolving limit against stock and receivables."],["What if a buyer delays payment beyond the invoice term?","Terms vary by facility — we structure this upfront so you know exactly how delays are handled before drawing down."],["How is the discounting cost calculated?","Typically 1.5–3% per month on the advanced amount, prorated for the actual number of days outstanding — you're not charged for the full tenor if the buyer pays early."]]
+},
+{
+  id:"school-college-funding", eyebrow:"Loans / Institutional",
+  name:"School & College Funding",
+  headline:"Infrastructure Finance for Educational Institutions",
+  sub:"Term loans for campus construction, hostel blocks, labs and equipment — structured against fee-cycle cash flows.",
+  tag:"#BuiltAroundYourAcademicCalendar",
+  stats:[["Up to ₹25Cr","Loan size"],["10.5% – 14% p.a.","Interest rate*"],["Up to 15 yrs","Tenure"]],
+  statNote:"*Institutional infrastructure lending, assessed case-by-case against enrolment, fee income and trust financials.",
+  brief:["Educational institution funding differs from a standard business loan in one key respect: cash flow arrives in seasonal fee cycles rather than continuous revenue, so lenders structure repayment schedules accordingly rather than defaulting to flat monthly EMIs.","Pricing for trust/society-backed institutional infrastructure loans generally falls in the 10.5–14% per annum range, comparable to secured commercial term lending, with tenure extending up to 15 years for larger campus projects.","Trust and society borrowers also face different documentation requirements than companies — governing body resolutions and trust deed compliance are central to the sanction process, which is where institutional lending expertise matters most."],
+  whoIntro:"Built for registered trusts and societies funding physical expansion, not day-to-day operating costs.",
+  whoSummary:["Best for: established trusts/societies expanding campus, hostel or lab infrastructure.","Think twice if: you're a first-year institution — most lenders want 5+ years of enrolment history."],
+  qualify:["Registered trust/society running a school or college","Expanding campus, building a new block, or upgrading facilities","Need funding structured around academic-year fee inflows","Established institution with a multi-year enrolment track record"],
+  features:[["01","Fee-cycle repayment","EMI/quarterly structuring aligned to admission and fee-collection cycles."],["02","Long tenure","Extended repayment periods suited to infrastructure-grade assets."],["03","Equipment & construction combined","One facility can cover civil construction plus lab/IT equipment."],["04","Trust/society structuring","Documentation built around trust deed and governing body approvals."]],
+  process:[["Institutional assessment","Enrolment trends, fee structure and governance reviewed."],["Project appraisal","Construction or equipment plan evaluated against loan sizing."],["Sanction","Terms structured around the academic fee-collection calendar."],["Phased disbursal","Funds released in stages tied to construction or procurement milestones."]],
+  calcType:"emi", calcDefaults:{principal:20000000, rate:12, years:10, minP:2000000, maxP:250000000, minR:10.5, maxR:14, minY:3, maxY:15},
+  reviews:{rating:4.6, count:41, items:[
+    ["Anita Malhotra","Ghaziabad","The bank's standard EMI ignored our seasonal fee income. Credit Lane restructured it around our actual collection months."],
+    ["S.K. Tripathi","Loni","Trust deed compliance was the part we understood least — they handled it end to end."],
+    ["Rekha Bhatia","Modinagar","Funded our new lab block and hostel in one facility instead of two separate loans."]
+  ]},
+  faqs:[["Can this fund a hostel block specifically?","Yes, hostel and residential infrastructure are commonly financed alongside academic blocks."],["Do government-aided schools qualify differently?","Aided institutions have additional documentation around grant-in-aid status — we assess this case by case."],["Is equipment (labs, computers) financed separately from construction?","It can be combined into one facility or split, depending on procurement timing and vendor invoicing."],["What repayment tenure is realistic for a large campus project?","Larger infrastructure projects commonly run 10–15 years, matched to the scale of construction and projected fee growth."]]
+},
+{
+  id:"builder-real-estate-funding", eyebrow:"Loans / Real Estate",
+  name:"Builder and Real Estate Developers Funding",
+  headline:"Construction Finance, Structured Around Your Project Timeline",
+  sub:"Project-linked funding for developers — from land acquisition and approvals through construction-linked disbursal.",
+  tag:"#MilestonesNotLumpSums",
+  stats:[["Up to 70%","Of project cost financed*"],["11% – 16% p.a.","Interest rate"],["Up to 5 yrs","Project tenure"]],
+  statNote:"*Excludes land cost; disbursal released against construction milestones, not upfront.",
+  brief:["Developer funding is structured fundamentally differently from a standard business loan — disbursal is tied to construction milestones rather than released upfront, which controls interest cost and aligns with RERA-mandated escrow practices.","Financing typically covers up to 70% of construction cost (excluding land), priced at roughly 11–16% per annum depending on project risk, developer track record and location, with tenure generally capped at 5 years for a single project cycle.","Because project risk is assessed on title clarity, approval status and developer track record together, early-stage due diligence is often the difference between a smooth sanction and a stalled one — this is where we front-load the work."],
+  whoIntro:"For developers with an approved plan ready to build, not early-stage land speculation.",
+  whoSummary:["Best for: developers with clear title and an approved plan, seeking milestone-linked funds.","Think twice if: your project lacks RERA registration — most lenders require it before sanction."],
+  qualify:["Developer with an approved layout/building plan ready to break ground","Need funding across land, approvals or construction — not just one stage","Project has clear title and RERA registration in progress or complete","Looking for disbursal tied to construction milestones, not lump sum"],
+  features:[["01","Milestone-linked disbursal","Funds released in stages as construction progresses, reducing idle interest cost."],["02","RERA-aligned structuring","Facility documentation built to align with RERA escrow requirements."],["03","Land + construction coverage","Single relationship can span acquisition, approval costs and construction."],["04","Exit-linked repayment","Repayment structured against projected unit sales/collections."]],
+  process:[["Project due diligence","Title, approvals and developer track record verified."],["Facility structuring","Loan sized and staged against the construction timeline."],["Sanction","Terms finalised including escrow and milestone conditions."],["Milestone disbursal","Tranches released as each construction stage is certified complete."]],
+  calcType:"emi", calcDefaults:{principal:50000000, rate:13, years:5, minP:5000000, maxP:500000000, minR:11, maxR:16, minY:1, maxY:5},
+  reviews:{rating:4.5, count:33, items:[
+    ["Anil Chaudhary","Ghaziabad","Lump-sum disbursal would have meant paying interest on idle money before we broke ground. Milestone funding matched our actual spend."],
+    ["Poonam Saxena","Noida","RERA escrow structuring was the one thing our previous lender didn't understand. This one did."],
+    ["Rajat Bhargava","Loni","Title diligence flagged an encumbrance early — avoided a costly delay mid-project."]
+  ]},
+  faqs:[["Can this fund land acquisition before construction begins?","Yes, though land-only funding typically carries a shorter tenure and stricter title requirements than construction-linked tranches."],["How does RERA escrow affect disbursal?","A portion of buyer collections must stay in a RERA-designated account for construction — we structure loan disbursal to work alongside this, not around it."],["What if the project timeline slips?","Milestone-linked facilities typically allow renegotiation of tranche timing — we flag this during structuring so it isn't a surprise mid-project."],["Why is the rate higher than a property purchase loan?","Construction finance carries higher execution risk than a purchase against a completed asset, which is reflected in the 11–16% pricing band versus 8.5–14% for purchase loans."]]
+},
+{
+  id:"hospital-funding", eyebrow:"Loans / Healthcare",
+  name:"Hospital Funding",
+  headline:"Capital for Beds, Equipment and Expansion",
+  sub:"Funding for hospital construction, medical equipment and working capital — sized against patient revenue and insurance receivables.",
+  tag:"#EquipYourNextExpansion",
+  stats:[["Up to ₹15Cr","Loan size"],["8.75% – 16% p.a.","Interest rate*"],["Up to 7 yrs","Equipment tenure"]],
+  statNote:"*Banks ~8.25–9.5% for established hospitals with collateral; NBFCs 9–16%+ with faster turnaround.",
+  brief:["Hospital funding sits at the intersection of infrastructure and equipment finance, since most facilities need both civil construction and high-value medical equipment financed together or in close sequence.","Established multi-specialty hospitals with adequate collateral can access bank pricing around 8.25–9.5% per annum; NBFCs charge more (9–16%+) but process in 3–7 days versus 10–20 days for banks and often accept equipment hypothecation instead of additional property collateral.","Because a meaningful share of hospital revenue is delayed through insurance and TPA settlement cycles, working capital facilities for healthcare providers are typically sized with that lag built in, rather than assuming immediate cash realisation."],
+  whoIntro:"Fits registered clinical establishments financing equipment, bed capacity or both — not personal medical loans.",
+  whoSummary:["Best for: hospitals/diagnostic centres adding equipment or bed capacity.","Think twice if: you need funds faster than 3 days — bank-priced facilities take longer to sanction."],
+  qualify:["Setting up a new facility or adding bed capacity","Purchasing high-value diagnostic or surgical equipment","Managing receivables delays from insurance/TPA settlements","Established practice looking to formalise into a larger facility"],
+  features:[["01","Equipment-specific financing","Dedicated lines for diagnostic, ICU and surgical equipment with vendor-direct payment."],["02","Receivables-aware structuring","Working capital sized with insurance/TPA settlement delays factored in."],["03","Expansion + infra combined","Single relationship spans new construction and equipment procurement."],["04","Licensing-stage support","Documentation guidance for facilities still completing regulatory approvals."]],
+  process:[["Facility assessment","Current capacity, licensing status and expansion plan reviewed."],["Sizing","Loan structured against equipment cost, construction estimate or both."],["Sanction","Terms finalised with vendor-direct payment for equipment tranches."],["Disbursal","Funds released to vendors/contractors per procurement or construction stage."]],
+  calcType:"emi", calcDefaults:{principal:7500000, rate:11, years:7, minP:1000000, maxP:150000000, minR:8.75, maxR:16, minY:1, maxY:7},
+  reviews:{rating:4.7, count:64, items:[
+    ["Dr. Alok Mehra","Ghaziabad","Needed a new MRI unit but our TPA receivables ran 60 days behind. The structure accounted for that lag from the start."],
+    ["Dr. Shalini Bose","Noida","NBFC route took 5 days against the bank's 3-week estimate — worth the marginally higher rate."],
+    ["Dr. Ramesh Iyer","Sahibabad","Equipment hypothecation instead of extra property collateral was the deciding factor for us."]
+  ]},
+  faqs:[["Can equipment and construction be financed under one facility?","Yes, they're commonly combined, with separate tranches and vendor-direct payment for equipment."],["Does TPA receivable delay affect loan eligibility?","It's factored into working capital sizing rather than treated as a red flag — this is standard for the sector."],["Is this available for diagnostic centres, not just full hospitals?","Yes, diagnostic and specialty centres qualify under the same equipment and infrastructure lines."],["Bank or NBFC — which should I choose?","Banks are cheaper (8.25–9.5%) if you have collateral and can wait 2–3 weeks; NBFCs (9–16%) fund in days and accept equipment as security — we help you weigh the trade-off."]]
+},
+{
+  id:"hotel-resort-funding", eyebrow:"Loans / Hospitality",
+  name:"Hotel & Resort Funding",
+  headline:"Finance Built for Hospitality's Seasonal Cash Cycle",
+  sub:"Construction, renovation and working capital finance for hotels and resorts — structured around occupancy seasonality, not flat monthly EMIs.",
+  tag:"#SeasonalEMIsThatFlex",
+  stats:[["Up to 70%","Of project cost financed*"],["9% – 14% p.a.","Interest rate"],["Up to 12 yrs","Tenure"]],
+  statNote:"*Excludes land cost. Banks typically price ~9–11%; NBFCs up to ~14% with faster turnaround.",
+  brief:["Hospitality projects carry a cash flow pattern that standard term loans handle poorly — occupancy and revenue swing seasonally, so repayment structuring needs to flex accordingly rather than assume flat monthly income.","Pricing generally runs 9–14% per annum — banks around 9–11% for well-collateralised projects, NBFCs up to 14% with materially faster approval — with construction finance covering up to 70% of project cost excluding land.","Beyond room construction, hotels and resorts often need financing for banquet halls, F&B outlets and amenity infrastructure that drive non-room revenue — this is typically bundled into the same facility rather than financed separately."],
+  whoIntro:"Fits hospitality operators whose revenue genuinely swings by season, not businesses wanting a generic construction loan.",
+  whoSummary:["Best for: hotels/resorts needing EMIs that flex with occupancy season.","Think twice if: your property has flat year-round demand — a standard term loan may be simpler."],
+  qualify:["Building a new property or renovating an existing hotel/resort","Revenue is seasonal and a flat EMI schedule doesn't fit cash flow","Need working capital to bridge low-occupancy months","Expanding room inventory or adding banquet/F&B infrastructure"],
+  features:[["01","Seasonality-matched EMIs","Higher repayment in peak season, lower in off-season — not a flat schedule."],["02","Renovation + new-build coverage","Applies equally to greenfield construction and existing property upgrades."],["03","F&B and banquet financing","Covers ancillary revenue infrastructure, not just room inventory."],["04","Brand-tie-up consideration","Loan terms can reflect projected revenue uplift from franchise/management tie-ups."]],
+  process:[["Property & market review","Location, competing supply and occupancy potential assessed."],["Project sizing","Loan structured against construction/renovation cost and revenue projection."],["Sanction","Seasonal repayment schedule finalised against projected occupancy curve."],["Phased disbursal","Funds released against construction milestones or renovation stages."]],
+  calcType:"emi", calcDefaults:{principal:30000000, rate:11, years:10, minP:2500000, maxP:300000000, minR:9, maxR:14, minY:2, maxY:12},
+  reviews:{rating:4.6, count:29, items:[
+    ["Karan Bedi","near Delhi NCR","Our previous lender wanted the same EMI in July as December, despite occupancy swinging by half. This flexes with our season."],
+    ["Nisha Kapoor","Delhi NCR","Banquet hall financing was bundled into the same facility — one relationship instead of two."],
+    ["Farhan Sheikh","Ghaziabad","NBFC route closed in under two weeks; our bank was still asking for documents at that point."]
+  ]},
+  faqs:[["Can this fund renovation of an existing property, not just new builds?","Yes — renovation financing follows the same seasonality-matched structuring as new construction."],["How is the seasonal EMI schedule decided?","Based on historical or projected occupancy data for the specific location and property category."],["Does a management/franchise tie-up improve loan terms?","It can — projected revenue uplift from an established brand affiliation is factored into sizing and pricing where relevant."],["Why is NBFC pricing higher than bank pricing here?","NBFCs price in the speed and flexibility they offer — often closing in under two weeks against 4–12 weeks for a bank, which matters for seasonal construction windows."]]
+},
+{
+  id:"npa-funding", eyebrow:"Loans / Stressed Assets",
+  name:"NPA Funding",
+  headline:"Resolve a Stressed Account Before It Escalates",
+  sub:"Structured refinancing and One-Time Settlement (OTS) support for businesses whose accounts have slipped into NPA — aimed at resolution, not just extension.",
+  tag:"#ResolutionNotJustExtension",
+  stats:[["5% – 10%","Typical token payment*"],["3 – 12 mo","OTS settlement window"],["Case-by-case","Loan sizing"]],
+  statNote:"*Token payment made to the no-lien account to obtain an OTS letter and demonstrate settlement intent, per standard bank practice.",
+  brief:["An NPA classification isn't necessarily the end of a lending relationship — many accounts are resolvable through a negotiated One-Time Settlement (OTS) or structured refinancing, provided the underlying business retains operational viability.","In a typical OTS, the borrower proposes a settlement figure, pays a token amount — usually 5–10% of the proposed sum — into a no-lien account to obtain an OTS letter, and then settles within a window of roughly 3 months to a year depending on transaction size.","This is deliberately the most case-specific product in our portfolio: every NPA situation carries a different history with the existing lender, which is why resolution strategy is built account-by-account rather than templated."],
+  whoIntro:"For businesses with a genuine turnaround story, not accounts flagged for wilful default or fraud.",
+  whoSummary:["Best for: viable businesses with an NPA-tagged account and a real repayment source.","Not applicable if: the account involves wilful default or fraud — RBI guidelines exclude these from OTS."],
+  qualify:["Existing loan account classified as NPA or approaching classification","Business is fundamentally viable but hit a temporary cash crunch","Looking to negotiate a One-Time Settlement (OTS) with the current lender","Need bridge funding to regularise an account before it escalates further"],
+  features:[["01","OTS negotiation support","We help structure and negotiate settlement terms with the existing lender."],["02","Bridge refinancing","Fresh funding structured to clear or regularise the stressed account."],["03","Turnaround assessment","Honest viability check before committing to a resolution path."],["04","New-lender onboarding","Where viable, we identify lenders willing to take on a post-resolution account."]],
+  process:[["Account review","We assess how the account slipped and what resolution path is realistic."],["Resolution strategy","OTS negotiation, refinancing, or a combination is proposed."],["Lender engagement","We coordinate directly with the existing lender on settlement terms."],["Closure & fresh start","Account regularised or settled; fresh credit access rebuilt where possible."]],
+  calcType:"settlement", calcDefaults:{outstanding:5000000, settlePct:60, tokenPct:8},
+  reviews:{rating:4.5, count:22, items:[
+    ["Suresh Nanda","Ghaziabad","Assumed once tagged NPA there was no way back. They negotiated an OTS that let us close the chapter and refinance."],
+    ["Vandana Kapoor","Sahibabad","Honest about our chances before we spent a rupee — didn't oversell a resolution that wasn't realistic."],
+    ["Mahesh Tandon","Loni","Direct coordination with the bank meant we weren't going back and forth ourselves."]
+  ]},
+  faqs:[["Can any NPA account be refinanced?","Not every account is viable — we assess the underlying business honestly before proposing a path, rather than promising resolution upfront."],["What is an OTS and how is it negotiated?","A One-Time Settlement is a negotiated reduced payoff that closes the loan account. We represent the borrower in structuring and negotiating these terms with the existing lender."],["Will this affect my CIBIL record?","An OTS is typically reported as 'settled' rather than fully closed, which does affect credit history — we explain these trade-offs before you commit to a path."],["How much of a token payment is usually required upfront?","Typically 5–10% of the proposed settlement amount, paid into a no-lien account to obtain the OTS letter and demonstrate genuine intent."]]
+},
+{
+  id:"infra-companies-funding", eyebrow:"Loans / Infrastructure",
+  name:"Infra Companies Funding",
+  headline:"Project and Working Capital Finance for Infrastructure Contractors",
+  sub:"Funding structured around EPC contracts, mobilisation needs and milestone billing cycles typical of infrastructure execution.",
+  tag:"#BuiltAroundYourBillingCycle",
+  stats:[["Up to ₹50Cr","Project loan size"],["10.5% – 15% p.a.","Interest rate*"],["Milestone-linked","Disbursal & repayment"]],
+  statNote:"*Indicative EPC/infra project finance band; actual pricing depends on contract quality and client (govt/PSU/private).",
+  brief:["Infrastructure contractors face a specific cash flow pattern: mobilisation costs are incurred upfront, billing happens at milestones, and client payment — especially from government and PSU clients — often lags well behind billing.","Funding for this sector is structured around the project's actual execution and billing calendar rather than treated as a generic business loan, typically priced 10.5–15% per annum with mobilisation advances and milestone-linked working capital as the core components.","Where relevant, we also support arranging the bid and performance bank guarantees required to participate in and execute tenders — a standard requirement infrastructure contractors face that general business lending doesn't address."],
+  whoIntro:"For registered contractors executing or bidding EPC/infrastructure work, not general SME borrowers.",
+  whoSummary:["Best for: EPC contractors with a signed work order and a billing-cycle cash gap.","Think twice if: you lack a verifiable work order — most lenders require one before structuring."],
+  qualify:["Executing or bidding for EPC/infrastructure contracts","Need mobilisation advance or equipment finance ahead of project start","Cash flow gap between milestone billing and client payment realisation","Government or PSU contracts with standard payment delays"],
+  features:[["01","Mobilisation advance","Upfront funding to cover site setup, equipment mobilisation and initial procurement."],["02","Bank guarantee facilitation","Support in arranging performance and bid guarantees required for tenders."],["03","Milestone billing-linked WC","Working capital sized against the project's billing schedule, not flat turnover."],["04","Equipment finance bundled","Heavy machinery and equipment loans structured alongside project funding."]],
+  process:[["Contract review","Work order terms, client payment history and project scope assessed."],["Facility structuring","Mobilisation advance, WC and equipment lines sized against the project plan."],["Sanction","Terms finalised, including any bank guarantee support required."],["Milestone-linked release","Funds and WC limits track the project's actual billing and execution stages."]],
+  calcType:"emi", calcDefaults:{principal:30000000, rate:13, years:5, minP:5000000, maxP:500000000, minR:10.5, maxR:15, minY:1, maxY:7},
+  reviews:{rating:4.4, count:19, items:[
+    ["Deepak Rawal","NCR","Government payment cycles run 90 days behind our billing. The working capital line was sized around that gap instead of ignoring it."],
+    ["Sameer Khosla","Ghaziabad","Bank guarantee support for a tender we'd have otherwise skipped bidding on."],
+    ["Vinod Sethi","Noida","Mobilisation advance meant we didn't dip into other project reserves to start site setup."]
+  ]},
+  faqs:[["What is a mobilisation advance?","Upfront funding to cover initial site setup, equipment deployment and procurement before milestone billing begins generating cash inflow."],["Can this help with bid or performance bank guarantees?","Yes, we assist in arranging the guarantees typically required to participate in and execute tenders."],["Does this apply to subcontractors, or only main EPC contractors?","Both, provided there's a verifiable work order or contract establishing the scope and payment terms."],["Why does government/PSU client payment take so long?","Standard bill certification and treasury release cycles for government works commonly run 60–120 days — we size working capital facilities with this delay factored in rather than assuming prompt payment."]]
+},
+{
+  id:"venture-funding", eyebrow:"Equity / Growth Capital",
+  name:"Venture Funding",
+  headline:"Growth Capital for Businesses Ready to Scale",
+  sub:"Structured introductions to venture and growth-stage investors for businesses with a scalable model and a clear use of capital.",
+  tag:"#EquityNotEMI",
+  stats:[["₹4Cr – ₹15Cr","Typical seed raise"],["15% – 25%","Typical dilution"],["Seed – Series B","Stages covered"]],
+  statNote:"India seed/Series A benchmarks; actual raise size and dilution depend on traction, sector and investor demand.",
+  brief:["Venture funding is fundamentally different from our lending products — it's equity capital in exchange for ownership, aimed at businesses whose growth trajectory justifies dilution rather than debt servicing.","Indian seed rounds typically raise ₹4–15 crore (most commonly ₹7–8 crore) at 15–25% dilution; Series A rounds run considerably larger — commonly $10–25 million — at a broadly similar 18–25% dilution band.","Our role here is advisory and introduction-based: preparing a business to be investor-ready, curating relevant investor introductions, and supporting negotiation through to a closed term sheet."],
+  whoIntro:"For companies with real traction seeking growth capital, not idea-stage concepts.",
+  whoSummary:["Best for: Pvt Ltd companies with traction, raising seed through Series B.","Not applicable if: you want to retain full ownership — this route requires equity dilution."],
+  qualify:["Scalable business model with demonstrable traction","Raising capital for growth, not just working capital","Need investor introductions, not just loan-based funding","Ready for equity dilution in exchange for growth capital"],
+  features:[["01","Investor matchmaking","Introductions curated to funds actively investing in your sector and stage."],["02","Pitch & data-room prep","Support structuring the pitch deck, financial model and data room."],["03","Valuation guidance","Realistic valuation benchmarking against comparable recent rounds."],["04","Term sheet negotiation","Support reviewing and negotiating investor term sheets before signing."]],
+  process:[["Readiness assessment","Business model, traction and materials reviewed for investor readiness."],["Materials preparation","Pitch deck, financial model and data room built or refined."],["Investor outreach","Curated introductions made to funds matching sector and stage."],["Term sheet to close","Support through negotiation, due diligence and final documentation."]],
+  calcType:"dilution", calcDefaults:{raise:70000000, preMoney:200000000},
+  reviews:{rating:4.8, count:17, items:[
+    ["Aditya Rao","Delhi NCR (B2B SaaS)","Strong product but a weak pitch deck. Their prep work was the difference between polite rejections and a term sheet."],
+    ["Neha Chandran","Gurugram (D2C)","Valuation guidance kept us from underselling the round — closed 20% above our first draft ask."],
+    ["Ishaan Kohli","Noida (Fintech)","Investor introductions were genuinely relevant to our stage, not a generic mass email list."]
+  ]},
+  faqs:[["How is this different from a business loan?","A loan is debt that must be repaid with interest; venture funding is equity capital exchanged for ownership stake, with no fixed repayment obligation."],["What stage of business is eligible?","Primarily seed through Series B — businesses with some traction and a credible growth story, rather than pure idea-stage concepts."],["Do you charge success fees on the raise?","Fee structures are discussed upfront during the readiness assessment, before any investor outreach begins."],["What's typical dilution at seed vs Series A?","Both bands run broadly similar in India — roughly 15–25% at seed and 18–25% at Series A — though the absolute cheque size is materially larger at Series A."]]
+}
+];
+
+function starString(r){
+  const full = Math.round(r);
+  return "★".repeat(full) + "☆".repeat(5-full);
+}
+function initials(name){ return name.split(" ").map(w=>w[0]).slice(0,2).join(""); }
+
+function calcHTML(p){
+  if(p.calcType==="invoice"){
+    const d = p.calcDefaults;
+    return `
+    <div class="calc-lede">One line: see how much cash you can unlock today against a pending invoice.</div>
+    <div class="calc-box">
+      <div class="calc-inputs">
+        <div class="calc-field"><label>Invoice value <span class="out" id="c_out1">${fmtINR(d.invoiceValue)}</span></label>
+          <input type="range" id="c_1" min="100000" max="10000000" step="50000" value="${d.invoiceValue}"></div>
+        <div class="calc-field"><label>Advance required <span class="out" id="c_out2">${d.advancePct}%</span></label>
+          <input type="range" id="c_2" min="60" max="90" step="1" value="${d.advancePct}"></div>
+        <div class="calc-field"><label>Days until buyer payment <span class="out" id="c_out3">${d.days} days</span></label>
+          <input type="range" id="c_3" min="15" max="120" step="5" value="${d.days}"></div>
+      </div>
+      <div class="calc-out">
+        <div class="row hi"><div class="l">Advance you receive</div><div class="v" id="c_res1">—</div></div>
+        <div class="row"><div class="l">Discounting cost</div><div class="v" id="c_res2">—</div></div>
+        <div class="row"><div class="l">You collect on settlement</div><div class="v" id="c_res3">—</div></div>
+      </div>
+      <div class="calc-note">Illustrative only, at a ${d.monthlyRate}%/month indicative discounting rate. Actual pricing depends on buyer credit rating and facility terms.</div>
+    </div>`;
+  }
+  if(p.calcType==="settlement"){
+    const d = p.calcDefaults;
+    return `
+    <div class="calc-lede">One line: estimate what an OTS could save you versus the outstanding due.</div>
+    <div class="calc-box">
+      <div class="calc-inputs">
+        <div class="calc-field"><label>Outstanding dues <span class="out" id="c_out1">${fmtINR(d.outstanding)}</span></label>
+          <input type="range" id="c_1" min="500000" max="50000000" step="100000" value="${d.outstanding}"></div>
+        <div class="calc-field"><label>Proposed settlement <span class="out" id="c_out2">${d.settlePct}% of dues</span></label>
+          <input type="range" id="c_2" min="30" max="90" step="1" value="${d.settlePct}"></div>
+        <div class="calc-field"><label>Token payment <span class="out" id="c_out3">${d.tokenPct}% of settlement</span></label>
+          <input type="range" id="c_3" min="5" max="10" step="1" value="${d.tokenPct}"></div>
+      </div>
+      <div class="calc-out">
+        <div class="row hi"><div class="l">Settlement amount</div><div class="v" id="c_res1">—</div></div>
+        <div class="row"><div class="l">You save</div><div class="v" id="c_res2">—</div></div>
+        <div class="row"><div class="l">Token payment now</div><div class="v" id="c_res3">—</div></div>
+      </div>
+      <div class="calc-note">Illustrative only — final settlement figures are negotiated directly with your existing lender, case by case.</div>
+    </div>`;
+  }
+  if(p.calcType==="dilution"){
+    const d = p.calcDefaults;
+    return `
+    <div class="calc-lede">One line: see how much of your company a raise would cost you.</div>
+    <div class="calc-box">
+      <div class="calc-inputs">
+        <div class="calc-field"><label>Amount you want to raise <span class="out" id="c_out1">${fmtINR(d.raise)}</span></label>
+          <input type="range" id="c_1" min="10000000" max="300000000" step="5000000" value="${d.raise}"></div>
+        <div class="calc-field"><label>Pre-money valuation <span class="out" id="c_out2">${fmtINR(d.preMoney)}</span></label>
+          <input type="range" id="c_2" min="50000000" max="1000000000" step="10000000" value="${d.preMoney}"></div>
+      </div>
+      <div class="calc-out">
+        <div class="row hi"><div class="l">Post-money valuation</div><div class="v" id="c_res1">—</div></div>
+        <div class="row"><div class="l">Dilution</div><div class="v" id="c_res2">—</div></div>
+        <div class="row"><div class="l">You retain</div><div class="v" id="c_res3">—</div></div>
+      </div>
+      <div class="calc-note">Illustrative only — real terms depend on investor negotiation, instrument type and cap table structure.</div>
+    </div>`;
+  }
+  const d = p.calcDefaults;
+  return `
+  <div class="calc-lede">One line: estimate your monthly EMI before you apply.</div>
+  <div class="calc-box">
+    <div class="calc-inputs">
+      <div class="calc-field"><label>Loan amount <span class="out" id="c_out1">${fmtINR(d.principal)}</span></label>
+        <input type="range" id="c_1" min="${d.minP}" max="${d.maxP}" step="${Math.max(10000,Math.round(d.maxP/500))}" value="${d.principal}"></div>
+      <div class="calc-field"><label>Interest rate (p.a.) <span class="out" id="c_out2">${d.rate}%</span></label>
+        <input type="range" id="c_2" min="${d.minR}" max="${d.maxR}" step="0.1" value="${d.rate}"></div>
+      <div class="calc-field"><label>Tenure <span class="out" id="c_out3">${d.years} yrs</span></label>
+        <input type="range" id="c_3" min="${d.minY}" max="${d.maxY}" step="1" value="${d.years}"></div>
+    </div>
+    <div class="calc-out">
+      <div class="row hi"><div class="l">Monthly EMI</div><div class="v" id="c_res1">—</div></div>
+      <div class="row"><div class="l">Total interest</div><div class="v" id="c_res2">—</div></div>
+      <div class="row"><div class="l">Total payable</div><div class="v" id="c_res3">—</div></div>
+      <div class="calc-bar" id="c_bar"><span style="background:var(--cyan)"></span><span style="background:#3a4180"></span></div>
+    </div>
+    <div class="calc-note">Illustrative EMI at the selected rate and tenure — final terms depend on the lender and your credit profile.</div>
+  </div>`;
+}
+
+function wireCalc(p){
+  const $ = id => document.getElementById(id);
+  if(p.calcType==="invoice"){
+    const upd = () => {
+      const val = +$("c_1").value, adv = +$("c_2").value, days = +$("c_3").value;
+      $("c_out1").textContent = fmtINR(val);
+      $("c_out2").textContent = adv+"%";
+      $("c_out3").textContent = days+" days";
+      const advanceAmt = val*adv/100;
+      const cost = advanceAmt * (p.calcDefaults.monthlyRate/100) * (days/30);
+      $("c_res1").textContent = fmtINR(advanceAmt);
+      $("c_res2").textContent = fmtINR(cost);
+      $("c_res3").textContent = fmtINR(val-cost);
+    };
+    ["c_1","c_2","c_3"].forEach(id=>$(id).addEventListener("input",upd)); upd(); return;
+  }
+  if(p.calcType==="settlement"){
+    const upd = () => {
+      const out = +$("c_1").value, pct = +$("c_2").value, tok = +$("c_3").value;
+      $("c_out1").textContent = fmtINR(out);
+      $("c_out2").textContent = pct+"% of dues";
+      $("c_out3").textContent = tok+"% of settlement";
+      const settle = out*pct/100;
+      $("c_res1").textContent = fmtINR(settle);
+      $("c_res2").textContent = fmtINR(out-settle);
+      $("c_res3").textContent = fmtINR(settle*tok/100);
+    };
+    ["c_1","c_2","c_3"].forEach(id=>$(id).addEventListener("input",upd)); upd(); return;
+  }
+  if(p.calcType==="dilution"){
+    const upd = () => {
+      const raise = +$("c_1").value, pre = +$("c_2").value;
+      $("c_out1").textContent = fmtINR(raise);
+      $("c_out2").textContent = fmtINR(pre);
+      const post = pre+raise;
+      const dilution = (raise/post*100);
+      $("c_res1").textContent = fmtINR(post);
+      $("c_res2").textContent = dilution.toFixed(1)+"%";
+      $("c_res3").textContent = (100-dilution).toFixed(1)+"%";
+    };
+    ["c_1","c_2"].forEach(id=>$(id).addEventListener("input",upd)); upd(); return;
+  }
+  const upd = () => {
+    const P = +$("c_1").value, annR = +$("c_2").value, yrs = +$("c_3").value;
+    $("c_out1").textContent = fmtINR(P);
+    $("c_out2").textContent = annR+"%";
+    $("c_out3").textContent = yrs+" yrs";
+    const r = annR/1200, n = yrs*12;
+    const emi = P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+    const total = emi*n, interest = total-P;
+    $("c_res1").textContent = fmtINR(emi);
+    $("c_res2").textContent = fmtINR(interest);
+    $("c_res3").textContent = fmtINR(total);
+    const pPct = P/total*100;
+    $("c_bar").children[0].style.width = pPct+"%";
+    $("c_bar").children[1].style.width = (100-pPct)+"%";
+  };
+  ["c_1","c_2","c_3"].forEach(id=>$(id).addEventListener("input",upd)); upd();
+}
+
+function render(id){
+  const p = PRODUCTS.find(x=>x.id===id) || PRODUCTS[0];
+
+  document.getElementById("crumbName").textContent = p.name;
+  document.getElementById("bHeadline").textContent = p.headline;
+  document.getElementById("bSub").textContent = p.sub;
+  document.getElementById("bTag").textContent = p.tag;
+  document.getElementById("bannerArt").innerHTML = blueprint(GLYPHS[p.id]);
+  document.getElementById("statStrip").innerHTML = p.stats.map(s=>`<div class="stat"><div class="v">${s[0]}</div><div class="k">${s[1]}</div></div>`).join('');
+
+  document.querySelectorAll(".navdrop-panel a").forEach(a=>a.classList.toggle("active", a.dataset.id===p.id));
+
+  const main = document.getElementById("main");
+  main.innerHTML = `
+    <section class="block" id="overview" style="padding-top:40px;">
+      <div class="block-head"><div class="tag">About this product</div><h2>${p.name}</h2></div>
+      <div class="brief">${p.brief.map(par=>`<p>${par}</p>`).join('')}</div>
+      <p style="font-size:0.76rem; color:var(--slate); margin-top:14px;">${p.statNote}</p>
+    </section>
+
+    <section class="block">
+      <div class="block-head"><div class="tag">Self-check</div><h2>Who should apply</h2></div>
+      <p class="who-intro">${p.whoIntro}</p>
+      <div class="who-summary">${p.whoSummary.map(s=>`<div>${s.replace(/^(Best for:|Think twice if:|Not applicable if:)/,'<b>$1</b>')}</div>`).join('')}</div>
+      <ul class="qualify-list">${p.qualify.map(q=>`<li>${q}</li>`).join('')}</ul>
+    </section>
+
+    <section class="block">
+      <div class="block-head"><div class="tag">Why this product</div><h2>Key features &amp; benefits</h2></div>
+      <ul class="feature-list">${p.features.map(f=>`<li><div class="fi">${f[0]}</div><div><h3>${f[1]}</h3><p>${f[2]}</p></div></li>`).join('')}</ul>
+    </section>
+
+    <section class="block">
+      <div class="block-head"><div class="tag">What happens next</div><h2>Our process</h2></div>
+      <div class="route">${p.process.map((s,i)=>`<div class="route-step"><div class="marker">${String(i+1).padStart(2,'0')}</div><div><h3>${s[0]}</h3><p>${s[1]}</p></div></div>`).join('')}</div>
+    </section>
+
+    <section class="block" id="calculator">
+      <div class="block-head"><div class="tag">Estimate before you apply</div><h2>${p.calcType==='dilution'?'Dilution calculator':p.calcType==='settlement'?'Settlement savings calculator':p.calcType==='invoice'?'Advance calculator':'EMI calculator'}</h2></div>
+      ${calcHTML(p)}
+    </section>
+
+    <section class="block" id="reviews">
+      <div class="block-head"><div class="tag">Client experience</div><h2>Social proof &amp; Google reviews</h2></div>
+      <div class="rating-summary">
+        <div class="score">${p.reviews.rating}</div>
+        <div><div class="stars">${starString(p.reviews.rating)}</div><div class="meta">${p.reviews.count} Google reviews for this product line</div></div>
+      </div>
+      <div class="review-grid">
+        ${p.reviews.items.map(r=>`
+          <div class="review-card">
+            <div class="who"><div class="avatar">${initials(r[0])}</div><div><div class="name">${r[0]}</div><div class="city">${r[1]}</div></div></div>
+            <div class="stars">${starString(5)}</div>
+            <p>"${r[2]}"</p>
+          </div>`).join('')}
+      </div>
+    </section>
+
+    <section class="block faq" id="faqs">
+      <div class="block-head"><div class="tag">Common questions</div><h2>FAQs</h2></div>
+      ${p.faqs.map(f=>`<details><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join('')}
+    </section>
+
+    <section id="apply" class="lead-section block" style="margin:0 -28px; padding:48px 28px; border-radius:12px;">
+      <div class="lead-grid">
+        <div class="lead-copy">
+          <h2>Check your eligibility for ${p.name}</h2>
+          <p>Share a few details and our advisory team responds the same working day — no obligation, no upfront fee.</p>
+          <div class="trust-mini">
+            <div><span class="dot"></span>15+ bank &amp; NBFC lender panel</div>
+            <div><span class="dot"></span>Data handled under NDA</div>
+            <div><span class="dot"></span>RBI guideline-aligned process</div>
+          </div>
+        </div>
+        <form class="lead-form" onsubmit="return false;">
+          <div class="f-row">
+            <div class="f-field"><label>Full name</label><input type="text" placeholder="Your full name"></div>
+            <div class="f-field"><label>Phone number</label><input type="tel" placeholder="+91"></div>
+          </div>
+          <div class="f-row">
+            <div class="f-field"><label>Email</label><input type="email" placeholder="you@company.com"></div>
+            <div class="f-field"><label>City</label><input type="text" placeholder="Ghaziabad"></div>
+          </div>
+          <div class="f-field"><label>Funding amount required</label>
+            <select><option>Under ₹10L</option><option>₹10L – ₹50L</option><option>₹50L – ₹1Cr</option><option>₹1Cr – ₹5Cr</option><option>Above ₹5Cr</option></select>
+          </div>
+          <label class="f-consent"><input type="checkbox">I authorise The Credit Lane and its lending partners to contact me regarding this enquiry via call, SMS, email or WhatsApp.</label>
+          <button class="lead-submit" type="submit">Submit Application →</button>
+        </form>
+      </div>
+    </section>
+  `;
+
+  document.querySelectorAll(".subnav-tabs a").forEach(a=>{
+    a.onclick = (e)=>{ document.querySelectorAll(".subnav-tabs a").forEach(x=>x.classList.remove("active")); a.classList.add("active"); };
+  });
+
+  wireCalc(p);
+}
+
+function buildNavDrop(){
+  const panel = document.getElementById("navDropPanel");
+  panel.innerHTML = PRODUCTS.map((p,i)=>`<a href="#${p.id}" data-id="${p.id}"><span class="n">${String(i+1).padStart(2,'0')}</span>${p.name}</a>`).join('');
+  panel.addEventListener("click", e=>{
+    const a = e.target.closest("a"); if(!a) return;
+    render(a.dataset.id);
+    window.scrollTo({top:0, behavior:"smooth"});
+  });
+}
+
+buildNavDrop();
+render((location.hash||'').replace('#','') || PRODUCTS[0].id);
+window.addEventListener("hashchange", ()=>{
+  const id = location.hash.replace('#','');
+  if(PRODUCTS.find(p=>p.id===id)){ render(id); }
+});
+</script>
+

@@ -1,0 +1,571 @@
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. STICKY HEADER SCROLL EFFECT
+  const header = document.querySelector("header");
+  const checkScroll = () => {
+    if (window.scrollY > 40) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  };
+  window.addEventListener("scroll", checkScroll);
+  checkScroll();
+
+  // 2. MOBILE NAVIGATION DRAWER
+  const hamburger = document.querySelector(".hamburger");
+  const mobileNav = document.querySelector(".mobile-nav");
+  const overlay = document.querySelector(".overlay");
+
+  if (hamburger && mobileNav && overlay) {
+    const toggleMobileMenu = () => {
+      hamburger.classList.toggle("active");
+      mobileNav.classList.toggle("open");
+      overlay.classList.toggle("open");
+      document.body.style.overflow = mobileNav.classList.contains("open") ? "hidden" : "";
+    };
+
+    hamburger.addEventListener("click", toggleMobileMenu);
+    overlay.addEventListener("click", toggleMobileMenu);
+
+    // Close mobile nav when clicking on a link
+    const mobileLinks = mobileNav.querySelectorAll("a");
+    mobileLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        if (mobileNav.classList.contains("open")) {
+          toggleMobileMenu();
+        }
+      });
+    });
+  }
+
+  // 3. MOBILE MENU ACCORDIONS
+  const mobileAccordionTitles = document.querySelectorAll(".mobile-nav-title");
+  mobileAccordionTitles.forEach(title => {
+    title.addEventListener("click", () => {
+      const submenu = title.nextElementSibling;
+      const arrow = title.querySelector(".arrow-toggle");
+      if (submenu && submenu.classList.contains("mobile-nav-submenu")) {
+        const isOpen = submenu.classList.contains("open");
+        
+        // Close other submenus first
+        document.querySelectorAll(".mobile-nav-submenu").forEach(sub => sub.classList.remove("open"));
+        document.querySelectorAll(".arrow-toggle").forEach(a => a.textContent = "▾");
+
+        if (!isOpen) {
+          submenu.classList.add("open");
+          if (arrow) arrow.textContent = "▴";
+        }
+      }
+    });
+  });
+
+  // 4. HOMEPAGE CAPITAL SELECTOR TABS
+  const selectorTabs = document.querySelectorAll(".stack-tab");
+  const selectorLists = document.querySelectorAll(".stack-list");
+  if (selectorTabs.length > 0 && selectorLists.length > 0) {
+    selectorTabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => {
+        selectorTabs.forEach(t => t.classList.remove("active"));
+        selectorLists.forEach(l => l.classList.remove("active"));
+        
+        tab.classList.add("active");
+        selectorLists[index].classList.add("active");
+      });
+    });
+  }
+
+  // 5. HOMEPAGE SERVICES CATALOG TABS
+  const catalogTabs = document.querySelectorAll(".catalog-tab");
+  const catalogGrids = document.querySelectorAll(".catalog-grid");
+  if (catalogTabs.length > 0 && catalogGrids.length > 0) {
+    catalogTabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => {
+        catalogTabs.forEach(t => t.classList.remove("active"));
+        catalogGrids.forEach(g => g.classList.remove("active"));
+
+        tab.classList.add("active");
+        catalogGrids[index].classList.add("active");
+      });
+    });
+  }
+
+  // 6. FAQ ACCORDION
+  const faqQuestions = document.querySelectorAll(".faq-q");
+  faqQuestions.forEach(q => {
+    q.addEventListener("click", () => {
+      const faqItem = q.parentElement;
+      const isOpen = faqItem.classList.contains("open");
+
+      // Close all first
+      document.querySelectorAll(".faq-item").forEach(item => {
+        item.classList.remove("open");
+        const indicator = item.querySelector(".faq-q span");
+        if (indicator) indicator.textContent = "+";
+      });
+
+      if (!isOpen) {
+        faqItem.classList.add("open");
+        const indicator = q.querySelector("span");
+        if (indicator) indicator.textContent = "−";
+      }
+    });
+  });
+
+  // 7. INTERACTIVE CALCULATORS
+  const fmtINR = n => "₹" + Math.round(n).toLocaleString("en-IN");
+
+  const wireEMI = () => {
+    const pInput = document.getElementById("emi-p");
+    const rInput = document.getElementById("emi-r");
+    const yInput = document.getElementById("emi-y");
+
+    if (!pInput || !rInput || !yInput) return;
+
+    const pOut = document.getElementById("emi-p-val");
+    const rOut = document.getElementById("emi-r-val");
+    const yOut = document.getElementById("emi-y-val");
+
+    const emiOut = document.getElementById("res-emi");
+    const interestOut = document.getElementById("res-interest");
+    const totalOut = document.getElementById("res-total");
+    const pBar = document.getElementById("bar-p");
+    const iBar = document.getElementById("bar-i");
+
+    const calculate = () => {
+      const P = +pInput.value;
+      const annR = +rInput.value;
+      const yrs = +yInput.value;
+
+      pOut.textContent = fmtINR(P);
+      rOut.textContent = annR + "%";
+      yOut.textContent = yrs + " yrs";
+
+      const r = annR / 1200;
+      const n = yrs * 12;
+
+      const emi = P * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1);
+      const total = emi * n;
+      const interest = total - P;
+
+      if (emiOut) emiOut.textContent = fmtINR(emi);
+      if (interestOut) interestOut.textContent = fmtINR(interest);
+      if (totalOut) totalOut.textContent = fmtINR(total);
+
+      if (pBar && iBar) {
+        const pPct = (P / total) * 100;
+        pBar.style.width = pPct + "%";
+        iBar.style.width = (100 - pPct) + "%";
+      }
+    };
+
+    [pInput, rInput, yInput].forEach(inp => inp.addEventListener("input", calculate));
+    calculate();
+  };
+
+  const wireInvoice = () => {
+    const valInput = document.getElementById("inv-val");
+    const advInput = document.getElementById("inv-adv");
+    const daysInput = document.getElementById("inv-days");
+    const mRate = parseFloat(document.getElementById("inv-mrate")?.value || "2");
+
+    if (!valInput || !advInput || !daysInput) return;
+
+    const valOut = document.getElementById("inv-val-val");
+    const advOut = document.getElementById("inv-adv-val");
+    const daysOut = document.getElementById("inv-days-val");
+
+    const resAdv = document.getElementById("res-inv-adv");
+    const resCost = document.getElementById("res-inv-cost");
+    const resNet = document.getElementById("res-inv-net");
+
+    const calculate = () => {
+      const val = +valInput.value;
+      const advPct = +advInput.value;
+      const days = +daysInput.value;
+
+      valOut.textContent = fmtINR(val);
+      advOut.textContent = advPct + "%";
+      daysOut.textContent = days + " days";
+
+      const advanceAmt = val * advPct / 100;
+      const cost = advanceAmt * (mRate / 100) * (days / 30);
+      const net = val - cost;
+
+      if (resAdv) resAdv.textContent = fmtINR(advanceAmt);
+      if (resCost) resCost.textContent = fmtINR(cost);
+      if (resNet) resNet.textContent = fmtINR(net);
+    };
+
+    [valInput, advInput, daysInput].forEach(inp => inp.addEventListener("input", calculate));
+    calculate();
+  };
+
+  const wireSettlement = () => {
+    const duesInput = document.getElementById("set-dues");
+    const setPctInput = document.getElementById("set-pct");
+    const tokPctInput = document.getElementById("set-tok");
+
+    if (!duesInput || !setPctInput || !tokPctInput) return;
+
+    const duesOut = document.getElementById("set-dues-val");
+    const setPctOut = document.getElementById("set-pct-val");
+    const tokPctOut = document.getElementById("set-tok-val");
+
+    const resSettle = document.getElementById("res-set-amt");
+    const resSave = document.getElementById("res-set-save");
+    const resToken = document.getElementById("res-set-tok");
+
+    const calculate = () => {
+      const dues = +duesInput.value;
+      const setPct = +setPctInput.value;
+      const tokPct = +tokPctInput.value;
+
+      duesOut.textContent = fmtINR(dues);
+      setPctOut.textContent = setPct + "% of dues";
+      tokPctOut.textContent = tokPct + "% of settlement";
+
+      const settlementAmt = dues * setPct / 100;
+      const savings = dues - settlementAmt;
+      const tokenAmt = settlementAmt * tokPct / 100;
+
+      if (resSettle) resSettle.textContent = fmtINR(settlementAmt);
+      if (resSave) resSave.textContent = fmtINR(savings);
+      if (resToken) resToken.textContent = fmtINR(tokenAmt);
+    };
+
+    [duesInput, setPctInput, tokPctInput].forEach(inp => inp.addEventListener("input", calculate));
+    calculate();
+  };
+
+  const wireDilution = () => {
+    const raiseInput = document.getElementById("dil-raise");
+    const preInput = document.getElementById("dil-pre");
+
+    if (!raiseInput || !preInput) return;
+
+    const raiseOut = document.getElementById("dil-raise-val");
+    const preOut = document.getElementById("dil-pre-val");
+
+    const resPost = document.getElementById("res-dil-post");
+    const resDil = document.getElementById("res-dil-dil");
+    const resRet = document.getElementById("res-dil-ret");
+
+    const calculate = () => {
+      const raise = +raiseInput.value;
+      const pre = +preInput.value;
+
+      raiseOut.textContent = fmtINR(raise);
+      preOut.textContent = fmtINR(pre);
+
+      const post = pre + raise;
+      const dilution = (raise / post) * 100;
+      const retain = 100 - dilution;
+
+      if (resPost) resPost.textContent = fmtINR(post);
+      if (resDil) resDil.textContent = dilution.toFixed(1) + "%";
+      if (resRet) resRet.textContent = retain.toFixed(1) + "%";
+    };
+
+    [raiseInput, preInput].forEach(inp => inp.addEventListener("input", calculate));
+    calculate();
+  };
+
+  const wireIPO = () => {
+    const issueInput = document.getElementById("ipo-issue");
+    const preInput = document.getElementById("ipo-pre");
+
+    if (!issueInput || !preInput) return;
+
+    const issueOut = document.getElementById("ipo-issue-val");
+    const preOut = document.getElementById("ipo-pre-val");
+
+    const resPost = document.getElementById("res-ipo-post");
+    const resPublic = document.getElementById("res-ipo-pub");
+    const resProm = document.getElementById("res-ipo-prom");
+
+    const calculate = () => {
+      const fresh = +issueInput.value;
+      const pre = +preInput.value;
+
+      issueOut.textContent = fmtINR(fresh);
+      preOut.textContent = fmtINR(pre);
+
+      const post = pre + fresh;
+      const pubPct = (fresh / post) * 100;
+      const promPct = 100 - pubPct;
+
+      if (resPost) resPost.textContent = fmtINR(post);
+      if (resPublic) resPublic.textContent = pubPct.toFixed(1) + "%";
+      if (resProm) resProm.textContent = promPct.toFixed(1) + "%";
+    };
+
+    [issueInput, preInput].forEach(inp => inp.addEventListener("input", calculate));
+    calculate();
+  };
+
+  const wireValuation = () => {
+    const ebitdaInput = document.getElementById("val-ebitda");
+    const multLoInput = document.getElementById("val-mlo");
+    const multHiInput = document.getElementById("val-mhi");
+
+    if (!ebitdaInput || !multLoInput || !multHiInput) return;
+
+    const ebitdaOut = document.getElementById("val-ebitda-val");
+    const multLoOut = document.getElementById("val-mlo-val");
+    const multHiOut = document.getElementById("val-mhi-val");
+
+    const resLo = document.getElementById("res-val-lo");
+    const resHi = document.getElementById("res-val-hi");
+
+    const calculate = () => {
+      const ebitda = +ebitdaInput.value;
+      let lo = +multLoInput.value;
+      let hi = +multHiInput.value;
+
+      if (hi < lo) {
+        hi = lo;
+        multHiInput.value = hi;
+      }
+
+      ebitdaOut.textContent = fmtINR(ebitda);
+      multLoOut.textContent = lo + "x";
+      multHiOut.textContent = hi + "x";
+
+      if (resLo) resLo.textContent = fmtINR(ebitda * lo);
+      if (resHi) resHi.textContent = fmtINR(ebitda * hi);
+    };
+
+    [ebitdaInput, multLoInput, multHiInput].forEach(inp => inp.addEventListener("input", calculate));
+    calculate();
+  };
+
+  const wireSubsidy = () => {
+    const costInput = document.getElementById("sub-cost");
+    const rateInput = document.getElementById("sub-rate");
+    const capVal = parseFloat(document.getElementById("sub-cap")?.value || "1500000");
+
+    if (!costInput || !rateInput) return;
+
+    const costOut = document.getElementById("sub-cost-val");
+    const rateOut = document.getElementById("sub-rate-val");
+
+    const resSub = document.getElementById("res-sub-amt");
+    const resNet = document.getElementById("res-sub-net");
+
+    const calculate = () => {
+      const cost = +costInput.value;
+      const rate = +rateInput.value;
+
+      costOut.textContent = fmtINR(cost);
+      rateOut.textContent = rate + "%";
+
+      const subsidy = Math.min(cost * rate / 100, capVal);
+      const net = cost - subsidy;
+
+      if (resSub) resSub.textContent = fmtINR(subsidy);
+      if (resNet) resNet.textContent = fmtINR(net);
+    };
+
+    [costInput, rateInput].forEach(inp => inp.addEventListener("input", calculate));
+    calculate();
+  };
+
+  // Wire up the correct calculator based on presence of elements
+  wireEMI();
+  wireInvoice();
+  wireSettlement();
+  wireDilution();
+  wireValuation();
+  wireIPO();
+  wireSubsidy();
+
+  // 8. LEAD GENERATION FORM VALIDATION
+  const leadForms = document.querySelectorAll(".lead-form, form[onsubmit='return false;']");
+  leadForms.forEach(form => {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = form.querySelector("input[placeholder='Your full name'], input[type='text']:nth-of-type(1)");
+      const phone = form.querySelector("input[placeholder='+91'], input[type='tel']");
+      const email = form.querySelector("input[type='email']");
+      const consent = form.querySelector("input[type='checkbox']");
+
+      let hasError = false;
+
+      // Reset styles
+      form.querySelectorAll("input, select, textarea").forEach(el => {
+        el.style.borderColor = "";
+      });
+
+      if (name && !name.value.trim()) {
+        name.style.borderColor = "red";
+        hasError = true;
+      }
+
+      if (phone && (!phone.value.trim() || phone.value.length < 10)) {
+        phone.style.borderColor = "red";
+        hasError = true;
+      }
+
+      if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+        email.style.borderColor = "red";
+        hasError = true;
+      }
+
+      if (consent && !consent.checked) {
+        consent.parentElement.style.color = "red";
+        hasError = true;
+      }
+
+      if (hasError) {
+        alert("Please fill in all required fields and accept the communication consent checkbox.");
+        return;
+      }
+
+      // Successful validation
+      alert("Thank you. Your funding advisory inquiry has been received. Our advisory team will review your financial profile and call you back shortly.");
+      form.reset();
+    });
+  });
+
+  // 9. GSAP SCROLL & LOAD ANIMATIONS
+  if (typeof gsap !== "undefined") {
+    // Initial page load animations for Hero elements
+    const heroTl = gsap.timeline();
+    if (document.querySelector(".hero")) {
+      heroTl.from(".hero .eyebrow", { opacity: 0, y: -20, duration: 0.8, ease: "power2.out" })
+            .from(".hero h1", { opacity: 0, y: 30, duration: 1, ease: "power3.out" }, "-=0.6")
+            .from(".hero .lead", { opacity: 0, y: 20, duration: 1, ease: "power2.out" }, "-=0.6")
+            .from(".hero-cta-row, .hero-trust", { opacity: 0, y: 20, duration: 0.8, stagger: 0.1, ease: "power2.out" }, "-=0.6")
+            .from(".hero-stats .stat", { opacity: 0, scale: 0.9, y: 20, duration: 0.8, stagger: 0.15, ease: "power2.out" }, "-=0.6")
+            .from(".hero .stack-card", { opacity: 0, x: 50, duration: 1, ease: "power3.out" }, "-=0.8");
+    } else if (document.querySelector(".service-banner")) {
+      heroTl.from(".service-banner .eyebrow", { opacity: 0, y: -20, duration: 0.8, ease: "power2.out" })
+            .from(".service-banner h1", { opacity: 0, y: 30, duration: 1, ease: "power3.out" }, "-=0.6")
+            .from(".service-banner p.lead", { opacity: 0, y: 20, duration: 1, ease: "power2.out" }, "-=0.6")
+            .from(".service-banner .hero-cta-row", { opacity: 0, y: 20, duration: 0.8, ease: "power2.out" }, "-=0.6")
+            .from(".service-banner-art", { opacity: 0, scale: 0.96, y: 15, duration: 1, ease: "power2.out" }, "-=0.8");
+    }
+
+    // Intersection Observer for scroll triggers
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px 0px -100px 0px",
+      threshold: 0.15
+    };
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const target = entry.target;
+          observer.unobserve(target); // Only trigger once
+
+          // Run GSAP reveal based on target class
+          if (target.classList.contains("section-head")) {
+            gsap.from(target, { opacity: 0, y: 30, duration: 0.8, ease: "power2.out" });
+          } else if (target.classList.contains("pillars")) {
+            const cards = target.querySelectorAll(".pillar-card");
+            gsap.from(cards, {
+              opacity: 0,
+              y: 40,
+              scale: 0.95,
+              duration: 0.8,
+              stagger: 0.15,
+              ease: "power2.out",
+              onStart: () => { gsap.set(cards, { transition: "none" }); },
+              onComplete: () => { gsap.set(cards, { clearProps: "transition,opacity,transform" }); }
+            });
+          } else if (target.classList.contains("why-grid")) {
+            const items = target.querySelectorAll(".why-item");
+            gsap.from(items, {
+              opacity: 0,
+              y: 30,
+              duration: 0.8,
+              stagger: 0.1,
+              ease: "power2.out",
+              onStart: () => { gsap.set(items, { transition: "none" }); },
+              onComplete: () => { gsap.set(items, { clearProps: "transition,opacity,transform" }); }
+            });
+          } else if (target.classList.contains("catalog-grid")) {
+            const cards = target.querySelectorAll(".service-card");
+            gsap.from(cards, {
+              opacity: 0,
+              y: 40,
+              duration: 0.8,
+              stagger: 0.1,
+              ease: "power2.out",
+              onStart: () => { gsap.set(cards, { transition: "none" }); },
+              onComplete: () => { gsap.set(cards, { clearProps: "transition,opacity,transform" }); }
+            });
+          } else if (target.classList.contains("industry-grid")) {
+            const cards = target.querySelectorAll(".industry-card");
+            gsap.from(cards, {
+              opacity: 0,
+              y: 30,
+              duration: 0.8,
+              stagger: 0.1,
+              ease: "power2.out",
+              onStart: () => { gsap.set(cards, { transition: "none" }); },
+              onComplete: () => { gsap.set(cards, { clearProps: "transition,opacity,transform" }); }
+            });
+          } else if (target.classList.contains("process-row")) {
+            const steps = target.querySelectorAll(".process-step");
+            gsap.from(steps, {
+              opacity: 0,
+              scale: 0.95,
+              y: 30,
+              duration: 0.8,
+              stagger: 0.15,
+              ease: "power2.out",
+              onStart: () => { gsap.set(steps, { transition: "none" }); },
+              onComplete: () => { gsap.set(steps, { clearProps: "transition,opacity,transform" }); }
+            });
+          } else if (target.classList.contains("route-timeline")) {
+            const steps = target.querySelectorAll(".route-timeline-step");
+            gsap.from(steps, {
+              opacity: 0,
+              x: -30,
+              duration: 0.8,
+              stagger: 0.15,
+              ease: "power2.out",
+              onStart: () => { gsap.set(steps, { transition: "none" }); },
+              onComplete: () => { gsap.set(steps, { clearProps: "transition,opacity,transform" }); }
+            });
+          } else if (target.classList.contains("about-graphics") || target.classList.contains("contact-card")) {
+            gsap.from(target, {
+              opacity: 0,
+              scale: 0.96,
+              y: 30,
+              duration: 1,
+              ease: "power2.out"
+            });
+          }
+        }
+      });
+    }, observerOptions);
+
+    // Observe elements
+    document.querySelectorAll(".section-head, .pillars, .why-grid, .catalog-grid.active, .industry-grid, .process-row, .route-timeline, .about-graphics, .contact-card").forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    // Also handle tab switches for catalog grids
+    const catalogTabs = document.querySelectorAll(".catalog-tab");
+    const catalogGrids = document.querySelectorAll(".catalog-grid");
+    if (catalogTabs.length > 0 && catalogGrids.length > 0) {
+      catalogTabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => {
+          // Whenever switching tabs, make sure the cards are visible
+          // In case the tab grid has not been animated yet
+          const activeGrid = catalogGrids[index];
+          if (activeGrid) {
+            // Remove any GSAP inline styles that might hide them
+            gsap.set(activeGrid.querySelectorAll(".service-card"), { clearProps: "all" });
+            // Observe again
+            revealObserver.observe(activeGrid);
+          }
+        });
+      });
+    }
+  }
+});
