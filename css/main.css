@@ -729,34 +729,56 @@ nav.mainnav > a.active::after {
 .marquee-band {
   background-color: var(--white);
   border-bottom: 1px solid var(--line);
-  padding: 32px 0;
+  padding: 28px 0 0;
+  overflow: hidden;
 }
 
-.marquee-band .eyebrow {
-  display: block;
+.marquee-eyebrow {
   text-align: center;
   margin-bottom: 20px;
+}
+
+.marquee-eyebrow .eyebrow {
   color: var(--slate);
 }
 
-.logos-row {
-  display: flex;
-  justify-content: center;
-  gap: 0;
-  flex-wrap: wrap;
+.marquee-track-wrap {
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 28px;
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 }
 
-.logos-row span {
-  padding: 8px 24px;
+.marquee-rail {
+  display: flex;
+  white-space: nowrap;
+  width: max-content;
+  align-items: center;
+  gap: 0;
+}
+
+.marquee-rail span {
   font-family: var(--font-mono);
   font-size: 13px;
+  font-weight: 600;
   color: var(--muted);
-  border-right: 1px solid var(--line);
+  padding: 0 28px;
+  letter-spacing: 0.08em;
+  transition: color 0.2s ease;
 }
 
-.logos-row span:last-child {
-  border-right: none;
+.marquee-rail span:hover {
+  color: var(--navy-dark);
 }
+
+.marquee-rail .marquee-sep {
+  color: var(--gold);
+  font-size: 16px;
+  padding: 0;
+  opacity: 0.5;
+}
+
 
 /* ==========================================================================
    Pillars & Grid Cards
@@ -2335,32 +2357,122 @@ footer h5 {
   }
 }
 
-@media (max-width: 768px) {
-  section {
-    padding: 64px 0;
+/* ==========================================================================
+   RESPONSIVE — TABLET (≤ 900px)
+   ========================================================================== */
+@media (max-width: 900px) {
+  .hero .wrap {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
+  .stack-card {
+    max-width: 100%;
+  }
+
+  .pillars {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .industry-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-cols {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .footer-top-row {
+    gap: 40px;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE — MOBILE (≤ 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Global */
+  section {
+    padding: 56px 0;
+  }
+
+  h2 {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+  }
+
+  /* Header */
+  .header-cta .phone {
+    display: none;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 90px 0 60px;
+  }
+
+  .hero .wrap {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.9rem, 7vw, 2.6rem);
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 24px;
+  }
+
+  /* Stack card */
+  .stack-card {
+    padding: 24px 18px;
+  }
+
+  .stack-tabs {
+    gap: 4px;
+  }
+
+  .stack-tab {
+    font-size: 10px;
+    padding: 8px 4px;
+  }
+
+  /* Marquee */
+  .marquee-rail span {
+    font-size: 12px;
+    padding: 0 18px;
+  }
+
+  /* Pillars */
   .pillars {
     grid-template-columns: 1fr;
   }
 
+  /* Industry */
+  .industry-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  /* Catalog */
   .catalog-grid {
     grid-template-columns: 1fr;
   }
 
-  .industry-grid {
-    grid-template-columns: 1fr;
-  }
-
+  /* Why us */
   .why-grid {
     grid-template-columns: 1fr;
   }
 
+  /* Process */
   .process-row {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 28px;
   }
 
+  /* Testimonials */
   .testi-grid {
     grid-template-columns: 1fr;
   }
@@ -2371,43 +2483,54 @@ footer h5 {
     gap: 16px;
   }
 
+  /* Calculator */
   .calc-grid {
     grid-template-columns: 1fr;
   }
+
   .calc-outputs {
     border-left: none;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-left: 0;
+    padding-top: 24px;
   }
 
+  /* Stats strip */
   .stat-strip .wrap {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
     text-align: center;
   }
+
   .stat-strip-item {
     border-right: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 16px;
   }
+
   .stat-strip-item:last-child {
     border-bottom: none;
     padding-bottom: 0;
   }
 
+  /* Service banner */
   .service-banner .wrap {
     grid-template-columns: 1fr;
     text-align: center;
   }
+
   .service-banner p.lead {
     margin-left: auto;
     margin-right: auto;
   }
+
   .service-banner-art-img {
     height: 220px;
     max-width: 100%;
     margin-top: 16px;
   }
 
+  /* Features / Values */
   .features-grid {
     grid-template-columns: 1fr;
   }
@@ -2416,6 +2539,12 @@ footer h5 {
     grid-template-columns: 1fr;
   }
 
+  /* Category catalog */
+  .category-grid-catalog {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
   .footer-top-row {
     flex-direction: column;
     gap: 32px;
@@ -2431,7 +2560,7 @@ footer h5 {
   }
 
   .footer-wordmark {
-    font-size: clamp(48px, 16vw, 100px);
+    font-size: clamp(48px, 15vw, 100px);
   }
 
   .footer-badges-row {
@@ -2445,12 +2574,118 @@ footer h5 {
     gap: 16px;
     text-align: center;
   }
+
   .footer-bottom .disclaimer {
     max-width: 100%;
     text-align: center;
+    border-left: none;
+    border-top: 2.5px solid rgba(200, 155, 60, 0.35);
+    border-radius: var(--radius);
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE — SMALL PHONES (≤ 480px)
+   ========================================================================== */
+@media (max-width: 480px) {
+  /* Layout */
+  .wrap {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
-  .category-grid-catalog {
+  /* Hero */
+  .hero {
+    padding: 80px 0 48px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.7rem, 8.5vw, 2.2rem);
+    max-width: 100%;
+  }
+
+  .hero p.lead {
+    font-size: 0.95rem;
+  }
+
+  .hero-cta-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-cta-row .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .hero-stats .stat b {
+    font-size: 20px;
+  }
+
+  /* Stack card — hide on very small phones to keep hero clean */
+  .stack-card {
+    padding: 20px 14px;
+  }
+
+  .stack-tab {
+    font-size: 9px;
+    padding: 7px 2px;
+    letter-spacing: 0;
+  }
+
+  /* Industry 1-col on phone */
+  .industry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Pillars */
+  .pillars {
+    grid-template-columns: 1fr;
+  }
+
+  /* Marquee smaller text */
+  .marquee-rail span {
+    font-size: 11px;
+    padding: 0 14px;
+  }
+
+  /* Stat strip full-col */
+  .stat-strip .wrap {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer cols */
+  .footer-cols {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Wordmark */
+  .footer-wordmark {
+    font-size: clamp(38px, 16vw, 72px);
+  }
+
+  /* Service banner image hidden on phones */
+  .service-banner-art-img {
+    height: 180px;
+  }
+
+  /* Buttons full-width */
+  .service-banner .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  /* Contact form full-width */
+  .form-row {
     grid-template-columns: 1fr;
   }
 }
+

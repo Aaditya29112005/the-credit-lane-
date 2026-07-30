@@ -1655,6 +1655,7 @@ def get_layout(content, title, description, url_slug, depth=0):
   <!-- Script Files -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Observer.min.js"></script>
   <script src="{pref}js/main.js"></script>
 </body>
 </html>"""
@@ -1783,16 +1784,39 @@ def generate_homepage():
 
     <!-- ============ TRUST MARQUEE ============ -->
     <div class="marquee-band">
-      <div class="wrap">
+      <div class="marquee-eyebrow">
         <span class="eyebrow">TRUSTED CHANNEL PARTNER TO PLATFORMS</span>
-        <div class="logos-row">
+      </div>
+      <div class="marquee-track-wrap">
+        <div class="marquee-rail" id="marqueeRail">
           <span>HDFC BANK</span>
+          <span class="marquee-sep">·</span>
           <span>AXIS BANK</span>
+          <span class="marquee-sep">·</span>
           <span>DCB BANK</span>
+          <span class="marquee-sep">·</span>
           <span>BAJAJ FINSERV</span>
+          <span class="marquee-sep">·</span>
           <span>ADITYA BIRLA</span>
+          <span class="marquee-sep">·</span>
           <span>SIDBI CO-LOAN</span>
+          <span class="marquee-sep">·</span>
           <span>TATA CAPITAL</span>
+          <span class="marquee-sep">·</span>
+          <span>HDFC BANK</span>
+          <span class="marquee-sep">·</span>
+          <span>AXIS BANK</span>
+          <span class="marquee-sep">·</span>
+          <span>DCB BANK</span>
+          <span class="marquee-sep">·</span>
+          <span>BAJAJ FINSERV</span>
+          <span class="marquee-sep">·</span>
+          <span>ADITYA BIRLA</span>
+          <span class="marquee-sep">·</span>
+          <span>SIDBI CO-LOAN</span>
+          <span class="marquee-sep">·</span>
+          <span>TATA CAPITAL</span>
+          <span class="marquee-sep">·</span>
         </div>
       </div>
     </div>
