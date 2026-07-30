@@ -1659,32 +1659,32 @@ def get_layout(content, title, description, url_slug, depth=0):
 
 # 6.5. IMAGE MAPPING HELPER FOR SERVICE PAGES
 def get_service_image(product):
-    cat = product["category"]
-    subcat = product["subcategory"]
+    pid = product["id"]
     
-    # Map by subcategory or category
-    if cat == "Equity":
-        if "IPO" in product["name"]:
-            return "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=800&auto=format&fit=crop" # IPO trading screen
-        return "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=800&auto=format&fit=crop" # Valuation spreadsheet
-    elif cat == "Incentives":
-        return "https://images.unsplash.com/photo-1518152006812-edab29b069ac?q=80&w=800&auto=format&fit=crop" # Tech factory floor
-    else:
-        # Loans subcategories
-        if subcat == "Business & Working Capital":
-            return "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" # Office work
-        elif subcat == "Asset & Equipment Finance":
-            if "Machine" in product["name"]:
-                return "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop" # Manufacturing machine
-            return "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800&auto=format&fit=crop" # Construction/Property
-        elif subcat == "Sector-Specific Funding":
-            if "Hospital" in product["name"]:
-                return "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?q=80&w=800&auto=format&fit=crop" # Hospital / Medical
-            elif "Hotel" in product["name"]:
-                return "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop" # Premium Hotel
-            return "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800&auto=format&fit=crop" # Education / Infrastructure
-        else: # Special Situation & Growth Capital
-            return "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=800&auto=format&fit=crop" # Gold/Vault
+    # 19 products unique active image mapping
+    mapping = {
+        "unsecured-business-loan-dod": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop", # Office work B2B
+        "commercial-industrial-purchase-loan": "https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=600&auto=format&fit=crop", # Commercial buildings
+        "machine-loan-sidbi": "https://images.unsplash.com/photo-1537462715879-360eeb61a0bc?q=80&w=600&auto=format&fit=crop", # CNC factory machining
+        "machine-loan-bank": "https://images.unsplash.com/photo-1565034946487-077786996e27?q=80&w=600&auto=format&fit=crop", # Welding robot arm
+        "invoice-finance": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=600&auto=format&fit=crop", # Logistics cargo boxes
+        "school-college-funding": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=600&auto=format&fit=crop", # University dome spire
+        "builder-real-estate-funding": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=600&auto=format&fit=crop", # Construction concrete frame
+        "hospital-funding": "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=600&auto=format&fit=crop", # ICU monitor and bed
+        "hotel-resort-funding": "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=600&auto=format&fit=crop", # Premium pool hotel front
+        "npa-funding": "https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=600&auto=format&fit=crop", # signing OTS document
+        "infrastructure-funding": "https://images.unsplash.com/photo-1590069261209-f8e9b8642343?q=80&w=600&auto=format&fit=crop", # Infrastructure concrete bridge
+        "venture-funding": "https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?q=80&w=600&auto=format&fit=crop", # Open tech workspace
+        "valuation-services": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop", # Analyzing financial chart screens
+        "pre-ipo-funding": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=600&auto=format&fit=crop", # Corporate advisor chart board
+        "sme-ipo": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=600&auto=format&fit=crop", # Exchange price graphs
+        "main-board-ipo": "https://images.unsplash.com/photo-1535320903710-d993d3d77d29?q=80&w=600&auto=format&fit=crop", # Corporate ticker boards
+        "up-tus-scheme": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=600&auto=format&fit=crop", # mill automated loom inspector
+        "up-msme-scheme": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600&auto=format&fit=crop", # manufacturing assembly line packager
+        "up-msmy-scheme": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop"  # young entrepreneur blueprint presentation
+    }
+    
+    return mapping.get(pid, "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop")
 
 # 7. HOMEPAGE COMPILER
 def generate_homepage():
