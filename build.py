@@ -1681,7 +1681,7 @@ def get_service_image(product):
         "main-board-ipo": "https://images.unsplash.com/photo-1535320903710-d993d3d77d29?q=80&w=600&auto=format&fit=crop", # Corporate ticker boards
         "up-tus-scheme": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=600&auto=format&fit=crop", # mill automated loom inspector
         "up-msme-scheme": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600&auto=format&fit=crop", # manufacturing assembly line packager
-        "up-msmy-scheme": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop"  # young entrepreneur blueprint presentation
+        "up-msmy-scheme": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=600&auto=format&fit=crop"  # young local store owner entrepreneur
     }
     
     return mapping.get(pid, "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop")
