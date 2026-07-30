@@ -363,6 +363,10 @@ nav.mainnav > a.active::after {
   padding: 24px;
 }
 
+.nav-item:hover .mega-menu.loans-menu {
+  max-height: 640px;
+}
+
 .mega-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
