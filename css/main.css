@@ -260,6 +260,9 @@ header .wrap {
   align-items: center;
   justify-content: space-between;
   height: 80px;
+  max-width: 1400px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .logo {
@@ -269,7 +272,8 @@ header .wrap {
   color: var(--navy-dark);
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  flex-shrink: 0;
 }
 
 .logo .mark {
@@ -288,9 +292,11 @@ header .wrap {
 
 nav.mainnav {
   display: flex;
-  gap: 32px;
+  gap: 36px;
   align-items: center;
   height: 100%;
+  margin-left: 52px;
+  margin-right: auto;
 }
 
 nav.mainnav > a, nav.mainnav > div.nav-item {
