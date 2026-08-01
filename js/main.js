@@ -112,7 +112,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // 7. INTERACTIVE CALCULATORS
-  const fmtINR = n => "₹" + Math.round(n).toLocaleString("en-IN");
+  const fmtINR = n => {
+    if (isNaN(n) || !isFinite(n)) return "₹0";
+    return "₹" + Math.round(n).toLocaleString("en-IN");
+  };
 
   const wireEMI = () => {
     const pInput = document.getElementById("emi-p");
@@ -136,29 +139,38 @@ document.addEventListener("DOMContentLoaded", () => {
       const annR = +rInput.value;
       const yrs = +yInput.value;
 
-      pOut.textContent = fmtINR(P);
-      rOut.textContent = annR + "%";
-      yOut.textContent = yrs + " yrs";
+      if (pOut) pOut.textContent = fmtINR(P);
+      if (rOut) rOut.textContent = annR + "%";
+      if (yOut) yOut.textContent = yrs + " yrs";
 
       const r = annR / 1200;
       const n = yrs * 12;
 
-      const emi = P * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1);
+      let emi = 0;
+      if (r > 0 && n > 0) {
+        emi = P * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1);
+      } else if (n > 0) {
+        emi = P / n;
+      }
+      
       const total = emi * n;
-      const interest = total - P;
+      const interest = Math.max(0, total - P);
 
       if (emiOut) emiOut.textContent = fmtINR(emi);
       if (interestOut) interestOut.textContent = fmtINR(interest);
       if (totalOut) totalOut.textContent = fmtINR(total);
 
-      if (pBar && iBar) {
-        const pPct = (P / total) * 100;
+      if (pBar && iBar && total > 0) {
+        const pPct = Math.min(100, Math.max(0, (P / total) * 100));
         pBar.style.width = pPct + "%";
         iBar.style.width = (100 - pPct) + "%";
       }
     };
 
-    [pInput, rInput, yInput].forEach(inp => inp.addEventListener("input", calculate));
+    [pInput, rInput, yInput].forEach(inp => {
+      inp.addEventListener("input", calculate);
+      inp.addEventListener("change", calculate);
+    });
     calculate();
   };
 
@@ -183,20 +195,23 @@ document.addEventListener("DOMContentLoaded", () => {
       const advPct = +advInput.value;
       const days = +daysInput.value;
 
-      valOut.textContent = fmtINR(val);
-      advOut.textContent = advPct + "%";
-      daysOut.textContent = days + " days";
+      if (valOut) valOut.textContent = fmtINR(val);
+      if (advOut) advOut.textContent = advPct + "%";
+      if (daysOut) daysOut.textContent = days + " days";
 
       const advanceAmt = val * advPct / 100;
       const cost = advanceAmt * (mRate / 100) * (days / 30);
-      const net = val - cost;
+      const net = Math.max(0, val - cost);
 
       if (resAdv) resAdv.textContent = fmtINR(advanceAmt);
       if (resCost) resCost.textContent = fmtINR(cost);
       if (resNet) resNet.textContent = fmtINR(net);
     };
 
-    [valInput, advInput, daysInput].forEach(inp => inp.addEventListener("input", calculate));
+    [valInput, advInput, daysInput].forEach(inp => {
+      inp.addEventListener("input", calculate);
+      inp.addEventListener("change", calculate);
+    });
     calculate();
   };
 
@@ -220,12 +235,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const setPct = +setPctInput.value;
       const tokPct = +tokPctInput.value;
 
-      duesOut.textContent = fmtINR(dues);
-      setPctOut.textContent = setPct + "% of dues";
-      tokPctOut.textContent = tokPct + "% of settlement";
+      if (duesOut) duesOut.textContent = fmtINR(dues);
+      if (setPctOut) setPctOut.textContent = setPct + "% of dues";
+      if (tokPctOut) tokPctOut.textContent = tokPct + "% of settlement";
 
       const settlementAmt = dues * setPct / 100;
-      const savings = dues - settlementAmt;
+      const savings = Math.max(0, dues - settlementAmt);
       const tokenAmt = settlementAmt * tokPct / 100;
 
       if (resSettle) resSettle.textContent = fmtINR(settlementAmt);
@@ -233,7 +248,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (resToken) resToken.textContent = fmtINR(tokenAmt);
     };
 
-    [duesInput, setPctInput, tokPctInput].forEach(inp => inp.addEventListener("input", calculate));
+    [duesInput, setPctInput, tokPctInput].forEach(inp => {
+      inp.addEventListener("input", calculate);
+      inp.addEventListener("change", calculate);
+    });
     calculate();
   };
 
@@ -254,19 +272,22 @@ document.addEventListener("DOMContentLoaded", () => {
       const raise = +raiseInput.value;
       const pre = +preInput.value;
 
-      raiseOut.textContent = fmtINR(raise);
-      preOut.textContent = fmtINR(pre);
+      if (raiseOut) raiseOut.textContent = fmtINR(raise);
+      if (preOut) preOut.textContent = fmtINR(pre);
 
       const post = pre + raise;
-      const dilution = (raise / post) * 100;
-      const retain = 100 - dilution;
+      const dilution = post > 0 ? (raise / post) * 100 : 0;
+      const retain = Math.max(0, 100 - dilution);
 
       if (resPost) resPost.textContent = fmtINR(post);
       if (resDil) resDil.textContent = dilution.toFixed(1) + "%";
       if (resRet) resRet.textContent = retain.toFixed(1) + "%";
     };
 
-    [raiseInput, preInput].forEach(inp => inp.addEventListener("input", calculate));
+    [raiseInput, preInput].forEach(inp => {
+      inp.addEventListener("input", calculate);
+      inp.addEventListener("change", calculate);
+    });
     calculate();
   };
 
@@ -287,19 +308,22 @@ document.addEventListener("DOMContentLoaded", () => {
       const fresh = +issueInput.value;
       const pre = +preInput.value;
 
-      issueOut.textContent = fmtINR(fresh);
-      preOut.textContent = fmtINR(pre);
+      if (issueOut) issueOut.textContent = fmtINR(fresh);
+      if (preOut) preOut.textContent = fmtINR(pre);
 
       const post = pre + fresh;
-      const pubPct = (fresh / post) * 100;
-      const promPct = 100 - pubPct;
+      const pubPct = post > 0 ? (fresh / post) * 100 : 0;
+      const promPct = Math.max(0, 100 - pubPct);
 
       if (resPost) resPost.textContent = fmtINR(post);
       if (resPublic) resPublic.textContent = pubPct.toFixed(1) + "%";
       if (resProm) resProm.textContent = promPct.toFixed(1) + "%";
     };
 
-    [issueInput, preInput].forEach(inp => inp.addEventListener("input", calculate));
+    [issueInput, preInput].forEach(inp => {
+      inp.addEventListener("input", calculate);
+      inp.addEventListener("change", calculate);
+    });
     calculate();
   };
 
@@ -327,15 +351,18 @@ document.addEventListener("DOMContentLoaded", () => {
         multHiInput.value = hi;
       }
 
-      ebitdaOut.textContent = fmtINR(ebitda);
-      multLoOut.textContent = lo + "x";
-      multHiOut.textContent = hi + "x";
+      if (ebitdaOut) ebitdaOut.textContent = fmtINR(ebitda);
+      if (multLoOut) multLoOut.textContent = lo + "x";
+      if (multHiOut) multHiOut.textContent = hi + "x";
 
       if (resLo) resLo.textContent = fmtINR(ebitda * lo);
       if (resHi) resHi.textContent = fmtINR(ebitda * hi);
     };
 
-    [ebitdaInput, multLoInput, multHiInput].forEach(inp => inp.addEventListener("input", calculate));
+    [ebitdaInput, multLoInput, multHiInput].forEach(inp => {
+      inp.addEventListener("input", calculate);
+      inp.addEventListener("change", calculate);
+    });
     calculate();
   };
 
@@ -356,21 +383,24 @@ document.addEventListener("DOMContentLoaded", () => {
       const cost = +costInput.value;
       const rate = +rateInput.value;
 
-      costOut.textContent = fmtINR(cost);
-      rateOut.textContent = rate + "%";
+      if (costOut) costOut.textContent = fmtINR(cost);
+      if (rateOut) rateOut.textContent = rate + "%";
 
       const subsidy = Math.min(cost * rate / 100, capVal);
-      const net = cost - subsidy;
+      const net = Math.max(0, cost - subsidy);
 
       if (resSub) resSub.textContent = fmtINR(subsidy);
       if (resNet) resNet.textContent = fmtINR(net);
     };
 
-    [costInput, rateInput].forEach(inp => inp.addEventListener("input", calculate));
+    [costInput, rateInput].forEach(inp => {
+      inp.addEventListener("input", calculate);
+      inp.addEventListener("change", calculate);
+    });
     calculate();
   };
 
-  // Wire up the correct calculator based on presence of elements
+  // Wire up all calculators
   wireEMI();
   wireInvoice();
   wireSettlement();
