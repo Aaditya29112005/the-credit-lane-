@@ -1690,7 +1690,7 @@ def get_service_image(product):
         "sme-ipo": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1200&auto=format&fit=crop", # Stock exchange SME equity trading floor
         "main-board-ipo": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=1200&auto=format&fit=crop", # Main board IPO public market ticker monitor
         "up-tus-scheme": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1200&auto=format&fit=crop", # Industrial technological upgrading loom equipment
-        "up-msme-scheme": "https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=1200&auto=format&fit=crop", # MSME manufacturing plant facility
+        "up-msme-scheme": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1200&auto=format&fit=crop", # MSME manufacturing plant facility
         "up-msmy-scheme": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop"  # Young MSME entrepreneur storefront
     }
     
