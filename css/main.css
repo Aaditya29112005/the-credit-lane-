@@ -260,7 +260,6 @@ header .wrap {
   align-items: center;
   justify-content: space-between;
   height: 80px;
-  padding-left: 0;
 }
 
 .logo {
@@ -292,7 +291,6 @@ nav.mainnav {
   gap: 32px;
   align-items: center;
   height: 100%;
-  margin-left: auto;
 }
 
 nav.mainnav > a, nav.mainnav > div.nav-item {
@@ -825,6 +823,91 @@ nav.mainnav > a.active::after {
   font-size: 13.5px;
   color: var(--muted);
   line-height: 1.5;
+}
+
+/* ==========================================================================
+   WHY CHOOSE US SECTION
+   ========================================================================== */
+.why-choose-us {
+  background: var(--cream);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.wcu-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.wcu-left {
+  position: sticky;
+  top: 100px;
+}
+
+.wcu-left h2 {
+  margin: 12px 0 20px;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+}
+
+.wcu-left p.lead {
+  font-size: 15px;
+  color: var(--slate);
+  line-height: 1.7;
+}
+
+.wcu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.wcu-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+  transition: var(--transition);
+}
+
+.wcu-item:hover {
+  border-color: var(--gold);
+  box-shadow: var(--shadow-premium);
+  transform: translateY(-2px);
+}
+
+.wcu-check {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--navy-dark);
+  font-size: 14px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.wcu-item strong {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--navy-dark);
+  margin-bottom: 5px;
+}
+
+.wcu-item p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
 }
 
 /* ==========================================================================
@@ -2465,6 +2548,20 @@ footer h5 {
 
   /* Why us */
   .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Why Choose Us */
+  .wcu-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .wcu-left {
+    position: static;
+  }
+
+  .wcu-grid {
     grid-template-columns: 1fr;
   }
 
