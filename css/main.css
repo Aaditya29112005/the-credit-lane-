@@ -2629,21 +2629,13 @@ footer h5 {
     padding-bottom: 0;
   }
 
-  /* Service banner */
-  .service-banner .wrap {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .service-banner p.lead {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
+  /* Service banner image */
   .service-banner-art-img {
     height: 220px;
     max-width: 100%;
     margin-top: 16px;
+    border-radius: var(--radius);
+    object-fit: cover;
   }
 
   /* Features / Values */
@@ -2660,10 +2652,38 @@ footer h5 {
     grid-template-columns: 1fr;
   }
 
+  /* Contact & Service Form Grids */
+  .form-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .lead-card {
+    padding: 24px 18px !important;
+  }
+
   /* Footer */
   .footer-top-row {
     flex-direction: column;
     gap: 32px;
+  }
+
+  .footer-partner-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 20px 16px !important;
+  }
+
+  .footer-partner-card .btn {
+    width: 100%;
   }
 
   .footer-cols {
@@ -2676,7 +2696,7 @@ footer h5 {
   }
 
   .footer-wordmark {
-    font-size: clamp(48px, 15vw, 100px);
+    font-size: clamp(44px, 14vw, 90px);
   }
 
   .footer-badges-row {
@@ -2704,19 +2724,34 @@ footer h5 {
    RESPONSIVE — SMALL PHONES (≤ 480px)
    ========================================================================== */
 @media (max-width: 480px) {
-  /* Layout */
+  /* Global */
+  html, body {
+    overflow-x: hidden !important;
+  }
+
   .wrap {
     padding-left: 16px;
     padding-right: 16px;
   }
 
+  /* Mobile Drawer */
+  .mobile-nav {
+    width: 300px;
+    max-width: 85vw;
+  }
+
+  /* Header Logo */
+  .logo img {
+    height: 34px !important;
+  }
+
   /* Hero */
   .hero {
-    padding: 80px 0 48px;
+    padding: 76px 0 44px;
   }
 
   .hero h1 {
-    font-size: clamp(1.7rem, 8.5vw, 2.2rem);
+    font-size: clamp(1.65rem, 8vw, 2.1rem);
     max-width: 100%;
   }
 
@@ -2727,6 +2762,7 @@ footer h5 {
   .hero-cta-row {
     flex-direction: column;
     gap: 12px;
+    width: 100%;
   }
 
   .hero-cta-row .btn {
@@ -2736,21 +2772,21 @@ footer h5 {
 
   .hero-stats {
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 14px;
   }
 
   .hero-stats .stat b {
-    font-size: 20px;
+    font-size: 19px;
   }
 
-  /* Stack card — hide on very small phones to keep hero clean */
+  /* Stack card */
   .stack-card {
-    padding: 20px 14px;
+    padding: 18px 12px;
   }
 
   .stack-tab {
-    font-size: 9px;
-    padding: 7px 2px;
+    font-size: 8.5px;
+    padding: 6px 2px;
     letter-spacing: 0;
   }
 
@@ -2775,6 +2811,19 @@ footer h5 {
     grid-template-columns: 1fr;
   }
 
+  /* Why Choose Us on small phones */
+  .wcu-inner {
+    gap: 24px;
+  }
+
+  .wcu-item {
+    padding: 16px 14px;
+  }
+
+  .wcu-item h4 {
+    font-size: 15px;
+  }
+
   /* Footer cols */
   .footer-cols {
     grid-template-columns: 1fr;
@@ -2783,10 +2832,10 @@ footer h5 {
 
   /* Wordmark */
   .footer-wordmark {
-    font-size: clamp(38px, 16vw, 72px);
+    font-size: clamp(34px, 15vw, 64px);
   }
 
-  /* Service banner image hidden on phones */
+  /* Service banner image */
   .service-banner-art-img {
     height: 180px;
   }
@@ -2800,8 +2849,9 @@ footer h5 {
   }
 
   /* Contact form full-width */
-  .form-row {
-    grid-template-columns: 1fr;
+  .form-row, .form-grid {
+    grid-template-columns: 1fr !important;
   }
 }
+
 
