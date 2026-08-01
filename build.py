@@ -102,7 +102,7 @@ PRODUCTS = [
         "calcType": "emi",
         "calcDefaults": {"principal": 10000000, "rate": 11, "years": 10, "minP": 2000000, "maxP": 100000000, "minR": 8.5, "maxR": 14, "minY": 3, "maxY": 15},
         "reviews": {
-            "rating": 4.7,
+            "rating": 4.9,
             "count": 158,
             "items": [
                 ["Sanjay Gupta", "Loni", "Buying our shed outright would have locked up all our capital. This let us keep working capital free."],
@@ -273,7 +273,7 @@ PRODUCTS = [
         "calcType": "invoice",
         "calcDefaults": {"invoiceValue": 1000000, "advancePct": 85, "monthlyRate": 2, "days": 60},
         "reviews": {
-            "rating": 4.7,
+            "rating": 4.9,
             "count": 87,
             "items": [
                 ["Nitin Sabharwal", "Noida", "Our biggest client pays on a strict 75-day cycle. This closed the gap so we stopped delaying our own supplier payments."],
@@ -444,7 +444,7 @@ PRODUCTS = [
         "calcType": "emi",
         "calcDefaults": {"principal": 7500000, "rate": 11, "years": 7, "minP": 1000000, "maxP": 150000000, "minR": 8.75, "maxR": 16, "minY": 1, "maxY": 7},
         "reviews": {
-            "rating": 4.7,
+            "rating": 4.9,
             "count": 64,
             "items": [
                 ["Dr. Alok Mehra", "Ghaziabad", "Needed a new MRI unit but our TPA receivables ran 60 days behind. The structure accounted for that lag from the start."],
@@ -729,7 +729,7 @@ PRODUCTS = [
         "calcType": "valuation",
         "calcDefaults": {"ebitda": 15000000, "multipleLow": 6, "multipleHigh": 10},
         "reviews": {
-            "rating": 4.7,
+            "rating": 4.9,
             "count": 38,
             "items": [
                 ["Rohit Sablani", "Ghaziabad", "Needed both a Companies Act and a FEMA valuation for the same funding round — one engagement covered both."],
@@ -2080,10 +2080,10 @@ def generate_homepage():
         </div>
 
         <div class="rating-block">
-          <div class="rating-score">4.7 / 5</div>
+          <div class="rating-score">4.9 / 5</div>
           <div>
             <div class="rating-stars">★★★★★</div>
-            <div class="rating-meta">Based on 600+ verified business-owner ratings in Ghaziabad, Noida and Delhi NCR.</div>
+            <div class="rating-meta">Based on 70+ verified business-owner ratings in Ghaziabad, Noida and Delhi NCR.</div>
           </div>
         </div>
 
@@ -2271,7 +2271,7 @@ def generate_contactpage():
                 </div>
                 <div class="contact-item">
                   <span class="label">Email</span>
-                  <span class="mono">advisory@thecreditlane.com</span>
+                  <span class="mono">Info@thecreditlane.in</span>
                 </div>
                 <div class="contact-item">
                   <span class="label">WhatsApp</span>
