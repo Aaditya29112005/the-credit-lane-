@@ -674,6 +674,57 @@ function horizontalLoop(items, config) {
       gsap.timeline({ defaults: { ease: "none" } })
         .to(tl, { timeScale: factor * 2.5, duration: 0.2, overwrite: true })
         .to(tl, { timeScale: factor > 0 ? 1 : -1, duration: 1 }, "+=0.3");
-    }
   });
 })();
+
+// 8. FORM SUBMISSION TO Info@thecreditlane.in
+document.addEventListener("DOMContentLoaded", () => {
+  const forms = document.querySelectorAll(".lead-form");
+  forms.forEach(form => {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      
+      const btn = form.querySelector("button[type='submit']");
+      const origText = btn ? btn.textContent : "Submit";
+      
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = "Sending Inquiry...";
+      }
+
+      try {
+        const formData = new FormData(form);
+        formData.append("_captcha", "false");
+        formData.append("_template", "table");
+        if (!formData.has("_subject")) {
+          formData.append("_subject", "New Advisory Request - The Credit Lane");
+        }
+
+        const response = await fetch("https://formsubmit.co/ajax/Info@thecreditlane.in", {
+          method: "POST",
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok || response.status === 200) {
+          form.innerHTML = `
+            <div style="padding: 32px 20px; text-align: center; background: rgba(36, 161, 72, 0.08); border: 1px solid #24a148; border-radius: var(--radius); margin-top: 10px;">
+              <div style="font-size: 40px; margin-bottom: 12px;">✅</div>
+              <h4 style="color: var(--navy-dark); font-size: 20px; font-family: var(--font-serif); margin-bottom: 8px;">Inquiry Submitted Successfully!</h4>
+              <p style="font-size: 14px; color: var(--slate); line-height: 1.6; margin: 0;">Your details have been sent directly to <strong>Info@thecreditlane.in</strong>.<br>Our corporate advisory desk will review your requirements and reach out within 24 working hours.</p>
+            </div>
+          `;
+        } else {
+          throw new Error("Form submission error");
+        }
+      } catch (err) {
+        // Direct browser form submission fallback
+        form.action = "https://formsubmit.co/Info@thecreditlane.in";
+        form.method = "POST";
+        form.submit();
+      }
+    });
+  });
+});

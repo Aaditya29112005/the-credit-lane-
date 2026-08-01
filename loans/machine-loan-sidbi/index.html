@@ -439,54 +439,58 @@
                   <h3 style="font-size: 22px; margin-bottom: 12px;">Check Eligibility</h3>
                   <p style="font-size: 13.5px; color: var(--slate); margin-bottom: 24px; line-height:1.4;">Submit details for <b>Machine Loan from SIDBI</b>. Our desk reviews profile variables and calls you back the same working day.</p>
                   
-                  <form class="lead-form" onsubmit="return false;">
+                  <form class="lead-form" action="https://formsubmit.co/Info@thecreditlane.in" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_subject" value="New Service Lead: Machine Loan from SIDBI - The Credit Lane">
+                    <input type="hidden" name="Selected Service" value="Machine Loan from SIDBI">
                     <div class="form-group">
                       <label>Full Name *</label>
-                      <input type="text" placeholder="Your full name" required>
+                      <input type="text" name="Full Name" placeholder="Your full name" required>
                     </div>
                     <div class="form-group">
                       <label>Company Name *</label>
-                      <input type="text" placeholder="Company name" required>
+                      <input type="text" name="Company Name" placeholder="Company name" required>
                     </div>
                     <div class="form-group">
                       <label>Phone Number *</label>
-                      <input type="tel" placeholder="+91" required>
+                      <input type="tel" name="Phone Number" placeholder="+91" required>
                     </div>
                     <div class="form-group">
                       <label>Email *</label>
-                      <input type="email" placeholder="you@company.com" required>
+                      <input type="email" name="Email" placeholder="you@company.com" required>
                     </div>
                     <div class="form-group">
                       <label>City *</label>
-                      <input type="text" placeholder="e.g. Ghaziabad" required>
+                      <input type="text" name="City" placeholder="e.g. Ghaziabad" required>
                     </div>
                     <div class="form-group">
                       <label>Business Type *</label>
-                      <select required>
+                      <select name="Business Type" required>
                         <option value="">Select your type</option>
-                        <option value="manufacturing">Manufacturing / Industrial</option>
-                        <option value="real-estate">Real Estate Developer</option>
-                        <option value="healthcare">Healthcare / Hospital</option>
-                        <option value="education">Education / Trust</option>
-                        <option value="hospitality">Hospitality / Hotel</option>
-                        <option value="infrastructure">Infrastructure Contractor</option>
-                        <option value="other">B2B Trade & Services</option>
+                        <option value="Manufacturing / Industrial">Manufacturing / Industrial</option>
+                        <option value="Real Estate Developer">Real Estate Developer</option>
+                        <option value="Healthcare / Hospital">Healthcare / Hospital</option>
+                        <option value="Education / Trust">Education / Trust</option>
+                        <option value="Hospitality / Hotel">Hospitality / Hotel</option>
+                        <option value="Infrastructure Contractor">Infrastructure Contractor</option>
+                        <option value="B2B Trade & Services">B2B Trade &amp; Services</option>
                       </select>
                     </div>
                     <div class="form-group">
                       <label>Funding Size Required *</label>
-                      <select required>
+                      <select name="Funding Size Required" required>
                         <option value="">Select size</option>
-                        <option value="1">Under ₹10 Lakh</option>
-                        <option value="2">₹10 Lakh – ₹50 Lakh</option>
-                        <option value="3">₹50 Lakh – ₹1 Crore</option>
-                        <option value="4">₹1 Crore – ₹5 Crore</option>
-                        <option value="5">Above ₹5 Crore</option>
+                        <option value="Under ₹10 Lakh">Under ₹10 Lakh</option>
+                        <option value="₹10 Lakh – ₹50 Lakh">₹10 Lakh – ₹50 Lakh</option>
+                        <option value="₹50 Lakh – ₹1 Crore">₹50 Lakh – ₹1 Crore</option>
+                        <option value="₹1 Crore – ₹5 Crore">₹1 Crore – ₹5 Crore</option>
+                        <option value="Above ₹5 Crore">Above ₹5 Crore</option>
                       </select>
                     </div>
                     
                     <label class="form-consent">
-                      <input type="checkbox" required>
+                      <input type="checkbox" name="Consent" required>
                       I agree to the disclosure terms and authorise The Credit Lane to contact me regarding this enquiry.
                     </label>
                     <button class="btn btn-primary form-submit-btn" type="submit">Submit Request →</button>
