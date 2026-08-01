@@ -292,6 +292,7 @@ nav.mainnav {
   gap: 32px;
   align-items: center;
   height: 100%;
+  margin-left: auto;
 }
 
 nav.mainnav > a, nav.mainnav > div.nav-item {
