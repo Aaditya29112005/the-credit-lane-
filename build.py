@@ -2375,17 +2375,19 @@ def generate_contactpage():
                   <span class="label">Hours</span>
                   <span>Monday – Saturday, 10 AM – 6 PM</span>
                 </div>
-                <div class="contact-item" style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line);">
-                  <span class="label" style="color: var(--navy-dark); font-weight: 700; display: flex; align-items: center; gap: 6px;">🤝 Partnership Opportunities</span>
-                  <span style="font-size: 13px; color: var(--slate); line-height: 1.5; margin-top: 4px; display: block;">We welcome professionals like CAs, CSs, and CWAs to collaborate with us and help their clients fulfill their financial needs.</span>
+                <div class="contact-item-block" style="margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line);">
+                  <strong style="color: var(--navy-dark); font-size: 14px; font-weight: 700; display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                    <span style="font-size: 18px;">🤝</span> Partnership Opportunities
+                  </strong>
+                  <p style="font-size: 13px; color: var(--slate); line-height: 1.6; margin: 0;">We welcome professionals like CAs, CSs, and CWAs to collaborate with us and help their clients fulfill their financial needs.</p>
                 </div>
-                <div class="contact-item" style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line);">
-                  <span class="label">Social Connect</span>
-                  <div style="display: flex; gap: 12px; margin-top: 6px;">
-                    <a href="https://www.linkedin.com/company/thecreditlane/" target="_blank" style="color: #0a66c2; text-decoration: none; font-weight: 600; font-size: 13px; display: inline-flex; align-items: center; gap: 4px;">
+                <div class="contact-item-block" style="margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line);">
+                  <span class="mono" style="font-size: 11px; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 8px;">Social Connect</span>
+                  <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <a href="https://www.linkedin.com/company/thecreditlane/" target="_blank" style="color: #0a66c2; text-decoration: none; font-weight: 600; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: rgba(10,102,194,0.08); border-radius: 6px;">
                       <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg> LinkedIn
                     </a>
-                    <a href="https://www.instagram.com/the_credit_lane/" target="_blank" style="color: #e1306c; text-decoration: none; font-weight: 600; font-size: 13px; display: inline-flex; align-items: center; gap: 4px;">
+                    <a href="https://www.instagram.com/the_credit_lane/" target="_blank" style="color: #e1306c; text-decoration: none; font-weight: 600; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: rgba(225,48,108,0.08); border-radius: 6px;">
                       <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram
                     </a>
                   </div>
