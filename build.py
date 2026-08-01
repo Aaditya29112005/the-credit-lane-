@@ -1576,6 +1576,9 @@ def get_layout(content, title, description, url_slug, depth=0):
                 Instagram
               </a>
             </div>
+            <div class="footer-logo-block" style="margin-top: 28px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1);">
+              <img src="{pref}logo.png" alt="The Credit Lane Logo" style="width: 150px; height: 150px; border-radius: 20px; object-fit: contain; background: #ffffff; padding: 14px; box-shadow: 0 12px 36px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.2); display: block;">
+            </div>
           </div>
           <div class="footer-cols">
             <div class="footer-col">
