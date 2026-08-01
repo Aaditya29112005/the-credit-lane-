@@ -1671,30 +1671,30 @@ def get_layout(content, title, description, url_slug, depth=0):
 def get_service_image(product):
     pid = product["id"]
     
-    # 19 products unique contextual active image mapping
+    # 19 products ultra-realistic Pinterest-style image mapping (1200px HD)
     mapping = {
-        "unsecured-business-loan-dod": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800&auto=format&fit=crop", # Modern corporate business desk
-        "commercial-industrial-purchase-loan": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop", # Commercial skyscraper & industrial park
-        "machine-loan-sidbi": "https://images.unsplash.com/photo-1537462715879-360eeb61a0bc?q=80&w=800&auto=format&fit=crop", # CNC factory precision machining
-        "machine-loan-bank": "https://images.unsplash.com/photo-1565034946487-077786996e27?q=80&w=800&auto=format&fit=crop", # Industrial welding & assembly robotics
-        "invoice-finance": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop", # Logistics supply chain & cargo warehousing
-        "school-college-funding": "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=800&auto=format&fit=crop", # University of Technology modern campus
-        "builder-real-estate-funding": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop", # Construction concrete frame & luxury real estate
-        "hospital-funding": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop", # Medical diagnostic lab & healthcare facility
-        "hotel-resort-funding": "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop", # 5-Star luxury hospitality resort front
-        "npa-funding": "https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=800&auto=format&fit=crop", # Financial restructuring & OTS agreement
-        "infrastructure-funding": "https://images.unsplash.com/photo-1590069261209-f8e9b8642343?q=80&w=800&auto=format&fit=crop", # Highway bridge & mega infrastructure project
-        "venture-funding": "https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?q=80&w=800&auto=format&fit=crop", # Tech startup venture workspace
-        "valuation-services": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop", # Financial valuation & stock chart analytics
-        "pre-ipo-funding": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop", # Pre-IPO corporate strategy meeting
-        "sme-ipo": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=800&auto=format&fit=crop", # SME stock exchange equity trading
-        "main-board-ipo": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=800&auto=format&fit=crop", # Main board IPO exchange ticker board
-        "up-tus-scheme": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800&auto=format&fit=crop", # Automated industrial technical upgrading
-        "up-msme-scheme": "https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=800&auto=format&fit=crop", # MSME manufacturing plant facility
-        "up-msmy-scheme": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop"  # Young MSME entrepreneur storefront
+        "unsecured-business-loan-dod": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop", # Business owner reviewing financial reports
+        "commercial-industrial-purchase-loan": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop", # Modern industrial commercial park & steel facility
+        "machine-loan-sidbi": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1200&auto=format&fit=crop", # Factory engineer inspecting heavy machinery
+        "machine-loan-bank": "https://images.unsplash.com/photo-1537462715879-360eeb61a0bc?q=80&w=1200&auto=format&fit=crop", # Heavy CNC industrial milling lathe
+        "invoice-finance": "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?q=80&w=1200&auto=format&fit=crop", # Warehouse logistics manager with digital inventory tablet
+        "school-college-funding": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop", # University of Technology modern campus hall
+        "builder-real-estate-funding": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop", # Architect on active real estate construction site
+        "hospital-funding": "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=1200&auto=format&fit=crop", # Modern hospital interior corridor & diagnostic equipment
+        "hotel-resort-funding": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1200&auto=format&fit=crop", # Luxury boutique hotel resort entrance
+        "npa-funding": "https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=1200&auto=format&fit=crop", # Debt restructuring audit & legal agreement
+        "infrastructure-funding": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1200&auto=format&fit=crop", # Civil infrastructure highway & bridge construction
+        "venture-funding": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&auto=format&fit=crop", # Tech startup pitch & investor board meeting
+        "valuation-services": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1200&auto=format&fit=crop", # Corporate valuation analyst auditing balance sheet
+        "pre-ipo-funding": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop", # Pre-IPO equity analytics & growth strategy
+        "sme-ipo": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=1200&auto=format&fit=crop", # Stock exchange SME equity listing screen
+        "main-board-ipo": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1200&auto=format&fit=crop", # Main board IPO public market ticker monitor
+        "up-tus-scheme": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop", # Industrial technological upgrading equipment
+        "up-msme-scheme": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1200&auto=format&fit=crop", # MSME manufacturing production floor
+        "up-msmy-scheme": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop"  # Young MSME entrepreneur storefront
     }
     
-    return mapping.get(pid, "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop")
+    return mapping.get(pid, "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop")
 
 # 7. HOMEPAGE COMPILER
 def generate_homepage():
