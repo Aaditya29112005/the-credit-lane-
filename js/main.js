@@ -113,24 +113,32 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 6. FAQ ACCORDION
+  window.toggleFaq = function(btn) {
+    if (!btn) return;
+    const item = btn.closest('.faq-item') || btn.parentElement;
+    if (!item) return;
+    const isOpen = item.classList.contains('open');
+    
+    const accordion = item.closest('.faq-accordion') || item.closest('.service-section') || document;
+    const allItems = accordion.querySelectorAll('.faq-item');
+    allItems.forEach(i => {
+      i.classList.remove('open');
+      const ind = i.querySelector('.faq-q span');
+      if (ind) ind.textContent = '+';
+    });
+    
+    if (!isOpen) {
+      item.classList.add('open');
+      const indicator = item.querySelector('.faq-q span');
+      if (indicator) indicator.textContent = '−';
+    }
+  };
+
   const faqQuestions = document.querySelectorAll(".faq-q");
   faqQuestions.forEach(q => {
-    q.addEventListener("click", () => {
-      const faqItem = q.parentElement;
-      const isOpen = faqItem.classList.contains("open");
-
-      // Close all first
-      document.querySelectorAll(".faq-item").forEach(item => {
-        item.classList.remove("open");
-        const indicator = item.querySelector(".faq-q span");
-        if (indicator) indicator.textContent = "+";
-      });
-
-      if (!isOpen) {
-        faqItem.classList.add("open");
-        const indicator = q.querySelector("span");
-        if (indicator) indicator.textContent = "−";
-      }
+    q.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.toggleFaq(q);
     });
   });
 

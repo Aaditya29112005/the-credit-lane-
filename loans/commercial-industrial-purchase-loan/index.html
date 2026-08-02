@@ -50,6 +50,26 @@
       if (tabs[index]) tabs[index].classList.add("active");
       if (grids[index]) grids[index].classList.add("active");
     }
+
+    function toggleFaq(btn) {
+      var item = btn.closest('.faq-item') || btn.parentElement;
+      if (!item) return;
+      var isOpen = item.classList.contains('open');
+      
+      var accordion = item.closest('.faq-accordion') || item.closest('.service-section') || document;
+      var allItems = accordion.querySelectorAll('.faq-item');
+      for (var i = 0; i < allItems.length; i++) {
+        allItems[i].classList.remove('open');
+        var ind = allItems[i].querySelector('.faq-q span');
+        if (ind) ind.textContent = '+';
+      }
+      
+      if (!isOpen) {
+        item.classList.add('open');
+        var indicator = item.querySelector('.faq-q span');
+        if (indicator) indicator.textContent = '−';
+      }
+    }
   </script>
 </head>
 <body>
@@ -435,28 +455,28 @@
                   <div class="faq-accordion">
                     
             <div class="faq-item open">
-              <div class="faq-q">Can I include renovation cost in the loan? <span>−</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Can I include renovation cost in the loan? <span>−</span></button>
               <div class="faq-a">
                 <p>Yes, most lenders allow a top-up for fit-out or renovation once the base purchase loan is sanctioned.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">Is a co-applicant mandatory? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Is a co-applicant mandatory? <span>+</span></button>
               <div class="faq-a">
                 <p>Not mandatory, but adding a co-applicant (partner/promoter) often improves eligibility and rate.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">What happens if the property has unclear title? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">What happens if the property has unclear title? <span>+</span></button>
               <div class="faq-a">
                 <p>We flag title issues during legal vetting before applying — resolving these upfront avoids sanction delays later.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">Bank or NBFC — which is cheaper? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Bank or NBFC — which is cheaper? <span>+</span></button>
               <div class="faq-a">
                 <p>Banks are typically cheaper (8.5–11%) but slower and stricter on documentation; NBFCs move faster at 10–14%. We benchmark both before you decide.</p>
               </div>

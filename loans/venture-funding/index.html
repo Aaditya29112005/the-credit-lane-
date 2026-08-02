@@ -50,6 +50,26 @@
       if (tabs[index]) tabs[index].classList.add("active");
       if (grids[index]) grids[index].classList.add("active");
     }
+
+    function toggleFaq(btn) {
+      var item = btn.closest('.faq-item') || btn.parentElement;
+      if (!item) return;
+      var isOpen = item.classList.contains('open');
+      
+      var accordion = item.closest('.faq-accordion') || item.closest('.service-section') || document;
+      var allItems = accordion.querySelectorAll('.faq-item');
+      for (var i = 0; i < allItems.length; i++) {
+        allItems[i].classList.remove('open');
+        var ind = allItems[i].querySelector('.faq-q span');
+        if (ind) ind.textContent = '+';
+      }
+      
+      if (!isOpen) {
+        item.classList.add('open');
+        var indicator = item.querySelector('.faq-q span');
+        if (indicator) indicator.textContent = '−';
+      }
+    }
   </script>
 </head>
 <body>
@@ -424,28 +444,28 @@
                   <div class="faq-accordion">
                     
             <div class="faq-item open">
-              <div class="faq-q">How is this different from a business loan? <span>−</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">How is this different from a business loan? <span>−</span></button>
               <div class="faq-a">
                 <p>A loan is debt that must be repaid with interest; venture funding is equity capital exchanged for ownership stake, with no fixed repayment obligation.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">What stage of business is eligible? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">What stage of business is eligible? <span>+</span></button>
               <div class="faq-a">
                 <p>Primarily seed through Series B — businesses with some traction and a credible growth story, rather than pure idea-stage concepts.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">Do you charge success fees on the raise? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Do you charge success fees on the raise? <span>+</span></button>
               <div class="faq-a">
                 <p>Fee structures are discussed upfront during the readiness assessment, before any investor outreach begins.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">What's typical dilution at seed vs Series A? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">What's typical dilution at seed vs Series A? <span>+</span></button>
               <div class="faq-a">
                 <p>Both bands run broadly similar in India — roughly 15–25% at seed and 18–25% at Series A — though the absolute cheque size is materially larger at Series A.</p>
               </div>

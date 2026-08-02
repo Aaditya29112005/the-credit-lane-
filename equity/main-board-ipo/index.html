@@ -50,6 +50,26 @@
       if (tabs[index]) tabs[index].classList.add("active");
       if (grids[index]) grids[index].classList.add("active");
     }
+
+    function toggleFaq(btn) {
+      var item = btn.closest('.faq-item') || btn.parentElement;
+      if (!item) return;
+      var isOpen = item.classList.contains('open');
+      
+      var accordion = item.closest('.faq-accordion') || item.closest('.service-section') || document;
+      var allItems = accordion.querySelectorAll('.faq-item');
+      for (var i = 0; i < allItems.length; i++) {
+        allItems[i].classList.remove('open');
+        var ind = allItems[i].querySelector('.faq-q span');
+        if (ind) ind.textContent = '+';
+      }
+      
+      if (!isOpen) {
+        item.classList.add('open');
+        var indicator = item.querySelector('.faq-q span');
+        if (indicator) indicator.textContent = '−';
+      }
+    }
   </script>
 </head>
 <body>
@@ -432,28 +452,28 @@
                   <div class="faq-accordion">
                     
             <div class="faq-item open">
-              <div class="faq-q">What if my company doesn't meet the profitability thresholds? <span>−</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">What if my company doesn't meet the profitability thresholds? <span>−</span></button>
               <div class="faq-a">
                 <p>You may still qualify via the QIB book-building route, which requires at least 75% of the net issue to be allocated to Qualified Institutional Buyers instead of meeting the standard profitability test.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">How long does SEBI's review of the DRHP typically take? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">How long does SEBI's review of the DRHP typically take? <span>+</span></button>
               <div class="faq-a">
                 <p>This varies by case and the number of observation rounds SEBI raises; we help prepare a DRHP designed to minimise back-and-forth.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">What's the difference between an SME IPO and a Main Board IPO for a company at the threshold? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">What's the difference between an SME IPO and a Main Board IPO for a company at the threshold? <span>+</span></button>
               <div class="faq-a">
                 <p>Main Board carries materially higher profitability and net worth thresholds and heavier compliance, but offers broader investor access and liquidity than the SME platforms.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">Who are the key parties involved besides the merchant banker? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Who are the key parties involved besides the merchant banker? <span>+</span></button>
               <div class="faq-a">
                 <p>Underwriters, registrars, legal counsel and often a syndicate of banks for larger issues — we help coordinate the full syndicate.</p>
               </div>

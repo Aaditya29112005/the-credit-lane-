@@ -50,6 +50,26 @@
       if (tabs[index]) tabs[index].classList.add("active");
       if (grids[index]) grids[index].classList.add("active");
     }
+
+    function toggleFaq(btn) {
+      var item = btn.closest('.faq-item') || btn.parentElement;
+      if (!item) return;
+      var isOpen = item.classList.contains('open');
+      
+      var accordion = item.closest('.faq-accordion') || item.closest('.service-section') || document;
+      var allItems = accordion.querySelectorAll('.faq-item');
+      for (var i = 0; i < allItems.length; i++) {
+        allItems[i].classList.remove('open');
+        var ind = allItems[i].querySelector('.faq-q span');
+        if (ind) ind.textContent = '+';
+      }
+      
+      if (!isOpen) {
+        item.classList.add('open');
+        var indicator = item.querySelector('.faq-q span');
+        if (indicator) indicator.textContent = '−';
+      }
+    }
   </script>
 </head>
 <body>
@@ -432,28 +452,28 @@
                   <div class="faq-accordion">
                     
             <div class="faq-item open">
-              <div class="faq-q">What's the difference between BSE SME and NSE Emerge? <span>−</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">What's the difference between BSE SME and NSE Emerge? <span>−</span></button>
               <div class="faq-a">
                 <p>Both are SME-focused platforms with similar eligibility norms; the choice often comes down to sector fit, market maker arrangements and merchant banker relationships — we assess both before recommending one.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">Does my company need to be profitable to list? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Does my company need to be profitable to list? <span>+</span></button>
               <div class="faq-a">
                 <p>No, profitability isn't mandatory, but EBITDA-positive results in at least 2 of the last 3 financial years are required.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">What is the Listing Advisory Committee? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">What is the Listing Advisory Committee? <span>+</span></button>
               <div class="faq-a">
                 <p>An exchange committee that reviews the DRHP, conducts a site inspection and interacts with promoters before granting in-principle listing approval.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">Can an SME-listed company migrate to the mainboard later? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Can an SME-listed company migrate to the mainboard later? <span>+</span></button>
               <div class="faq-a">
                 <p>Yes, companies that outgrow SME thresholds and meet mainboard eligibility criteria can migrate to NSE/BSE mainboard listing.</p>
               </div>

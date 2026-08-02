@@ -50,6 +50,26 @@
       if (tabs[index]) tabs[index].classList.add("active");
       if (grids[index]) grids[index].classList.add("active");
     }
+
+    function toggleFaq(btn) {
+      var item = btn.closest('.faq-item') || btn.parentElement;
+      if (!item) return;
+      var isOpen = item.classList.contains('open');
+      
+      var accordion = item.closest('.faq-accordion') || item.closest('.service-section') || document;
+      var allItems = accordion.querySelectorAll('.faq-item');
+      for (var i = 0; i < allItems.length; i++) {
+        allItems[i].classList.remove('open');
+        var ind = allItems[i].querySelector('.faq-q span');
+        if (ind) ind.textContent = '+';
+      }
+      
+      if (!isOpen) {
+        item.classList.add('open');
+        var indicator = item.querySelector('.faq-q span');
+        if (indicator) indicator.textContent = '−';
+      }
+    }
   </script>
 </head>
 <body>
@@ -421,28 +441,28 @@
                   <div class="faq-accordion">
                     
             <div class="faq-item open">
-              <div class="faq-q">Is this scheme only for buying machinery? <span>−</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Is this scheme only for buying machinery? <span>−</span></button>
               <div class="faq-a">
                 <p>No — it also covers quality-improvement interventions like BIS, FSSAI and management-system certification, not just equipment purchase.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">What does 'first come first serve' actually mean in practice? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">What does 'first come first serve' actually mean in practice? <span>+</span></button>
               <div class="faq-a">
                 <p>Applications are processed in the order received once the window opens; once the district/state allocation is exhausted, later applications may not be funded in that cycle — timing your application matters.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">Can a unit that already received a UP 2017 policy grant apply for TUS? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Can a unit that already received a UP 2017 policy grant apply for TUS? <span>+</span></button>
               <div class="faq-a">
                 <p>No, units that have already received benefits under the UP Industrial Investment and Employment Promotion Policy 2017 or a similar scheme are not eligible.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">How is the green/women-owned bonus applied? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">How is the green/women-owned bonus applied? <span>+</span></button>
               <div class="faq-a">
                 <p>It's an additional 15% subsidy layered on top of the standard TUS support, for units adopting green/renewable solutions or owned by women entrepreneurs.</p>
               </div>

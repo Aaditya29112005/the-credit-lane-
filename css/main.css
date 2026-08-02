@@ -1870,6 +1870,12 @@ footer h5 {
 }
 
 .faq-q {
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  color: var(--navy-dark);
   padding: 18px 24px;
   font-weight: 600;
   font-size: 15px;
@@ -1878,6 +1884,8 @@ footer h5 {
   align-items: center;
   cursor: pointer;
   user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
   background-color: var(--white);
   transition: var(--transition);
 }
@@ -1890,12 +1898,14 @@ footer h5 {
   font-family: var(--font-mono);
   font-size: 18px;
   color: var(--gold);
+  flex-shrink: 0;
+  margin-left: 12px;
 }
 
 .faq-a {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.35s ease;
   padding: 0 24px;
   font-size: 14px;
   color: var(--slate);
@@ -1903,7 +1913,7 @@ footer h5 {
 }
 
 .faq-item.open .faq-a {
-  max-height: 240px;
+  max-height: 800px;
   padding-bottom: 18px;
 }
 

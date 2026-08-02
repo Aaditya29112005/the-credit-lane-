@@ -50,6 +50,26 @@
       if (tabs[index]) tabs[index].classList.add("active");
       if (grids[index]) grids[index].classList.add("active");
     }
+
+    function toggleFaq(btn) {
+      var item = btn.closest('.faq-item') || btn.parentElement;
+      if (!item) return;
+      var isOpen = item.classList.contains('open');
+      
+      var accordion = item.closest('.faq-accordion') || item.closest('.service-section') || document;
+      var allItems = accordion.querySelectorAll('.faq-item');
+      for (var i = 0; i < allItems.length; i++) {
+        allItems[i].classList.remove('open');
+        var ind = allItems[i].querySelector('.faq-q span');
+        if (ind) ind.textContent = '+';
+      }
+      
+      if (!isOpen) {
+        item.classList.add('open');
+        var indicator = item.querySelector('.faq-q span');
+        if (indicator) indicator.textContent = '−';
+      }
+    }
   </script>
 </head>
 <body>
@@ -435,28 +455,28 @@
                   <div class="faq-accordion">
                     
             <div class="faq-item open">
-              <div class="faq-q">Is any collateral needed at all? <span>−</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Is any collateral needed at all? <span>−</span></button>
               <div class="faq-a">
                 <p>No. Sanction is based on turnover, banking conduct and credit score — not fixed assets.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">How is a DOD limit different from a term loan? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">How is a DOD limit different from a term loan? <span>+</span></button>
               <div class="faq-a">
                 <p>A term loan disburses the full amount upfront with fixed EMIs. A DOD limit is a revolving line — you draw and repay within the limit and pay interest only on the utilised amount.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">What CIBIL score is typically required? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">What CIBIL score is typically required? <span>+</span></button>
               <div class="faq-a">
                 <p>700+ is preferred by most lenders, though a strong banking profile can offset a slightly lower score.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">Can I get a lower rate through a government scheme? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Can I get a lower rate through a government scheme? <span>+</span></button>
               <div class="faq-a">
                 <p>CGTMSE-backed schemes can bring eligible MSME borrowers down to roughly 10.5–13% p.a. — we check this alongside your standard application.</p>
               </div>

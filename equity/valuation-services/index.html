@@ -50,6 +50,26 @@
       if (tabs[index]) tabs[index].classList.add("active");
       if (grids[index]) grids[index].classList.add("active");
     }
+
+    function toggleFaq(btn) {
+      var item = btn.closest('.faq-item') || btn.parentElement;
+      if (!item) return;
+      var isOpen = item.classList.contains('open');
+      
+      var accordion = item.closest('.faq-accordion') || item.closest('.service-section') || document;
+      var allItems = accordion.querySelectorAll('.faq-item');
+      for (var i = 0; i < allItems.length; i++) {
+        allItems[i].classList.remove('open');
+        var ind = allItems[i].querySelector('.faq-q span');
+        if (ind) ind.textContent = '+';
+      }
+      
+      if (!isOpen) {
+        item.classList.add('open');
+        var indicator = item.querySelector('.faq-q span');
+        if (indicator) indicator.textContent = '−';
+      }
+    }
   </script>
 </head>
 <body>
@@ -431,28 +451,28 @@
                   <div class="faq-accordion">
                     
             <div class="faq-item open">
-              <div class="faq-q">Do I need a Registered Valuer or a Merchant Banker? <span>−</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Do I need a Registered Valuer or a Merchant Banker? <span>−</span></button>
               <div class="faq-a">
                 <p>It depends on the filing: Companies Act/IBC needs an IBBI Registered Valuer; Income Tax Rule 11UA DCF valuations need a SEBI Merchant Banker; FEMA pricing accepts either a Merchant Banker or a CA.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">How long is a valuation report valid for? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">How long is a valuation report valid for? <span>+</span></button>
               <div class="faq-a">
                 <p>Validity depends on the purpose — ESOP FMV certificates must be within 180 days of exercise; other reports are typically used within the same financial year or transaction window.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">Can one report cover multiple statutory purposes? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Can one report cover multiple statutory purposes? <span>+</span></button>
               <div class="faq-a">
                 <p>Yes, a multi-framework report can address Companies Act, FEMA and Income Tax requirements together, which is usually more cost-efficient than three separate engagements.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">What information do I need to provide? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">What information do I need to provide? <span>+</span></button>
               <div class="faq-a">
                 <p>Audited financials, cap table, business projections and details of the transaction the valuation supports — we provide a checklist upfront.</p>
               </div>

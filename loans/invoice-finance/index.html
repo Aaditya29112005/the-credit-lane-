@@ -50,6 +50,26 @@
       if (tabs[index]) tabs[index].classList.add("active");
       if (grids[index]) grids[index].classList.add("active");
     }
+
+    function toggleFaq(btn) {
+      var item = btn.closest('.faq-item') || btn.parentElement;
+      if (!item) return;
+      var isOpen = item.classList.contains('open');
+      
+      var accordion = item.closest('.faq-accordion') || item.closest('.service-section') || document;
+      var allItems = accordion.querySelectorAll('.faq-item');
+      for (var i = 0; i < allItems.length; i++) {
+        allItems[i].classList.remove('open');
+        var ind = allItems[i].querySelector('.faq-q span');
+        if (ind) ind.textContent = '+';
+      }
+      
+      if (!isOpen) {
+        item.classList.add('open');
+        var indicator = item.querySelector('.faq-q span');
+        if (indicator) indicator.textContent = '−';
+      }
+    }
   </script>
 </head>
 <body>
@@ -432,28 +452,28 @@
                   <div class="faq-accordion">
                     
             <div class="faq-item open">
-              <div class="faq-q">Does my buyer need to be involved in the process? <span>−</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Does my buyer need to be involved in the process? <span>−</span></button>
               <div class="faq-a">
                 <p>Some structures require buyer acknowledgement of the invoice; others don't — we confirm which applies to your buyer base.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">Is this the same as a cash credit limit? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Is this the same as a cash credit limit? <span>+</span></button>
               <div class="faq-a">
                 <p>No — it's transaction-linked and tied to specific invoices/POs, rather than a general-purpose revolving limit against stock and receivables.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">What if a buyer delays payment beyond the invoice term? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">What if a buyer delays payment beyond the invoice term? <span>+</span></button>
               <div class="faq-a">
                 <p>Terms vary by facility — we structure this upfront so you know exactly how delays are handled before drawing down.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">How is the discounting cost calculated? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">How is the discounting cost calculated? <span>+</span></button>
               <div class="faq-a">
                 <p>Typically 1.5–3% per month on the advanced amount, prorated for the actual number of days outstanding — you're not charged for the full tenor if the buyer pays early.</p>
               </div>

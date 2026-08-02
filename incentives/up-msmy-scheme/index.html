@@ -50,6 +50,26 @@
       if (tabs[index]) tabs[index].classList.add("active");
       if (grids[index]) grids[index].classList.add("active");
     }
+
+    function toggleFaq(btn) {
+      var item = btn.closest('.faq-item') || btn.parentElement;
+      if (!item) return;
+      var isOpen = item.classList.contains('open');
+      
+      var accordion = item.closest('.faq-accordion') || item.closest('.service-section') || document;
+      var allItems = accordion.querySelectorAll('.faq-item');
+      for (var i = 0; i < allItems.length; i++) {
+        allItems[i].classList.remove('open');
+        var ind = allItems[i].querySelector('.faq-q span');
+        if (ind) ind.textContent = '+';
+      }
+      
+      if (!isOpen) {
+        item.classList.add('open');
+        var indicator = item.querySelector('.faq-q span');
+        if (indicator) indicator.textContent = '−';
+      }
+    }
   </script>
 </head>
 <body>
@@ -421,28 +441,28 @@
                   <div class="faq-accordion">
                     
             <div class="faq-item open">
-              <div class="faq-q">Who exactly counts as 'educated unemployed youth' for this scheme? <span>−</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Who exactly counts as 'educated unemployed youth' for this scheme? <span>−</span></button>
               <div class="faq-a">
                 <p>Eligibility is based on educational qualification and current unemployment status at the time of application — exact age and qualification bands are confirmed during the eligibility check, as they're periodically revised.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">Is this only for men, or can women apply too? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Is this only for men, or can women apply too? <span>+</span></button>
               <div class="faq-a">
                 <p>Women are explicitly eligible, with enhanced margin-money and interest support built into the scheme's special provisions.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">Can I use this to expand an existing business? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Can I use this to expand an existing business? <span>+</span></button>
               <div class="faq-a">
                 <p>No — this scheme is specifically for setting up a new enterprise, not for working capital or expansion of an already-running unit.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">What happens after the district committee approves my plan? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">What happens after the district committee approves my plan? <span>+</span></button>
               <div class="faq-a">
                 <p>An empanelled bank sanctions the financing and the margin-money subsidy is credited alongside disbursal, per the scheme's process.</p>
               </div>

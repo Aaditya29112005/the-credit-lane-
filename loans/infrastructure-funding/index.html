@@ -50,6 +50,26 @@
       if (tabs[index]) tabs[index].classList.add("active");
       if (grids[index]) grids[index].classList.add("active");
     }
+
+    function toggleFaq(btn) {
+      var item = btn.closest('.faq-item') || btn.parentElement;
+      if (!item) return;
+      var isOpen = item.classList.contains('open');
+      
+      var accordion = item.closest('.faq-accordion') || item.closest('.service-section') || document;
+      var allItems = accordion.querySelectorAll('.faq-item');
+      for (var i = 0; i < allItems.length; i++) {
+        allItems[i].classList.remove('open');
+        var ind = allItems[i].querySelector('.faq-q span');
+        if (ind) ind.textContent = '+';
+      }
+      
+      if (!isOpen) {
+        item.classList.add('open');
+        var indicator = item.querySelector('.faq-q span');
+        if (indicator) indicator.textContent = '−';
+      }
+    }
   </script>
 </head>
 <body>
@@ -435,28 +455,28 @@
                   <div class="faq-accordion">
                     
             <div class="faq-item open">
-              <div class="faq-q">What is a mobilisation advance? <span>−</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">What is a mobilisation advance? <span>−</span></button>
               <div class="faq-a">
                 <p>Upfront funding to cover initial site setup, equipment deployment and procurement before milestone billing begins generating cash inflow.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">Can this help with bid or performance bank guarantees? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Can this help with bid or performance bank guarantees? <span>+</span></button>
               <div class="faq-a">
                 <p>Yes, we assist in arranging the guarantees typically required to participate in and execute tenders.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">Does this apply to subcontractors, or only main EPC contractors? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Does this apply to subcontractors, or only main EPC contractors? <span>+</span></button>
               <div class="faq-a">
                 <p>Both, provided there's a verifiable work order or contract establishing the scope and payment terms.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">Why does government/PSU client payment take so long? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Why does government/PSU client payment take so long? <span>+</span></button>
               <div class="faq-a">
                 <p>Standard bill certification and treasury release cycles for government works commonly run 60–120 days — we size working capital facilities with this delay factored in rather than assuming prompt payment.</p>
               </div>

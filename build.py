@@ -1483,6 +1483,26 @@ def get_layout(content, title, description, url_slug, depth=0):
       if (tabs[index]) tabs[index].classList.add("active");
       if (grids[index]) grids[index].classList.add("active");
     }}
+
+    function toggleFaq(btn) {{
+      var item = btn.closest('.faq-item') || btn.parentElement;
+      if (!item) return;
+      var isOpen = item.classList.contains('open');
+      
+      var accordion = item.closest('.faq-accordion') || item.closest('.service-section') || document;
+      var allItems = accordion.querySelectorAll('.faq-item');
+      for (var i = 0; i < allItems.length; i++) {{
+        allItems[i].classList.remove('open');
+        var ind = allItems[i].querySelector('.faq-q span');
+        if (ind) ind.textContent = '+';
+      }}
+      
+      if (!isOpen) {{
+        item.classList.add('open');
+        var indicator = item.querySelector('.faq-q span');
+        if (indicator) indicator.textContent = '−';
+      }}
+    }}
   </script>
 </head>
 <body>
@@ -2838,7 +2858,7 @@ def generate_service_pages():
             indicator_char = "−" if idx == 0 else "+"
             faqs_html += f"""
             <div class="faq-item {open_class}">
-              <div class="faq-q">{faq[0]} <span>{indicator_char}</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">{faq[0]} <span>{indicator_char}</span></button>
               <div class="faq-a">
                 <p>{faq[1]}</p>
               </div>

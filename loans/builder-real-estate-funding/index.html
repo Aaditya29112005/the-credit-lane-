@@ -50,6 +50,26 @@
       if (tabs[index]) tabs[index].classList.add("active");
       if (grids[index]) grids[index].classList.add("active");
     }
+
+    function toggleFaq(btn) {
+      var item = btn.closest('.faq-item') || btn.parentElement;
+      if (!item) return;
+      var isOpen = item.classList.contains('open');
+      
+      var accordion = item.closest('.faq-accordion') || item.closest('.service-section') || document;
+      var allItems = accordion.querySelectorAll('.faq-item');
+      for (var i = 0; i < allItems.length; i++) {
+        allItems[i].classList.remove('open');
+        var ind = allItems[i].querySelector('.faq-q span');
+        if (ind) ind.textContent = '+';
+      }
+      
+      if (!isOpen) {
+        item.classList.add('open');
+        var indicator = item.querySelector('.faq-q span');
+        if (indicator) indicator.textContent = '−';
+      }
+    }
   </script>
 </head>
 <body>
@@ -435,28 +455,28 @@
                   <div class="faq-accordion">
                     
             <div class="faq-item open">
-              <div class="faq-q">Can this fund land acquisition before construction begins? <span>−</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Can this fund land acquisition before construction begins? <span>−</span></button>
               <div class="faq-a">
                 <p>Yes, though land-only funding typically carries a shorter tenure and stricter title requirements than construction-linked tranches.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">How does RERA escrow affect disbursal? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">How does RERA escrow affect disbursal? <span>+</span></button>
               <div class="faq-a">
                 <p>A portion of buyer collections must stay in a RERA-designated account for construction — we structure loan disbursal to work alongside this, not around it.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">What if the project timeline slips? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">What if the project timeline slips? <span>+</span></button>
               <div class="faq-a">
                 <p>Milestone-linked facilities typically allow renegotiation of tranche timing — we flag this during structuring so it isn't a surprise mid-project.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">Why is the rate higher than a property purchase loan? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Why is the rate higher than a property purchase loan? <span>+</span></button>
               <div class="faq-a">
                 <p>Construction finance carries higher execution risk than a purchase against a completed asset, which is reflected in the 11–16% pricing band versus 8.5–14% for purchase loans.</p>
               </div>

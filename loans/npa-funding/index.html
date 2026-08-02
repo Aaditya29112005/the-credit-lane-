@@ -50,6 +50,26 @@
       if (tabs[index]) tabs[index].classList.add("active");
       if (grids[index]) grids[index].classList.add("active");
     }
+
+    function toggleFaq(btn) {
+      var item = btn.closest('.faq-item') || btn.parentElement;
+      if (!item) return;
+      var isOpen = item.classList.contains('open');
+      
+      var accordion = item.closest('.faq-accordion') || item.closest('.service-section') || document;
+      var allItems = accordion.querySelectorAll('.faq-item');
+      for (var i = 0; i < allItems.length; i++) {
+        allItems[i].classList.remove('open');
+        var ind = allItems[i].querySelector('.faq-q span');
+        if (ind) ind.textContent = '+';
+      }
+      
+      if (!isOpen) {
+        item.classList.add('open');
+        var indicator = item.querySelector('.faq-q span');
+        if (indicator) indicator.textContent = '−';
+      }
+    }
   </script>
 </head>
 <body>
@@ -431,28 +451,28 @@
                   <div class="faq-accordion">
                     
             <div class="faq-item open">
-              <div class="faq-q">Can any NPA account be refinanced? <span>−</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Can any NPA account be refinanced? <span>−</span></button>
               <div class="faq-a">
                 <p>Not every account is viable — we assess the underlying business honestly before proposing a path, rather than promising resolution upfront.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">What is an OTS and how is it negotiated? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">What is an OTS and how is it negotiated? <span>+</span></button>
               <div class="faq-a">
                 <p>A One-Time Settlement is a negotiated reduced payoff that closes the loan account. We represent the borrower in structuring and negotiating these terms with the existing lender.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">Will this affect my CIBIL record? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Will this affect my CIBIL record? <span>+</span></button>
               <div class="faq-a">
                 <p>An OTS is typically reported as 'settled' rather than fully closed, which does affect credit history — we explain these trade-offs before you commit to a path.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">How much of a token payment is usually required upfront? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">How much of a token payment is usually required upfront? <span>+</span></button>
               <div class="faq-a">
                 <p>Typically 5–10% of the proposed settlement amount, paid into a no-lien account to obtain the OTS letter and demonstrate genuine intent.</p>
               </div>

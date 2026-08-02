@@ -50,6 +50,26 @@
       if (tabs[index]) tabs[index].classList.add("active");
       if (grids[index]) grids[index].classList.add("active");
     }
+
+    function toggleFaq(btn) {
+      var item = btn.closest('.faq-item') || btn.parentElement;
+      if (!item) return;
+      var isOpen = item.classList.contains('open');
+      
+      var accordion = item.closest('.faq-accordion') || item.closest('.service-section') || document;
+      var allItems = accordion.querySelectorAll('.faq-item');
+      for (var i = 0; i < allItems.length; i++) {
+        allItems[i].classList.remove('open');
+        var ind = allItems[i].querySelector('.faq-q span');
+        if (ind) ind.textContent = '+';
+      }
+      
+      if (!isOpen) {
+        item.classList.add('open');
+        var indicator = item.querySelector('.faq-q span');
+        if (indicator) indicator.textContent = '−';
+      }
+    }
   </script>
 </head>
 <body>
@@ -424,28 +444,28 @@
                   <div class="faq-accordion">
                     
             <div class="faq-item open">
-              <div class="faq-q">How is pre-IPO funding different from a regular equity round? <span>−</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">How is pre-IPO funding different from a regular equity round? <span>−</span></button>
               <div class="faq-a">
                 <p>It's specifically timed and structured around an upcoming listing — instruments and investor base are chosen to support IPO governance and valuation continuity, not just growth capital.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">What instruments are typically used? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">What instruments are typically used? <span>+</span></button>
               <div class="faq-a">
                 <p>Compulsorily or optionally convertible debentures and preference shares are common, often with conversion triggers tied to listing milestones.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">Who typically invests at this stage? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Who typically invests at this stage? <span>+</span></button>
               <div class="faq-a">
                 <p>Private equity funds, family offices and high-net-worth individuals seeking exposure to a near-term liquidity event.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">Does this delay or complicate the eventual IPO? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Does this delay or complicate the eventual IPO? <span>+</span></button>
               <div class="faq-a">
                 <p>Not if structured correctly — we benchmark round pricing and instrument terms to support rather than conflict with your IPO valuation and cap table.</p>
               </div>

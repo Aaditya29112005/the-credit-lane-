@@ -50,6 +50,26 @@
       if (tabs[index]) tabs[index].classList.add("active");
       if (grids[index]) grids[index].classList.add("active");
     }
+
+    function toggleFaq(btn) {
+      var item = btn.closest('.faq-item') || btn.parentElement;
+      if (!item) return;
+      var isOpen = item.classList.contains('open');
+      
+      var accordion = item.closest('.faq-accordion') || item.closest('.service-section') || document;
+      var allItems = accordion.querySelectorAll('.faq-item');
+      for (var i = 0; i < allItems.length; i++) {
+        allItems[i].classList.remove('open');
+        var ind = allItems[i].querySelector('.faq-q span');
+        if (ind) ind.textContent = '+';
+      }
+      
+      if (!isOpen) {
+        item.classList.add('open');
+        var indicator = item.querySelector('.faq-q span');
+        if (indicator) indicator.textContent = '−';
+      }
+    }
   </script>
 </head>
 <body>
@@ -421,28 +441,28 @@
                   <div class="faq-accordion">
                     
             <div class="faq-item open">
-              <div class="faq-q">Why does my subsidy depend on which district I'm in? <span>−</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Why does my subsidy depend on which district I'm in? <span>−</span></button>
               <div class="faq-a">
                 <p>The policy deliberately tiers benefits higher in less-industrialised regions (Purvanchal, Bundelkhand) to encourage investment there, versus already-developed NCR-adjacent districts like Ghaziabad and Gautam Buddh Nagar.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">Can I combine capital subsidy, stamp duty exemption and interest subvention? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Can I combine capital subsidy, stamp duty exemption and interest subvention? <span>+</span></button>
               <div class="faq-a">
                 <p>Yes, these are separate benefit heads under the same policy and can typically be availed together, subject to each head's own eligibility and caps.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">Is the 100% stamp duty exemption for women available everywhere, including Ghaziabad? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Is the 100% stamp duty exemption for women available everywhere, including Ghaziabad? <span>+</span></button>
               <div class="faq-a">
                 <p>Yes — the policy grants 100% stamp duty exemption to women entrepreneurs statewide, overriding the lower regional tier that would otherwise apply.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">How long does the interest subvention last? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">How long does the interest subvention last? <span>+</span></button>
               <div class="faq-a">
                 <p>5 years for the standard capital interest subvention on new micro units (up to ₹25 lakh per unit), and 7 years for the separate infrastructure interest subsidy where applicable.</p>
               </div>

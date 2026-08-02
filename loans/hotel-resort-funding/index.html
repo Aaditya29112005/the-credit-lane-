@@ -50,6 +50,26 @@
       if (tabs[index]) tabs[index].classList.add("active");
       if (grids[index]) grids[index].classList.add("active");
     }
+
+    function toggleFaq(btn) {
+      var item = btn.closest('.faq-item') || btn.parentElement;
+      if (!item) return;
+      var isOpen = item.classList.contains('open');
+      
+      var accordion = item.closest('.faq-accordion') || item.closest('.service-section') || document;
+      var allItems = accordion.querySelectorAll('.faq-item');
+      for (var i = 0; i < allItems.length; i++) {
+        allItems[i].classList.remove('open');
+        var ind = allItems[i].querySelector('.faq-q span');
+        if (ind) ind.textContent = '+';
+      }
+      
+      if (!isOpen) {
+        item.classList.add('open');
+        var indicator = item.querySelector('.faq-q span');
+        if (indicator) indicator.textContent = '−';
+      }
+    }
   </script>
 </head>
 <body>
@@ -435,28 +455,28 @@
                   <div class="faq-accordion">
                     
             <div class="faq-item open">
-              <div class="faq-q">Can this fund renovation of an existing property, not just new builds? <span>−</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Can this fund renovation of an existing property, not just new builds? <span>−</span></button>
               <div class="faq-a">
                 <p>Yes — renovation financing follows the same seasonality-matched structuring as new construction.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">How is the seasonal EMI schedule decided? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">How is the seasonal EMI schedule decided? <span>+</span></button>
               <div class="faq-a">
                 <p>Based on historical or projected occupancy data for the specific location and property category.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">Does a management/franchise tie-up improve loan terms? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Does a management/franchise tie-up improve loan terms? <span>+</span></button>
               <div class="faq-a">
                 <p>It can — projected revenue uplift from an established brand affiliation is factored into sizing and pricing where relevant.</p>
               </div>
             </div>
 
             <div class="faq-item ">
-              <div class="faq-q">Why is NBFC pricing higher than bank pricing here? <span>+</span></div>
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Why is NBFC pricing higher than bank pricing here? <span>+</span></button>
               <div class="faq-a">
                 <p>NBFCs price in the speed and flexibility they offer — often closing in under two weeks against 4–12 weeks for a bank, which matters for seasonal construction windows.</p>
               </div>
