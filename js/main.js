@@ -15,17 +15,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".hamburger");
   const mobileNav = document.querySelector(".mobile-nav");
   const overlay = document.querySelector(".overlay");
+  const mobileNavClose = document.querySelector(".mobile-nav-close");
 
-  if (hamburger && mobileNav && overlay) {
+  if (mobileNav && overlay) {
     const toggleMobileMenu = () => {
-      hamburger.classList.toggle("active");
-      mobileNav.classList.toggle("open");
-      overlay.classList.toggle("open");
-      document.body.style.overflow = mobileNav.classList.contains("open") ? "hidden" : "";
+      const isOpen = mobileNav.classList.contains("open");
+      if (hamburger) hamburger.classList.toggle("active", !isOpen);
+      mobileNav.classList.toggle("open", !isOpen);
+      overlay.classList.toggle("open", !isOpen);
+      document.body.style.overflow = !isOpen ? "hidden" : "";
     };
 
-    hamburger.addEventListener("click", toggleMobileMenu);
-    overlay.addEventListener("click", toggleMobileMenu);
+    if (hamburger) hamburger.addEventListener("click", toggleMobileMenu);
+    if (overlay) overlay.addEventListener("click", toggleMobileMenu);
+    if (mobileNavClose) mobileNavClose.addEventListener("click", toggleMobileMenu);
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && mobileNav.classList.contains("open")) {
+        toggleMobileMenu();
+      }
+    });
 
     // Close mobile nav when clicking on a link
     const mobileLinks = mobileNav.querySelectorAll("a");
@@ -60,31 +69,45 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // 4. HOMEPAGE CAPITAL SELECTOR TABS
+  window.switchStackTab = function(index) {
+    const selectorTabs = document.querySelectorAll(".stack-tab");
+    const selectorLists = document.querySelectorAll(".stack-list");
+    if (selectorTabs.length > 0 && selectorLists.length > 0) {
+      selectorTabs.forEach(t => t.classList.remove("active"));
+      selectorLists.forEach(l => l.classList.remove("active"));
+      if (selectorTabs[index]) selectorTabs[index].classList.add("active");
+      if (selectorLists[index]) selectorLists[index].classList.add("active");
+    }
+  };
+
   const selectorTabs = document.querySelectorAll(".stack-tab");
-  const selectorLists = document.querySelectorAll(".stack-list");
-  if (selectorTabs.length > 0 && selectorLists.length > 0) {
+  if (selectorTabs.length > 0) {
     selectorTabs.forEach((tab, index) => {
-      tab.addEventListener("click", () => {
-        selectorTabs.forEach(t => t.classList.remove("active"));
-        selectorLists.forEach(l => l.classList.remove("active"));
-        
-        tab.classList.add("active");
-        selectorLists[index].classList.add("active");
+      tab.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.switchStackTab(index);
       });
     });
   }
 
   // 5. HOMEPAGE SERVICES CATALOG TABS
-  const catalogTabs = document.querySelectorAll(".catalog-tab");
-  const catalogGrids = document.querySelectorAll(".catalog-grid");
-  if (catalogTabs.length > 0 && catalogGrids.length > 0) {
-    catalogTabs.forEach((tab, index) => {
-      tab.addEventListener("click", () => {
-        catalogTabs.forEach(t => t.classList.remove("active"));
-        catalogGrids.forEach(g => g.classList.remove("active"));
+  window.switchCatalogTab = function(index) {
+    const catalogTabs = document.querySelectorAll(".catalog-tab");
+    const catalogGrids = document.querySelectorAll(".catalog-grid");
+    if (catalogTabs.length > 0 && catalogGrids.length > 0) {
+      catalogTabs.forEach(t => t.classList.remove("active"));
+      catalogGrids.forEach(g => g.classList.remove("active"));
+      if (catalogTabs[index]) catalogTabs[index].classList.add("active");
+      if (catalogGrids[index]) catalogGrids[index].classList.add("active");
+    }
+  };
 
-        tab.classList.add("active");
-        catalogGrids[index].classList.add("active");
+  const catalogTabs = document.querySelectorAll(".catalog-tab");
+  if (catalogTabs.length > 0) {
+    catalogTabs.forEach((tab, index) => {
+      tab.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.switchCatalogTab(index);
       });
     });
   }

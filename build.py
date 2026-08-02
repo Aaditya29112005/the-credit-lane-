@@ -1467,7 +1467,7 @@ def get_layout(content, title, description, url_slug, depth=0):
       <nav class="mainnav">
         <a href="{pref}index.html" class="{"active" if url_slug == "" else ""}">Home</a>
         <div class="nav-item">
-          <span>Loans ▾</span>
+          <a href="{pref}loans/index.html" class="nav-title">Loans ▾</a>
           <div class="mega-menu loans-menu">
             <h4>Debt Solutions & Funding</h4>
             <div class="mega-grid">
@@ -1476,7 +1476,7 @@ def get_layout(content, title, description, url_slug, depth=0):
           </div>
         </div>
         <div class="nav-item">
-          <span>Equity ▾</span>
+          <a href="{pref}equity/index.html" class="nav-title">Equity ▾</a>
           <div class="mega-menu">
             <h4>Advisory & Public Listings</h4>
             <div class="mega-grid">
@@ -1485,7 +1485,7 @@ def get_layout(content, title, description, url_slug, depth=0):
           </div>
         </div>
         <div class="nav-item">
-          <span>Incentives ▾</span>
+          <a href="{pref}incentives/index.html" class="nav-title">Incentives ▾</a>
           <div class="mega-menu">
             <h4>Government Scheme Subsidies</h4>
             <div class="mega-grid">
@@ -1513,6 +1513,10 @@ def get_layout(content, title, description, url_slug, depth=0):
 
   <!-- Mobile nav drawer -->
   <div class="mobile-nav">
+    <div class="mobile-nav-header" style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 14px; border-bottom: 1px solid var(--line); margin-bottom: 16px;">
+      <span style="font-family: var(--font-serif); font-weight: 700; font-size: 18px; color: var(--navy-dark);">Navigation</span>
+      <button class="mobile-nav-close" aria-label="Close Menu" style="background: none; border: none; font-size: 22px; color: var(--navy-dark); cursor: pointer; padding: 4px 8px; line-height: 1;">✕</button>
+    </div>
     <div class="mobile-nav-links">
       <div class="mobile-nav-item">
         <a href="{pref}index.html" style="font-weight: 700; font-size: 16px;">Home</a>
@@ -1776,9 +1780,9 @@ def generate_homepage():
         <!-- Interactive Capital Selector -->
         <div class="stack-card" id="selector">
           <div class="stack-tabs">
-            <div class="stack-tab active">LOANS</div>
-            <div class="stack-tab">EQUITY</div>
-            <div class="stack-tab">INCENTIVES</div>
+            <div class="stack-tab active" onclick="switchStackTab(0)">LOANS</div>
+            <div class="stack-tab" onclick="switchStackTab(1)">EQUITY</div>
+            <div class="stack-tab" onclick="switchStackTab(2)">INCENTIVES</div>
           </div>
           {stack_lists_html}
           <div class="stack-note">
@@ -1953,9 +1957,9 @@ def generate_homepage():
         </div>
 
         <div class="catalog-tabs">
-          <div class="catalog-tab active">Loans</div>
-          <div class="catalog-tab">Equity</div>
-          <div class="catalog-tab">Incentives</div>
+          <div class="catalog-tab active" onclick="switchCatalogTab(0)">Loans</div>
+          <div class="catalog-tab" onclick="switchCatalogTab(1)">Equity</div>
+          <div class="catalog-tab" onclick="switchCatalogTab(2)">Incentives</div>
         </div>
 
         {catalog_grids_html}
