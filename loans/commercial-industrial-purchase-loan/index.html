@@ -70,6 +70,246 @@
         if (indicator) indicator.textContent = '−';
       }
     }
+
+    function fmtINR(n) {
+      if (isNaN(n) || !isFinite(n)) return "₹0";
+      return "₹" + Math.round(n).toLocaleString("en-IN");
+    }
+
+    function updateEmiCalc() {
+      var pInput = document.getElementById("emi-p");
+      var rInput = document.getElementById("emi-r");
+      var yInput = document.getElementById("emi-y");
+      if (!pInput || !rInput || !yInput) return;
+
+      var P = parseFloat(pInput.value) || 0;
+      var annR = parseFloat(rInput.value) || 0;
+      var yrs = parseFloat(yInput.value) || 0;
+
+      var pOut = document.getElementById("emi-p-val");
+      var rOut = document.getElementById("emi-r-val");
+      var yOut = document.getElementById("emi-y-val");
+
+      if (pOut) pOut.textContent = fmtINR(P);
+      if (rOut) rOut.textContent = annR + "%";
+      if (yOut) yOut.textContent = yrs + " yrs";
+
+      var r = annR / 1200;
+      var n = yrs * 12;
+
+      var emi = 0;
+      if (r > 0 && n > 0) {
+        emi = P * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1);
+      } else if (n > 0) {
+        emi = P / n;
+      }
+      
+      var total = emi * n;
+      var interest = Math.max(0, total - P);
+
+      var emiOut = document.getElementById("res-emi");
+      var interestOut = document.getElementById("res-interest");
+      var totalOut = document.getElementById("res-total");
+      var pBar = document.getElementById("bar-p");
+      var iBar = document.getElementById("bar-i");
+
+      if (emiOut) emiOut.textContent = fmtINR(emi);
+      if (interestOut) interestOut.textContent = fmtINR(interest);
+      if (totalOut) totalOut.textContent = fmtINR(total);
+
+      if (pBar && iBar && total > 0) {
+        var pPct = Math.min(100, Math.max(0, (P / total) * 100));
+        pBar.style.width = pPct + "%";
+        iBar.style.width = (100 - pPct) + "%";
+      }
+    }
+
+    function updateInvoiceCalc() {
+      var valInput = document.getElementById("inv-val");
+      var advInput = document.getElementById("inv-adv");
+      var daysInput = document.getElementById("inv-days");
+      if (!valInput || !advInput || !daysInput) return;
+
+      var mRate = parseFloat(document.getElementById("inv-mrate") ? document.getElementById("inv-mrate").value : "2");
+      var val = parseFloat(valInput.value) || 0;
+      var advPct = parseFloat(advInput.value) || 0;
+      var days = parseFloat(daysInput.value) || 0;
+
+      var valOut = document.getElementById("inv-val-val");
+      var advOut = document.getElementById("inv-adv-val");
+      var daysOut = document.getElementById("inv-days-val");
+
+      if (valOut) valOut.textContent = fmtINR(val);
+      if (advOut) advOut.textContent = advPct + "%";
+      if (daysOut) daysOut.textContent = days + " days";
+
+      var advanceAmt = val * advPct / 100;
+      var cost = advanceAmt * (mRate / 100) * (days / 30);
+      var net = Math.max(0, val - cost);
+
+      var resAdv = document.getElementById("res-inv-adv");
+      var resCost = document.getElementById("res-inv-cost");
+      var resNet = document.getElementById("res-inv-net");
+
+      if (resAdv) resAdv.textContent = fmtINR(advanceAmt);
+      if (resCost) resCost.textContent = fmtINR(cost);
+      if (resNet) resNet.textContent = fmtINR(net);
+    }
+
+    function updateSettlementCalc() {
+      var duesInput = document.getElementById("set-dues");
+      var setPctInput = document.getElementById("set-pct");
+      var tokPctInput = document.getElementById("set-tok");
+      if (!duesInput || !setPctInput || !tokPctInput) return;
+
+      var dues = parseFloat(duesInput.value) || 0;
+      var setPct = parseFloat(setPctInput.value) || 0;
+      var tokPct = parseFloat(tokPctInput.value) || 0;
+
+      var duesOut = document.getElementById("set-dues-val");
+      var setPctOut = document.getElementById("set-pct-val");
+      var tokPctOut = document.getElementById("set-tok-val");
+
+      if (duesOut) duesOut.textContent = fmtINR(dues);
+      if (setPctOut) setPctOut.textContent = setPct + "% of dues";
+      if (tokPctOut) tokPctOut.textContent = tokPct + "% of settlement";
+
+      var settlementAmt = dues * setPct / 100;
+      var savings = Math.max(0, dues - settlementAmt);
+      var tokenAmt = settlementAmt * tokPct / 100;
+
+      var resSettle = document.getElementById("res-set-amt");
+      var resSave = document.getElementById("res-set-save");
+      var resToken = document.getElementById("res-set-tok");
+
+      if (resSettle) resSettle.textContent = fmtINR(settlementAmt);
+      if (resSave) resSave.textContent = fmtINR(savings);
+      if (resToken) resToken.textContent = fmtINR(tokenAmt);
+    }
+
+    function updateDilutionCalc() {
+      var raiseInput = document.getElementById("dil-raise");
+      var preInput = document.getElementById("dil-pre");
+      if (!raiseInput || !preInput) return;
+
+      var raise = parseFloat(raiseInput.value) || 0;
+      var pre = parseFloat(preInput.value) || 0;
+
+      var raiseOut = document.getElementById("dil-raise-val");
+      var preOut = document.getElementById("dil-pre-val");
+
+      if (raiseOut) raiseOut.textContent = fmtINR(raise);
+      if (preOut) preOut.textContent = fmtINR(pre);
+
+      var post = pre + raise;
+      var dilution = post > 0 ? (raise / post) * 100 : 0;
+      var retain = Math.max(0, 100 - dilution);
+
+      var resPost = document.getElementById("res-dil-post");
+      var resDil = document.getElementById("res-dil-dil");
+      var resRet = document.getElementById("res-dil-ret");
+
+      if (resPost) resPost.textContent = fmtINR(post);
+      if (resDil) resDil.textContent = dilution.toFixed(1) + "%";
+      if (resRet) resRet.textContent = retain.toFixed(1) + "%";
+    }
+
+    function updateIpoCalc() {
+      var issueInput = document.getElementById("ipo-issue");
+      var preInput = document.getElementById("ipo-pre");
+      if (!issueInput || !preInput) return;
+
+      var fresh = parseFloat(issueInput.value) || 0;
+      var pre = parseFloat(preInput.value) || 0;
+
+      var issueOut = document.getElementById("ipo-issue-val");
+      var preOut = document.getElementById("ipo-pre-val");
+
+      if (issueOut) issueOut.textContent = fmtINR(fresh);
+      if (preOut) preOut.textContent = fmtINR(pre);
+
+      var post = pre + fresh;
+      var pubPct = post > 0 ? (fresh / post) * 100 : 0;
+      var promPct = Math.max(0, 100 - pubPct);
+
+      var resPost = document.getElementById("res-ipo-post");
+      var resPublic = document.getElementById("res-ipo-pub");
+      var resProm = document.getElementById("res-ipo-prom");
+
+      if (resPost) resPost.textContent = fmtINR(post);
+      if (resPublic) resPublic.textContent = pubPct.toFixed(1) + "%";
+      if (resProm) resProm.textContent = promPct.toFixed(1) + "%";
+    }
+
+    function updateValuationCalc() {
+      var ebitdaInput = document.getElementById("val-ebitda");
+      var multLoInput = document.getElementById("val-mlo");
+      var multHiInput = document.getElementById("val-mhi");
+      if (!ebitdaInput || !multLoInput || !multHiInput) return;
+
+      var ebitda = parseFloat(ebitdaInput.value) || 0;
+      var lo = parseFloat(multLoInput.value) || 0;
+      var hi = parseFloat(multHiInput.value) || 0;
+
+      if (hi < lo) {
+        hi = lo;
+        multHiInput.value = hi;
+      }
+
+      var ebitdaOut = document.getElementById("val-ebitda-val");
+      var multLoOut = document.getElementById("val-mlo-val");
+      var multHiOut = document.getElementById("val-mhi-val");
+
+      if (ebitdaOut) ebitdaOut.textContent = fmtINR(ebitda);
+      if (multLoOut) multLoOut.textContent = lo + "x";
+      if (multHiOut) multHiOut.textContent = hi + "x";
+
+      var resLo = document.getElementById("res-val-lo");
+      var resHi = document.getElementById("res-val-hi");
+
+      if (resLo) resLo.textContent = fmtINR(ebitda * lo);
+      if (resHi) resHi.textContent = fmtINR(ebitda * hi);
+    }
+
+    function updateSubsidyCalc() {
+      var costInput = document.getElementById("sub-cost");
+      var rateInput = document.getElementById("sub-rate");
+      if (!costInput || !rateInput) return;
+
+      var capVal = parseFloat(document.getElementById("sub-cap") ? document.getElementById("sub-cap").value : "1500000");
+      var cost = parseFloat(costInput.value) || 0;
+      var rate = parseFloat(rateInput.value) || 0;
+
+      var costOut = document.getElementById("sub-cost-val");
+      var rateOut = document.getElementById("sub-rate-val");
+
+      if (costOut) costOut.textContent = fmtINR(cost);
+      if (rateOut) rateOut.textContent = rate + "%";
+
+      var subsidy = Math.min(cost * rate / 100, capVal);
+      var net = Math.max(0, cost - subsidy);
+
+      var resSub = document.getElementById("res-sub-amt");
+      var resNet = document.getElementById("res-sub-net");
+
+      if (resSub) resSub.textContent = fmtINR(subsidy);
+      if (resNet) resNet.textContent = fmtINR(net);
+    }
+
+    function initAllCalculators() {
+      updateEmiCalc();
+      updateInvoiceCalc();
+      updateSettlementCalc();
+      updateDilutionCalc();
+      updateIpoCalc();
+      updateValuationCalc();
+      updateSubsidyCalc();
+    }
+
+    document.addEventListener("DOMContentLoaded", initAllCalculators);
+    window.addEventListener("load", initAllCalculators);
+    setTimeout(initAllCalculators, 50);
+    setTimeout(initAllCalculators, 300);
   </script>
 </head>
 <body>
@@ -351,21 +591,21 @@
             <span>Desired Loan Amount</span>
             <span class="value-output" id="emi-p-val">₹50,00,000</span>
           </div>
-          <input type="range" class="calc-slider" id="emi-p" min="2000000" max="100000000" step="1000000" value="10000000">
+          <input type="range" class="calc-slider" id="emi-p" min="2000000" max="100000000" step="1000000" value="10000000" oninput="updateEmiCalc()" onchange="updateEmiCalc()">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
             <span>Interest Rate (p.a. indicative)</span>
             <span class="value-output" id="emi-r-val">11%</span>
           </div>
-          <input type="range" class="calc-slider" id="emi-r" min="8.5" max="14" step="0.1" value="11">
+          <input type="range" class="calc-slider" id="emi-r" min="8.5" max="14" step="0.1" value="11" oninput="updateEmiCalc()" onchange="updateEmiCalc()">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
             <span>Repayment Tenure</span>
             <span class="value-output" id="emi-y-val">10 yrs</span>
           </div>
-          <input type="range" class="calc-slider" id="emi-y" min="3" max="15" step="1" value="10">
+          <input type="range" class="calc-slider" id="emi-y" min="3" max="15" step="1" value="10" oninput="updateEmiCalc()" onchange="updateEmiCalc()">
         </div>
         
                       </div>
