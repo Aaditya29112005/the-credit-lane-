@@ -1454,6 +1454,36 @@ def get_layout(content, title, description, url_slug, depth=0):
 
   <!-- Style Sheets -->
   <link rel="stylesheet" href="{pref}css/main.css">
+  
+  <script>
+    function switchStackTab(index) {{
+      var card = document.getElementById("selector");
+      if (!card) card = document;
+      var tabs = card.querySelectorAll(".stack-tab");
+      var lists = card.querySelectorAll(".stack-list");
+      for (var i = 0; i < tabs.length; i++) {{
+        tabs[i].classList.remove("active");
+      }}
+      for (var j = 0; j < lists.length; j++) {{
+        lists[j].classList.remove("active");
+      }}
+      if (tabs[index]) tabs[index].classList.add("active");
+      if (lists[index]) lists[index].classList.add("active");
+    }}
+
+    function switchCatalogTab(index) {{
+      var tabs = document.querySelectorAll(".catalog-tab");
+      var grids = document.querySelectorAll(".catalog-grid");
+      for (var i = 0; i < tabs.length; i++) {{
+        tabs[i].classList.remove("active");
+      }}
+      for (var j = 0; j < grids.length; j++) {{
+        grids[j].classList.remove("active");
+      }}
+      if (tabs[index]) tabs[index].classList.add("active");
+      if (grids[index]) grids[index].classList.add("active");
+    }}
+  </script>
 </head>
 <body>
 
@@ -1780,9 +1810,9 @@ def generate_homepage():
         <!-- Interactive Capital Selector -->
         <div class="stack-card" id="selector">
           <div class="stack-tabs">
-            <div class="stack-tab active" onclick="switchStackTab(0)">LOANS</div>
-            <div class="stack-tab" onclick="switchStackTab(1)">EQUITY</div>
-            <div class="stack-tab" onclick="switchStackTab(2)">INCENTIVES</div>
+            <button type="button" class="stack-tab active" onclick="switchStackTab(0)">LOANS</button>
+            <button type="button" class="stack-tab" onclick="switchStackTab(1)">EQUITY</button>
+            <button type="button" class="stack-tab" onclick="switchStackTab(2)">INCENTIVES</button>
           </div>
           {stack_lists_html}
           <div class="stack-note">
@@ -1957,9 +1987,9 @@ def generate_homepage():
         </div>
 
         <div class="catalog-tabs">
-          <div class="catalog-tab active" onclick="switchCatalogTab(0)">Loans</div>
-          <div class="catalog-tab" onclick="switchCatalogTab(1)">Equity</div>
-          <div class="catalog-tab" onclick="switchCatalogTab(2)">Incentives</div>
+          <button type="button" class="catalog-tab active" onclick="switchCatalogTab(0)">Loans</button>
+          <button type="button" class="catalog-tab" onclick="switchCatalogTab(1)">Equity</button>
+          <button type="button" class="catalog-tab" onclick="switchCatalogTab(2)">Incentives</button>
         </div>
 
         {catalog_grids_html}

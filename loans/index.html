@@ -21,6 +21,36 @@
 
   <!-- Style Sheets -->
   <link rel="stylesheet" href="../css/main.css">
+  
+  <script>
+    function switchStackTab(index) {
+      var card = document.getElementById("selector");
+      if (!card) card = document;
+      var tabs = card.querySelectorAll(".stack-tab");
+      var lists = card.querySelectorAll(".stack-list");
+      for (var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove("active");
+      }
+      for (var j = 0; j < lists.length; j++) {
+        lists[j].classList.remove("active");
+      }
+      if (tabs[index]) tabs[index].classList.add("active");
+      if (lists[index]) lists[index].classList.add("active");
+    }
+
+    function switchCatalogTab(index) {
+      var tabs = document.querySelectorAll(".catalog-tab");
+      var grids = document.querySelectorAll(".catalog-grid");
+      for (var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove("active");
+      }
+      for (var j = 0; j < grids.length; j++) {
+        grids[j].classList.remove("active");
+      }
+      if (tabs[index]) tabs[index].classList.add("active");
+      if (grids[index]) grids[index].classList.add("active");
+    }
+  </script>
 </head>
 <body>
 
