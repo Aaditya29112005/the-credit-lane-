@@ -2459,50 +2459,117 @@ def generate_homepage():
       </div>
     </section>
 
-    <!-- ============ SOCIAL PROOF ============ -->
-    <section class="testimonials">
+    <!-- ============ GOOGLE REVIEWS CAROUSEL ============ -->
+    <section class="google-reviews-section" style="background: #071529; padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1);">
       <div class="wrap">
-        <div class="section-head center">
-          <span class="eyebrow">CLIENT FEEDBACK</span>
-          <h2>Trusted through every stage of the funding journey.</h2>
-        </div>
-
-        <div class="rating-block">
-          <div class="rating-score">4.9 / 5</div>
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 32px; flex-wrap: wrap; gap: 20px;">
           <div>
-            <div class="rating-stars">★★★★★</div>
-            <div class="rating-meta">Based on 70+ verified business-owner ratings in Ghaziabad, Noida and Delhi NCR.</div>
+            <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.08); padding: 6px 14px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.15); margin-bottom: 12px;">
+              <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+              <span style="color: #fff; font-size: 13px; font-weight: 600;">Google Verified Business Reviews</span>
+            </div>
+            <h3 style="color: #fff; font-family: var(--font-serif); font-size: 28px; margin: 0 0 6px 0;">Client Feedback &amp; Google Ratings</h3>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="color: #FFD700; font-size: 20px; font-weight: 800;">4.9</span>
+              <div style="color: #FFD700; font-size: 18px;">★★★★★</div>
+              <span style="color: #94A3B8; font-size: 13.5px;">Based on 70+ Verified Business-Owner Ratings</span>
+            </div>
+          </div>
+          <div style="display: flex; gap: 10px;">
+            <button class="reviews-prev" aria-label="Previous Review" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: all 0.2s;">‹</button>
+            <button class="reviews-next" aria-label="Next Review" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: all 0.2s;">›</button>
           </div>
         </div>
 
-        <div class="testi-grid">
-          <div class="testi-card">
-            <p class="quote">"Credit Lane structured our CNC machine loan through SIDBI's SPEED scheme. We saved roughly 2.5% in annual interest and they handled all the government subsidy files alongside the bank work."</p>
-            <div class="who">
-              <div class="avatar">RM</div>
-              <div class="who-meta">
-                <b>Rajeev Malhotra</b>
-                <span>Manufacturing unit, Sahibabad</span>
+        <div class="google-reviews-carousel">
+          <div class="google-reviews-rail">
+            <!-- Card 1 -->
+            <div class="review-card">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--gold); color: #000; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px;">V</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0; font-weight: 600;">Vikram Malhotra</h4>
+                      <span style="color: #94A3B8; font-size: 12px;">Managing Director, Auto Components</span>
+                    </div>
+                  </div>
+                  <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 14px; margin-bottom: 10px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"The Credit Lane helped us secure ₹8.5 Crore machine loan from SIDBI with 50% TUS Grant sanction in record time. Professional CA, CS &amp; Advocate advisory team!"</p>
               </div>
             </div>
-          </div>
-          <div class="testi-card">
-            <p class="quote">"B2B invoice finance cleared our cash flow hurdles. We sell to top electronics manufacturers with a 90-day wait period. They set up the limit in 4 business days."</p>
-            <div class="who">
-              <div class="avatar">SS</div>
-              <div class="who-meta">
-                <b>Siddharth Sharma</b>
-                <span>Technology exporter, Noida Sector 63</span>
+
+            <!-- Card 2 -->
+            <div class="review-card">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: #24a148; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px;">R</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0; font-weight: 600;">Rajesh Sharma</h4>
+                      <span style="color: #94A3B8; font-size: 12px;">Founder, Real Estate Infra</span>
+                    </div>
+                  </div>
+                  <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 14px; margin-bottom: 10px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"Very methodical project finance &amp; builder funding team. They structured our corporate finance terms cleanly and got bank committee approvals fast."</p>
               </div>
             </div>
-          </div>
-          <div class="testi-card">
-            <p class="quote">"They compiled our FEMA-compliant share valuations and connected us with pre-IPO institutional funds. Clear communication, no false promises, and exceptional merchant banking coordinate."</p>
-            <div class="who">
-              <div class="avatar">AK</div>
-              <div class="who-meta">
-                <b>Alka Kathpalia</b>
-                <span>Founder, Healthcare Chain</span>
+
+            <!-- Card 3 -->
+            <div class="review-card">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: #0072b1; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px;">A</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0; font-weight: 600;">Amitabh Singhania</h4>
+                      <span style="color: #94A3B8; font-size: 12px;">CEO, Healthcare &amp; Hospital Group</span>
+                    </div>
+                  </div>
+                  <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 14px; margin-bottom: 10px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"The Pre-IPO valuation and UP Govt MSME promotion grant guidance provided by Rajat Garg Sir &amp; team was top notch. Highly recommended corporate finance desk!"</p>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="review-card">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: #e056fd; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px;">S</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0; font-weight: 600;">Sandeep Verma</h4>
+                      <span style="color: #94A3B8; font-size: 12px;">Director, Engineering MSME Unit</span>
+                    </div>
+                  </div>
+                  <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 14px; margin-bottom: 10px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"100% transparent and advisory-first execution. Secured unsecured working capital limit &amp; drop-line overdraft without pledging collateral."</p>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="review-card">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: #ff7675; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px;">M</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0; font-weight: 600;">Manish Gupta</h4>
+                      <span style="color: #94A3B8; font-size: 12px;">Director, Chemical Processing</span>
+                    </div>
+                  </div>
+                  <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 14px; margin-bottom: 10px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"Fast turnaround on UP MSME promotion policy capital subsidy and interest subvention claims. Highly competent team!"</p>
               </div>
             </div>
           </div>

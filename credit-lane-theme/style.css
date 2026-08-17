@@ -1,0 +1,23 @@
+/*
+Theme Name: The Credit Lane
+Theme URI: https://thecreditlane.com/
+Author: The Credit Lane Team
+Author URI: https://thecreditlane.com/
+Description: Custom WordPress Theme for Corporate Finance & Business Funding Advisory with ACF Gutenberg Block support.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+Text Domain: credit-lane
+*/
+
+/* WordPress Core & Alignment Fallbacks */
+.alignwide {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.alignfull {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,500&family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,500&family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
 :root {
   /* Color Palette */
@@ -15,6 +15,7 @@
   --muted: #5B6472;
 
   /* Typography */
+  --font-logo: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-serif: 'Newsreader', Georgia, serif;
   --font-sans: 'Public Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
@@ -275,57 +276,65 @@ header .wrap {
 }
 
 .logo {
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: 24px;
-  color: var(--navy-dark);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   flex-shrink: 0;
 }
 
-.logo .mark {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: conic-gradient(from 220deg, var(--gold), var(--navy-dark) 65%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-  font-size: 14px;
-  font-weight: 800;
-  border: 1px solid var(--gold-light);
+.logo-text {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  font-size: 25px;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.logo-the {
+  font-weight: 300; /* Light/Regular weight for 'The' */
+  color: var(--navy-dark);
+}
+
+.logo-bold {
+  font-weight: 900; /* Extra bold heavy weight for 'Credit Lane' */
+  color: var(--navy-dark);
 }
 
 nav.mainnav {
   display: flex;
-  gap: 36px;
+  gap: 24px;
   align-items: center;
   height: 100%;
-  margin-left: 52px;
+  margin-left: 28px;
   margin-right: auto;
+  flex-shrink: 0;
 }
 
-nav.mainnav > a, nav.mainnav > div.nav-item {
+nav.mainnav > a, nav.mainnav .nav-title {
   font-weight: 600;
   font-size: 14.5px;
   color: var(--navy-dark);
   position: relative;
   padding: 28px 0;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 4px;
 }
 
-nav.mainnav > a:hover, nav.mainnav > div.nav-item:hover {
+nav.mainnav > a:hover, nav.mainnav .nav-title:hover {
   color: var(--gold);
 }
 
-nav.mainnav > a.active {
+nav.mainnav > a.active, nav.mainnav .nav-title.active {
   color: var(--gold);
 }
 
-nav.mainnav > a.active::after {
+nav.mainnav > a.active::after, nav.mainnav .nav-title.active::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -333,6 +342,7 @@ nav.mainnav > a.active::after {
   width: 100%;
   height: 3px;
   background-color: var(--gold);
+  border-radius: 2px 2px 0 0;
 }
 
 /* Mega Dropdown Menu */
@@ -428,10 +438,30 @@ nav.mainnav > a.active::after {
   line-height: 1.3;
 }
 
+.logo span, .logo-text, .logo-the, .logo-bold {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.logo-the {
+  font-weight: 300 !important;
+  color: var(--navy-dark) !important;
+  font-size: 25px !important;
+}
+
+.logo-bold {
+  font-weight: 900 !important;
+  color: var(--navy-dark) !important;
+  font-size: 25px !important;
+}
+
 .header-cta {
   display: flex;
   align-items: center;
   gap: 16px;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .header-cta .phone {
@@ -439,11 +469,13 @@ nav.mainnav > a.active::after {
   font-size: 14px;
   font-weight: 600;
   color: var(--navy-dark);
+  white-space: nowrap;
 }
 
 .header-cta .btn {
   padding: 10px 20px;
   font-size: 13.5px;
+  white-space: nowrap;
 }
 
 /* Mobile Menu Controls */
@@ -471,15 +503,16 @@ nav.mainnav > a.active::after {
   top: 0;
   right: -100%;
   width: 320px;
+  max-width: 85vw;
   height: 100vh;
   background-color: var(--white);
-  box-shadow: -10px 0 30px rgba(11, 31, 58, 0.1);
-  z-index: 999;
-  transition: right 0.3s ease;
-  padding: 100px 24px 40px;
+  box-shadow: -10px 0 30px rgba(11, 31, 58, 0.2);
+  z-index: 99999;
+  transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 24px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
   overflow-y: auto;
 }
 
@@ -520,7 +553,7 @@ nav.mainnav > a.active::after {
 }
 
 .mobile-nav-submenu.open {
-  max-height: 500px;
+  max-height: 1500px;
   margin-top: 10px;
 }
 
@@ -535,6 +568,7 @@ nav.mainnav > a.active::after {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  padding-top: 16px;
 }
 
 .mobile-nav-cta .phone {
@@ -544,6 +578,24 @@ nav.mainnav > a.active::after {
 }
 
 /* Mobile Back Drop overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(11, 31, 58, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 99998;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
 .overlay {
   position: fixed;
   top: 0;
@@ -1903,18 +1955,17 @@ footer h5 {
 }
 
 .faq-a {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.35s ease;
-  padding: 0 24px;
-  font-size: 14px;
+  display: none;
+  padding: 12px 24px 18px 24px;
+  font-size: 14.5px;
+  line-height: 1.6;
   color: var(--slate);
   background-color: var(--white);
+  border-top: 1px solid rgba(11, 31, 58, 0.06);
 }
 
 .faq-item.open .faq-a {
-  max-height: 800px;
-  padding-bottom: 18px;
+  display: block !important;
 }
 
 /* ==========================================================================
@@ -1931,6 +1982,50 @@ footer h5 {
 .calc-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
+}
+
+.calculator-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.calculator-output-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: 12px;
+}
+
+@media (max-width: 900px) {
+  .calculator-card-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+}
+
+@media (max-width: 480px) {
+.equity-journey-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .equity-journey-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .equity-journey-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
 }
 
 .calc-inputs {
@@ -2544,6 +2639,19 @@ footer h5 {
    RESPONSIVE — MOBILE (≤ 768px)
    ========================================================================== */
 @media (max-width: 768px) {
+  /* Prevent iOS auto-zoom on input focus */
+  input[type="text"], input[type="email"], input[type="tel"], input[type="number"], select, textarea {
+    font-size: 16px !important;
+  }
+
+  .logo-the, .logo-bold {
+    font-size: clamp(16px, 4.8vw, 22px) !important;
+  }
+
+  .founders-grid {
+    grid-template-columns: 1fr !important;
+  }
+
   /* Global */
   section {
     padding: 48px 0;
@@ -2588,11 +2696,15 @@ footer h5 {
     height: 68px;
     padding-left: 16px;
     padding-right: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .logo {
     font-size: clamp(15px, 4.2vw, 20px);
     gap: 8px;
+    flex-shrink: 1;
   }
 
   .logo img, .logo-img {
@@ -2600,13 +2712,18 @@ footer h5 {
     height: 32px !important;
   }
 
-  .header-cta .phone {
-    display: none;
+  .header-cta {
+    display: none !important;
   }
 
   .hamburger {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
     padding: 8px;
     margin-right: -4px;
+    margin-left: auto;
+    z-index: 1001;
   }
 
   /* Hero */
@@ -2849,12 +2966,12 @@ footer h5 {
   }
 
   .faq-a {
-    padding: 0 18px;
+    padding: 10px 18px 16px 18px;
     font-size: 14px;
   }
 
   .faq-item.open .faq-a {
-    padding-bottom: 16px;
+    display: block !important;
   }
 
   /* Stats strip */
@@ -3136,6 +3253,81 @@ footer h5 {
   .stat-strip .wrap {
     grid-template-columns: 1fr;
   }
+}
+
+/* ==========================================================================
+   GOOGLE REVIEWS GSAP HORIZONTAL LOOP
+   ========================================================================== */
+@keyframes creditLaneMarqueeLoop {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.google-reviews-carousel {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding: 10px 0 20px;
+}
+
+.google-reviews-rail {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  gap: 24px;
+  width: max-content;
+  will-change: transform;
+  animation: creditLaneMarqueeLoop 35s linear infinite;
+}
+
+.google-reviews-rail .review-card {
+  flex: 0 0 350px !important;
+  width: 350px !important;
+  min-width: 310px !important;
+  max-width: 360px !important;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin: 0 !important;
+}
+
+/* Trusted Channel Partner Marquee Rail */
+#marqueeRail, .marquee-rail {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  white-space: nowrap !important;
+  width: max-content !important;
+  will-change: transform;
+  align-items: center;
+  animation: creditLaneMarqueeLoop 25s linear infinite;
+}
+
+#marqueeRail span, .marquee-rail span {
+  display: inline-flex !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+/* Disable CSS animation when GSAP takes over */
+.gsap-active #marqueeRail,
+.gsap-active .marquee-rail,
+.gsap-active .google-reviews-rail {
+  animation: none !important;
 }
 
 

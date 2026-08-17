@@ -1,0 +1,318 @@
+<?php
+/**
+ * Template for infrastructure-funding.php
+ */
+?>
+
+    
+        <!-- ============ SERVICE BANNER ============ -->
+        <section class="service-banner">
+          <div class="wrap">
+            <div>
+              <div class="breadcrumbs"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a> / <a href="<?php echo esc_url(home_url('/')); ?>">Loans</a> / Infrastructure Companies Funding</div>
+              <span class="eyebrow" style="color:var(--gold-light);">LOANS</span>
+              <h1>Infrastructure Companies Funding</h1>
+              <p class="lead">Funding structured around EPC contracts, mobilisation needs and milestone billing cycles typical of infrastructure execution.</p>
+              <div class="hero-cta-row">
+                <a href="#apply" class="btn btn-primary">Check Eligibility</a>
+                <a href="#calculator" class="btn btn-outline">Estimate Numbers</a>
+              </div>
+            </div>
+            <div class="service-banner-art">
+              <div class="service-banner-art-img" style="background-image: url('https://images.unsplash.com/photo-1590069261209-f8e9b8642343?q=80&w=1200&auto=format&fit=crop');"></div>
+            </div>
+          </div>
+          
+          <div class="stat-strip">
+            <div class="wrap">
+              <div class="stat-strip-item"><div class="v">Up to ₹50Cr</div><div class="k">Project loan size</div></div><div class="stat-strip-item"><div class="v">10.5% – 15% p.a.</div><div class="k">Interest rate*</div></div><div class="stat-strip-item"><div class="v">Milestone-linked</div><div class="k">Disbursal & repayment</div></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ SERVICE DETAILS GRID ============ -->
+        <section style="background-color: var(--white); border-bottom:1px solid var(--line);">
+          <div class="wrap">
+            <div class="service-content-grid">
+              
+              <!-- Main Column (Left) -->
+              <div class="service-main-col">
+                
+                <!-- 1. ABOUT -->
+                <div class="service-section" id="overview">
+                  <span class="eyebrow">DIAGNOSTICS</span>
+                  <h2 style="margin-top:8px;">About this funding solution</h2>
+                  <p>Infrastructure contractors face a specific cash flow pattern: mobilisation costs are incurred upfront, billing happens at milestones, and client payment — especially from government and PSU clients — often lags well behind billing.</p><p>Funding for this sector is structured around the project's actual execution and billing calendar rather than treated as a generic business loan, typically priced 10.5–15% per annum with mobilisation advances and milestone-linked working capital as the core components.</p><p>Where relevant, we also support arranging the bid and performance bank guarantees required to participate in and execute tenders — a standard requirement infrastructure contractors face that general business lending doesn't address.</p>
+                  <p style="font-size:12px; color:var(--muted); font-style:italic; margin-top:20px;">*Indicative EPC/infra project finance band; actual pricing depends on contract quality and client (govt/PSU/private).</p>
+                </div>
+
+                <!-- 2. WHO SHOULD APPLY -->
+                <div class="service-section" id="eligibility">
+                  <span class="eyebrow">SUITABILITY CHECK</span>
+                  <h2 style="margin-top:8px;">Who is this solution for?</h2>
+                  <p>For registered contractors executing or bidding EPC/infrastructure work, not general SME borrowers.</p>
+                  
+                  <div class="who-summary-box">
+                    <div><b>Best for:</b> EPC contractors with a signed work order and a billing-cycle cash gap.</div><div><b>Think twice if:</b> you lack a verifiable work order — most lenders require one before structuring.</div>
+                  </div>
+
+                  <ul class="qualify-bullets">
+                    <li>Executing or bidding for EPC/infrastructure contracts</li><li>Need mobilisation advance or equipment finance ahead of project start</li><li>Cash flow gap between milestone billing and client payment realisation</li><li>Government or PSU contracts with standard payment delays</li>
+                  </ul>
+                </div>
+
+                <!-- 3. KEY FEATURES & BENEFITS -->
+                <div class="service-section" id="features">
+                  <span class="eyebrow">ADVANTAGES</span>
+                  <h2 style="margin-top:8px;">Why consider this funding route?</h2>
+                  <div class="features-grid">
+                    
+            <div class="feature-block">
+              <span class="num">01</span>
+              <div>
+                <h3>Mobilisation advance</h3>
+                <p>Upfront funding to cover site setup, equipment mobilisation and initial procurement.</p>
+              </div>
+            </div>
+
+            <div class="feature-block">
+              <span class="num">02</span>
+              <div>
+                <h3>Bank guarantee facilitation</h3>
+                <p>Support in arranging performance and bid guarantees required for tenders.</p>
+              </div>
+            </div>
+
+            <div class="feature-block">
+              <span class="num">03</span>
+              <div>
+                <h3>Milestone billing-linked WC</h3>
+                <p>Working capital sized against the project's billing schedule, not flat turnover.</p>
+              </div>
+            </div>
+
+            <div class="feature-block">
+              <span class="num">04</span>
+              <div>
+                <h3>Equipment finance bundled</h3>
+                <p>Heavy machinery and equipment loans structured alongside project funding.</p>
+              </div>
+            </div>
+
+                  </div>
+                </div>
+
+                <!-- 4. OUR PROCESS -->
+                <div class="service-section" id="process">
+                  <span class="eyebrow">TRANSACTION STAGES</span>
+                  <h2 style="margin-top:8px;">How it works</h2>
+                  <div class="route-timeline">
+                    
+            <div class="route-timeline-step">
+              <div class="dot">01</div>
+              <div>
+                <h3>Contract review</h3>
+                <p>Work order terms, client payment history and project scope assessed.</p>
+              </div>
+            </div>
+
+            <div class="route-timeline-step">
+              <div class="dot">02</div>
+              <div>
+                <h3>Facility structuring</h3>
+                <p>Mobilisation advance, WC and equipment lines sized against the project plan.</p>
+              </div>
+            </div>
+
+            <div class="route-timeline-step">
+              <div class="dot">03</div>
+              <div>
+                <h3>Sanction</h3>
+                <p>Terms finalised, including any bank guarantee support required.</p>
+              </div>
+            </div>
+
+            <div class="route-timeline-step">
+              <div class="dot">04</div>
+              <div>
+                <h3>Milestone-linked release</h3>
+                <p>Funds and WC limits track the project's actual billing and execution stages.</p>
+              </div>
+            </div>
+
+                  </div>
+                </div>
+
+                <!-- 5. EMI CALCULATOR / ESTIMATOR -->
+                <div class="service-section" id="calculator">
+                  <span class="eyebrow">INDICATIVE ESTIMATES</span>
+                  <h2 style="margin-top:8px; margin-bottom:12px;">Indicative Repayment (EMI) Calculator</h2>
+                  <p style="font-size:14.5px; color:var(--slate); margin-bottom:24px;">Use the sliders below to get an indicative estimate. Final terms are subject to formal underwriting and lender / investor committee assessment.</p>
+                  
+                  <div class="calc-container">
+                    <div class="calc-grid">
+                      <!-- Left Inputs -->
+                      <div class="calc-inputs">
+                        
+        <div class="calc-input-group">
+          <div class="calc-input-label">
+            <span>Desired Loan Amount</span>
+            <span class="value-output" id="emi-p-val">₹50,00,000</span>
+          </div>
+          <input type="range" class="calc-slider" id="emi-p" min="5000000" max="500000000" step="5000000" value="30000000" oninput="updateEmiCalc()" onchange="updateEmiCalc()">
+        </div>
+        <div class="calc-input-group">
+          <div class="calc-input-label">
+            <span>Interest Rate (p.a. indicative)</span>
+            <span class="value-output" id="emi-r-val">13%</span>
+          </div>
+          <input type="range" class="calc-slider" id="emi-r" min="10.5" max="15" step="0.1" value="13" oninput="updateEmiCalc()" onchange="updateEmiCalc()">
+        </div>
+        <div class="calc-input-group">
+          <div class="calc-input-label">
+            <span>Repayment Tenure</span>
+            <span class="value-output" id="emi-y-val">5 yrs</span>
+          </div>
+          <input type="range" class="calc-slider" id="emi-y" min="1" max="7" step="1" value="5" oninput="updateEmiCalc()" onchange="updateEmiCalc()">
+        </div>
+        
+                      </div>
+                      
+                      <!-- Right Outputs -->
+                      <div class="calc-outputs">
+                        
+        <div class="calc-output-item primary-out">
+          <div class="label">Monthly Repayment (EMI)</div>
+          <div class="value" id="res-emi">—</div>
+        </div>
+        <div class="calc-output-item">
+          <div class="label">Total Interest Payable</div>
+          <div class="value" id="res-interest">—</div>
+        </div>
+        <div class="calc-output-item">
+          <div class="label">Total Capital + Interest Payable</div>
+          <div class="value" id="res-total">—</div>
+        </div>
+        <div class="calc-bar" id="c_bar">
+          <div class="calc-bar-p" id="bar-p"></div>
+          <div class="calc-bar-i" id="bar-i"></div>
+        </div>
+        
+                      </div>
+                    </div>
+                    <div class="calc-disclaimer">
+                      <b>* Notice:</b> Calculated figures are for simulation purposes only. Sizing, interest rate margins, security discount factors, and subsidy tranches depend on credit metrics and final sanction letters.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 6. SOCIAL PROOF (REVIEWS) -->
+                <!-- 7. FAQ -->
+                <div class="service-section" id="faq">
+                  <span class="eyebrow">COMMON OBJECTS</span>
+                  <h2 style="margin-top:8px; margin-bottom:20px;">FAQs</h2>
+                  <div class="faq-accordion">
+                    
+            <div class="faq-item open">
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">What is a mobilisation advance? <span>−</span></button>
+              <div class="faq-a">
+                <p>Upfront funding to cover initial site setup, equipment deployment and procurement before milestone billing begins generating cash inflow.</p>
+              </div>
+            </div>
+
+            <div class="faq-item ">
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Can this help with bid or performance bank guarantees? <span>+</span></button>
+              <div class="faq-a">
+                <p>Yes, we assist in arranging the guarantees typically required to participate in and execute tenders.</p>
+              </div>
+            </div>
+
+            <div class="faq-item ">
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Does this apply to subcontractors, or only main EPC contractors? <span>+</span></button>
+              <div class="faq-a">
+                <p>Both, provided there's a verifiable work order or contract establishing the scope and payment terms.</p>
+              </div>
+            </div>
+
+            <div class="faq-item ">
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Why does government/PSU client payment take so long? <span>+</span></button>
+              <div class="faq-a">
+                <p>Standard bill certification and treasury release cycles for government works commonly run 60–120 days — we size working capital facilities with this delay factored in rather than assuming prompt payment.</p>
+              </div>
+            </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Sticky Form Column (Right) -->
+              <div>
+                <div class="lead-card" id="apply" style="position: sticky; top: 100px;">
+                  <h3 style="font-size: 22px; margin-bottom: 12px;">Check Eligibility</h3>
+                  <p style="font-size: 13.5px; color: var(--slate); margin-bottom: 24px; line-height:1.4;">Submit details for <b>Infrastructure Companies Funding</b>. Our desk reviews profile variables and calls you back the same working day.</p>
+                  
+                  <form class="lead-form" action="https://formsubmit.co/Info@thecreditlane.in" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_subject" value="New Service Lead: Infrastructure Companies Funding - The Credit Lane">
+                    <input type="hidden" name="Selected Service" value="Infrastructure Companies Funding">
+                    <div class="form-group">
+                      <label>Full Name *</label>
+                      <input type="text" name="Full Name" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                      <label>Company Name *</label>
+                      <input type="text" name="Company Name" placeholder="Company name" required>
+                    </div>
+                    <div class="form-group">
+                      <label>Phone Number *</label>
+                      <input type="tel" name="Phone Number" placeholder="+91" required>
+                    </div>
+                    <div class="form-group">
+                      <label>Email *</label>
+                      <input type="email" name="Email" placeholder="you@company.com" required>
+                    </div>
+                    <div class="form-group">
+                      <label>City *</label>
+                      <input type="text" name="City" placeholder="e.g. Ghaziabad" required>
+                    </div>
+                    <div class="form-group">
+                      <label>Business Type *</label>
+                      <select name="Business Type" required>
+                        <option value="">Select your type</option>
+                        <option value="Manufacturing / Industrial">Manufacturing / Industrial</option>
+                        <option value="Real Estate Developer">Real Estate Developer</option>
+                        <option value="Healthcare / Hospital">Healthcare / Hospital</option>
+                        <option value="Education / Trust">Education / Trust</option>
+                        <option value="Hospitality / Hotel">Hospitality / Hotel</option>
+                        <option value="Infrastructure Contractor">Infrastructure Contractor</option>
+                        <option value="B2B Trade & Services">B2B Trade &amp; Services</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Funding Size Required *</label>
+                      <select name="Funding Size Required" required>
+                        <option value="">Select size</option>
+                        <option value="Under ₹10 Lakh">Under ₹10 Lakh</option>
+                        <option value="₹10 Lakh – ₹50 Lakh">₹10 Lakh – ₹50 Lakh</option>
+                        <option value="₹50 Lakh – ₹1 Crore">₹50 Lakh – ₹1 Crore</option>
+                        <option value="₹1 Crore – ₹5 Crore">₹1 Crore – ₹5 Crore</option>
+                        <option value="Above ₹5 Crore">Above ₹5 Crore</option>
+                      </select>
+                    </div>
+                    
+                    <label class="form-consent">
+                      <input type="checkbox" name="Consent" required>
+                      I agree to the disclosure terms and authorise The Credit Lane to contact me regarding this enquiry.
+                    </label>
+                    <button class="btn btn-primary form-submit-btn" type="submit">Submit Request →</button>
+                  </form>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        
+  

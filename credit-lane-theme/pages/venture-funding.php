@@ -1,0 +1,307 @@
+<?php
+/**
+ * Template for venture-funding.php
+ */
+?>
+
+    
+        <!-- ============ SERVICE BANNER ============ -->
+        <section class="service-banner">
+          <div class="wrap">
+            <div>
+              <div class="breadcrumbs"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a> / <a href="<?php echo esc_url(home_url('/')); ?>">Loans</a> / Venture Funding</div>
+              <span class="eyebrow" style="color:var(--gold-light);">LOANS</span>
+              <h1>Venture Funding</h1>
+              <p class="lead">Structured introductions to venture and growth-stage investors for businesses with a scalable model and a clear use of capital.</p>
+              <div class="hero-cta-row">
+                <a href="#apply" class="btn btn-primary">Check Eligibility</a>
+                <a href="#calculator" class="btn btn-outline">Estimate Numbers</a>
+              </div>
+            </div>
+            <div class="service-banner-art">
+              <div class="service-banner-art-img" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop');"></div>
+            </div>
+          </div>
+          
+          <div class="stat-strip">
+            <div class="wrap">
+              <div class="stat-strip-item"><div class="v">₹4Cr – ₹15Cr</div><div class="k">Typical seed raise</div></div><div class="stat-strip-item"><div class="v">15% – 25%</div><div class="k">Typical dilution</div></div><div class="stat-strip-item"><div class="v">Seed – Series B</div><div class="k">Stages covered</div></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ SERVICE DETAILS GRID ============ -->
+        <section style="background-color: var(--white); border-bottom:1px solid var(--line);">
+          <div class="wrap">
+            <div class="service-content-grid">
+              
+              <!-- Main Column (Left) -->
+              <div class="service-main-col">
+                
+                <!-- 1. ABOUT -->
+                <div class="service-section" id="overview">
+                  <span class="eyebrow">DIAGNOSTICS</span>
+                  <h2 style="margin-top:8px;">About this funding solution</h2>
+                  <p>Venture funding is fundamentally different from our lending products — it's equity capital in exchange for ownership, aimed at businesses whose growth trajectory justifies dilution rather than debt servicing.</p><p>Indian seed rounds typically raise ₹4–15 crore (most commonly ₹7–8 crore) at 15–25% dilution; Series A rounds run considerably larger — commonly $10–25 million — at a broadly similar 18–25% dilution band.</p><p>Our role here is advisory and introduction-based: preparing a business to be investor-ready, curating relevant investor introductions, and supporting negotiation through to a closed term sheet.</p>
+                  <p style="font-size:12px; color:var(--muted); font-style:italic; margin-top:20px;">India seed/Series A benchmarks; actual raise size and dilution depend on traction, sector and investor demand.</p>
+                </div>
+
+                <!-- 2. WHO SHOULD APPLY -->
+                <div class="service-section" id="eligibility">
+                  <span class="eyebrow">SUITABILITY CHECK</span>
+                  <h2 style="margin-top:8px;">Who is this solution for?</h2>
+                  <p>For companies with real traction seeking growth capital, not idea-stage concepts.</p>
+                  
+                  <div class="who-summary-box">
+                    <div><b>Best for:</b> Pvt Ltd companies with traction, raising seed through Series B.</div><div>Not applicable if: you want to retain full ownership — this route requires equity dilution.</div>
+                  </div>
+
+                  <ul class="qualify-bullets">
+                    <li>Scalable business model with demonstrable traction</li><li>Raising capital for growth, not just working capital</li><li>Need investor introductions, not just loan-based funding</li><li>Ready for equity dilution in exchange for growth capital</li>
+                  </ul>
+                </div>
+
+                <!-- 3. KEY FEATURES & BENEFITS -->
+                <div class="service-section" id="features">
+                  <span class="eyebrow">ADVANTAGES</span>
+                  <h2 style="margin-top:8px;">Why consider this funding route?</h2>
+                  <div class="features-grid">
+                    
+            <div class="feature-block">
+              <span class="num">01</span>
+              <div>
+                <h3>Investor matchmaking</h3>
+                <p>Introductions curated to funds actively investing in your sector and stage.</p>
+              </div>
+            </div>
+
+            <div class="feature-block">
+              <span class="num">02</span>
+              <div>
+                <h3>Pitch & data-room prep</h3>
+                <p>Support structuring the pitch deck, financial model and data room.</p>
+              </div>
+            </div>
+
+            <div class="feature-block">
+              <span class="num">03</span>
+              <div>
+                <h3>Valuation guidance</h3>
+                <p>Realistic valuation benchmarking against comparable recent rounds.</p>
+              </div>
+            </div>
+
+            <div class="feature-block">
+              <span class="num">04</span>
+              <div>
+                <h3>Term sheet negotiation</h3>
+                <p>Support reviewing and negotiating investor term sheets before signing.</p>
+              </div>
+            </div>
+
+                  </div>
+                </div>
+
+                <!-- 4. OUR PROCESS -->
+                <div class="service-section" id="process">
+                  <span class="eyebrow">TRANSACTION STAGES</span>
+                  <h2 style="margin-top:8px;">How it works</h2>
+                  <div class="route-timeline">
+                    
+            <div class="route-timeline-step">
+              <div class="dot">01</div>
+              <div>
+                <h3>Readiness assessment</h3>
+                <p>Business model, traction and materials reviewed for investor readiness.</p>
+              </div>
+            </div>
+
+            <div class="route-timeline-step">
+              <div class="dot">02</div>
+              <div>
+                <h3>Materials preparation</h3>
+                <p>Pitch deck, financial model and data room built or refined.</p>
+              </div>
+            </div>
+
+            <div class="route-timeline-step">
+              <div class="dot">03</div>
+              <div>
+                <h3>Investor outreach</h3>
+                <p>Curated introductions made to funds matching sector and stage.</p>
+              </div>
+            </div>
+
+            <div class="route-timeline-step">
+              <div class="dot">04</div>
+              <div>
+                <h3>Term sheet to close</h3>
+                <p>Support through negotiation, due diligence and final documentation.</p>
+              </div>
+            </div>
+
+                  </div>
+                </div>
+
+                <!-- 5. EMI CALCULATOR / ESTIMATOR -->
+                <div class="service-section" id="calculator">
+                  <span class="eyebrow">INDICATIVE ESTIMATES</span>
+                  <h2 style="margin-top:8px; margin-bottom:12px;">Dilution & Valuation Estimator</h2>
+                  <p style="font-size:14.5px; color:var(--slate); margin-bottom:24px;">Use the sliders below to get an indicative estimate. Final terms are subject to formal underwriting and lender / investor committee assessment.</p>
+                  
+                  <div class="calc-container">
+                    <div class="calc-grid">
+                      <!-- Left Inputs -->
+                      <div class="calc-inputs">
+                        
+        <div class="calc-input-group">
+          <div class="calc-input-label">
+            <span>Target Raise Amount</span>
+            <span class="value-output" id="dil-raise-val">₹7,00,000</span>
+          </div>
+          <input type="range" class="calc-slider" id="dil-raise" min="5000000" max="300000000" step="5000000" value="70000000" oninput="updateDilutionCalc()" onchange="updateDilutionCalc()">
+        </div>
+        <div class="calc-input-group">
+          <div class="calc-input-label">
+            <span>Pre-Money Valuation</span>
+            <span class="value-output" id="dil-pre-val">₹20,00,00,000</span>
+          </div>
+          <input type="range" class="calc-slider" id="dil-pre" min="20000000" max="1000000000" step="5000000" value="200000000" oninput="updateDilutionCalc()" onchange="updateDilutionCalc()">
+        </div>
+        
+                      </div>
+                      
+                      <!-- Right Outputs -->
+                      <div class="calc-outputs">
+                        
+        <div class="calc-output-item primary-out">
+          <div class="label">Post-Money Valuation</div>
+          <div class="value" id="res-dil-post">—</div>
+        </div>
+        <div class="calc-output-item">
+          <div class="label">Equity Dilution (approx)</div>
+          <div class="value" id="res-dil-dil">—</div>
+        </div>
+        <div class="calc-output-item">
+          <div class="label">Promoters Shareholding Retained</div>
+          <div class="value" id="res-dil-ret">—</div>
+        </div>
+        
+                      </div>
+                    </div>
+                    <div class="calc-disclaimer">
+                      <b>* Notice:</b> Calculated figures are for simulation purposes only. Sizing, interest rate margins, security discount factors, and subsidy tranches depend on credit metrics and final sanction letters.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 6. SOCIAL PROOF (REVIEWS) -->
+                <!-- 7. FAQ -->
+                <div class="service-section" id="faq">
+                  <span class="eyebrow">COMMON OBJECTS</span>
+                  <h2 style="margin-top:8px; margin-bottom:20px;">FAQs</h2>
+                  <div class="faq-accordion">
+                    
+            <div class="faq-item open">
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">How is this different from a business loan? <span>−</span></button>
+              <div class="faq-a">
+                <p>A loan is debt that must be repaid with interest; venture funding is equity capital exchanged for ownership stake, with no fixed repayment obligation.</p>
+              </div>
+            </div>
+
+            <div class="faq-item ">
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">What stage of business is eligible? <span>+</span></button>
+              <div class="faq-a">
+                <p>Primarily seed through Series B — businesses with some traction and a credible growth story, rather than pure idea-stage concepts.</p>
+              </div>
+            </div>
+
+            <div class="faq-item ">
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Do you charge success fees on the raise? <span>+</span></button>
+              <div class="faq-a">
+                <p>Fee structures are discussed upfront during the readiness assessment, before any investor outreach begins.</p>
+              </div>
+            </div>
+
+            <div class="faq-item ">
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">What's typical dilution at seed vs Series A? <span>+</span></button>
+              <div class="faq-a">
+                <p>Both bands run broadly similar in India — roughly 15–25% at seed and 18–25% at Series A — though the absolute cheque size is materially larger at Series A.</p>
+              </div>
+            </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Sticky Form Column (Right) -->
+              <div>
+                <div class="lead-card" id="apply" style="position: sticky; top: 100px;">
+                  <h3 style="font-size: 22px; margin-bottom: 12px;">Check Eligibility</h3>
+                  <p style="font-size: 13.5px; color: var(--slate); margin-bottom: 24px; line-height:1.4;">Submit details for <b>Venture Funding</b>. Our desk reviews profile variables and calls you back the same working day.</p>
+                  
+                  <form class="lead-form" action="https://formsubmit.co/Info@thecreditlane.in" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_subject" value="New Service Lead: Venture Funding - The Credit Lane">
+                    <input type="hidden" name="Selected Service" value="Venture Funding">
+                    <div class="form-group">
+                      <label>Full Name *</label>
+                      <input type="text" name="Full Name" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                      <label>Company Name *</label>
+                      <input type="text" name="Company Name" placeholder="Company name" required>
+                    </div>
+                    <div class="form-group">
+                      <label>Phone Number *</label>
+                      <input type="tel" name="Phone Number" placeholder="+91" required>
+                    </div>
+                    <div class="form-group">
+                      <label>Email *</label>
+                      <input type="email" name="Email" placeholder="you@company.com" required>
+                    </div>
+                    <div class="form-group">
+                      <label>City *</label>
+                      <input type="text" name="City" placeholder="e.g. Ghaziabad" required>
+                    </div>
+                    <div class="form-group">
+                      <label>Business Type *</label>
+                      <select name="Business Type" required>
+                        <option value="">Select your type</option>
+                        <option value="Manufacturing / Industrial">Manufacturing / Industrial</option>
+                        <option value="Real Estate Developer">Real Estate Developer</option>
+                        <option value="Healthcare / Hospital">Healthcare / Hospital</option>
+                        <option value="Education / Trust">Education / Trust</option>
+                        <option value="Hospitality / Hotel">Hospitality / Hotel</option>
+                        <option value="Infrastructure Contractor">Infrastructure Contractor</option>
+                        <option value="B2B Trade & Services">B2B Trade &amp; Services</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Funding Size Required *</label>
+                      <select name="Funding Size Required" required>
+                        <option value="">Select size</option>
+                        <option value="Under ₹10 Lakh">Under ₹10 Lakh</option>
+                        <option value="₹10 Lakh – ₹50 Lakh">₹10 Lakh – ₹50 Lakh</option>
+                        <option value="₹50 Lakh – ₹1 Crore">₹50 Lakh – ₹1 Crore</option>
+                        <option value="₹1 Crore – ₹5 Crore">₹1 Crore – ₹5 Crore</option>
+                        <option value="Above ₹5 Crore">Above ₹5 Crore</option>
+                      </select>
+                    </div>
+                    
+                    <label class="form-consent">
+                      <input type="checkbox" name="Consent" required>
+                      I agree to the disclosure terms and authorise The Credit Lane to contact me regarding this enquiry.
+                    </label>
+                    <button class="btn btn-primary form-submit-btn" type="submit">Submit Request →</button>
+                  </form>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        
+  

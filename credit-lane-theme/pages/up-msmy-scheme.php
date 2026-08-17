@@ -1,0 +1,255 @@
+<?php
+/**
+ * Template for up-msmy-scheme.php
+ */
+?>
+
+    
+        <!-- ============ SERVICE BANNER ============ -->
+        <section class="service-banner">
+          <div class="wrap">
+            <div>
+              <div class="breadcrumbs"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a> / <a href="<?php echo esc_url(home_url('/')); ?>">Incentives</a> / UP Govt MSMY (Mukhyamantri Yuva Swarozgar Yojana)</div>
+              <span class="eyebrow" style="color:var(--gold-light);">INCENTIVES</span>
+              <h1>UP Govt MSMY (Mukhyamantri Yuva Swarozgar Yojana)</h1>
+              <p class="lead">Margin-money grant and interest support to help educated unemployed youth in Uttar Pradesh set up their first enterprise.</p>
+              <div class="hero-cta-row">
+                <a href="#apply" class="btn btn-primary">Check Eligibility</a>
+                <a href="#overview" class="btn btn-outline">Explore Benefits</a>
+              </div>
+            </div>
+            <div class="service-banner-art">
+              <div class="service-banner-art-img" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop');"></div>
+            </div>
+          </div>
+          
+          <div class="stat-strip">
+            <div class="wrap">
+              <div class="stat-strip-item"><div class="v">Up to ₹5L</div><div class="k">Loan, largely interest-free*</div></div><div class="stat-strip-item"><div class="v">10%</div><div class="k">Margin money subsidy</div></div><div class="stat-strip-item"><div class="v">Collateral-free</div><div class="k">Security requirement</div></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ SERVICE DETAILS GRID ============ -->
+        <section style="background-color: var(--white); border-bottom:1px solid var(--line);">
+          <div class="wrap">
+            <div class="service-content-grid">
+              
+              <!-- Main Column (Left) -->
+              <div class="service-main-col">
+                
+                <!-- 1. ABOUT -->
+                <div class="service-section" id="overview">
+                  <span class="eyebrow">DIAGNOSTICS</span>
+                  <h2 style="margin-top:8px;">About this funding solution</h2>
+                  <p>Mukhyamantri Yuva Swarozgar Yojana (MYSY) was created to give Uttar Pradesh's educated but unemployed youth a route into self-employment in the industry and service sectors, through a margin-money grant and interest support rather than a standard commercial loan.</p><p>In its current operating form — aligned with the state's broader CM-YUVA push — eligible applicants can access collateral-free financing up to ₹5 lakh with a 10% margin-money subsidy on total project cost, removing the two biggest barriers first-time entrepreneurs face: security and upfront equity.</p><p>Special provisions apply for SC/ST and women applicants, who receive enhanced margin-money and interest support beyond the standard terms — reflecting the scheme's explicit focus on widening access to first-generation entrepreneurship.</p>
+                  <p style="font-size:12px; color:var(--muted); font-style:italic; margin-top:20px;">*Reflects CM-YUVA alignment; SC/ST and women applicants receive enhanced margin-money and interest support.</p>
+                </div>
+
+                <!-- 2. WHO SHOULD APPLY -->
+                <div class="service-section" id="eligibility">
+                  <span class="eyebrow">SUITABILITY CHECK</span>
+                  <h2 style="margin-top:8px;">Who is this solution for?</h2>
+                  <p>For educated, currently-unemployed individuals in UP setting up their very first enterprise — not an expansion or working-capital product.</p>
+                  
+                  <div class="who-summary-box">
+                    <div><b>Best for:</b> first-time entrepreneurs, educated and unemployed, setting up a new micro-enterprise in UP.</div><div>Not applicable if: you're expanding an existing running business — this scheme targets new-unit formation.</div>
+                  </div>
+
+                  <ul class="qualify-bullets">
+                    <li>Educated but currently unemployed resident of Uttar Pradesh</li><li>Setting up a new enterprise in the industry or service sector</li><li>Have a workable business plan for a first-time venture</li><li>Fall under SC/ST or women categories for enhanced scheme benefits</li>
+                  </ul>
+                </div>
+
+                <!-- 3. KEY FEATURES & BENEFITS -->
+                <div class="service-section" id="features">
+                  <span class="eyebrow">ADVANTAGES</span>
+                  <h2 style="margin-top:8px;">Why consider this funding route?</h2>
+                  <div class="features-grid">
+                    
+            <div class="feature-block">
+              <span class="num">01</span>
+              <div>
+                <h3>Collateral-free financing</h3>
+                <p>Up to ₹5 lakh in financing without pledging security.</p>
+              </div>
+            </div>
+
+            <div class="feature-block">
+              <span class="num">02</span>
+              <div>
+                <h3>Margin-money subsidy</h3>
+                <p>10% of total project cost covered as a subsidy, reducing promoter contribution.</p>
+              </div>
+            </div>
+
+            <div class="feature-block">
+              <span class="num">03</span>
+              <div>
+                <h3>SC/ST & women enhancements</h3>
+                <p>Additional margin-money and interest support for eligible categories.</p>
+              </div>
+            </div>
+
+            <div class="feature-block">
+              <span class="num">04</span>
+              <div>
+                <h3>Business-plan support</h3>
+                <p>Guidance structuring a bankable plan before the district committee review.</p>
+              </div>
+            </div>
+
+                  </div>
+                </div>
+
+                <!-- 4. OUR PROCESS -->
+                <div class="service-section" id="process">
+                  <span class="eyebrow">TRANSACTION STAGES</span>
+                  <h2 style="margin-top:8px;">How it works</h2>
+                  <div class="route-timeline">
+                    
+            <div class="route-timeline-step">
+              <div class="dot">01</div>
+              <div>
+                <h3>Eligibility & plan preparation</h3>
+                <p>Applicant eligibility confirmed and a business plan drafted for review.</p>
+              </div>
+            </div>
+
+            <div class="route-timeline-step">
+              <div class="dot">02</div>
+              <div>
+                <h3>Online application</h3>
+                <p>Application submitted via the UP MSME/self-employment portal.</p>
+              </div>
+            </div>
+
+            <div class="route-timeline-step">
+              <div class="dot">03</div>
+              <div>
+                <h3>District committee screening</h3>
+                <p>District-level committee reviews the plan and applicant eligibility.</p>
+              </div>
+            </div>
+
+            <div class="route-timeline-step">
+              <div class="dot">04</div>
+              <div>
+                <h3>Bank sanction & disbursal</h3>
+                <p>Empanelled bank sanctions financing; margin-money subsidy credited alongside.</p>
+              </div>
+            </div>
+
+                  </div>
+                </div>
+
+                <!-- 5. SOCIAL PROOF (REVIEWS) -->
+                <!-- 7. FAQ -->
+                <div class="service-section" id="faq">
+                  <span class="eyebrow">COMMON OBJECTS</span>
+                  <h2 style="margin-top:8px; margin-bottom:20px;">FAQs</h2>
+                  <div class="faq-accordion">
+                    
+            <div class="faq-item open">
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Who exactly counts as 'educated unemployed youth' for this scheme? <span>−</span></button>
+              <div class="faq-a">
+                <p>Eligibility is based on educational qualification and current unemployment status at the time of application — exact age and qualification bands are confirmed during the eligibility check, as they're periodically revised.</p>
+              </div>
+            </div>
+
+            <div class="faq-item ">
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Is this only for men, or can women apply too? <span>+</span></button>
+              <div class="faq-a">
+                <p>Women are explicitly eligible, with enhanced margin-money and interest support built into the scheme's special provisions.</p>
+              </div>
+            </div>
+
+            <div class="faq-item ">
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">Can I use this to expand an existing business? <span>+</span></button>
+              <div class="faq-a">
+                <p>No — this scheme is specifically for setting up a new enterprise, not for working capital or expansion of an already-running unit.</p>
+              </div>
+            </div>
+
+            <div class="faq-item ">
+              <button type="button" class="faq-q" onclick="toggleFaq(this)">What happens after the district committee approves my plan? <span>+</span></button>
+              <div class="faq-a">
+                <p>An empanelled bank sanctions the financing and the margin-money subsidy is credited alongside disbursal, per the scheme's process.</p>
+              </div>
+            </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Sticky Form Column (Right) -->
+              <div>
+                <div class="lead-card" id="apply" style="position: sticky; top: 100px;">
+                  <h3 style="font-size: 22px; margin-bottom: 12px;">Check Eligibility</h3>
+                  <p style="font-size: 13.5px; color: var(--slate); margin-bottom: 24px; line-height:1.4;">Submit details for <b>UP Govt MSMY (Mukhyamantri Yuva Swarozgar Yojana)</b>. Our desk reviews profile variables and calls you back the same working day.</p>
+                  
+                  <form class="lead-form" action="https://formsubmit.co/Info@thecreditlane.in" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_subject" value="New Service Lead: UP Govt MSMY (Mukhyamantri Yuva Swarozgar Yojana) - The Credit Lane">
+                    <input type="hidden" name="Selected Service" value="UP Govt MSMY (Mukhyamantri Yuva Swarozgar Yojana)">
+                    <div class="form-group">
+                      <label>Full Name *</label>
+                      <input type="text" name="Full Name" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                      <label>Company Name *</label>
+                      <input type="text" name="Company Name" placeholder="Company name" required>
+                    </div>
+                    <div class="form-group">
+                      <label>Phone Number *</label>
+                      <input type="tel" name="Phone Number" placeholder="+91" required>
+                    </div>
+                    <div class="form-group">
+                      <label>Email *</label>
+                      <input type="email" name="Email" placeholder="you@company.com" required>
+                    </div>
+                    <div class="form-group">
+                      <label>City *</label>
+                      <input type="text" name="City" placeholder="e.g. Ghaziabad" required>
+                    </div>
+                    <div class="form-group">
+                      <label>Business Type *</label>
+                      <select name="Business Type" required>
+                        <option value="">Select your type</option>
+                        <option value="Manufacturing / Industrial">Manufacturing / Industrial</option>
+                        <option value="Real Estate Developer">Real Estate Developer</option>
+                        <option value="Healthcare / Hospital">Healthcare / Hospital</option>
+                        <option value="Education / Trust">Education / Trust</option>
+                        <option value="Hospitality / Hotel">Hospitality / Hotel</option>
+                        <option value="Infrastructure Contractor">Infrastructure Contractor</option>
+                        <option value="B2B Trade & Services">B2B Trade &amp; Services</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Funding Size Required *</label>
+                      <select name="Funding Size Required" required>
+                        <option value="">Select size</option>
+                        <option value="Under ₹10 Lakh">Under ₹10 Lakh</option>
+                        <option value="₹10 Lakh – ₹50 Lakh">₹10 Lakh – ₹50 Lakh</option>
+                        <option value="₹50 Lakh – ₹1 Crore">₹50 Lakh – ₹1 Crore</option>
+                        <option value="₹1 Crore – ₹5 Crore">₹1 Crore – ₹5 Crore</option>
+                        <option value="Above ₹5 Crore">Above ₹5 Crore</option>
+                      </select>
+                    </div>
+                    
+                    <label class="form-consent">
+                      <input type="checkbox" name="Consent" required>
+                      I agree to the disclosure terms and authorise The Credit Lane to contact me regarding this enquiry.
+                    </label>
+                    <button class="btn btn-primary form-submit-btn" type="submit">Submit Request →</button>
+                  </form>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        
+  
