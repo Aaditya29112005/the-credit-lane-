@@ -230,37 +230,39 @@ function initMarqueesWithObserver() {
   let tlReviews = null;
   let tlPartners = null;
 
-  // 8A. Google Verified Reviews Marquee
-  const reviewsRail = document.querySelector(".google-reviews-rail");
-  if (reviewsRail) {
-    if (!reviewsRail.dataset.duplicated) {
-      reviewsRail.innerHTML += reviewsRail.innerHTML;
-      reviewsRail.dataset.duplicated = "true";
-    }
-    const reviewCards = gsap.utils.toArray(".google-reviews-rail .review-card");
-    if (reviewCards.length) {
-      tlReviews = horizontalLoop(reviewCards, {
-        repeat: -1,
-        paddingRight: 24,
-        speed: 0.8
+  // 8A. Google Verified Reviews Slider Controller
+  (function initReviewsSlider() {
+    const track = document.querySelector(".reviews-carousel-track");
+    const prevBtn = document.querySelector(".reviews-prev-btn, .reviews-prev");
+    const nextBtn = document.querySelector(".reviews-next-btn, .reviews-next");
+
+    if (!track) return;
+
+    let currentIndex = 0;
+    const cardWidth = 344; // 320px width + 24px gap
+
+    const updateSlider = () => {
+      const maxIndex = Math.max(0, track.children.length - 1);
+      if (currentIndex < 0) currentIndex = 0;
+      if (currentIndex > maxIndex) currentIndex = maxIndex;
+      track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    };
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        currentIndex = Math.max(0, currentIndex - 1);
+        updateSlider();
       });
-
-      const prevBtn = document.querySelector(".reviews-prev");
-      const nextBtn = document.querySelector(".reviews-next");
-      if (prevBtn) {
-        prevBtn.addEventListener("click", () => tlReviews.previous({ duration: 0.6, ease: "power2.inOut" }));
-      }
-      if (nextBtn) {
-        nextBtn.addEventListener("click", () => tlReviews.next({ duration: 0.6, ease: "power2.inOut" }));
-      }
-
-      const carouselEl = document.querySelector(".google-reviews-carousel");
-      if (carouselEl) {
-        carouselEl.addEventListener("mouseenter", () => gsap.to(tlReviews, { timeScale: 0, duration: 0.4 }));
-        carouselEl.addEventListener("mouseleave", () => gsap.to(tlReviews, { timeScale: 1, duration: 0.4 }));
-      }
     }
-  }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        const maxScroll = Math.max(0, track.children.length - 2);
+        currentIndex = Math.min(maxScroll, currentIndex + 1);
+        updateSlider();
+      });
+    }
+  })();
 
   // 8B. Trusted Channel Partner Logo Marquee
   const partnerRail = document.querySelector("#marqueeRail, .marquee-rail");
