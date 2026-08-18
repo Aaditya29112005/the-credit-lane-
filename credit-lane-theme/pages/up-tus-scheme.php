@@ -145,6 +145,59 @@
 
                 <!-- 5. SOCIAL PROOF (REVIEWS) -->
                 <!-- 7. FAQ -->
+                <!-- 5. EMI CALCULATOR / ESTIMATOR -->
+                <div class="service-section" id="calculator">
+                  <span class="eyebrow">INDICATIVE ESTIMATES</span>
+                  <h2 style="margin-top:8px; margin-bottom:12px;">UP Policy Scheme Subsidy Estimator</h2>
+                  <p style="font-size:14.5px; color:var(--slate); margin-bottom:24px;">Use the sliders below to get an indicative estimate. Final terms are subject to formal underwriting and lender / investor committee assessment.</p>
+                  
+                  <div class="calc-container">
+                    <div class="calc-grid">
+                      <!-- Left Inputs -->
+                      <div class="calc-inputs">
+                        
+        <div class="calc-input-group">
+          <div class="calc-input-label">
+            <span>Total Project / Machine Cost</span>
+            <span class="value-output" id="sub-cost-val">₹20,00,000</span>
+          </div>
+          <input type="range" class="calc-slider" id="sub-cost" min="100000" max="50000000" step="100000" value="2000000" oninput="updateSubsidyCalc()" onchange="updateSubsidyCalc()">
+        </div>
+        <div class="calc-input-group">
+          <div class="calc-input-label">
+            <span>Policy Subsidy Rate</span>
+            <span class="value-output" id="sub-rate-val">20%</span>
+          </div>
+          <input type="range" class="calc-slider" id="sub-rate" min="5" max="30" step="1" value="20" oninput="updateSubsidyCalc()" onchange="updateSubsidyCalc()">
+        </div>
+        <input type="hidden" id="sub-cap" value="1500000">
+        
+                      </div>
+                      
+                      <!-- Right Outputs -->
+                      <div class="calc-outputs">
+                        
+        <div>
+          <div class="calc-output-head" style="font-size: 11.5px; font-weight: 700; color: #C89B3C; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">ESTIMATED SUBSIDY CLAIMABLE</div>
+          <div class="calc-output-main-val" id="res-sub-amt" style="font-family: 'Newsreader', Georgia, serif; font-size: clamp(2.2rem, 3.5vw, 2.6rem); font-weight: 700; color: #ffffff; line-height: 1.1; margin-bottom: 16px;">—</div>
+          <div class="calc-divider" style="border-bottom: 1px solid rgba(255, 255, 255, 0.12); margin-bottom: 20px;"></div>
+          <div class="calc-metrics-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="calc-metric-item" style="grid-column: span 2;">
+              <div class="m-label" style="font-size: 12px; color: #94A3B8; margin-bottom: 4px;">Net Cost After Subsidy</div>
+              <div class="m-val" id="res-sub-net" style="font-size: 18px; font-weight: 700; color: #ffffff;">—</div>
+            </div>
+          </div>
+        </div>
+        <a href="#apply" class="calc-apply-btn" style="display: block; width: 100%; text-align: center; background: #C89B3C; color: #0B1F3A; font-weight: 700; font-size: 15px; padding: 14px 20px; border-radius: 10px; text-decoration: none; margin-top: 16px;">Apply for In-Principle Sanction &rarr;</a>
+        
+                      </div>
+                    </div>
+                    <div class="calc-disclaimer">
+                      <b>* Notice:</b> Calculated figures are for simulation purposes only. Sizing, interest rate margins, security discount factors, and subsidy tranches depend on credit metrics and final sanction letters.
+                    </div>
+                  </div>
+                </div>
+
                 <div class="service-section" id="faq">
                   <span class="eyebrow">COMMON OBJECTS</span>
                   <h2 style="margin-top:8px; margin-bottom:20px;">FAQs</h2>
