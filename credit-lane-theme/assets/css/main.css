@@ -2578,13 +2578,13 @@ footer h5 {
   }
 
   .lead-gen-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    grid-template-columns: 1fr 340px;
+    gap: 32px;
   }
 
   .service-content-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    grid-template-columns: 1fr 340px;
+    gap: 32px;
   }
 
   .about-story {
@@ -2597,7 +2597,8 @@ footer h5 {
   }
 
   .contact-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
   }
 
   .category-grid-catalog {
@@ -2651,6 +2652,21 @@ footer h5 {
 
   .founders-grid {
     grid-template-columns: 1fr !important;
+  }
+
+  .service-content-grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+
+  .lead-gen-grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
   }
 
   /* Global */
