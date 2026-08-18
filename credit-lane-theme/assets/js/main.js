@@ -375,7 +375,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div style="padding: 32px 24px; text-align: center; background: rgba(36, 161, 72, 0.08); border: 1px solid #24a148; border-radius: 16px; margin-top: 10px;">
             <div style="font-size: 42px; margin-bottom: 12px;">✅</div>
             <h4 style="color: #0b1f3a; font-size: 22px; font-family: 'Newsreader', serif; margin-bottom: 8px;">Requirement Submitted Successfully!</h4>
-            <p style="font-size: 14.5px; color: #5B6472; line-height: 1.6; margin: 0;">Your details have been registered into our master Google Sheet and emailed directly to <strong>Info@thecreditlane.in</strong>.<br><br>Rajat Garg &amp; our corporate advisory desk will review your submission and reach out within 24 working hours.</p>
+            <p style="font-size: 14.5px; color: #5B6472; line-height: 1.6; margin: 0;">Your details have been registered into our master Google Sheet and emailed directly to <strong>Info@thecreditlane.in</strong>.<br><br>The Credit Lane corporate advisory desk will review your submission and reach out within 24 working hours.</p>
           </div>
         `;
 

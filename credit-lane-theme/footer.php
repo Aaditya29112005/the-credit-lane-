@@ -181,9 +181,9 @@
               <h5>COMPANY</h5>
               <div class="footer-links">
                 <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">About Us</a>
+                <a href="<?php echo esc_url( home_url( '/partner-with-us/' ) ); ?>">Partner With Us</a>
                 <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Contact Us</a>
-                <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>#brochure" style="color: var(--gold-light);">Company Brochure 📄</a>
-                <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Partner With Us</a>
+                <a href="<?php echo esc_url( get_template_directory_uri() . '/assets/docs/The-Credit-Lane-Company-Brochure.pdf?v=1.2.4' ); ?>" download="The-Credit-Lane-Company-Brochure.pdf" target="_blank" style="color: var(--gold-light);">Company Brochure 📄</a>
               </div>
             </div>
           </div>
@@ -198,7 +198,7 @@
               <p style="color: var(--slate-light); font-size: 13.5px; line-height: 1.5; margin: 0;">We welcome professionals like CAs, CSs, and Advocates to collaborate with us and help their clients fulfill their financial needs.</p>
             </div>
           </div>
-          <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-primary" style="white-space: nowrap; font-size: 13.5px; padding: 10px 20px;">Partner With Us &rarr;</a>
+          <a href="<?php echo esc_url( home_url( '/partner-with-us/' ) ); ?>" class="btn btn-primary" style="white-space: nowrap; font-size: 13.5px; padding: 10px 20px;">Partner With Us &rarr;</a>
         </div>
 
         <div class="footer-badges-row" style="margin-top: 28px;">

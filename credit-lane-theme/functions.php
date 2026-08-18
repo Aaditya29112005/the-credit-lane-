@@ -81,6 +81,7 @@ function credit_lane_auto_create_pages() {
     // 1. Parent Pages
     $parents = array(
         'About Us' => 'about',
+        'Partner With Us' => 'partner-with-us',
         'Contact Us' => 'contact',
         'Loans' => 'loans',
         'Equity' => 'equity',

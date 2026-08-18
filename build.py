@@ -1808,6 +1808,7 @@ def get_layout(content, title, description, url_slug, depth=0):
           </div>
         </div>
         <a href="{pref}about/index.html" class="{"active" if url_slug == "about" else ""}">About Us</a>
+        <a href="{pref}partner-with-us/index.html" class="{"active" if url_slug == "partner-with-us" else ""}">Partner With Us</a>
         <a href="{pref}contact/index.html" class="{"active" if url_slug == "contact" else ""}">Contact Us</a>
       </nav>
       
@@ -1858,6 +1859,9 @@ def get_layout(content, title, description, url_slug, depth=0):
       </div>
       <div class="mobile-nav-item">
         <a href="{pref}about/index.html" style="font-weight: 700; font-size: 16px;">About Us</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="{pref}partner-with-us/index.html" style="font-weight: 700; font-size: 16px;">Partner With Us</a>
       </div>
       <div class="mobile-nav-item">
         <a href="{pref}contact/index.html" style="font-weight: 700; font-size: 16px;">Contact Us</a>
@@ -1921,9 +1925,8 @@ def get_layout(content, title, description, url_slug, depth=0):
               <h5>COMPANY</h5>
               <div class="footer-links">
                 <a href="{pref}about/index.html">About Us</a>
+                <a href="{pref}partner-with-us/index.html">Partner With Us</a>
                 <a href="{pref}contact/index.html">Contact Us</a>
-                <a href="{pref}contact/index.html">Partner With Us</a>
-                <a href="{pref}contact/index.html">Track Application</a>
               </div>
             </div>
           </div>
@@ -1935,9 +1938,11 @@ def get_layout(content, title, description, url_slug, depth=0):
             <span style="font-size: 28px;">🤝</span>
             <div>
               <strong style="color: var(--gold-light); font-size: 16px; font-family: var(--font-serif); display: block; margin-bottom: 4px;">Partnership Opportunities</strong>
-              <p style="color: var(--slate-light); font-size: 13.5px; line-height: 1.5; margin: 0;">We welcome professionals like CAs, CSs, and CWAs to collaborate with us and help their clients fulfill their financial needs.</p>
+              <p style="color: var(--slate-light); font-size: 13.5px; line-height: 1.5; margin: 0;">We welcome professionals like CAs, CSs, and Advocates to collaborate with us and help their clients fulfill their financial needs.</p>
             </div>
           </div>
+          <a href="{pref}partner-with-us/index.html" class="btn btn-primary" style="white-space: nowrap; font-size: 14px; font-weight: 700;">Partner With Us &rarr;</a>
+        </div>
           <a href="{pref}contact/index.html" class="btn btn-primary" style="white-space: nowrap; font-size: 13.5px; padding: 10px 20px;">Partner With Us &rarr;</a>
         </div>
 
@@ -2936,35 +2941,15 @@ def generate_contactpage():
       <div class="wrap">
         <div>
           <span class="eyebrow" style="color:var(--gold-light);">GET IN TOUCH</span>
-          <h1 style="max-width: 100%; font-size: clamp(32px, 4vw, 48px); line-height: 1.2;">Connect With Rajat Garg &amp; Our Advisory Team.</h1>
+          <h1 style="max-width: 100%; font-size: clamp(32px, 4vw, 48px); line-height: 1.2;">Connect With The Credit Lane Team</h1>
           <p class="lead" style="max-width: 100%; font-size: 17px; color: rgba(255,255,255,0.85); margin-top: 14px;">Submit your corporate debt, SIDBI machine loan, SME IPO, or UP Government Grant requirement. Direct consultation with our CA, CS, and Legal Advocates within 1 working day.</p>
         </div>
         <div class="service-banner-art" style="display: flex; align-items: center; justify-content: center; width: 100%;">
           <div style="width: 100%; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 20px; padding: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.35);">
-            <img src="../about/WhatsApp Image 2026-08-11 at 10.10.23.jpeg" alt="Rajat Garg & The Credit Lane Founders" style="width: 100%; height: auto; max-height: 440px; object-fit: contain; border-radius: 14px; display: block;">
+            <img src="../about/WhatsApp Image 2026-08-11 at 10.10.23.jpeg" alt="The Credit Lane Executive Team" style="width: 100%; height: auto; max-height: 440px; object-fit: contain; border-radius: 14px; display: block;">
             <div style="text-align: center; padding: 8px 0 4px; color: var(--gold-light); font-size: 12.5px; font-weight: 600; letter-spacing: 0.03em;">
-              ⭐ Rajat Garg &amp; Executive Leadership Desk at Build Bharat Expo 2025
+              ⭐ The Credit Lane Executive Advisory Team
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Top Exhibition & Event Highlights Banner -->
-    <section style="padding: 24px 0 40px; background: var(--offwhite); border-bottom: 1px solid var(--line);">
-      <div class="wrap">
-        <div style="background: var(--navy-dark); color: #fff; border-radius: 20px; padding: 28px 36px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; box-shadow: 0 10px 30px rgba(0,0,0,0.12);">
-          <div style="display: flex; align-items: center; gap: 20px;">
-            <img src="../about/BRT CorporateBBE Participation Certificate_page-0001.jpg" alt="Build Bharat Expo Certificate" style="width: 76px; height: 76px; border-radius: 12px; object-fit: cover; border: 2px solid var(--gold); box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
-            <div>
-              <span style="font-size: 11px; font-weight: 700; color: var(--gold-light); text-transform: uppercase; letter-spacing: 0.08em; display: block;">BUILD BHARAT EXPO 2025 EXHIBITOR</span>
-              <h3 style="font-size: 20px; color: #fff; font-family: var(--font-serif); margin: 2px 0 4px 0;">Visit Us at Bharat Mandapam (Hall 6 Stall D19)</h3>
-              <p style="font-size: 13.5px; color: var(--slate-light); margin: 0;">Meet our CA, CS, and Advocate led team live at national MSME expos or visit our Ghaziabad Head Office.</p>
-            </div>
-          </div>
-          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-            <a href="tel:9217924499" class="btn btn-primary" style="white-space: nowrap; font-size: 14px; font-weight: 700; padding: 12px 24px;">📞 Call 9217924499</a>
-            <a href="tel:9818709747" class="btn btn-outline-light" style="white-space: nowrap; font-size: 14px; font-weight: 600; border-color: rgba(255,255,255,0.3); color: #fff; padding: 12px 24px;">📞 Call 9818709747</a>
           </div>
         </div>
       </div>
@@ -2979,7 +2964,7 @@ def generate_contactpage():
           <div class="contact-info-col">
             <div class="contact-card" style="padding: 0; overflow: hidden; border-radius: 20px; border: 1px solid var(--line); background: var(--offwhite); box-shadow: 0 8px 30px rgba(0,0,0,0.05);">
               <div style="width: 100%; height: 220px; overflow: hidden; position: relative;">
-                <img src="../about/image copy 16.png" alt="Build Bharat Expo 2025 Stall" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                <img src="../about/image copy 16.png" alt="The Credit Lane Advisory Desk" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
               </div>
               <div style="padding: 32px 28px;">
                 <h3 style="font-family: var(--font-serif); font-size: 24px; color: var(--navy-dark); margin-bottom: 24px;">Corporate Advisory Desk</h3>
@@ -2992,7 +2977,7 @@ def generate_contactpage():
                 <div class="contact-item" style="margin-bottom: 20px;">
                   <span class="label" style="font-size: 11.5px; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; display: block;">Direct Contact Helplines</span>
                   <div style="margin-top: 6px; display: flex; flex-direction: column; gap: 6px;">
-                    <a href="tel:9217924499" class="mono" style="color: var(--navy-dark); font-weight: 700; text-decoration: none; font-size: 16px;">📞 +91-9217924499 (Rajat Garg, MD)</a>
+                    <a href="tel:9217924499" class="mono" style="color: var(--navy-dark); font-weight: 700; text-decoration: none; font-size: 16px;">📞 +91-9217924499 (Managing Director Desk)</a>
                     <a href="tel:9818709747" class="mono" style="color: var(--navy-dark); font-weight: 700; text-decoration: none; font-size: 16px;">📞 +91-9818709747 (Advisory Desk)</a>
                   </div>
                 </div>
@@ -3108,6 +3093,11 @@ def generate_contactpage():
                 <textarea name="Project Details" rows="4" placeholder="Mention your business sector, existing turnover, machinery specs, or specific subsidy requirement..." style="width: 100%; padding: 13px 16px; border-radius: 10px; border: 1px solid var(--line); font-size: 14.5px; background: var(--white); resize: vertical;"></textarea>
               </div>
 
+              <label class="form-consent" style="display: flex; align-items: flex-start; gap: 8px; font-size: 12px; color: var(--slate); line-height: 1.4; cursor: pointer;">
+                <input type="checkbox" name="Consent" required style="margin-top: 2px; width: 16px; height: 16px; accent-color: #C89B3C;">
+                I authorise The Credit Lane team to contact me regarding this enquiry.
+              </label>
+
               <button type="submit" class="btn btn-primary" style="padding: 16px 32px; font-size: 16px; font-weight: 700; width: 100%; justify-content: center; box-shadow: 0 8px 25px rgba(184,134,11,0.3); border: none; cursor: pointer;">
                 Submit Inquiry to Advisory Desk &rarr;
               </button>
@@ -3127,6 +3117,193 @@ def generate_contactpage():
     with open("contact/index.html", "w") as f:
         f.write(html)
     print("Contact page generated.")
+
+# 10. PARTNER WITH US COMPILER
+def generate_partnerpage():
+    content = """
+    <!-- ============ HERO BANNER ============ -->
+    <section class="service-banner" style="padding-bottom: 50px;">
+      <div class="wrap">
+        <div>
+          <span class="eyebrow" style="color:var(--gold-light);">STRATEGIC COLLABORATION</span>
+          <h1 style="max-width: 100%; font-size: clamp(32px, 4vw, 48px); line-height: 1.2;">Partner With The Credit Lane</h1>
+          <p class="lead" style="max-width: 100%; font-size: 17px; color: rgba(255,255,255,0.85); margin-top: 14px;">Expand your client service capabilities. Collaborate with our CA, CS, and Advocate led advisory desk for MSME debt loans, SIDBI machine finance, SME IPO listing, and UP Government subsidies.</p>
+        </div>
+        <div class="service-banner-art" style="display: flex; align-items: center; justify-content: center; width: 100%;">
+          <div style="width: 100%; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 20px; padding: 28px; box-shadow: 0 15px 40px rgba(0,0,0,0.35); text-align: left; color: #fff;">
+            <span style="color: var(--gold-light); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 10px;">PROMOTER &amp; CHANNEL DESK</span>
+            <h3 style="font-family: var(--font-serif); font-size: 24px; color: #fff; margin-bottom: 12px;">Institutional Backing for Your Clients</h3>
+            <p style="font-size: 14px; color: #CBD5E1; line-height: 1.6; margin-bottom: 16px;">We partner with Chartered Accountants, Company Secretaries, Financial Consultants, DSAs, and Corporate Advocates to structure high-ticket credit sanctions seamlessly.</p>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <span style="background: rgba(200,155,60,0.15); border: 1px solid var(--gold); color: var(--gold-light); padding: 6px 14px; border-radius: 20px; font-size: 12.5px; font-weight: 600;">✓ Transparent Revenue Share</span>
+              <span style="background: rgba(200,155,60,0.15); border: 1px solid var(--gold); color: var(--gold-light); padding: 6px 14px; border-radius: 20px; font-size: 12.5px; font-weight: 600;">✓ Priority Sanction Processing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PARTNER CATEGORIES & BENEFITS ============ -->
+    <section style="padding: 70px 0; background: var(--white);">
+      <div class="wrap">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto 50px auto;">
+          <span class="eyebrow">PARTNERSHIP ARCHITECTURE</span>
+          <h2 style="font-family: var(--font-serif); font-size: 36px; color: var(--navy-dark); margin-top: 8px;">Who Can Collaborate With Us?</h2>
+          <p style="color: var(--slate); font-size: 15px; margin-top: 10px;">Our desk provides backend execution, credit underwriting preparation, and direct bank committee presentations while protecting your client relationships.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
+          
+          <div style="background: var(--offwhite); border: 1px solid var(--line); border-radius: 18px; padding: 28px; transition: all 0.25s ease;">
+            <div style="font-size: 32px; margin-bottom: 14px;">📑</div>
+            <h3 style="font-family: var(--font-serif); font-size: 20px; color: var(--navy-dark); margin-bottom: 8px;">Chartered Accountants</h3>
+            <p style="font-size: 13.5px; color: var(--slate); line-height: 1.6; margin: 0;">Provide institutional project finance, SIDBI machinery loans, and capital subsidies to your audit &amp; tax clients without expanding overheads.</p>
+          </div>
+
+          <div style="background: var(--offwhite); border: 1px solid var(--line); border-radius: 18px; padding: 28px; transition: all 0.25s ease;">
+            <div style="font-size: 32px; margin-bottom: 14px;">⚖️</div>
+            <h3 style="font-family: var(--font-serif); font-size: 20px; color: var(--navy-dark); margin-bottom: 8px;">Company Secretaries &amp; Advocates</h3>
+            <p style="font-size: 13.5px; color: var(--slate); line-height: 1.6; margin: 0;">Partner for SME IPO listing, mainboard IPO structuring, corporate debt restructuring, NPA resolution, and statutory share valuations.</p>
+          </div>
+
+          <div style="background: var(--offwhite); border: 1px solid var(--line); border-radius: 18px; padding: 28px; transition: all 0.25s ease;">
+            <div style="font-size: 32px; margin-bottom: 14px;">💼</div>
+            <h3 style="font-family: var(--font-serif); font-size: 20px; color: var(--navy-dark); margin-bottom: 8px;">Financial Consultants &amp; DSAs</h3>
+            <p style="font-size: 13.5px; color: var(--slate); line-height: 1.6; margin: 0;">Gain access to specialized SIDBI SPEED schemes, high-ticket builder finance, hospital/hotel loans, and UP state MSME grants.</p>
+          </div>
+
+          <div style="background: var(--offwhite); border: 1px solid var(--line); border-radius: 18px; padding: 28px; transition: all 0.25s ease;">
+            <div style="font-size: 32px; margin-bottom: 14px;">🚀</div>
+            <h3 style="font-family: var(--font-serif); font-size: 20px; color: var(--navy-dark); margin-bottom: 8px;">Investment Bankers &amp; Advisors</h3>
+            <p style="font-size: 13.5px; color: var(--slate); line-height: 1.6; margin: 0;">Syndicate pre-IPO bridge capital, venture growth funding, and structured invoice discounting for growth-stage clients.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PARTNER REGISTRATION FORM ============ -->
+    <section style="padding: 70px 0; background: var(--offwhite); border-top: 1px solid var(--line);">
+      <div class="wrap">
+        <div style="display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 48px; align-items: start;">
+          
+          <div>
+            <span class="eyebrow">BECOME AN ASSOCIATE</span>
+            <h2 style="font-family: var(--font-serif); font-size: 32px; color: var(--navy-dark); margin-top: 6px;">Register As A Channel Partner</h2>
+            <p style="color: var(--slate); font-size: 15px; line-height: 1.6; margin-top: 12px;">Fill out the partner onboarding form. Our Director Desk will review your application and share our Partner Agreement &amp; Revenue Share Terms within 24 hours.</p>
+            
+            <div style="margin-top: 32px; display: flex; flex-direction: column; gap: 20px;">
+              <div style="display: flex; gap: 16px; align-items: flex-start;">
+                <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(200,155,60,0.15); color: var(--gold); font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+                <div>
+                  <h4 style="font-size: 16px; color: var(--navy-dark); margin: 0 0 4px 0;">Sign NDA &amp; Empanelment Agreement</h4>
+                  <p style="font-size: 13.5px; color: var(--slate); margin: 0;">Complete non-disclosure terms protecting client ownership and referral rights.</p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 16px; align-items: flex-start;">
+                <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(200,155,60,0.15); color: var(--gold); font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+                <div>
+                  <h4 style="font-size: 16px; color: var(--navy-dark); margin: 0 0 4px 0;">Submit Client Cases to Advisory Desk</h4>
+                  <p style="font-size: 13.5px; color: var(--slate); margin: 0;">Direct submission to Info@thecreditlane.in or call +91-9217924499.</p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 16px; align-items: flex-start;">
+                <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(200,155,60,0.15); color: var(--gold); font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+                <div>
+                  <h4 style="font-size: 16px; color: var(--navy-dark); margin: 0 0 4px 0;">Sanction Disbursal &amp; Commission Payout</h4>
+                  <p style="font-size: 13.5px; color: var(--slate); margin: 0;">Transparent commission disbursal upon sanction letter issuance / bank disbursal.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lead-card" style="background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--gold); border-radius: 20px; padding: 40px 32px; box-shadow: 0 10px 35px rgba(0,0,0,0.06);">
+            <h3 style="font-family: var(--font-serif); font-size: 24px; color: var(--navy-dark); margin-bottom: 8px;">Partner Registration Form</h3>
+            <p style="color: var(--slate); font-size: 14px; margin-bottom: 24px;">Submit details to receive our Corporate Partnership Kit.</p>
+
+            <form class="lead-form" action="https://formsubmit.co/Info@thecreditlane.in" method="POST" style="display: grid; gap: 16px;">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_subject" value="New Partner Registration - The Credit Lane">
+
+              <div>
+                <label style="display: block; font-size: 13px; font-weight: 700; color: var(--navy-dark); margin-bottom: 4px;">Full Name *</label>
+                <input type="text" name="Partner Full Name" placeholder="e.g. CA Anuj Verma" required style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1.5px solid var(--line); font-size: 14px; background: var(--offwhite);">
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div>
+                  <label style="display: block; font-size: 13px; font-weight: 700; color: var(--navy-dark); margin-bottom: 4px;">Firm / Practice Name *</label>
+                  <input type="text" name="Firm Name" placeholder="Firm name" required style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1.5px solid var(--line); font-size: 14px; background: var(--offwhite);">
+                </div>
+                <div>
+                  <label style="display: block; font-size: 13px; font-weight: 700; color: var(--navy-dark); margin-bottom: 4px;">Profession / Designation *</label>
+                  <select name="Profession" required style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1.5px solid var(--line); font-size: 14px; background: var(--offwhite);">
+                    <option value="">Select Profession...</option>
+                    <option value="Chartered Accountant (CA)">Chartered Accountant (CA)</option>
+                    <option value="Company Secretary (CS)">Company Secretary (CS)</option>
+                    <option value="Advocate / Legal Consultant">Advocate / Legal Consultant</option>
+                    <option value="Financial Consultant / DSA">Financial Consultant / DSA</option>
+                    <option value="Investment Banker">Investment Banker</option>
+                    <option value="Corporate Advisor">Corporate Advisor</option>
+                  </select>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div>
+                  <label style="display: block; font-size: 13px; font-weight: 700; color: var(--navy-dark); margin-bottom: 4px;">Mobile Number *</label>
+                  <input type="tel" name="Mobile Number" placeholder="+91" required style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1.5px solid var(--line); font-size: 14px; background: var(--offwhite);">
+                </div>
+                <div>
+                  <label style="display: block; font-size: 13px; font-weight: 700; color: var(--navy-dark); margin-bottom: 4px;">Email Address *</label>
+                  <input type="email" name="Email" placeholder="you@firm.com" required style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1.5px solid var(--line); font-size: 14px; background: var(--offwhite);">
+                </div>
+              </div>
+
+              <div>
+                <label style="display: block; font-size: 13px; font-weight: 700; color: var(--navy-dark); margin-bottom: 4px;">City / State *</label>
+                <input type="text" name="City State" placeholder="e.g. Ghaziabad, Uttar Pradesh" required style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1.5px solid var(--line); font-size: 14px; background: var(--offwhite);">
+              </div>
+
+              <div>
+                <label style="display: block; font-size: 13px; font-weight: 700; color: var(--navy-dark); margin-bottom: 4px;">Primary Focus Area / Client Requirement</label>
+                <select name="Focus Area" style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1.5px solid var(--line); font-size: 14px; background: var(--offwhite);">
+                  <option value="">Select Primary Focus...</option>
+                  <option value="SIDBI / Bank Machinery Loans">SIDBI / Bank Machinery Loans</option>
+                  <option value="UP Govt MSME & TUS Grants">UP Govt MSME &amp; TUS Grants</option>
+                  <option value="SME IPO & Mainboard IPO">SME IPO &amp; Mainboard IPO Listing</option>
+                  <option value="Unsecured & Working Capital">Unsecured &amp; Working Capital Debt</option>
+                  <option value="Builder / Hospital / Infra Funding">Builder / Hospital / Infra Funding</option>
+                  <option value="NPA Debt Restructuring">NPA Debt Restructuring &amp; OTS</option>
+                </select>
+              </div>
+
+              <label class="form-consent" style="display: flex; align-items: flex-start; gap: 8px; font-size: 12px; color: var(--slate); line-height: 1.4; margin: 4px 0; cursor: pointer;">
+                <input type="checkbox" name="Consent" required style="margin-top: 2px; width: 16px; height: 16px; accent-color: #C89B3C;">
+                I agree to empanelment terms and authorise The Credit Lane team to contact me regarding partner collaboration.
+              </label>
+
+              <button type="submit" class="btn btn-primary" style="padding: 14px 24px; font-size: 15px; font-weight: 700; width: 100%; justify-content: center; box-shadow: 0 6px 20px rgba(184,134,11,0.3); border: none; cursor: pointer;">
+                Register As Channel Partner &rarr;
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    """
+    
+    html = get_layout(content, "Partner With Us | Channel Partner & Associate Empanelment", "Empanel as a channel partner with The Credit Lane. Collaboration model for CAs, CSs, Advocates, Financial Consultants & DSAs for corporate debt, SME IPO, and government subsidy filings.", "partner-with-us", 1)
+    
+    os.makedirs("partner-with-us", exist_ok=True)
+    with open("partner-with-us/index.html", "w") as f:
+        f.write(html)
+    print("Partner With Us page generated.")
+
 
 # 10. CATEGORY PAGES COMPILER (LOANS, EQUITY, INCENTIVES OVERVIEWS)
 def generate_category_pages():
@@ -3673,6 +3850,7 @@ if __name__ == "__main__":
     generate_homepage()
     generate_aboutpage()
     generate_contactpage()
+    generate_partnerpage()
     generate_category_pages()
     generate_service_pages()
     print("Static website generation completed successfully.")

@@ -10,35 +10,15 @@ $gallery_base = get_template_directory_uri() . '/assets/images/gallery/';
       <div class="wrap">
         <div>
           <span class="eyebrow" style="color:var(--gold-light);">GET IN TOUCH</span>
-          <h1 style="max-width: 100%; font-size: clamp(32px, 4vw, 48px); line-height: 1.2;">Connect With Rajat Garg &amp; Our Advisory Team.</h1>
+          <h1 style="max-width: 100%; font-size: clamp(32px, 4vw, 48px); line-height: 1.2;">Connect With The Credit Lane Team</h1>
           <p class="lead" style="max-width: 100%; font-size: 17px; color: rgba(255,255,255,0.85); margin-top: 14px;">Submit your corporate debt, SIDBI machine loan, SME IPO, or UP Government Grant requirement. Direct consultation with our CA, CS, and Legal Advocates within 1 working day.</p>
         </div>
         <div class="service-banner-art" style="display: flex; align-items: center; justify-content: center; width: 100%;">
           <div style="width: 100%; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 20px; padding: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.35);">
-            <img src="<?php echo $gallery_base; ?>WhatsApp Image 2026-08-11 at 10.10.23.jpeg" alt="Rajat Garg & The Credit Lane Founders" style="width: 100%; height: auto; max-height: 440px; object-fit: contain; border-radius: 14px; display: block;">
+            <img src="<?php echo $gallery_base; ?>WhatsApp Image 2026-08-11 at 10.10.23.jpeg" alt="The Credit Lane Executive Team" style="width: 100%; height: auto; max-height: 440px; object-fit: contain; border-radius: 14px; display: block;">
             <div style="text-align: center; padding: 8px 0 4px; color: var(--gold-light); font-size: 12.5px; font-weight: 600; letter-spacing: 0.03em;">
-              ⭐ Rajat Garg &amp; Executive Leadership Desk at Build Bharat Expo 2025
+              ⭐ The Credit Lane Executive Advisory Team
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Top Exhibition & Event Highlights Banner -->
-    <section style="padding: 24px 0 40px; background: var(--offwhite); border-bottom: 1px solid var(--line);">
-      <div class="wrap">
-        <div style="background: var(--navy-dark); color: #fff; border-radius: 20px; padding: 28px 36px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; box-shadow: 0 10px 30px rgba(0,0,0,0.12);">
-          <div style="display: flex; align-items: center; gap: 20px;">
-            <img src="<?php echo $gallery_base; ?>BRT CorporateBBE Participation Certificate_page-0001.jpg" alt="Build Bharat Expo Certificate" style="width: 76px; height: 76px; border-radius: 12px; object-fit: cover; border: 2px solid var(--gold); box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
-            <div>
-              <span style="font-size: 11px; font-weight: 700; color: var(--gold-light); text-transform: uppercase; letter-spacing: 0.08em; display: block;">BUILD BHARAT EXPO 2025 EXHIBITOR</span>
-              <h3 style="font-size: 20px; color: #fff; font-family: var(--font-serif); margin: 2px 0 4px 0;">Visit Us at Bharat Mandapam (Hall 6 Stall D19)</h3>
-              <p style="font-size: 13.5px; color: var(--slate-light); margin: 0;">Meet our CA, CS, and Advocate led team live at national MSME expos or visit our Ghaziabad Head Office.</p>
-            </div>
-          </div>
-          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-            <a href="tel:9217924499" class="btn btn-primary" style="white-space: nowrap; font-size: 14px; font-weight: 700; padding: 12px 24px;">📞 Call 9217924499</a>
-            <a href="tel:9818709747" class="btn btn-outline-light" style="white-space: nowrap; font-size: 14px; font-weight: 600; border-color: rgba(255,255,255,0.3); color: #fff; padding: 12px 24px;">📞 Call 9818709747</a>
           </div>
         </div>
       </div>
@@ -53,7 +33,7 @@ $gallery_base = get_template_directory_uri() . '/assets/images/gallery/';
           <div class="contact-info-col">
             <div class="contact-card" style="padding: 0; overflow: hidden; border-radius: 20px; border: 1px solid var(--line); background: var(--offwhite); box-shadow: 0 8px 30px rgba(0,0,0,0.05);">
               <div style="width: 100%; height: 220px; overflow: hidden; position: relative;">
-                <img src="<?php echo $gallery_base; ?>image copy 16.png" alt="Build Bharat Expo 2025 Stall" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+                <img src="<?php echo $gallery_base; ?>image copy 16.png" alt="The Credit Lane Advisory Desk" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
               </div>
               <div style="padding: 32px 28px;">
                 <h3 style="font-family: var(--font-serif); font-size: 24px; color: var(--navy-dark); margin-bottom: 24px;">Corporate Advisory Desk</h3>
@@ -66,7 +46,7 @@ $gallery_base = get_template_directory_uri() . '/assets/images/gallery/';
                 <div class="contact-item" style="margin-bottom: 20px;">
                   <span class="label" style="font-size: 11.5px; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; display: block;">Direct Contact Helplines</span>
                   <div style="margin-top: 6px; display: flex; flex-direction: column; gap: 6px;">
-                    <a href="tel:9217924499" class="mono" style="color: var(--navy-dark); font-weight: 700; text-decoration: none; font-size: 16px;">📞 +91-9217924499 (Rajat Garg, MD)</a>
+                    <a href="tel:9217924499" class="mono" style="color: var(--navy-dark); font-weight: 700; text-decoration: none; font-size: 16px;">📞 +91-9217924499 (Managing Director Desk)</a>
                     <a href="tel:9818709747" class="mono" style="color: var(--navy-dark); font-weight: 700; text-decoration: none; font-size: 16px;">📞 +91-9818709747 (Advisory Desk)</a>
                   </div>
                 </div>
@@ -182,6 +162,11 @@ $gallery_base = get_template_directory_uri() . '/assets/images/gallery/';
                 <label style="display: block; font-size: 13px; font-weight: 700; color: var(--navy-dark); margin-bottom: 6px;">Project &amp; Business Details</label>
                 <textarea name="Project Details" rows="4" placeholder="Mention your business sector, existing turnover, machinery specs, or specific subsidy requirement..." style="width: 100%; padding: 13px 16px; border-radius: 10px; border: 1px solid var(--line); font-size: 14.5px; background: var(--white); resize: vertical;"></textarea>
               </div>
+
+              <label class="form-consent" style="display: flex; align-items: flex-start; gap: 8px; font-size: 12px; color: var(--slate); line-height: 1.4; cursor: pointer;">
+                <input type="checkbox" name="Consent" required style="margin-top: 2px; width: 16px; height: 16px; accent-color: #C89B3C;">
+                I authorise The Credit Lane team to contact me regarding this enquiry.
+              </label>
 
               <button type="submit" class="btn btn-primary" style="padding: 16px 32px; font-size: 16px; font-weight: 700; width: 100%; justify-content: center; box-shadow: 0 8px 25px rgba(184,134,11,0.3); border: none; cursor: pointer;">
                 Submit Inquiry to Advisory Desk &rarr;
