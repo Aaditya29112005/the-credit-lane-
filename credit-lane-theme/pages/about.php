@@ -90,13 +90,21 @@ $gallery_base = get_template_directory_uri() . '/assets/images/gallery/';
     <!-- ============ PROFILE OF PROMOTERS & LEADERSHIP ============ -->
     <section class="section-tight" id="promoters" style="background-color: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 80px 0;">
       <div class="wrap">
-        <div class="section-head center" style="margin-bottom: 50px; text-align: center;">
+        <div class="section-head center" style="margin-bottom: 40px; text-align: center;">
           <span class="eyebrow" style="color: var(--gold); font-weight: 700;">EXECUTIVE LEADERSHIP</span>
           <h2 style="font-size: 36px; color: var(--navy-dark); font-family: var(--font-serif); margin-top: 8px; margin-bottom: 12px;">Profile of Promoters &amp; Advisory Desk</h2>
-          <p style="font-size: 16px; color: var(--slate); max-width: 720px; margin: 0 auto; line-height: 1.6;">Guided by senior Chartered Accountants, Company Secretaries, and Corporate Financial Consultants with extensive experience in direct taxation, debt syndication, and capital markets.</p>
+          <p style="font-size: 16px; color: var(--slate); max-width: 760px; margin: 0 auto; line-height: 1.6;">Guided by senior Chartered Accountants, Business Strategists, Company Secretaries, and Legal Advocates dedicated to structured corporate capital, taxation, and growth advisory.</p>
         </div>
 
-        <div class="founders-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; align-items: stretch;">
+        <!-- 40+ Years Combined Experience Highlight Bar -->
+        <div style="background: linear-gradient(135deg, #0B1F3A 0%, #1A365D 100%); border: 1px solid #C89B3C; border-radius: 16px; padding: 20px 24px; text-align: center; max-width: 900px; margin: 0 auto 48px; box-shadow: 0 8px 24px rgba(11, 31, 58, 0.15);">
+          <div style="color: #C89B3C; font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px;">COMBINED ADVISORY EXCELLENCE</div>
+          <div style="color: #FFFFFF; font-size: 17px; font-weight: 700; font-family: var(--font-serif);">
+            Together, the Leadership Team brings 40+ years of combined experience across Taxation, Finance, Subsidies, Business Strategy, and Growth.
+          </div>
+        </div>
+
+        <div class="founders-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; align-items: stretch;">
           
           <!-- Promoter 1: Bhagchand Bangani -->
           <div class="promoter-card" style="background: #FAF8F5; border: 1px solid #E2DDD5; border-top: 4px solid #C89B3C; border-radius: 20px; padding: 32px 28px; box-shadow: 0 10px 30px rgba(11, 31, 58, 0.05); display: flex; flex-direction: column; justify-content: space-between;">
@@ -113,7 +121,7 @@ $gallery_base = get_template_directory_uri() . '/assets/images/gallery/';
               </div>
               
               <div style="display: inline-block; background: rgba(200, 155, 60, 0.12); color: #B8860B; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 16px;">
-                15+ Years Taxation &amp; Advisory Experience
+                15+ Years Taxation Advisory Experience
               </div>
 
               <p style="font-size: 14px; color: #3E5372; line-height: 1.65; margin-bottom: 14px;">
@@ -125,8 +133,8 @@ $gallery_base = get_template_directory_uri() . '/assets/images/gallery/';
             </div>
             
             <div style="border-top: 1px solid #E2DDD5; padding-top: 16px; margin-top: 24px; display: flex; justify-content: space-between; align-items: center;">
-              <span style="font-size: 12.5px; font-weight: 700; color: #0B1F3A;">Direct &amp; Indirect Tax Advisory</span>
-              <span style="font-size: 12px; color: #C89B3C; font-weight: 700;">CA Division Desk</span>
+              <span style="font-size: 12.5px; font-weight: 700; color: #0B1F3A;">Direct &amp; Indirect Taxation</span>
+              <span style="font-size: 12px; color: #C89B3C; font-weight: 700;">Taxation Division</span>
             </div>
           </div>
 
@@ -138,59 +146,59 @@ $gallery_base = get_template_directory_uri() . '/assets/images/gallery/';
                   RG
                 </div>
                 <div>
-                  <span style="font-size: 11px; font-weight: 700; color: #C89B3C; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 2px;">FOUNDER &amp; MANAGING DIRECTOR</span>
+                  <span style="font-size: 11px; font-weight: 700; color: #C89B3C; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 2px;">CHARTERED ACCOUNTANT</span>
                   <h3 style="font-size: 22px; color: #0B1F3A; font-family: var(--font-serif); margin: 0; font-weight: 700;">Rajat Garg</h3>
-                  <span style="font-size: 13px; font-weight: 600; color: #5B6472; display: block; margin-top: 2px;">Corporate Finance &amp; Debt Desk</span>
+                  <span style="font-size: 13px; font-weight: 600; color: #5B6472; display: block; margin-top: 2px;">Head – Finance &amp; Subsidy Division</span>
                 </div>
               </div>
 
               <div style="display: inline-block; background: rgba(11, 31, 58, 0.08); color: #0B1F3A; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 16px;">
-                10+ Years Corporate Syndication Experience
+                10+ Years Finance &amp; Subsidy Experience
               </div>
 
               <p style="font-size: 14px; color: #3E5372; line-height: 1.65; margin-bottom: 14px;">
-                Rajat Garg leads corporate debt syndication, SIDBI machinery loans, drop-line overdrafts, equity valuation advisory, and UP Government incentive schemes at The Credit Lane.
+                CA Rajat Garg is a Chartered Accountant by profession with over 10 years of experience in the fields of Finance and Taxation. He has extensive experience in financial advisory, business funding, structured finance, and government subsidy solutions.
               </p>
               <p style="font-size: 14px; color: #3E5372; line-height: 1.65; margin-bottom: 0;">
-                He ensures Indian businesses receive structured financial planning, credit rating diagnosis, and transparent banking committee representations without upfront brokerages.
+                At <b>THE CREDIT LANE</b>, he heads the Finance &amp; Subsidy Division, helping businesses identify the right funding opportunities and maximize available financial and government incentives.
               </p>
             </div>
 
             <div style="border-top: 1px solid #E2DDD5; padding-top: 16px; margin-top: 24px; display: flex; justify-content: space-between; align-items: center;">
-              <span style="font-size: 12.5px; font-weight: 700; color: #0B1F3A;">Debt Syndication &amp; Subsidies</span>
-              <a href="<?php echo esc_url(home_url('/contact/')); ?>" style="font-size: 12px; color: #C89B3C; font-weight: 700; text-decoration: none;">📞 Contact Desk &rarr;</a>
+              <span style="font-size: 12.5px; font-weight: 700; color: #0B1F3A;">Finance &amp; Subsidies</span>
+              <a href="<?php echo esc_url(home_url('/contact/')); ?>" style="font-size: 12px; color: #C89B3C; font-weight: 700; text-decoration: none;">📞 Contact Division &rarr;</a>
             </div>
           </div>
 
-          <!-- Promoter 3: Advisory Chambers (CS & Legal) -->
+          <!-- Promoter 3: Tarang Mittal -->
           <div class="promoter-card" style="background: #FAF8F5; border: 1px solid #E2DDD5; border-top: 4px solid #C89B3C; border-radius: 20px; padding: 32px 28px; box-shadow: 0 10px 30px rgba(11, 31, 58, 0.05); display: flex; flex-direction: column; justify-content: space-between;">
             <div>
               <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
                 <div style="width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #0B1F3A 0%, #1A365D 100%); color: #C89B3C; font-weight: 800; font-size: 20px; display: flex; align-items: center; justify-content: center; border: 2px solid #C89B3C; flex-shrink: 0; box-shadow: 0 4px 12px rgba(11, 31, 58, 0.2);">
-                  CS
+                  TM
                 </div>
                 <div>
-                  <span style="font-size: 11px; font-weight: 700; color: #C89B3C; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 2px;">COMPANY SECRETARIES &amp; LEGAL DESK</span>
-                  <h3 style="font-size: 22px; color: #0B1F3A; font-family: var(--font-serif); margin: 0; font-weight: 700;">Legal &amp; Compliance Chambers</h3>
-                  <span style="font-size: 13px; font-weight: 600; color: #5B6472; display: block; margin-top: 2px;">Corporate Governance &amp; SME IPO</span>
+                  <span style="font-size: 11px; font-weight: 700; color: #C89B3C; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 2px;">STRATEGIST &amp; BUSINESS ANALYST</span>
+                  <h3 style="font-size: 22px; color: #0B1F3A; font-family: var(--font-serif); margin: 0; font-weight: 700;">Tarang Mittal</h3>
+                  <span style="font-size: 13px; font-weight: 600; color: #5B6472; display: block; margin-top: 2px;">Head – Growth Division</span>
                 </div>
               </div>
 
               <div style="display: inline-block; background: rgba(200, 155, 60, 0.12); color: #B8860B; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 16px;">
-                Statutory Due Diligence &amp; Listings
+                15+ Years Strategy &amp; Consultancy Experience
               </div>
 
               <p style="font-size: 14px; color: #3E5372; line-height: 1.65; margin-bottom: 14px;">
-                Our panel of Company Secretaries and Legal Advocates handles statutory due diligence, title search reports, SEBI / NSE / BSE compliance filings, and SME IPO prospectus structuring.
+                Tarang Mittal is a Strategist and Business Analyst with over 15 years of experience in Business Consultancy, Strategy, and Management. He brings strong expertise in business growth, strategic planning, process improvement, and management consulting.
               </p>
               <p style="font-size: 14px; color: #3E5372; line-height: 1.65; margin-bottom: 0;">
-                Providing clients with end-to-end legal protection and corporate governance assurance during equity raises and government grant filings.
+                At <b>THE CREDIT LANE</b>, he heads the Growth Division, driving strategic initiatives, business development, and sustainable growth for the organization.
               </p>
             </div>
 
             <div style="border-top: 1px solid #E2DDD5; padding-top: 16px; margin-top: 24px; display: flex; justify-content: space-between; align-items: center;">
-              <span style="font-size: 12.5px; font-weight: 700; color: #0B1F3A;">CS &amp; Legal Chambers</span>
-              <span style="font-size: 12px; color: #C89B3C; font-weight: 700;">Compliance Division</span>
+              <span style="font-size: 12.5px; font-weight: 700; color: #0B1F3A;">Strategy &amp; Management</span>
+              <span style="font-size: 12px; color: #C89B3C; font-weight: 700;">Growth Division</span>
             </div>
           </div>
 
@@ -229,7 +237,7 @@ $gallery_base = get_template_directory_uri() . '/assets/images/gallery/';
                 <img src="<?php echo $gallery_base; ?>WhatsApp Image 2026-08-11 at 10.10.23.jpeg" alt="The Credit Lane Exhibition Booth" style="width: 100%; height: auto; max-height: 320px; object-fit: cover; display: block; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
               </div>
             </div>
-            <p style="font-size: 13px; color: var(--slate); margin: 0;">Rajat Garg &amp; team conducting live funding feasibility reviews for MSME business owners.</p>
+            <p style="font-size: 13px; color: var(--slate); margin: 0;">The Credit Lane advisory team conducting live funding feasibility reviews for MSME business owners.</p>
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@
  */
 
 $title       = get_field('contact_title') ?: 'Discuss Your Funding Requirement';
-$subtitle    = get_field('contact_subtitle') ?: 'Speak directly with Rajat Garg & our CA, CS, Advocate led advisory desk.';
+$subtitle    = get_field('contact_subtitle') ?: 'Speak directly with The Credit Lane CA, CS, Advocate led advisory desk.';
 $form_code   = get_field('contact_form_shortcode') ?: '';
 ?>
 

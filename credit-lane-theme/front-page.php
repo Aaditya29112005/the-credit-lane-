@@ -278,7 +278,7 @@ get_header();
     <section class="final-cta">
       <div class="wrap">
         <h2>Have a funding or grant requirement?</h2>
-        <p>Tell us what you are building. Rajat Garg &amp; our team will help you explore the right capital route with no upfront advisory charge.</p>
+        <p>Tell us what you are building. The Credit Lane team will help you explore the right capital route with no upfront advisory charge.</p>
         <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
           <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn btn-primary">Talk to The Credit Lane &rarr;</a>
           <a href="https://wa.me/919217924499" class="btn btn-outline" target="_blank">WhatsApp Us (9217924499)</a>
