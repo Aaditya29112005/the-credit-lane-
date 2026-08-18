@@ -3469,26 +3469,29 @@ footer h5 {
   background: linear-gradient(135deg, #D4A748 0%, #C89B3C 100%) !important;
 }
 
-/* CALCULATOR SYSTEM */
+/* CALCULATOR SYSTEM (MATCHING SCREENSHOT 3 PERFECTLY) */
 .calc-container {
-  background-color: var(--white) !important;
+  background-color: #FFFFFF !important;
   border: 1.5px solid var(--line) !important;
-  border-radius: 20px !important;
+  border-radius: 24px !important;
   overflow: hidden !important;
-  box-shadow: 0 12px 35px rgba(11, 31, 58, 0.08) !important;
-  margin-top: 20px !important;
+  box-shadow: 0 10px 40px rgba(11, 31, 58, 0.06) !important;
+  margin-top: 24px !important;
   width: 100% !important;
+  padding: 16px !important;
 }
 
 .calc-grid {
   display: grid !important;
   grid-template-columns: 1.15fr 0.85fr !important;
+  gap: 32px !important;
   width: 100% !important;
+  align-items: center !important;
 }
 
 .calc-inputs {
-  padding: 36px 32px !important;
-  background-color: var(--white) !important;
+  padding: 24px 28px !important;
+  background-color: #FFFFFF !important;
   display: flex !important;
   flex-direction: column !important;
   gap: 24px !important;
@@ -3510,14 +3513,13 @@ footer h5 {
 }
 
 .calc-input-label span.value-output {
-  font-family: var(--font-mono) !important;
-  font-size: 15px !important;
+  font-family: var(--font-sans) !important;
+  font-size: 16px !important;
   font-weight: 700 !important;
-  color: var(--gold) !important;
-  background: rgba(200, 155, 60, 0.1) !important;
-  padding: 4px 12px !important;
-  border-radius: 6px !important;
-  border: 1px solid rgba(200, 155, 60, 0.2) !important;
+  color: #C89B3C !important;
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
 }
 
 .calc-slider {
@@ -3527,8 +3529,7 @@ footer h5 {
   outline: none !important;
   -webkit-appearance: none !important;
   appearance: none !important;
-  background-color: var(--line) !important;
-  accent-color: var(--gold) !important;
+  background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #4A4A4A 50%, #4A4A4A 100%) !important;
   cursor: pointer !important;
 }
 
@@ -3538,8 +3539,8 @@ footer h5 {
   width: 22px !important;
   height: 22px !important;
   border-radius: 50% !important;
-  background: var(--gold) !important;
-  border: 3px solid var(--white) !important;
+  background: #C89B3C !important;
+  border: 3px solid #FFFFFF !important;
   box-shadow: 0 3px 8px rgba(11, 31, 58, 0.3) !important;
   cursor: pointer !important;
   transition: transform 0.15s ease !important;
@@ -3550,45 +3551,88 @@ footer h5 {
 }
 
 .calc-outputs {
-  background: #071529 !important; /* Premium Dark Navy */
+  background: #08192E !important; /* Deep Dark Navy Card */
   color: #FFFFFF !important;
   padding: 36px 32px !important;
+  border-radius: 20px !important;
   display: flex !important;
   flex-direction: column !important;
-  justify-content: center !important;
-  gap: 24px !important;
-  border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
+  justify-content: space-between !important;
+  gap: 20px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
 }
 
-.calc-output-item .label {
-  font-family: var(--font-mono) !important;
+.calc-output-head {
+  font-family: var(--font-sans) !important;
   font-size: 11.5px !important;
-  color: #94A3B8 !important;
-  letter-spacing: 0.08em !important;
+  font-weight: 700 !important;
+  color: #C89B3C !important;
+  letter-spacing: 0.1em !important;
   text-transform: uppercase !important;
-  margin-bottom: 6px !important;
+  margin-bottom: 8px !important;
 }
 
-.calc-output-item .value {
-  font-family: var(--font-mono) !important;
-  font-size: clamp(1.5rem, 2.8vw, 2.1rem) !important;
-  font-weight: 800 !important;
+.calc-output-main-val {
+  font-family: var(--font-serif) !important;
+  font-size: clamp(2.2rem, 3.5vw, 2.6rem) !important;
+  font-weight: 700 !important;
   color: #FFFFFF !important;
-  line-height: 1.2 !important;
+  line-height: 1.1 !important;
+  margin-bottom: 16px !important;
 }
 
-.calc-output-item.primary-out .value {
-  color: #E4C878 !important;
-  font-size: clamp(1.8rem, 3.2vw, 2.4rem) !important;
+.calc-divider {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+  margin-bottom: 20px !important;
+}
+
+.calc-metrics-row {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 16px !important;
+}
+
+.calc-metric-item .m-label {
+  font-size: 12px !important;
+  color: #94A3B8 !important;
+  margin-bottom: 4px !important;
+}
+
+.calc-metric-item .m-val {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #FFFFFF !important;
+}
+
+.calc-apply-btn {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  background: #C89B3C !important;
+  color: #0B1F3A !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  padding: 15px 20px !important;
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  transition: all 0.25s ease !important;
+  margin-top: 12px !important;
+}
+
+.calc-apply-btn:hover {
+  background: #D4A748 !important;
+  transform: translateY(-2px) !important;
 }
 
 .calc-disclaimer {
   padding: 16px 24px !important;
   background-color: var(--off-white) !important;
   border-top: 1px solid var(--line) !important;
+  border-radius: 0 0 18px 18px !important;
   font-size: 12.5px !important;
   color: var(--slate) !important;
   line-height: 1.5 !important;
+  margin-top: 12px !important;
 }
 
 @media (max-width: 850px) {
@@ -3596,12 +3640,10 @@ footer h5 {
     grid-template-columns: 1fr !important;
   }
   .calc-outputs {
-    border-left: none !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
     padding: 28px 20px !important;
   }
   .calc-inputs {
-    padding: 28px 20px !important;
+    padding: 20px 16px !important;
   }
 }
 

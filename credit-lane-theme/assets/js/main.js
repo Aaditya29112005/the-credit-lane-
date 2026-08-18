@@ -219,6 +219,45 @@ function horizontalLoop(items, config) {
   return tl;
 }
 
+// Global Google Reviews Carousel Controller
+window.reviewCurrentIndex = 0;
+window.scrollReviewsTrack = function(direction) {
+  var track = document.querySelector(".reviews-carousel-track");
+  if (!track) return;
+  var cardWidth = 344; // 320px width + 24px gap
+  var totalCards = track.children.length;
+  var visibleCards = window.innerWidth < 768 ? 1 : (window.innerWidth < 1100 ? 2 : 3);
+  var maxIndex = Math.max(0, totalCards - visibleCards);
+
+  window.reviewCurrentIndex = (window.reviewCurrentIndex || 0) + direction;
+  if (window.reviewCurrentIndex < 0) window.reviewCurrentIndex = 0;
+  if (window.reviewCurrentIndex > maxIndex) window.reviewCurrentIndex = maxIndex;
+
+  track.style.transform = "translateX(-" + (window.reviewCurrentIndex * cardWidth) + "px)";
+};
+
+// Global Slider Track Color Update (Gold filled track / Dark Grey unfilled track)
+window.updateSliderTrack = function(slider) {
+  if (!slider) return;
+  var min = parseFloat(slider.min) || 0;
+  var max = parseFloat(slider.max) || 100;
+  var val = parseFloat(slider.value) || 0;
+  var pct = ((val - min) / (max - min)) * 100;
+  slider.style.background = "linear-gradient(to right, #C89B3C 0%, #C89B3C " + pct + "%, #4A4A4A " + pct + "%, #4A4A4A 100%)";
+};
+
+document.addEventListener("DOMContentLoaded", function() {
+  var sliders = document.querySelectorAll(".calc-slider");
+  sliders.forEach(function(s) {
+    window.updateSliderTrack(s);
+  });
+  
+  var prevBtn = document.querySelector(".reviews-prev-btn, .reviews-prev");
+  var nextBtn = document.querySelector(".reviews-next-btn, .reviews-next");
+  if (prevBtn) prevBtn.onclick = function() { window.scrollReviewsTrack(-1); };
+  if (nextBtn) nextBtn.onclick = function() { window.scrollReviewsTrack(1); };
+});
+
 // 8. INITIALIZE BOTH MARQUEES WITH GSAP OBSERVER (CODEPEN INTEGRATION)
 function initMarqueesWithObserver() {
   if (typeof gsap === "undefined") return false;
@@ -229,40 +268,6 @@ function initMarqueesWithObserver() {
 
   let tlReviews = null;
   let tlPartners = null;
-
-  // 8A. Google Verified Reviews Slider Controller
-  (function initReviewsSlider() {
-    const track = document.querySelector(".reviews-carousel-track");
-    const prevBtn = document.querySelector(".reviews-prev-btn, .reviews-prev");
-    const nextBtn = document.querySelector(".reviews-next-btn, .reviews-next");
-
-    if (!track) return;
-
-    let currentIndex = 0;
-    const cardWidth = 344; // 320px width + 24px gap
-
-    const updateSlider = () => {
-      const maxIndex = Math.max(0, track.children.length - 1);
-      if (currentIndex < 0) currentIndex = 0;
-      if (currentIndex > maxIndex) currentIndex = maxIndex;
-      track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-    };
-
-    if (prevBtn) {
-      prevBtn.addEventListener("click", () => {
-        currentIndex = Math.max(0, currentIndex - 1);
-        updateSlider();
-      });
-    }
-
-    if (nextBtn) {
-      nextBtn.addEventListener("click", () => {
-        const maxScroll = Math.max(0, track.children.length - 2);
-        currentIndex = Math.min(maxScroll, currentIndex + 1);
-        updateSlider();
-      });
-    }
-  })();
 
   // 8B. Trusted Channel Partner Logo Marquee
   const partnerRail = document.querySelector("#marqueeRail, .marquee-rail");

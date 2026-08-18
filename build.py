@@ -1301,114 +1301,134 @@ def render_calculator_html(p):
 def render_calculator_outputs_html(p):
     calc_type = p["calcType"]
     
-    label_style = 'font-family: var(--font-mono); font-size: 11.5px; color: #94A3B8; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px;'
-    val_style = 'font-family: var(--font-mono); font-size: clamp(1.5rem, 2.8vw, 2.1rem); font-weight: 800; color: #FFFFFF; line-height: 1.2;'
-    pri_val_style = 'font-family: var(--font-mono); font-size: clamp(1.8rem, 3.2vw, 2.4rem); font-weight: 800; color: #E4C878; line-height: 1.2;'
-
     if calc_type == "invoice":
-        return f"""
-        <div class="calc-output-item primary-out">
-          <div class="label" style="{label_style}">Immediate Cash Advance (approx)</div>
-          <div class="value" id="res-inv-adv" style="{pri_val_style}">—</div>
+        return """
+        <div>
+          <div class="calc-output-head" style="font-size: 11.5px; font-weight: 700; color: #C89B3C; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">ESTIMATED ADVANCE</div>
+          <div class="calc-output-main-val" id="res-inv-adv" style="font-family: 'Newsreader', Georgia, serif; font-size: clamp(2.2rem, 3.5vw, 2.6rem); font-weight: 700; color: #ffffff; line-height: 1.1; margin-bottom: 16px;">—</div>
+          <div class="calc-divider" style="border-bottom: 1px solid rgba(255, 255, 255, 0.12); margin-bottom: 20px;"></div>
+          <div class="calc-metrics-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="calc-metric-item">
+              <div class="m-label" style="font-size: 12px; color: #94A3B8; margin-bottom: 4px;">Discounting Fee</div>
+              <div class="m-val" id="res-inv-cost" style="font-size: 18px; font-weight: 700; color: #ffffff;">—</div>
+            </div>
+            <div class="calc-metric-item">
+              <div class="m-label" style="font-size: 12px; color: #94A3B8; margin-bottom: 4px;">Net Balance</div>
+              <div class="m-val" id="res-inv-net" style="font-size: 18px; font-weight: 700; color: #ffffff;">—</div>
+            </div>
+          </div>
         </div>
-        <div class="calc-output-item">
-          <div class="label" style="{label_style}">Factoring / Discounting Fee</div>
-          <div class="value" id="res-inv-cost" style="{val_style}">—</div>
-        </div>
-        <div class="calc-output-item">
-          <div class="label" style="{label_style}">Net Balance on Realisation</div>
-          <div class="value" id="res-inv-net" style="{val_style}">—</div>
-        </div>
+        <a href="#apply" class="calc-apply-btn" style="display: block; width: 100%; text-align: center; background: #C89B3C; color: #0B1F3A; font-weight: 700; font-size: 15px; padding: 14px 20px; border-radius: 10px; text-decoration: none; margin-top: 16px;">Apply for In-Principle Sanction &rarr;</a>
         """
     elif calc_type == "settlement":
-        return f"""
-        <div class="calc-output-item primary-out">
-          <div class="label" style="{label_style}">Settlement Amount (OTS)</div>
-          <div class="value" id="res-set-amt" style="{pri_val_style}">—</div>
+        return """
+        <div>
+          <div class="calc-output-head" style="font-size: 11.5px; font-weight: 700; color: #C89B3C; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">ESTIMATED SETTLEMENT (OTS)</div>
+          <div class="calc-output-main-val" id="res-set-amt" style="font-family: 'Newsreader', Georgia, serif; font-size: clamp(2.2rem, 3.5vw, 2.6rem); font-weight: 700; color: #ffffff; line-height: 1.1; margin-bottom: 16px;">—</div>
+          <div class="calc-divider" style="border-bottom: 1px solid rgba(255, 255, 255, 0.12); margin-bottom: 20px;"></div>
+          <div class="calc-metrics-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="calc-metric-item">
+              <div class="m-label" style="font-size: 12px; color: #94A3B8; margin-bottom: 4px;">Total Savings</div>
+              <div class="m-val" id="res-set-save" style="font-size: 18px; font-weight: 700; color: #ffffff;">—</div>
+            </div>
+            <div class="calc-metric-item">
+              <div class="m-label" style="font-size: 12px; color: #94A3B8; margin-bottom: 4px;">Token Amount</div>
+              <div class="m-val" id="res-set-tok" style="font-size: 18px; font-weight: 700; color: #ffffff;">—</div>
+            </div>
+          </div>
         </div>
-        <div class="calc-output-item">
-          <div class="label" style="{label_style}">Total Savings Realised</div>
-          <div class="value" id="res-set-save" style="{val_style}">—</div>
-        </div>
-        <div class="calc-output-item">
-          <div class="label" style="{label_style}">Token Amount to Secure OTS Letter</div>
-          <div class="value" id="res-set-tok" style="{val_style}">—</div>
-        </div>
+        <a href="#apply" class="calc-apply-btn" style="display: block; width: 100%; text-align: center; background: #C89B3C; color: #0B1F3A; font-weight: 700; font-size: 15px; padding: 14px 20px; border-radius: 10px; text-decoration: none; margin-top: 16px;">Apply for In-Principle Sanction &rarr;</a>
         """
     elif calc_type == "dilution":
-        return f"""
-        <div class="calc-output-item primary-out">
-          <div class="label" style="{label_style}">Post-Money Valuation</div>
-          <div class="value" id="res-dil-post" style="{pri_val_style}">—</div>
+        return """
+        <div>
+          <div class="calc-output-head" style="font-size: 11.5px; font-weight: 700; color: #C89B3C; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">POST-MONEY VALUATION</div>
+          <div class="calc-output-main-val" id="res-dil-post" style="font-family: 'Newsreader', Georgia, serif; font-size: clamp(2.2rem, 3.5vw, 2.6rem); font-weight: 700; color: #ffffff; line-height: 1.1; margin-bottom: 16px;">—</div>
+          <div class="calc-divider" style="border-bottom: 1px solid rgba(255, 255, 255, 0.12); margin-bottom: 20px;"></div>
+          <div class="calc-metrics-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="calc-metric-item">
+              <div class="m-label" style="font-size: 12px; color: #94A3B8; margin-bottom: 4px;">Equity Dilution</div>
+              <div class="m-val" id="res-dil-dil" style="font-size: 18px; font-weight: 700; color: #ffffff;">—</div>
+            </div>
+            <div class="calc-metric-item">
+              <div class="m-label" style="font-size: 12px; color: #94A3B8; margin-bottom: 4px;">Promoters Retained</div>
+              <div class="m-val" id="res-dil-ret" style="font-size: 18px; font-weight: 700; color: #ffffff;">—</div>
+            </div>
+          </div>
         </div>
-        <div class="calc-output-item">
-          <div class="label" style="{label_style}">Equity Dilution (approx)</div>
-          <div class="value" id="res-dil-dil" style="{val_style}">—</div>
-        </div>
-        <div class="calc-output-item">
-          <div class="label" style="{label_style}">Promoters Shareholding Retained</div>
-          <div class="value" id="res-dil-ret" style="{val_style}">—</div>
-        </div>
+        <a href="#apply" class="calc-apply-btn" style="display: block; width: 100%; text-align: center; background: #C89B3C; color: #0B1F3A; font-weight: 700; font-size: 15px; padding: 14px 20px; border-radius: 10px; text-decoration: none; margin-top: 16px;">Apply for In-Principle Sanction &rarr;</a>
         """
     elif calc_type == "ipo":
-        return f"""
-        <div class="calc-output-item primary-out">
-          <div class="label" style="{label_style}">Post-Issue Valuation</div>
-          <div class="value" id="res-ipo-post" style="{pri_val_style}">—</div>
+        return """
+        <div>
+          <div class="calc-output-head" style="font-size: 11.5px; font-weight: 700; color: #C89B3C; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">POST-ISSUE VALUATION</div>
+          <div class="calc-output-main-val" id="res-ipo-post" style="font-family: 'Newsreader', Georgia, serif; font-size: clamp(2.2rem, 3.5vw, 2.6rem); font-weight: 700; color: #ffffff; line-height: 1.1; margin-bottom: 16px;">—</div>
+          <div class="calc-divider" style="border-bottom: 1px solid rgba(255, 255, 255, 0.12); margin-bottom: 20px;"></div>
+          <div class="calc-metrics-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="calc-metric-item">
+              <div class="m-label" style="font-size: 12px; color: #94A3B8; margin-bottom: 4px;">Public Float</div>
+              <div class="m-val" id="res-ipo-pub" style="font-size: 18px; font-weight: 700; color: #ffffff;">—</div>
+            </div>
+            <div class="calc-metric-item">
+              <div class="m-label" style="font-size: 12px; color: #94A3B8; margin-bottom: 4px;">Promoters Holding</div>
+              <div class="m-val" id="res-ipo-prom" style="font-size: 18px; font-weight: 700; color: #ffffff;">—</div>
+            </div>
+          </div>
         </div>
-        <div class="calc-output-item">
-          <div class="label" style="{label_style}">Public / Float Shareholding</div>
-          <div class="value" id="res-ipo-pub" style="{val_style}">—</div>
-        </div>
-        <div class="calc-output-item">
-          <div class="label" style="{label_style}">Promoters Holding Post-Issue</div>
-          <div class="value" id="res-ipo-prom" style="{val_style}">—</div>
-        </div>
+        <a href="#apply" class="calc-apply-btn" style="display: block; width: 100%; text-align: center; background: #C89B3C; color: #0B1F3A; font-weight: 700; font-size: 15px; padding: 14px 20px; border-radius: 10px; text-decoration: none; margin-top: 16px;">Apply for In-Principle Sanction &rarr;</a>
         """
     elif calc_type == "valuation":
-        return f"""
-        <div class="calc-output-item primary-out">
-          <div class="label" style="{label_style}">Indicative Valuation (Low Bound)</div>
-          <div class="value" id="res-val-lo" style="{pri_val_style}">—</div>
+        return """
+        <div>
+          <div class="calc-output-head" style="font-size: 11.5px; font-weight: 700; color: #C89B3C; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">INDICATIVE VALUATION RANGE</div>
+          <div class="calc-output-main-val" id="res-val-lo" style="font-family: 'Newsreader', Georgia, serif; font-size: clamp(2.2rem, 3.5vw, 2.6rem); font-weight: 700; color: #ffffff; line-height: 1.1; margin-bottom: 16px;">—</div>
+          <div class="calc-divider" style="border-bottom: 1px solid rgba(255, 255, 255, 0.12); margin-bottom: 20px;"></div>
+          <div class="calc-metrics-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="calc-metric-item">
+              <div class="m-label" style="font-size: 12px; color: #94A3B8; margin-bottom: 4px;">High Bound</div>
+              <div class="m-val" id="res-val-hi" style="font-size: 18px; font-weight: 700; color: #ffffff;">—</div>
+            </div>
+            <div class="calc-metric-item">
+              <div class="m-label" style="font-size: 12px; color: #94A3B8; margin-bottom: 4px;">Methodology</div>
+              <div class="m-val" style="font-size: 14px; color: #ffffff;">EBITDA Multiple</div>
+            </div>
+          </div>
         </div>
-        <div class="calc-output-item primary-out">
-          <div class="label" style="{label_style}">Indicative Valuation (High Bound)</div>
-          <div class="value" id="res-val-hi" style="{pri_val_style}">—</div>
-        </div>
-        <div class="calc-output-item">
-          <div class="label" style="{label_style}">Methodology Applied</div>
-          <div class="value" style="font-size: 15px; color: #FFFFFF;">Comparable Multiple (EBITDA * multiple)</div>
-        </div>
+        <a href="#apply" class="calc-apply-btn" style="display: block; width: 100%; text-align: center; background: #C89B3C; color: #0B1F3A; font-weight: 700; font-size: 15px; padding: 14px 20px; border-radius: 10px; text-decoration: none; margin-top: 16px;">Apply for In-Principle Sanction &rarr;</a>
         """
     elif calc_type == "subsidy":
-        return f"""
-        <div class="calc-output-item primary-out">
-          <div class="label" style="{label_style}">Estimated Subsidy Claimable</div>
-          <div class="value" id="res-sub-amt" style="{pri_val_style}">—</div>
+        return """
+        <div>
+          <div class="calc-output-head" style="font-size: 11.5px; font-weight: 700; color: #C89B3C; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">ESTIMATED SUBSIDY CLAIMABLE</div>
+          <div class="calc-output-main-val" id="res-sub-amt" style="font-family: 'Newsreader', Georgia, serif; font-size: clamp(2.2rem, 3.5vw, 2.6rem); font-weight: 700; color: #ffffff; line-height: 1.1; margin-bottom: 16px;">—</div>
+          <div class="calc-divider" style="border-bottom: 1px solid rgba(255, 255, 255, 0.12); margin-bottom: 20px;"></div>
+          <div class="calc-metrics-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="calc-metric-item" style="grid-column: span 2;">
+              <div class="m-label" style="font-size: 12px; color: #94A3B8; margin-bottom: 4px;">Net Cost After Subsidy</div>
+              <div class="m-val" id="res-sub-net" style="font-size: 18px; font-weight: 700; color: #ffffff;">—</div>
+            </div>
+          </div>
         </div>
-        <div class="calc-output-item">
-          <div class="label" style="{label_style}">Net Setup Cost After Subsidy</div>
-          <div class="value" id="res-sub-net" style="{val_style}">—</div>
-        </div>
+        <a href="#apply" class="calc-apply-btn" style="display: block; width: 100%; text-align: center; background: #C89B3C; color: #0B1F3A; font-weight: 700; font-size: 15px; padding: 14px 20px; border-radius: 10px; text-decoration: none; margin-top: 16px;">Apply for In-Principle Sanction &rarr;</a>
         """
     else: # Term Loan EMI
-        return f"""
-        <div class="calc-output-item primary-out">
-          <div class="label" style="{label_style}">Monthly Repayment (EMI)</div>
-          <div class="value" id="res-emi" style="{pri_val_style}">—</div>
+        return """
+        <div>
+          <div class="calc-output-head" style="font-size: 11.5px; font-weight: 700; color: #C89B3C; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">MONTHLY EMI PAIRED</div>
+          <div class="calc-output-main-val" id="res-emi" style="font-family: 'Newsreader', Georgia, serif; font-size: clamp(2.2rem, 3.5vw, 2.6rem); font-weight: 700; color: #ffffff; line-height: 1.1; margin-bottom: 16px;">—</div>
+          <div class="calc-divider" style="border-bottom: 1px solid rgba(255, 255, 255, 0.12); margin-bottom: 20px;"></div>
+          <div class="calc-metrics-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="calc-metric-item">
+              <div class="m-label" style="font-size: 12px; color: #94A3B8; margin-bottom: 4px;">Total Interest</div>
+              <div class="m-val" id="res-interest" style="font-size: 18px; font-weight: 700; color: #ffffff;">—</div>
+            </div>
+            <div class="calc-metric-item">
+              <div class="m-label" style="font-size: 12px; color: #94A3B8; margin-bottom: 4px;">Total Payable</div>
+              <div class="m-val" id="res-total" style="font-size: 18px; font-weight: 700; color: #ffffff;">—</div>
+            </div>
+          </div>
         </div>
-        <div class="calc-output-item">
-          <div class="label" style="{label_style}">Total Interest Payable</div>
-          <div class="value" id="res-interest" style="{val_style}">—</div>
-        </div>
-        <div class="calc-output-item">
-          <div class="label" style="{label_style}">Total Capital + Interest Payable</div>
-          <div class="value" id="res-total" style="{val_style}">—</div>
-        </div>
-        <div class="calc-bar" id="c_bar" style="height: 6px; border-radius: 3px; overflow: hidden; background: rgba(255,255,255,0.1); display: flex;">
-          <div class="calc-bar-p" id="bar-p" style="background: #E4C878; height: 100%; width: 50%;"></div>
-          <div class="calc-bar-i" id="bar-i" style="background: #38BDF8; height: 100%; width: 50%;"></div>
-        </div>
+        <a href="#apply" class="calc-apply-btn" style="display: block; width: 100%; text-align: center; background: #C89B3C; color: #0B1F3A; font-weight: 700; font-size: 15px; padding: 14px 20px; border-radius: 10px; text-decoration: none; margin-top: 16px;">Apply for In-Principle Sanction &rarr;</a>
         """
 
 # 6. LAYOUT WRAPPER (HEADER, FOOTER, SCRIPTS & CSS PATH RESOLUTION)
@@ -2476,8 +2496,8 @@ def generate_homepage():
             </div>
           </div>
           <div style="display: flex; gap: 12px;">
-            <button class="reviews-prev-btn" aria-label="Previous Review" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">‹</button>
-            <button class="reviews-next-btn" aria-label="Next Review" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">›</button>
+            <button class="reviews-prev-btn" aria-label="Previous Review" onclick="scrollReviewsTrack(-1)" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">‹</button>
+            <button class="reviews-next-btn" aria-label="Next Review" onclick="scrollReviewsTrack(1)" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">›</button>
           </div>
         </div>
 
