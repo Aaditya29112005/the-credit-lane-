@@ -3445,14 +3445,65 @@ footer h5 {
   flex-shrink: 0 !important;
 }
 
+/* EXECUTIVE SIDEBAR LEAD CARD (MATCHING USER SCREENSHOT PERFECTLY) */
+.lead-card {
+  background: #FAF8F5 !important;
+  border: 1px solid #E2DDD5 !important;
+  border-top: 4px solid #C89B3C !important;
+  border-radius: 20px !important;
+  padding: 32px 26px !important;
+  box-shadow: 0 10px 30px rgba(11, 31, 58, 0.06) !important;
+}
+
+.lead-card h3 {
+  font-family: var(--font-serif) !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  color: #0B1F3A !important;
+  margin-bottom: 6px !important;
+}
+
+.lead-card p {
+  font-size: 13.5px !important;
+  color: #5B6472 !important;
+  line-height: 1.5 !important;
+  margin-bottom: 22px !important;
+}
+
+.lead-form input[type="text"],
+.lead-form input[type="tel"],
+.lead-form input[type="email"],
+.lead-form select,
+.lead-form textarea {
+  width: 100% !important;
+  padding: 12px 14px !important;
+  border-radius: 10px !important;
+  border: 1px solid #DFD9CE !important;
+  font-size: 14px !important;
+  color: #0B1F3A !important;
+  background: #F2EFE9 !important;
+  outline: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.lead-form input[type="text"]:focus,
+.lead-form input[type="tel"]:focus,
+.lead-form input[type="email"]:focus,
+.lead-form select:focus,
+.lead-form textarea:focus {
+  border-color: #C89B3C !important;
+  background: #FFFFFF !important;
+  box-shadow: 0 0 0 3px rgba(200, 155, 60, 0.15) !important;
+}
+
 .form-submit-btn,
 .lead-form button[type="submit"] {
   width: 100% !important;
-  padding: 15px 24px !important;
+  padding: 14px 20px !important;
   border-radius: 10px !important;
   background: linear-gradient(135deg, #C89B3C 0%, #B8860B 100%) !important;
   color: #FFFFFF !important;
-  font-size: 15.5px !important;
+  font-size: 15px !important;
   font-weight: 700 !important;
   border: none !important;
   cursor: pointer !important;
