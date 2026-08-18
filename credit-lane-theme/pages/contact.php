@@ -1,94 +1,102 @@
 <?php
 /**
- * Template for contact.php - With Event Top Banner & Google Sheet Integration
+ * Template for contact.php - Clean Executive Contact Portal & Form
  */
 $gallery_base = get_template_directory_uri() . '/assets/images/gallery/';
 ?>
 
-    <!-- ============ EVENT HERO BANNER ============ -->
-    <section class="service-banner" style="padding-bottom: 40px;">
+    <!-- ============ HERO BANNER ============ -->
+    <section class="service-banner" style="padding-bottom: 50px;">
       <div class="wrap">
         <div>
           <span class="eyebrow" style="color:var(--gold-light);">GET IN TOUCH</span>
-          <h1 style="max-width: 100%;">Connect With Rajat Garg &amp; Advisory Team.</h1>
-          <p class="lead" style="max-width: 100%;">Submit your corporate debt, SIDBI machine loan, SME IPO, or UP Government Grant requirement below. Our desk responds within 1 working day.</p>
+          <h1 style="max-width: 100%; font-size: clamp(32px, 4vw, 48px); line-height: 1.2;">Connect With Rajat Garg &amp; Our Advisory Team.</h1>
+          <p class="lead" style="max-width: 100%; font-size: 17px; color: rgba(255,255,255,0.85); margin-top: 14px;">Submit your corporate debt, SIDBI machine loan, SME IPO, or UP Government Grant requirement. Direct consultation with our CA, CS, and Legal Advocates within 1 working day.</p>
         </div>
-        <div class="service-banner-art" style="display: flex; align-items: center; justify-content: center;">
-          <img src="<?php echo $gallery_base; ?>image copy 6.png" alt="Rajat Garg & Advisory Team" style="width: 100%; height: 320px; object-fit: cover; object-position: center; border-radius: 16px; border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 10px 30px rgba(0,0,0,0.25); display: block;">
+        <div class="service-banner-art" style="display: flex; align-items: center; justify-content: center; width: 100%;">
+          <div style="width: 100%; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 20px; padding: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.35);">
+            <img src="<?php echo $gallery_base; ?>WhatsApp Image 2026-08-11 at 10.10.23.jpeg" alt="Rajat Garg & The Credit Lane Founders" style="width: 100%; height: auto; max-height: 440px; object-fit: contain; border-radius: 14px; display: block;">
+            <div style="text-align: center; padding: 8px 0 4px; color: var(--gold-light); font-size: 12.5px; font-weight: 600; letter-spacing: 0.03em;">
+              ⭐ Rajat Garg &amp; Executive Leadership Desk at Build Bharat Expo 2025
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Top Exhibition & Event Highlights Banner -->
-    <section style="padding: 20px 0 40px; background: var(--offwhite); border-bottom: 1px solid var(--line);">
+    <section style="padding: 24px 0 40px; background: var(--offwhite); border-bottom: 1px solid var(--line);">
       <div class="wrap">
-        <div style="background: var(--navy-dark); color: #fff; border-radius: 16px; padding: 24px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+        <div style="background: var(--navy-dark); color: #fff; border-radius: 20px; padding: 28px 36px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; box-shadow: 0 10px 30px rgba(0,0,0,0.12);">
           <div style="display: flex; align-items: center; gap: 20px;">
-            <img src="<?php echo $gallery_base; ?>BRT CorporateBBE Participation Certificate_page-0001.jpg" alt="Build Bharat Expo Certificate" style="width: 70px; height: 70px; border-radius: 10px; object-fit: cover; border: 2px solid var(--gold);">
+            <img src="<?php echo $gallery_base; ?>BRT CorporateBBE Participation Certificate_page-0001.jpg" alt="Build Bharat Expo Certificate" style="width: 76px; height: 76px; border-radius: 12px; object-fit: cover; border: 2px solid var(--gold); box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
             <div>
               <span style="font-size: 11px; font-weight: 700; color: var(--gold-light); text-transform: uppercase; letter-spacing: 0.08em; display: block;">BUILD BHARAT EXPO 2025 EXHIBITOR</span>
-              <h3 style="font-size: 18px; color: #fff; font-family: var(--font-serif); margin: 2px 0 4px 0;">Visit Us at Bharat Mandapam (Hall 6 Stall D19)</h3>
-              <p style="font-size: 13px; color: var(--slate-light); margin: 0;">Meet our CA, CS, and Advocate led team live at national MSME expos or visit our Ghaziabad Head Office.</p>
+              <h3 style="font-size: 20px; color: #fff; font-family: var(--font-serif); margin: 2px 0 4px 0;">Visit Us at Bharat Mandapam (Hall 6 Stall D19)</h3>
+              <p style="font-size: 13.5px; color: var(--slate-light); margin: 0;">Meet our CA, CS, and Advocate led team live at national MSME expos or visit our Ghaziabad Head Office.</p>
             </div>
           </div>
-          <div style="display: flex; gap: 12px;">
-            <a href="tel:9217924499" class="btn btn-primary" style="white-space: nowrap; font-size: 13.5px;">Call 9217924499</a>
-            <a href="tel:9818709747" class="btn btn-outline-light" style="white-space: nowrap; font-size: 13.5px; border-color: rgba(255,255,255,0.3); color: #fff;">Call 9818709747</a>
+          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+            <a href="tel:9217924499" class="btn btn-primary" style="white-space: nowrap; font-size: 14px; font-weight: 700; padding: 12px 24px;">📞 Call 9217924499</a>
+            <a href="tel:9818709747" class="btn btn-outline-light" style="white-space: nowrap; font-size: 14px; font-weight: 600; border-color: rgba(255,255,255,0.3); color: #fff; padding: 12px 24px;">📞 Call 9818709747</a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ============ MAIN CONTACT & LEAD FORM ============ -->
-    <section style="padding: 60px 0;">
+    <section style="padding: 70px 0; background: var(--white);">
       <div class="wrap">
-        <div class="contact-grid">
+        <div class="contact-grid" style="display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 48px; align-items: start;">
           
+          <!-- Left Column: Contact Information -->
           <div class="contact-info-col">
-            <div class="contact-card" style="padding: 0; overflow: hidden; border-radius: 16px;">
-              <div style="background-image: url('<?php echo $gallery_base; ?>image copy 16.png'); background-size: cover; background-position: center; height: 160px; width: 100%;"></div>
-              <div style="padding: 32px 24px;">
-                <h4 style="font-family: var(--font-serif); font-size: 20px; color: var(--navy-dark); margin-bottom: 20px;">Corporate Advisory Desk</h4>
+            <div class="contact-card" style="padding: 0; overflow: hidden; border-radius: 20px; border: 1px solid var(--line); background: var(--offwhite); box-shadow: 0 8px 30px rgba(0,0,0,0.05);">
+              <div style="width: 100%; height: 220px; overflow: hidden; position: relative;">
+                <img src="<?php echo $gallery_base; ?>image copy 16.png" alt="Build Bharat Expo 2025 Stall" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+              </div>
+              <div style="padding: 32px 28px;">
+                <h3 style="font-family: var(--font-serif); font-size: 24px; color: var(--navy-dark); margin-bottom: 24px;">Corporate Advisory Desk</h3>
                 
-                <div class="contact-item" style="margin-bottom: 16px;">
-                  <span class="label" style="font-size: 12px; color: var(--gold); font-weight: 700; text-transform: uppercase;">Head Office Address</span>
-                  <span style="font-weight: 700; color: var(--navy-dark); font-size: 14.5px; line-height: 1.5; display: block; margin-top: 4px;">B 31 FIRST FLOOR RAJ NAGAR GHAZIABAD 201001</span>
+                <div class="contact-item" style="margin-bottom: 20px;">
+                  <span class="label" style="font-size: 11.5px; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; display: block;">Head Office Address</span>
+                  <span style="font-weight: 700; color: var(--navy-dark); font-size: 15px; line-height: 1.5; display: block; margin-top: 4px;">B 31 FIRST FLOOR RAJ NAGAR GHAZIABAD 201001</span>
                 </div>
 
-                <div class="contact-item" style="margin-bottom: 16px;">
-                  <span class="label" style="font-size: 12px; color: var(--gold); font-weight: 700; text-transform: uppercase;">Direct Contact Numbers</span>
-                  <div style="margin-top: 4px; display: flex; flex-direction: column; gap: 4px;">
-                    <a href="tel:9217924499" class="mono" style="color: var(--navy-dark); font-weight: 700; text-decoration: none; font-size: 15px;">📞 +91-9217924499</a>
-                    <a href="tel:9818709747" class="mono" style="color: var(--navy-dark); font-weight: 700; text-decoration: none; font-size: 15px;">📞 +91-9818709747</a>
+                <div class="contact-item" style="margin-bottom: 20px;">
+                  <span class="label" style="font-size: 11.5px; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; display: block;">Direct Contact Helplines</span>
+                  <div style="margin-top: 6px; display: flex; flex-direction: column; gap: 6px;">
+                    <a href="tel:9217924499" class="mono" style="color: var(--navy-dark); font-weight: 700; text-decoration: none; font-size: 16px;">📞 +91-9217924499 (Rajat Garg, MD)</a>
+                    <a href="tel:9818709747" class="mono" style="color: var(--navy-dark); font-weight: 700; text-decoration: none; font-size: 16px;">📞 +91-9818709747 (Advisory Desk)</a>
                   </div>
                 </div>
 
-                <div class="contact-item" style="margin-bottom: 16px;">
-                  <span class="label" style="font-size: 12px; color: var(--gold); font-weight: 700; text-transform: uppercase;">Official Email</span>
-                  <a href="mailto:Info@thecreditlane.in" class="mono" style="color: var(--navy-dark); font-weight: 700; text-decoration: none; font-size: 14.5px; display: block; margin-top: 4px;">Info@thecreditlane.in</a>
+                <div class="contact-item" style="margin-bottom: 20px;">
+                  <span class="label" style="font-size: 11.5px; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; display: block;">Official Email</span>
+                  <a href="mailto:Info@thecreditlane.in" class="mono" style="color: var(--navy-dark); font-weight: 700; text-decoration: none; font-size: 15px; display: block; margin-top: 4px;">✉️ Info@thecreditlane.in</a>
                 </div>
 
-                <div class="contact-item" style="margin-bottom: 16px;">
-                  <span class="label" style="font-size: 12px; color: var(--gold); font-weight: 700; text-transform: uppercase;">WhatsApp Desk</span>
-                  <a href="https://wa.me/919217924499" target="_blank" class="mono" style="color: #25d366; font-weight: 700; text-decoration: none; font-size: 14.5px; display: block; margin-top: 4px;">💬 Chat on WhatsApp (+91-9217924499)</a>
+                <div class="contact-item" style="margin-bottom: 20px;">
+                  <span class="label" style="font-size: 11.5px; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; display: block;">WhatsApp Instant Assistance</span>
+                  <a href="https://wa.me/919217924499" target="_blank" class="mono" style="color: #25d366; font-weight: 700; text-decoration: none; font-size: 15px; display: inline-flex; align-items: center; gap: 6px; margin-top: 4px; padding: 6px 14px; background: rgba(37,211,102,0.1); border-radius: 8px;">💬 Chat on WhatsApp (+91-9217924499)</a>
                 </div>
 
-                <div class="contact-item" style="margin-bottom: 16px;">
-                  <span class="label" style="font-size: 12px; color: var(--gold); font-weight: 700; text-transform: uppercase;">Working Hours</span>
-                  <span style="font-weight: 600; color: var(--navy-dark); font-size: 13.5px; display: block; margin-top: 4px;">Monday – Saturday: 10:00 AM – 6:30 PM</span>
+                <div class="contact-item" style="margin-bottom: 20px;">
+                  <span class="label" style="font-size: 11.5px; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; display: block;">Working Hours</span>
+                  <span style="font-weight: 600; color: var(--navy-dark); font-size: 14px; display: block; margin-top: 4px;">🕒 Monday – Saturday: 10:00 AM – 6:30 PM</span>
                 </div>
 
-                <div class="contact-item-block" style="margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--line);">
-                  <strong style="color: var(--navy-dark); font-size: 14px; font-weight: 700; display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                <div class="contact-item-block" style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line);">
+                  <strong style="color: var(--navy-dark); font-size: 15px; font-weight: 700; display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
                     <span style="font-size: 18px;">🤝</span> CA / CS / Advocate Partnerships
                   </strong>
-                  <p style="font-size: 13px; color: var(--slate); line-height: 1.6; margin: 0;">We welcome Chartered Accountants, Company Secretaries, and Advocates to collaborate with us for client funding requirements.</p>
+                  <p style="font-size: 13.5px; color: var(--slate); line-height: 1.6; margin: 0;">We welcome Chartered Accountants, Company Secretaries, and Advocates to collaborate with us for client corporate debt, SME IPO, and government subsidy filings.</p>
                 </div>
               </div>
             </div>
 
             <!-- Map container with Google Map -->
-            <div class="map-container" style="position: relative; height: 260px; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; margin-top: 24px;">
+            <div class="map-container" style="position: relative; height: 280px; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; margin-top: 28px; box-shadow: 0 8px 24px rgba(0,0,0,0.06);">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.7892341!2d77.4385!3d28.6732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf1b1d1234567%3A0x123456789abcdef!2sRaj%20Nagar%2C%20Ghaziabad%2C%20Uttar%20Pradesh%20201001!5e0!3m2!1sen!2sin!4v1717012345678!5m2!1sen!2sin" 
                 width="100%" 
@@ -97,125 +105,92 @@ $gallery_base = get_template_directory_uri() . '/assets/images/gallery/';
                 allowfullscreen="" 
                 loading="lazy">
               </iframe>
-              <div style="position: absolute; bottom: 12px; left: 12px; right: 12px; background: rgba(255, 255, 255, 0.95); padding: 12px 16px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); border-left: 4px solid var(--gold); pointer-events: none; backdrop-filter: blur(4px);">
-                <b style="font-size: 13.5px; color: var(--navy-dark); display: block;">The Credit Lane Head Office</b>
-                <p style="font-size: 12px; color: var(--slate); margin: 2px 0 0 0; line-height: 1.4;">B 31 FIRST FLOOR RAJ NAGAR GHAZIABAD 201001</p>
+              <div style="position: absolute; bottom: 12px; left: 12px; right: 12px; background: rgba(255, 255, 255, 0.95); padding: 12px 16px; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); border-left: 4px solid var(--gold); pointer-events: none; backdrop-filter: blur(4px);">
+                <b style="font-size: 13.5px; color: var(--navy-dark); display: block;">Ghaziabad Head Office</b>
+                <p style="font-size: 12px; color: var(--slate); margin: 3px 0 0 0; line-height: 1.4;">B 31 First Floor, Raj Nagar, Ghaziabad 201001 (Delhi NCR)</p>
               </div>
             </div>
           </div>
 
-          <!-- Lead form card -->
-          <div class="lead-card" style="background: #fff; padding: 36px; border-radius: 16px; border: 1px solid var(--line); box-shadow: 0 8px 30px rgba(0,0,0,0.05);">
-            <h3 style="font-size: 24px; margin-bottom: 8px; font-family: var(--font-serif); color: var(--navy-dark);">Discuss Your Funding Need</h3>
-            <p style="color: var(--slate); font-size: 14px; margin-bottom: 24px; border-bottom: 1px solid var(--line); padding-bottom: 16px;">Fill out the form below. Data is securely routed to our corporate desk &amp; Google Sheets.</p>
-            
-            <form id="contact-lead-form" class="lead-form" action="https://formsubmit.co/Info@thecreditlane.in" method="POST" style="display: flex; flex-direction: column; gap: 18px;">
+          <!-- Right Column: Lead Form -->
+          <div class="lead-card" style="background: var(--offwhite); border: 1px solid var(--line); border-radius: 20px; padding: 40px 32px; box-shadow: 0 10px 35px rgba(0,0,0,0.06);">
+            <div style="margin-bottom: 28px;">
+              <span class="eyebrow">SUBMIT YOUR REQUIREMENT</span>
+              <h2 style="font-size: 28px; color: var(--navy-dark); font-family: var(--font-serif); margin-top: 6px;">Discuss Your Funding Need</h2>
+              <p style="color: var(--slate); font-size: 14.5px; margin-top: 6px;">Fill out the form below. All details route directly to <strong style="color: var(--navy-dark);">Info@thecreditlane.in</strong>.</p>
+            </div>
+
+            <form class="lead-form" action="https://formsubmit.co/Info@thecreditlane.in" method="POST" style="display: grid; gap: 20px;">
               <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_template" value="table">
-              <input type="hidden" name="_subject" value="New Website Requirement - The Credit Lane">
+              <input type="hidden" name="_subject" value="New Contact Inquiry - The Credit Lane">
+              <input type="hidden" name="_next" value="<?php echo esc_url(home_url('/contact/')); ?>?submitted=true">
 
-              <div class="form-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-                <div class="form-group">
-                  <label style="font-size: 13px; font-weight: 700; color: var(--navy-dark); display: block; margin-bottom: 6px;">Full Name *</label>
-                  <input type="text" name="Full Name" placeholder="Enter your full name" required style="width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px;">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div>
+                  <label style="display: block; font-size: 13px; font-weight: 700; color: var(--navy-dark); margin-bottom: 6px;">Full Name *</label>
+                  <input type="text" name="Full Name" placeholder="e.g. Rajesh Sharma" required style="width: 100%; padding: 13px 16px; border-radius: 10px; border: 1px solid var(--line); font-size: 14.5px; background: var(--white);">
                 </div>
-                <div class="form-group">
-                  <label style="font-size: 13px; font-weight: 700; color: var(--navy-dark); display: block; margin-bottom: 6px;">Company Name *</label>
-                  <input type="text" name="Company Name" placeholder="Company / Firm name" required style="width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px;">
+                <div>
+                  <label style="display: block; font-size: 13px; font-weight: 700; color: var(--navy-dark); margin-bottom: 6px;">Company / Firm Name *</label>
+                  <input type="text" name="Company Name" placeholder="e.g. Apex Industries Pvt Ltd" required style="width: 100%; padding: 13px 16px; border-radius: 10px; border: 1px solid var(--line); font-size: 14.5px; background: var(--white);">
                 </div>
               </div>
 
-              <div class="form-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-                <div class="form-group">
-                  <label style="font-size: 13px; font-weight: 700; color: var(--navy-dark); display: block; margin-bottom: 6px;">Phone Number *</label>
-                  <input type="tel" name="Phone Number" placeholder="10-digit mobile number" required style="width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px;">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div>
+                  <label style="display: block; font-size: 13px; font-weight: 700; color: var(--navy-dark); margin-bottom: 6px;">Mobile Number *</label>
+                  <input type="tel" name="Mobile Number" placeholder="e.g. 9812345678" required style="width: 100%; padding: 13px 16px; border-radius: 10px; border: 1px solid var(--line); font-size: 14.5px; background: var(--white);">
                 </div>
-                <div class="form-group">
-                  <label style="font-size: 13px; font-weight: 700; color: var(--navy-dark); display: block; margin-bottom: 6px;">Work Email *</label>
-                  <input type="email" name="Work Email" placeholder="you@company.com" required style="width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px;">
+                <div>
+                  <label style="display: block; font-size: 13px; font-weight: 700; color: var(--navy-dark); margin-bottom: 6px;">Email Address *</label>
+                  <input type="email" name="Email" placeholder="e.g. name@company.com" required style="width: 100%; padding: 13px 16px; border-radius: 10px; border: 1px solid var(--line); font-size: 14.5px; background: var(--white);">
                 </div>
               </div>
 
-              <div class="form-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-                <div class="form-group">
-                  <label style="font-size: 13px; font-weight: 700; color: var(--navy-dark); display: block; margin-bottom: 6px;">Business Type *</label>
-                  <select name="Business Type" required style="width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; background: #fff;">
-                    <option value="">Select Business Type</option>
-                    <option value="Manufacturing">Manufacturing</option>
-                    <option value="Trading / Wholesale">Trading / Wholesale</option>
-                    <option value="Services / IT">Services / IT</option>
-                    <option value="Real Estate / Construction">Real Estate / Construction</option>
-                    <option value="Healthcare / Hospital">Healthcare / Hospital</option>
-                    <option value="Education / School">Education / School</option>
-                    <option value="Hospitality / Hotel">Hospitality / Hotel</option>
-                    <option value="Infrastructure">Infrastructure</option>
-                    <option value="Other">Other</option>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div>
+                  <label style="display: block; font-size: 13px; font-weight: 700; color: var(--navy-dark); margin-bottom: 6px;">Facility Required *</label>
+                  <select name="Facility Required" required style="width: 100%; padding: 13px 16px; border-radius: 10px; border: 1px solid var(--line); font-size: 14.5px; background: var(--white);">
+                    <option value="">Select Service Category...</option>
+                    <option value="Unsecured Business Loan & DOD">Unsecured Business Loan &amp; Drop-Line OD</option>
+                    <option value="SIDBI / Bank Machinery Loan">SIDBI / Bank Machinery Purchase Loan</option>
+                    <option value="Commercial & Industrial Loan">Commercial / Industrial Property Purchase Loan</option>
+                    <option value="Invoice Discounting">Invoice &amp; Receivable Discounting</option>
+                    <option value="Infrastructure Funding">School / Hospital / Hotel / Real Estate Funding</option>
+                    <option value="NPA Resolution Funding">NPA Resolution &amp; OTS Debt Restructuring</option>
+                    <option value="UP Govt MSME / TUS Subsidy">UP Government Incentive / Subsidy Claim (MSME / TUS)</option>
+                    <option value="SME IPO & Mainboard IPO">SME IPO &amp; Mainboard IPO Listing Advisory</option>
+                    <option value="Pre-IPO & Valuation Services">Pre-IPO Funding &amp; Valuation Services</option>
+                    <option value="CA/CS Partnership">CA / CS / Advocate Professional Collaboration</option>
                   </select>
                 </div>
-                <div class="form-group">
-                  <label style="font-size: 13px; font-weight: 700; color: var(--navy-dark); display: block; margin-bottom: 6px;">Funding Purpose / Requirement *</label>
-                  <select name="Funding Requirement" required style="width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; background: #fff;">
-                    <option value="">Select Primary Requirement</option>
-                    <option value="Unsecured Business Loan / DOD Limit">Unsecured Business Loan / DOD Limit</option>
-                    <option value="Commercial / Industrial Purchase Loan">Commercial / Industrial Purchase Loan</option>
-                    <option value="Machine Loan (SIDBI / Bank)">Machine Loan (SIDBI / Bank)</option>
-                    <option value="Sale / Purchase Invoice Finance">Sale / Purchase Invoice Finance</option>
-                    <option value="Real Estate / Builder Funding">Real Estate / Builder Funding</option>
-                    <option value="Hospital / School Funding">Hospital / School Funding</option>
-                    <option value="NPA Funding / Debt Resolution">NPA Funding / Debt Resolution</option>
-                    <option value="Pre-IPO / SME IPO / Equity Advisory">Pre-IPO / SME IPO / Equity Advisory</option>
-                    <option value="Government Grant / Subsidy (TUS / MSME)">Government Grant / Subsidy (TUS / MSME)</option>
-                    <option value="Other">Other</option>
+                <div>
+                  <label style="display: block; font-size: 13px; font-weight: 700; color: var(--navy-dark); margin-bottom: 6px;">Required Capital / Loan Amount *</label>
+                  <select name="Loan Amount" required style="width: 100%; padding: 13px 16px; border-radius: 10px; border: 1px solid var(--line); font-size: 14.5px; background: var(--white);">
+                    <option value="">Select Capital Scale...</option>
+                    <option value="₹25 Lakhs – ₹1 Crore">₹25 Lakhs – ₹1 Crore</option>
+                    <option value="₹1 Crore – ₹5 Crores">₹1 Crore – ₹5 Crores</option>
+                    <option value="₹5 Crores – ₹25 Crores">₹5 Crores – ₹25 Crores</option>
+                    <option value="₹25 Crores – ₹100 Crores">₹25 Crores – ₹100 Crores</option>
+                    <option value="Above ₹100 Crores">Above ₹100 Crores</option>
                   </select>
                 </div>
               </div>
 
-              <div class="form-group">
-                <label style="font-size: 13px; font-weight: 700; color: var(--navy-dark); display: block; margin-bottom: 6px;">Required Funding Amount *</label>
-                <select name="Required Funding Amount" required style="width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; background: #fff;">
-                  <option value="">Select Funding Range</option>
-                  <option value="5lac to 25lac">₹5 Lac to ₹25 Lac</option>
-                  <option value="above 25lac">Above ₹25 Lac</option>
-                  <option value="₹25 Lac - ₹1 Crore">₹25 Lac - ₹1 Crore</option>
-                  <option value="₹1 Crore - ₹5 Crore">₹1 Crore - ₹5 Crore</option>
-                  <option value="Above ₹5 Crore">Above ₹5 Crore</option>
-                </select>
+              <div>
+                <label style="display: block; font-size: 13px; font-weight: 700; color: var(--navy-dark); margin-bottom: 6px;">Project &amp; Business Details</label>
+                <textarea name="Project Details" rows="4" placeholder="Mention your business sector, existing turnover, machinery specs, or specific subsidy requirement..." style="width: 100%; padding: 13px 16px; border-radius: 10px; border: 1px solid var(--line); font-size: 14.5px; background: var(--white); resize: vertical;"></textarea>
               </div>
 
-              <div class="form-group">
-                <label style="font-size: 13px; font-weight: 700; color: var(--navy-dark); display: block; margin-bottom: 6px;">Message / Additional Details (Optional)</label>
-                <textarea name="Message" rows="3" placeholder="Briefly describe your business turnover, project specs, or specific funding questions..." style="width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; resize: vertical;"></textarea>
-              </div>
+              <button type="submit" class="btn btn-primary" style="padding: 16px 32px; font-size: 16px; font-weight: 700; width: 100%; justify-content: center; box-shadow: 0 8px 25px rgba(184,134,11,0.3); border: none; cursor: pointer;">
+                Submit Inquiry to Advisory Desk &rarr;
+              </button>
 
-              <label class="form-consent" style="font-size: 12.5px; color: var(--slate); display: flex; gap: 8px; align-items: flex-start;">
-                <input type="checkbox" name="Consent" required style="margin-top: 2px;">
-                <span>I authorise Rajat Garg &amp; The Credit Lane team to contact me regarding this advisory request.</span>
-              </label>
-
-              <button class="btn btn-primary form-submit-btn" type="submit" style="width: 100%; padding: 14px; font-size: 15px; font-weight: 700;">Submit Requirement &amp; Request Callback &rarr;</button>
+              <p style="font-size: 12px; color: var(--slate); text-align: center; margin: 0;">🔒 Confidentiality Guaranteed. Your details are reviewed solely by our internal credit committee.</p>
             </form>
           </div>
 
         </div>
       </div>
     </section>
-
-    <!-- Google Sheet Form Script Handler (Pushes data to Webhook if configured) -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        var form = document.getElementById("contact-lead-form");
-        if (form) {
-          form.addEventListener("submit", function(e) {
-            // Google Apps Script Webhook URL (Can be pasted by admin or custom plugin)
-            var googleSheetWebhookUrl = ""; // Admin can paste Google Apps Script Webhook URL here
-            if (googleSheetWebhookUrl) {
-              var formData = new FormData(form);
-              fetch(googleSheetWebhookUrl, {
-                method: "POST",
-                body: formData
-              }).catch(function(err) { console.log("Google sheet sync error:", err); });
-            }
-          });
-        }
-      });
-    </script>
