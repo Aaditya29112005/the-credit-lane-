@@ -2006,7 +2006,6 @@ footer h5 {
   }
 }
 
-@media (max-width: 480px) {
 .equity-journey-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
