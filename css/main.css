@@ -1989,7 +1989,13 @@ footer h5 {
 /* ==========================================================================
    PERFECT CALCULATOR SYSTEM (100% EXACT MATCH TO IMAGE COPY 18.PNG)
    ========================================================================== */
-.calc-container {
+/* ==========================================================================
+   PERFECT CALCULATOR SYSTEM (100% EXACT MATCH TO ATTACHED IMAGE)
+   ========================================================================== */
+.calc-container,
+.calculator-card,
+#calculator .wrap > div,
+#calculator .calculator-card {
   background: #FFFFFF !important;
   border: 1px solid #E2DDD5 !important;
   border-radius: 24px !important;
@@ -1998,22 +2004,28 @@ footer h5 {
   overflow: hidden !important;
   width: 100% !important;
   box-sizing: border-box !important;
+  padding: 36px 40px !important;
 }
 
-.calc-grid, .calculator-card-grid {
+.calc-grid,
+.calculator-card-grid {
   display: grid !important;
   grid-template-columns: 1.15fr 0.85fr !important;
   gap: 36px !important;
-  padding: 36px !important;
   align-items: center !important;
   width: 100% !important;
   box-sizing: border-box !important;
 }
 
 @media (max-width: 850px) {
-  .calc-grid, .calculator-card-grid {
+  .calc-container,
+  .calculator-card,
+  #calculator .wrap > div {
+    padding: 24px 20px !important;
+  }
+  .calc-grid,
+  .calculator-card-grid {
     grid-template-columns: 1fr !important;
-    padding: 24px !important;
     gap: 28px !important;
   }
 }
@@ -2021,7 +2033,7 @@ footer h5 {
 .calc-inputs {
   display: flex !important;
   flex-direction: column !important;
-  gap: 24px !important;
+  gap: 28px !important;
   justify-content: center !important;
   width: 100% !important;
   box-sizing: border-box !important;
@@ -2031,7 +2043,7 @@ footer h5 {
 .calc-input-group {
   display: flex !important;
   flex-direction: column !important;
-  gap: 12px !important;
+  gap: 10px !important;
   width: 100% !important;
 }
 
@@ -2039,13 +2051,15 @@ footer h5 {
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
-  font-size: 14.5px !important;
+  font-size: 15px !important;
   font-weight: 700 !important;
   color: #0B1F3A !important;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
 }
 
 .calc-input-label span.value-output,
-.calc-input-label span[id$="-val"] {
+.calc-input-label span[id$="-val"],
+.calc-input-label span:last-child {
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
   font-size: 16px !important;
   font-weight: 800 !important;
@@ -2055,7 +2069,7 @@ footer h5 {
   border: none !important;
 }
 
-/* CUSTOM RANGE SLIDER (MATCHING IMAGE COPY 18.PNG EXACTLY) */
+/* CUSTOM RANGE SLIDER (100% MATCH TO ATTACHED IMAGE) */
 input[type="range"].calc-slider,
 input[type="range"] {
   width: 100% !important;
@@ -2083,14 +2097,14 @@ input[type="range"].calc-slider::-webkit-slider-thumb,
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none !important;
   appearance: none !important;
-  width: 18px !important;
-  height: 18px !important;
+  width: 20px !important;
+  height: 20px !important;
   border-radius: 50% !important;
   background: #C89B3C !important;
   border: none !important;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4) !important;
   cursor: pointer !important;
-  margin-top: -5px !important;
+  margin-top: -6px !important;
   transition: transform 0.15s ease, background 0.15s ease !important;
 }
 
@@ -2105,8 +2119,8 @@ input[type="range"]::-moz-range-track {
 
 input[type="range"].calc-slider::-moz-range-thumb,
 input[type="range"]::-moz-range-thumb {
-  width: 18px !important;
-  height: 18px !important;
+  width: 20px !important;
+  height: 20px !important;
   border-radius: 50% !important;
   background: #C89B3C !important;
   border: none !important;
@@ -2120,7 +2134,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
   background: #D4A748 !important;
 }
 
-/* RIGHT HAND DARK NAVY CARD (100% MATCH TO IMAGE COPY 18.PNG) */
+/* RIGHT HAND DARK NAVY CARD (100% MATCH TO ATTACHED IMAGE) */
 .calc-outputs {
   background: #0B1D33 !important;
   color: #FFFFFF !important;
@@ -2147,16 +2161,16 @@ input[type="range"]::-webkit-slider-thumb:hover {
 
 .calc-output-main-val {
   font-family: 'Newsreader', Georgia, serif !important;
-  font-size: clamp(2.4rem, 4vw, 3rem) !important;
+  font-size: clamp(2.4rem, 4vw, 3.2rem) !important;
   font-weight: 700 !important;
   color: #FFFFFF !important;
   line-height: 1.1 !important;
-  margin-bottom: 16px !important;
+  margin-bottom: 18px !important;
 }
 
 .calc-divider {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-  margin: 16px 0 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+  margin: 18px 0 !important;
 }
 
 .calc-metrics-row {
@@ -2169,12 +2183,15 @@ input[type="range"]::-webkit-slider-thumb:hover {
   font-size: 13px !important;
   color: #94A3B8 !important;
   margin-bottom: 6px !important;
+  font-weight: 500 !important;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
 }
 
 .calc-metric-item .m-val {
   font-size: 20px !important;
   font-weight: 700 !important;
   color: #FFFFFF !important;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
 }
 
 .calc-apply-btn {
@@ -2185,13 +2202,14 @@ input[type="range"]::-webkit-slider-thumb:hover {
   color: #0B1D33 !important;
   font-weight: 700 !important;
   font-size: 15px !important;
-  padding: 14px 20px !important;
+  padding: 16px 20px !important;
   border-radius: 10px !important;
   text-decoration: none !important;
   transition: all 0.2s ease !important;
   margin-top: 20px !important;
   box-shadow: 0 4px 15px rgba(200, 155, 60, 0.3) !important;
   box-sizing: border-box !important;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
 }
 
 .calc-apply-btn:hover {
