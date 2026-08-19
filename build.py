@@ -2727,99 +2727,93 @@ def generate_aboutpage():
 
         <div class="founders-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; align-items: stretch;">
           
-          <!-- Promoter 1: Bhagchand Bangani -->
-          <div class="promoter-card" style="background: #FAF8F5; border: 1px solid #E2DDD5; border-top: 4px solid #C89B3C; border-radius: 20px; padding: 32px 28px; box-shadow: 0 10px 30px rgba(11, 31, 58, 0.05); display: flex; flex-direction: column; justify-content: space-between;">
+          <!-- Promoter 1: Rajat Garg -->
+          <div class="promoter-card" style="background: #FAF8F5; border: 1px solid #E2DDD5; border-top: 4px solid #C89B3C; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(11, 31, 58, 0.05); display: flex; flex-direction: column; justify-content: space-between;">
             <div>
-              <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
-                <div style="width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #0B1F3A 0%, #1A365D 100%); color: #C89B3C; font-weight: 800; font-size: 20px; display: flex; align-items: center; justify-content: center; border: 2px solid #C89B3C; flex-shrink: 0; box-shadow: 0 4px 12px rgba(11, 31, 58, 0.2);">
-                  BB
-                </div>
-                <div>
-                  <span style="font-size: 11px; font-weight: 700; color: #C89B3C; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 2px;">CHARTERED ACCOUNTANT</span>
-                  <h3 style="font-size: 22px; color: #0B1F3A; font-family: var(--font-serif); margin: 0; font-weight: 700;">Bhagchand Bangani</h3>
-                  <span style="font-size: 13px; font-weight: 600; color: #5B6472; display: block; margin-top: 2px;">Head – Taxation Division</span>
-                </div>
+              <div style="height: 280px; overflow: hidden; position: relative; background: #e5dfd5;">
+                <img src="../about/image copy 15.png" alt="CA Rajat Garg - Head Finance & Subsidy Division" style="width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block;">
               </div>
-              
-              <div style="display: inline-block; background: rgba(200, 155, 60, 0.12); color: #B8860B; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 16px;">
-                15+ Years Taxation Advisory Experience
-              </div>
-
-              <p style="font-size: 14px; color: #3E5372; line-height: 1.65; margin-bottom: 14px;">
-                CA Bhagchand Bangani is a Chartered Accountant by profession with over 15 years of extensive experience in the fields of Direct Taxation and Indirect Taxation. He brings deep expertise in tax advisory, compliance, planning, and strategic tax management.
-              </p>
-              <p style="font-size: 14px; color: #3E5372; line-height: 1.65; margin-bottom: 0;">
-                At <b>THE CREDIT LANE</b>, he heads the Taxation Division, guiding clients with practical and strategic taxation solutions.
-              </p>
-            </div>
-            
-            <div style="border-top: 1px solid #E2DDD5; padding-top: 16px; margin-top: 24px; display: flex; justify-content: space-between; align-items: center;">
-              <span style="font-size: 12.5px; font-weight: 700; color: #0B1F3A;">Direct &amp; Indirect Taxation</span>
-              <span style="font-size: 12px; color: #C89B3C; font-weight: 700;">Taxation Division</span>
-            </div>
-          </div>
-
-          <!-- Promoter 2: Rajat Garg -->
-          <div class="promoter-card" style="background: #FAF8F5; border: 1px solid #E2DDD5; border-top: 4px solid #0B1F3A; border-radius: 20px; padding: 32px 28px; box-shadow: 0 10px 30px rgba(11, 31, 58, 0.05); display: flex; flex-direction: column; justify-content: space-between;">
-            <div>
-              <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
-                <div style="width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #C89B3C 0%, #B8860B 100%); color: #FFFFFF; font-weight: 800; font-size: 20px; display: flex; align-items: center; justify-content: center; border: 2px solid #0B1F3A; flex-shrink: 0; box-shadow: 0 4px 12px rgba(184, 134, 11, 0.25);">
-                  RG
+              <div style="padding: 24px 24px 0;">
+                <span style="font-size: 11px; font-weight: 700; color: #C89B3C; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 4px;">CHARTERED ACCOUNTANT</span>
+                <h3 style="font-size: 22px; color: #0B1F3A; font-family: var(--font-serif); margin: 0; font-weight: 700;">Rajat Garg</h3>
+                <span style="font-size: 13.5px; font-weight: 600; color: #5B6472; display: block; margin-top: 2px; margin-bottom: 12px;">Head – Finance &amp; Subsidy Division</span>
+                
+                <div style="display: inline-block; background: rgba(200, 155, 60, 0.12); color: #B8860B; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 16px;">
+                  10+ Years Finance &amp; Subsidy Experience
                 </div>
-                <div>
-                  <span style="font-size: 11px; font-weight: 700; color: #C89B3C; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 2px;">CHARTERED ACCOUNTANT</span>
-                  <h3 style="font-size: 22px; color: #0B1F3A; font-family: var(--font-serif); margin: 0; font-weight: 700;">Rajat Garg</h3>
-                  <span style="font-size: 13px; font-weight: 600; color: #5B6472; display: block; margin-top: 2px;">Head – Finance &amp; Subsidy Division</span>
-                </div>
-              </div>
 
-              <div style="display: inline-block; background: rgba(11, 31, 58, 0.08); color: #0B1F3A; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 16px;">
-                10+ Years Finance &amp; Subsidy Experience
+                <p style="font-size: 14px; color: #3E5372; line-height: 1.65; margin-bottom: 14px;">
+                  CA Rajat Garg is a Chartered Accountant by profession with over 10 years of experience in the fields of Finance and Taxation. He has extensive experience in financial advisory, business funding, structured finance, and government subsidy solutions.
+                </p>
+                <p style="font-size: 14px; color: #3E5372; line-height: 1.65; margin-bottom: 0;">
+                  At <b>THE CREDIT LANE</b>, he heads the Finance &amp; Subsidy Division, helping businesses identify the right funding opportunities and maximize available financial and government incentives.
+                </p>
               </div>
-
-              <p style="font-size: 14px; color: #3E5372; line-height: 1.65; margin-bottom: 14px;">
-                CA Rajat Garg is a Chartered Accountant by profession with over 10 years of experience in the fields of Finance and Taxation. He has extensive experience in financial advisory, business funding, structured finance, and government subsidy solutions.
-              </p>
-              <p style="font-size: 14px; color: #3E5372; line-height: 1.65; margin-bottom: 0;">
-                At <b>THE CREDIT LANE</b>, he heads the Finance &amp; Subsidy Division, helping businesses identify the right funding opportunities and maximize available financial and government incentives.
-              </p>
             </div>
 
-            <div style="border-top: 1px solid #E2DDD5; padding-top: 16px; margin-top: 24px; display: flex; justify-content: space-between; align-items: center;">
+            <div style="border-top: 1px solid #E2DDD5; padding: 16px 24px; margin-top: 24px; display: flex; justify-content: space-between; align-items: center;">
               <span style="font-size: 12.5px; font-weight: 700; color: #0B1F3A;">Finance &amp; Subsidies</span>
               <a href="../contact/index.html" style="font-size: 12px; color: #C89B3C; font-weight: 700; text-decoration: none;">📞 Contact Division &rarr;</a>
             </div>
           </div>
 
-          <!-- Promoter 3: Tarang Mittal -->
-          <div class="promoter-card" style="background: #FAF8F5; border: 1px solid #E2DDD5; border-top: 4px solid #C89B3C; border-radius: 20px; padding: 32px 28px; box-shadow: 0 10px 30px rgba(11, 31, 58, 0.05); display: flex; flex-direction: column; justify-content: space-between;">
+          <!-- Promoter 2: Tarang Mittal -->
+          <div class="promoter-card" style="background: #FAF8F5; border: 1px solid #E2DDD5; border-top: 4px solid #0B1F3A; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(11, 31, 58, 0.05); display: flex; flex-direction: column; justify-content: space-between;">
             <div>
-              <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
-                <div style="width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #0B1F3A 0%, #1A365D 100%); color: #C89B3C; font-weight: 800; font-size: 20px; display: flex; align-items: center; justify-content: center; border: 2px solid #C89B3C; flex-shrink: 0; box-shadow: 0 4px 12px rgba(11, 31, 58, 0.2);">
-                  TM
-                </div>
-                <div>
-                  <span style="font-size: 11px; font-weight: 700; color: #C89B3C; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 2px;">STRATEGIST &amp; BUSINESS ANALYST</span>
-                  <h3 style="font-size: 22px; color: #0B1F3A; font-family: var(--font-serif); margin: 0; font-weight: 700;">Tarang Mittal</h3>
-                  <span style="font-size: 13px; font-weight: 600; color: #5B6472; display: block; margin-top: 2px;">Head – Growth Division</span>
-                </div>
+              <div style="height: 280px; overflow: hidden; position: relative; background: #e5dfd5;">
+                <img src="../about/image copy 2.png" alt="Tarang Mittal - Head Growth Division" style="width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block;">
               </div>
+              <div style="padding: 24px 24px 0;">
+                <span style="font-size: 11px; font-weight: 700; color: #C89B3C; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 4px;">STRATEGIST &amp; BUSINESS ANALYST</span>
+                <h3 style="font-size: 22px; color: #0B1F3A; font-family: var(--font-serif); margin: 0; font-weight: 700;">Tarang Mittal</h3>
+                <span style="font-size: 13.5px; font-weight: 600; color: #5B6472; display: block; margin-top: 2px; margin-bottom: 12px;">Head – Growth Division</span>
 
-              <div style="display: inline-block; background: rgba(200, 155, 60, 0.12); color: #B8860B; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 16px;">
-                15+ Years Strategy &amp; Consultancy Experience
+                <div style="display: inline-block; background: rgba(11, 31, 58, 0.08); color: #0B1F3A; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 16px;">
+                  15+ Years Strategy &amp; Growth Experience
+                </div>
+
+                <p style="font-size: 14px; color: #3E5372; line-height: 1.65; margin-bottom: 14px;">
+                  Tarang Mittal is a Strategist and Business Analyst with over 15 years of experience in Business Consultancy, Strategy, and Management. He brings strong expertise in business growth, strategic planning, process improvement, and management consulting.
+                </p>
+                <p style="font-size: 14px; color: #3E5372; line-height: 1.65; margin-bottom: 0;">
+                  At <b>THE CREDIT LANE</b>, he heads the Growth Division, driving strategic initiatives, business development, and sustainable growth for the organization.
+                </p>
               </div>
-
-              <p style="font-size: 14px; color: #3E5372; line-height: 1.65; margin-bottom: 14px;">
-                Tarang Mittal is a Strategist and Business Analyst with over 15 years of experience in Business Consultancy, Strategy, and Management. He brings strong expertise in business growth, strategic planning, process improvement, and management consulting.
-              </p>
-              <p style="font-size: 14px; color: #3E5372; line-height: 1.65; margin-bottom: 0;">
-                At <b>THE CREDIT LANE</b>, he heads the Growth Division, driving strategic initiatives, business development, and sustainable growth for the organization.
-              </p>
             </div>
 
-            <div style="border-top: 1px solid #E2DDD5; padding-top: 16px; margin-top: 24px; display: flex; justify-content: space-between; align-items: center;">
-              <span style="font-size: 12.5px; font-weight: 700; color: #0B1F3A;">Strategy &amp; Management</span>
+            <div style="border-top: 1px solid #E2DDD5; padding: 16px 24px; margin-top: 24px; display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 12.5px; font-weight: 700; color: #0B1F3A;">Strategy &amp; Growth</span>
               <span style="font-size: 12px; color: #C89B3C; font-weight: 700;">Growth Division</span>
+            </div>
+          </div>
+
+          <!-- Promoter 3: Bhagchand Bangani -->
+          <div class="promoter-card" style="background: #FAF8F5; border: 1px solid #E2DDD5; border-top: 4px solid #C89B3C; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(11, 31, 58, 0.05); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="height: 280px; overflow: hidden; position: relative; background: #e5dfd5;">
+                <img src="../about/image copy 3.png" alt="CA Bhagchand Bangani - Head Taxation Division" style="width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block;">
+              </div>
+              <div style="padding: 24px 24px 0;">
+                <span style="font-size: 11px; font-weight: 700; color: #C89B3C; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 4px;">CHARTERED ACCOUNTANT</span>
+                <h3 style="font-size: 22px; color: #0B1F3A; font-family: var(--font-serif); margin: 0; font-weight: 700;">Bhagchand Bangani</h3>
+                <span style="font-size: 13.5px; font-weight: 600; color: #5B6472; display: block; margin-top: 2px; margin-bottom: 12px;">Head – Taxation Division</span>
+                
+                <div style="display: inline-block; background: rgba(200, 155, 60, 0.12); color: #B8860B; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 16px;">
+                  15+ Years Taxation Advisory Experience
+                </div>
+
+                <p style="font-size: 14px; color: #3E5372; line-height: 1.65; margin-bottom: 14px;">
+                  CA Bhagchand Bangani is a Chartered Accountant by profession with over 15 years of extensive experience in the fields of Direct Taxation and Indirect Taxation. He brings deep expertise in tax advisory, compliance, planning, and strategic tax management.
+                </p>
+                <p style="font-size: 14px; color: #3E5372; line-height: 1.65; margin-bottom: 0;">
+                  At <b>THE CREDIT LANE</b>, he heads the Taxation Division, guiding clients with practical and strategic taxation solutions.
+                </p>
+              </div>
+            </div>
+            
+            <div style="border-top: 1px solid #E2DDD5; padding: 16px 24px; margin-top: 24px; display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 12.5px; font-weight: 700; color: #0B1F3A;">Direct &amp; Indirect Taxation</span>
+              <span style="font-size: 12px; color: #C89B3C; font-weight: 700;">Taxation Division</span>
             </div>
           </div>
 
