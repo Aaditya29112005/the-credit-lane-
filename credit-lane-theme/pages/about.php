@@ -6,31 +6,41 @@ $gallery_base = get_template_directory_uri() . '/assets/images/gallery/';
 ?>
 
     <!-- ============ HERO BANNER ============ -->
-    <section class="service-banner" style="padding: 80px 0 60px; text-align: center; background: linear-gradient(135deg, #0B1F3A 0%, #071529 100%);">
-      <div class="wrap" style="max-width: 900px; margin: 0 auto;">
-        <span class="eyebrow" style="color: var(--gold-light); display: inline-block; margin-bottom: 12px; font-weight: 700; letter-spacing: 0.1em;">OUR PROFILE</span>
-        <h1 style="font-size: clamp(34px, 4.5vw, 52px); line-height: 1.25; color: #FFFFFF; font-family: var(--font-serif); margin-bottom: 20px;">Capital decisions deserve more than a generic answer.</h1>
-        <p class="lead" style="font-size: 17.5px; color: rgba(255,255,255,0.85); line-height: 1.65; max-width: 780px; margin: 0 auto 36px;">
-          Meet our advisory team of Chartered Accountants, Company Secretaries, and Legal Advocates driving transparent corporate capitalization, debt syndication, equity advisory, and government subsidy filings across India.
-        </p>
-        
-        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 40px;">
-          <a href="#promoters" class="btn btn-primary" style="padding: 14px 28px; font-size: 15px; font-weight: 700; box-shadow: 0 6px 20px rgba(184,134,11,0.3);">Meet Our Leadership &rarr;</a>
-          <a href="#mandate" class="btn btn-outline" style="padding: 14px 28px; font-size: 15px; font-weight: 600;">Our Advisory Mandate</a>
-        </div>
+    <section class="service-banner" style="padding: 80px 0 60px; background: linear-gradient(135deg, #0B1F3A 0%, #071529 100%);">
+      <div class="wrap">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 48px; align-items: center;">
+          <div style="text-align: left;">
+            <span class="eyebrow" style="color: var(--gold-light); display: inline-block; margin-bottom: 12px; font-weight: 700; letter-spacing: 0.1em;">OUR PROFILE</span>
+            <h1 style="font-size: clamp(32px, 4vw, 48px); line-height: 1.2; color: #FFFFFF; font-family: var(--font-serif); margin-bottom: 20px;">Capital decisions deserve more than a generic answer.</h1>
+            <p class="lead" style="font-size: 16.5px; color: rgba(255,255,255,0.85); line-height: 1.65; margin-bottom: 28px;">
+              Meet our advisory team of Chartered Accountants, Company Secretaries, and Legal Advocates driving transparent corporate capitalization, debt syndication, equity advisory, and government subsidy filings across India.
+            </p>
+            
+            <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px;">
+              <a href="#promoters" class="btn btn-primary" style="padding: 14px 28px; font-size: 15px; font-weight: 700; box-shadow: 0 6px 20px rgba(184,134,11,0.3);">Meet Our Leadership &rarr;</a>
+              <a href="#mandate" class="btn btn-outline" style="padding: 14px 28px; font-size: 15px; font-weight: 600;">Our Advisory Mandate</a>
+            </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 24px; text-align: center;">
-          <div>
-            <div style="color: var(--gold-light); font-size: 28px; font-weight: 800; font-family: var(--font-serif);">₹500+ Cr</div>
-            <div style="color: rgba(255,255,255,0.7); font-size: 13px; margin-top: 4px;">Corporate Debt &amp; Capital Structured</div>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 18px; text-align: center;">
+              <div>
+                <div style="color: var(--gold-light); font-size: 22px; font-weight: 800; font-family: var(--font-serif);">₹500+ Cr</div>
+                <div style="color: rgba(255,255,255,0.7); font-size: 11.5px; margin-top: 2px;">Capital Structured</div>
+              </div>
+              <div style="border-left: 1px solid rgba(255,255,255,0.1); border-right: 1px solid rgba(255,255,255,0.1);">
+                <div style="color: var(--gold-light); font-size: 22px; font-weight: 800; font-family: var(--font-serif);">CA / CS / Law</div>
+                <div style="color: rgba(255,255,255,0.7); font-size: 11.5px; margin-top: 2px;">Direct Oversight</div>
+              </div>
+              <div>
+                <div style="color: var(--gold-light); font-size: 22px; font-weight: 800; font-family: var(--font-serif);">100+</div>
+                <div style="color: rgba(255,255,255,0.7); font-size: 11.5px; margin-top: 2px;">Lender Empanelments</div>
+              </div>
+            </div>
           </div>
-          <div style="border-left: 1px solid rgba(255,255,255,0.1); border-right: 1px solid rgba(255,255,255,0.1);">
-            <div style="color: var(--gold-light); font-size: 28px; font-weight: 800; font-family: var(--font-serif);">CA / CS / Law</div>
-            <div style="color: rgba(255,255,255,0.7); font-size: 13px; margin-top: 4px;">Direct Professional Oversight</div>
-          </div>
-          <div>
-            <div style="color: var(--gold-light); font-size: 28px; font-weight: 800; font-family: var(--font-serif);">100+</div>
-            <div style="color: rgba(255,255,255,0.7); font-size: 13px; margin-top: 4px;">Lender &amp; Portal Empanelments</div>
+
+          <div style="position: relative;">
+            <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 20px; padding: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.4); overflow: hidden; cursor: pointer;" onclick="openGalleryModal('<?php echo $gallery_base; ?>image copy 8.png')">
+              <img src="<?php echo $gallery_base; ?>image copy 8.png" alt="The Credit Lane Executive Team &amp; Office" style="width: 100%; height: 380px; object-fit: cover; border-radius: 12px; display: block;">
+            </div>
           </div>
         </div>
       </div>
