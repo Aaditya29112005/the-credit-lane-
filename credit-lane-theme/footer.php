@@ -183,7 +183,7 @@
                 <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">About Us</a>
                 <a href="<?php echo esc_url( home_url( '/partner-with-us/' ) ); ?>">Partner With Us</a>
                 <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Contact Us</a>
-                <a href="<?php echo esc_url( get_template_directory_uri() . '/assets/docs/The-Credit-Lane-Company-Brochure.pdf?v=1.2.4' ); ?>" download="The-Credit-Lane-Company-Brochure.pdf" target="_blank" style="color: var(--gold-light);">Company Brochure 📄</a>
+                <a href="<?php echo esc_url( get_template_directory_uri() . '/assets/docs/The-Credit-Lane-Company-Profile.pdf?v=1.2.5' ); ?>" download="The-Credit-Lane-Company-Profile.pdf" target="_blank" style="color: var(--gold-light);">Company Profile 📄</a>
               </div>
             </div>
           </div>

@@ -356,7 +356,7 @@
         <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" class="<?php echo is_page('about') ? 'active' : ''; ?>">About Us</a>
         <a href="<?php echo esc_url( home_url( '/partner-with-us/' ) ); ?>" class="<?php echo is_page('partner-with-us') ? 'active' : ''; ?>">Partner With Us</a>
         <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="<?php echo is_page('contact') ? 'active' : ''; ?>">Contact Us</a>
-        <a href="<?php echo esc_url( get_template_directory_uri() . '/assets/docs/The-Credit-Lane-Company-Brochure.pdf?v=1.2.4' ); ?>" download="The-Credit-Lane-Company-Brochure.pdf" target="_blank" class="brochure-link" style="color: var(--gold); font-weight: 700; white-space: nowrap;">Brochure 📄</a>
+        <a href="<?php echo esc_url( get_template_directory_uri() . '/assets/docs/The-Credit-Lane-Company-Profile.pdf?v=1.2.5' ); ?>" download="The-Credit-Lane-Company-Profile.pdf" target="_blank" class="brochure-link" style="color: var(--gold); font-weight: 700; white-space: nowrap;">Company Profile 📄</a>
       </nav>
       
       <div class="header-cta" style="display: flex; align-items: center; gap: 14px; flex-shrink: 0;">
@@ -430,7 +430,7 @@
         <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" style="font-weight: 700; font-size: 16px;">Contact Us</a>
       </div>
       <div class="mobile-nav-item">
-        <a href="<?php echo esc_url( get_template_directory_uri() . '/assets/docs/The-Credit-Lane-Company-Brochure.pdf?v=1.2.4' ); ?>" download="The-Credit-Lane-Company-Brochure.pdf" target="_blank" style="font-weight: 700; font-size: 16px; color: var(--gold);">Company Brochure 📄</a>
+        <a href="<?php echo esc_url( get_template_directory_uri() . '/assets/docs/The-Credit-Lane-Company-Profile.pdf?v=1.2.5' ); ?>" download="The-Credit-Lane-Company-Profile.pdf" target="_blank" style="font-weight: 700; font-size: 16px; color: var(--gold);">Company Profile 📄</a>
       </div>
     </div>
     

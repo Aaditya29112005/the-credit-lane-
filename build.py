@@ -2680,7 +2680,7 @@ def generate_aboutpage():
             
             <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
               <a href="../contact/index.html" class="btn btn-primary" style="padding: 14px 28px; font-size: 15px; font-weight: 700; box-shadow: 0 6px 20px rgba(184,134,11,0.25);">Talk to Our Team &rarr;</a>
-              <a href="#brochure" class="btn btn-outline-dark" style="padding: 14px 28px; font-size: 15px; font-weight: 600; border-color: var(--navy-dark); color: var(--navy-dark);">Download Corporate Brochure 📄</a>
+              <a href="#profile" class="btn btn-outline-dark" style="padding: 14px 28px; font-size: 15px; font-weight: 600; border-color: var(--navy-dark); color: var(--navy-dark);">Download Company Profile 📄</a>
             </div>
           </div>
 
@@ -2892,15 +2892,15 @@ def generate_aboutpage():
       </div>
     </section>
 
-    <!-- ============ COMPANY BROCHURE & PROFILE SHOWCASE ============ -->
-    <section id="brochure" style="padding: 80px 0; background: var(--navy-dark); color: #fff;">
+    <!-- ============ COMPANY PROFILE SHOWCASE ============ -->
+    <section id="profile" style="padding: 80px 0; background: var(--navy-dark); color: #fff;">
       <div class="wrap">
         <div style="text-align: center; max-width: 850px; margin: 0 auto 48px;">
-          <span style="font-size: 12px; font-weight: 700; color: var(--gold-light); text-transform: uppercase; letter-spacing: 0.12em; display: block; margin-bottom: 8px;">OFFICIAL CORPORATE BROCHURE &amp; COMPLETE COMPANY DOSSIER</span>
-          <h2 style="color: #fff; font-family: var(--font-serif); font-size: clamp(28px, 4vw, 42px); margin-bottom: 16px;">The Credit Lane Complete Brochure &amp; Achievements Showcase</h2>
+          <span style="font-size: 12px; font-weight: 700; color: var(--gold-light); text-transform: uppercase; letter-spacing: 0.12em; display: block; margin-bottom: 8px;">OFFICIAL COMPANY PROFILE &amp; COMPLETE ADVISORY DOSSIER</span>
+          <h2 style="color: #fff; font-family: var(--font-serif); font-size: clamp(28px, 4vw, 42px); margin-bottom: 16px;">The Credit Lane Official Company Profile &amp; Capabilities</h2>
           <p style="color: var(--slate-light); font-size: 16px; line-height: 1.6; margin-bottom: 24px;">BRT Corporate Advisory Pvt. Ltd. — CA, CS and Advocate-led Corporate Finance Desk. Complete company profile covering Debt Syndication, SIDBI Machinery Funding, Public Market IPOs, Government Subsidies, Exhibition Credentials &amp; Certifications.</p>
           <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-            <a href="../about/The-Credit-Lane-Company-Brochure.pdf" download="The-Credit-Lane-Company-Brochure.pdf" target="_blank" class="btn btn-primary" style="padding: 16px 36px; font-size: 16px; font-weight: 700; box-shadow: 0 10px 30px rgba(184,134,11,0.3);">📥 Download Official Brochure PDF (Direct File)</a>
+            <a href="../about/The-Credit-Lane-Company-Profile.pdf" download="The-Credit-Lane-Company-Profile.pdf" target="_blank" class="btn btn-primary" style="padding: 16px 36px; font-size: 16px; font-weight: 700; box-shadow: 0 10px 30px rgba(184,134,11,0.3);">📥 Download Company Profile PDF (Direct File)</a>
             <a href="tel:9217924499" class="btn btn-secondary" style="padding: 16px 28px; font-size: 15px; border-color: rgba(255,255,255,0.25); color: #fff;">📞 Speak With Founder Desk</a>
           </div>
         </div>
