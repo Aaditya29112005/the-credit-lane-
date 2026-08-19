@@ -3556,21 +3556,21 @@ def generate_contactpage():
                 </div>
 
                 <div class="contact-item" style="margin-bottom: 20px;">
-                  <span class="label" style="font-size: 11.5px; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; display: block;">Direct Contact Helplines</span>
-                  <div style="margin-top: 6px; display: flex; flex-direction: column; gap: 6px;">
-                    <a href="tel:9217924499" class="mono" style="color: var(--navy-dark); font-weight: 700; text-decoration: none; font-size: 16px;">📞 +91-9217924499 (Managing Director Desk)</a>
-                    <a href="tel:9818709747" class="mono" style="color: var(--navy-dark); font-weight: 700; text-decoration: none; font-size: 16px;">📞 +91-9818709747 (Advisory Desk)</a>
+                  <span class="label" style="font-size: 11.5px; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; display: block; font-family: 'Plus Jakarta Sans', system-ui, sans-serif;">Direct Contact Helplines</span>
+                  <div style="margin-top: 6px; display: flex; flex-direction: column; gap: 8px;">
+                    <a href="tel:9217924499" style="color: var(--navy-dark); font-weight: 700; text-decoration: none; font-size: 15.5px; font-family: 'Plus Jakarta Sans', system-ui, sans-serif;">📞 +91-9217924499 <span style="font-weight: 500; color: var(--slate); font-size: 14px;">(Managing Director Desk)</span></a>
+                    <a href="tel:9818709747" style="color: var(--navy-dark); font-weight: 700; text-decoration: none; font-size: 15.5px; font-family: 'Plus Jakarta Sans', system-ui, sans-serif;">📞 +91-9818709747 <span style="font-weight: 500; color: var(--slate); font-size: 14px;">(Advisory Desk)</span></a>
                   </div>
                 </div>
 
                 <div class="contact-item" style="margin-bottom: 20px;">
-                  <span class="label" style="font-size: 11.5px; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; display: block;">Official Email</span>
-                  <a href="mailto:Info@thecreditlane.in" class="mono" style="color: var(--navy-dark); font-weight: 700; text-decoration: none; font-size: 15px; display: block; margin-top: 4px;">✉️ Info@thecreditlane.in</a>
+                  <span class="label" style="font-size: 11.5px; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; display: block; font-family: 'Plus Jakarta Sans', system-ui, sans-serif;">Official Email</span>
+                  <a href="mailto:Info@thecreditlane.in" style="color: var(--navy-dark); font-weight: 700; text-decoration: none; font-size: 15px; display: block; margin-top: 4px; font-family: 'Plus Jakarta Sans', system-ui, sans-serif;">✉️ Info@thecreditlane.in</a>
                 </div>
 
                 <div class="contact-item" style="margin-bottom: 20px;">
-                  <span class="label" style="font-size: 11.5px; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; display: block;">WhatsApp Instant Assistance</span>
-                  <a href="https://wa.me/919217924499" target="_blank" class="mono" style="color: #25d366; font-weight: 700; text-decoration: none; font-size: 15px; display: inline-flex; align-items: center; gap: 6px; margin-top: 4px; padding: 6px 14px; background: rgba(37,211,102,0.1); border-radius: 8px;">💬 Chat on WhatsApp (+91-9217924499)</a>
+                  <span class="label" style="font-size: 11.5px; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; display: block; font-family: 'Plus Jakarta Sans', system-ui, sans-serif;">WhatsApp Instant Assistance</span>
+                  <a href="https://wa.me/919217924499" target="_blank" style="color: #15803d; font-weight: 700; text-decoration: none; font-size: 14.5px; display: inline-flex; align-items: center; gap: 6px; margin-top: 4px; padding: 8px 16px; background: rgba(37,211,102,0.12); border: 1px solid rgba(37,211,102,0.3); border-radius: 8px; font-family: 'Plus Jakarta Sans', system-ui, sans-serif;">💬 Chat on WhatsApp (+91-9217924499)</a>
                 </div>
 
                 <div class="contact-item" style="margin-bottom: 20px;">
