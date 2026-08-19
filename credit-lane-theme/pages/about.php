@@ -272,11 +272,8 @@ $gallery_base = get_template_directory_uri() . '/assets/images/gallery/';
 
           foreach ($gallery_images as $img_filename => $caption):
           ?>
-            <div class="gallery-item" style="position: relative; overflow: hidden; border-radius: 14px; height: 210px; border: 1px solid var(--line); cursor: pointer; box-shadow: 0 4px 14px rgba(0,0,0,0.04);" onclick="openGalleryModal('<?php echo $gallery_base . $img_filename; ?>')">
-              <img src="<?php echo $gallery_base . $img_filename; ?>" alt="<?php echo esc_attr($caption); ?>" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.35 ease;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
-              <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 12px 14px; background: linear-gradient(transparent, rgba(11,31,58,0.9)); color: #fff; font-size: 12px; font-weight: 600;">
-                <?php echo esc_html($caption); ?>
-              </div>
+            <div class="gallery-item" style="position: relative; overflow: hidden; border-radius: 14px; height: 220px; border: 1px solid var(--line); cursor: pointer; box-shadow: 0 4px 14px rgba(0,0,0,0.06);" onclick="openGalleryModal('<?php echo $gallery_base . $img_filename; ?>')">
+              <img src="<?php echo $gallery_base . $img_filename; ?>" alt="The Credit Lane Exhibition &amp; Gallery Photo" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.35s ease;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
             </div>
           <?php endforeach; ?>
         </div>
