@@ -314,9 +314,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function initMarqueesWithObserver() {
   if (typeof gsap === "undefined") return false;
   if (document.body.dataset.gsapMarqueeInit === "true") return true;
-  document.body.dataset.gsapMarqueeInit = "true";
-
-  document.body.classList.add("gsap-active");
+  // Pure CSS animation engine active
 
   let tlReviews = null;
   let tlPartners = null;

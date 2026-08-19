@@ -3360,15 +3360,26 @@ footer h5 {
 }
 
 /* Trusted Channel Partner Marquee Rail */
+.marquee-track-wrap {
+  overflow: hidden !important;
+  width: 100% !important;
+  position: relative !important;
+  white-space: nowrap !important;
+}
+
 #marqueeRail, .marquee-rail {
   display: flex !important;
   flex-direction: row !important;
   flex-wrap: nowrap !important;
   white-space: nowrap !important;
   width: max-content !important;
-  will-change: transform;
-  align-items: center;
-  animation: creditLaneMarqueeLoop 25s linear infinite;
+  will-change: transform !important;
+  align-items: center !important;
+  animation: creditLaneMarqueeLoop 25s linear infinite !important;
+}
+
+#marqueeRail:hover, .marquee-rail:hover {
+  animation-play-state: paused !important;
 }
 
 #marqueeRail span, .marquee-rail span {
@@ -3380,13 +3391,7 @@ footer h5 {
   letter-spacing: 0.12em;
   font-size: 13px;
   text-transform: uppercase;
-}
-
-/* Disable CSS animation when GSAP takes over */
-.gsap-active #marqueeRail,
-.gsap-active .marquee-rail,
-.gsap-active .google-reviews-rail {
-  animation: none !important;
+  padding: 0 10px;
 }
 
 /* ==========================================================================
