@@ -1994,7 +1994,6 @@ footer h5 {
    ========================================================================== */
 .calc-container,
 .calculator-card,
-#calculator .wrap > div,
 #calculator .calculator-card {
   background: #FFFFFF !important;
   border: 1px solid #E2DDD5 !important;
@@ -2019,8 +2018,7 @@ footer h5 {
 
 @media (max-width: 850px) {
   .calc-container,
-  .calculator-card,
-  #calculator .wrap > div {
+  .calculator-card {
     padding: 24px 20px !important;
   }
   .calc-grid,
@@ -2135,8 +2133,11 @@ input[type="range"]::-webkit-slider-thumb:hover {
 }
 
 /* RIGHT HAND DARK NAVY CARD (100% MATCH TO ATTACHED IMAGE) */
-.calc-outputs {
+.calc-outputs,
+div.calc-outputs,
+#calculator .calc-outputs {
   background: #0B1D33 !important;
+  background-color: #0B1D33 !important;
   color: #FFFFFF !important;
   padding: 36px 32px !important;
   border-radius: 20px !important;
@@ -2144,7 +2145,8 @@ input[type="range"]::-webkit-slider-thumb:hover {
   flex-direction: column !important;
   justify-content: space-between !important;
   gap: 20px !important;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25) !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3) !important;
+  border: 1.5px solid rgba(200, 155, 60, 0.4) !important;
   width: 100% !important;
   box-sizing: border-box !important;
 }
@@ -2159,13 +2161,28 @@ input[type="range"]::-webkit-slider-thumb:hover {
   margin-bottom: 8px !important;
 }
 
-.calc-output-main-val {
+.calc-output-main-val,
+.calc-outputs .calc-output-main-val,
+.calc-outputs [id^="res-"] {
   font-family: 'Newsreader', Georgia, serif !important;
   font-size: clamp(2.4rem, 4vw, 3.2rem) !important;
-  font-weight: 700 !important;
+  font-weight: 800 !important;
   color: #FFFFFF !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6) !important;
   line-height: 1.1 !important;
   margin-bottom: 18px !important;
+}
+
+.calc-metrics-row .m-val,
+.calc-outputs .m-val {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+}
+
+.calc-metrics-row .m-label,
+.calc-outputs .m-label {
+  color: #94A3B8 !important;
+  font-weight: 600 !important;
 }
 
 .calc-divider {

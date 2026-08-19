@@ -179,7 +179,7 @@
                       </div>
                       
                       <!-- Right Outputs -->
-                      <div class="calc-outputs">
+                      <div class="calc-outputs" style="background: #0B1D33 !important; color: #FFFFFF !important; padding: 36px 32px !important; border-radius: 20px !important; border: 1.5px solid rgba(200, 155, 60, 0.4) !important; box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3) !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important;">
                         
         <div>
           <div class="calc-output-head" style="font-size: 11.5px; font-weight: 700; color: #C89B3C; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">ESTIMATED SETTLEMENT (OTS)</div>

@@ -4368,7 +4368,7 @@ def generate_service_pages():
                       </div>
                       
                       <!-- Right Outputs -->
-                      <div class="calc-outputs">
+                      <div class="calc-outputs" style="background: #0B1D33 !important; color: #FFFFFF !important; padding: 36px 32px !important; border-radius: 20px !important; border: 1.5px solid rgba(200, 155, 60, 0.4) !important; box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3) !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important;">
                         {render_calculator_outputs_html(p)}
                       </div>
                     </div>
