@@ -144,10 +144,9 @@
                 </div>
 
                 <!-- 5. EMI CALCULATOR / ESTIMATOR -->
-                <!-- 5. EMI CALCULATOR / ESTIMATOR -->
                 <div class="service-section" id="calculator">
                   <span class="eyebrow">INDICATIVE ESTIMATES</span>
-                  <h2 style="margin-top:8px; margin-bottom:12px;">Invoice Discounting Cash Advance Estimator</h2>
+                  <h2 style="margin-top:8px; margin-bottom:12px;">Supply Chain Invoice & Receivable Discounting Estimator</h2>
                   <p style="font-size:14.5px; color:var(--slate); margin-bottom:24px;">Use the sliders below to get an indicative estimate. Final terms are subject to formal underwriting and lender / investor committee assessment.</p>
                   
                   <div class="calc-container">
@@ -157,21 +156,21 @@
                         
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Outstanding Invoice Value</span>
+            <span>Outstanding Approved Invoice Value</span>
             <span class="value-output" id="inv-val-val">₹10,00,000</span>
           </div>
           <input type="range" class="calc-slider" id="inv-val" min="100000" max="10000000" step="50000" value="1000000" oninput="updateInvoiceCalc()" onchange="updateInvoiceCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Advance Percentage</span>
+            <span>Upfront Advance Percentage</span>
             <span class="value-output" id="inv-adv-val">85%</span>
           </div>
           <input type="range" class="calc-slider" id="inv-adv" min="60" max="90" step="1" value="85" oninput="updateInvoiceCalc()" onchange="updateInvoiceCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Days Until Buyer Payment</span>
+            <span>Credit Due Period (Days)</span>
             <span class="value-output" id="inv-days-val">60 days</span>
           </div>
           <input type="range" class="calc-slider" id="inv-days" min="15" max="120" step="5" value="60" oninput="updateInvoiceCalc()" onchange="updateInvoiceCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
@@ -181,7 +180,7 @@
                       </div>
                       
                       <!-- Right Outputs -->
-                      <div class="calc-outputs" style="background: #08192E !important; color: #FFFFFF !important; padding: 32px 28px !important; border-radius: 18px !important; display: flex; flex-direction: column; justify-content: space-between; gap: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); width: 100%; box-sizing: border-box;">
+                      <div class="calc-outputs">
                         
         <div>
           <div class="calc-output-head" style="font-size: 11.5px; font-weight: 700; color: #C89B3C; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">ESTIMATED ADVANCE</div>
@@ -207,6 +206,8 @@
                     </div>
                   </div>
                 </div>
+
+                <!-- 6. SOCIAL PROOF (REVIEWS) -->
 
                 <div class="service-section" id="faq">
                   <span class="eyebrow">COMMON OBJECTS</span>

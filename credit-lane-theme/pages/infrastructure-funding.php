@@ -144,10 +144,9 @@
                 </div>
 
                 <!-- 5. EMI CALCULATOR / ESTIMATOR -->
-                <!-- 5. EMI CALCULATOR / ESTIMATOR -->
                 <div class="service-section" id="calculator">
                   <span class="eyebrow">INDICATIVE ESTIMATES</span>
-                  <h2 style="margin-top:8px; margin-bottom:12px;">Indicative Repayment (EMI) Calculator</h2>
+                  <h2 style="margin-top:8px; margin-bottom:12px;">Infrastructure & Solar Renewable Project Debt Calculator</h2>
                   <p style="font-size:14.5px; color:var(--slate); margin-bottom:24px;">Use the sliders below to get an indicative estimate. Final terms are subject to formal underwriting and lender / investor committee assessment.</p>
                   
                   <div class="calc-container">
@@ -157,21 +156,21 @@
                         
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Desired Loan Amount</span>
+            <span>Total Infrastructure Project Outlay</span>
             <span class="value-output" id="emi-p-val">₹50,00,000</span>
           </div>
           <input type="range" class="calc-slider" id="emi-p" min="5000000" max="500000000" step="5000000" value="30000000" oninput="updateEmiCalc()" onchange="updateEmiCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Interest Rate (p.a. indicative)</span>
+            <span>Project Debt Interest Rate (% p.a.)</span>
             <span class="value-output" id="emi-r-val">13%</span>
           </div>
           <input type="range" class="calc-slider" id="emi-r" min="10.5" max="15" step="0.1" value="13" oninput="updateEmiCalc()" onchange="updateEmiCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Repayment Tenure</span>
+            <span>Project Finance Tenure</span>
             <span class="value-output" id="emi-y-val">5 yrs</span>
           </div>
           <input type="range" class="calc-slider" id="emi-y" min="1" max="7" step="1" value="5" oninput="updateEmiCalc()" onchange="updateEmiCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
@@ -180,11 +179,12 @@
                       </div>
                       
                       <!-- Right Outputs -->
-                      <div class="calc-outputs" style="background: #08192E !important; color: #FFFFFF !important; padding: 32px 28px !important; border-radius: 18px !important; display: flex; flex-direction: column; justify-content: space-between; gap: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); width: 100%; box-sizing: border-box;">
+                      <div class="calc-outputs">
                         
         <div>
-          <div class="calc-output-head" style="font-size: 11.5px; font-weight: 700; color: #C89B3C; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">MONTHLY EMI PAIRED</div>
+          <div class="calc-output-head" style="font-size: 11.5px; font-weight: 700; color: #C89B3C; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">ESTIMATED INFRASTRUCTURE EMI</div>
           <div class="calc-output-main-val" id="res-emi" style="font-family: 'Newsreader', Georgia, serif; font-size: clamp(2.2rem, 3.5vw, 2.6rem); font-weight: 700; color: #ffffff; line-height: 1.1; margin-bottom: 14px;">—</div>
+          
           <div style="background: rgba(255,255,255,0.12); height: 8px; border-radius: 4px; overflow: hidden; display: flex; margin: 10px 0 6px 0;">
             <div id="bar-p" style="background: #C89B3C; height: 100%; width: 70%; transition: width 0.3s ease;"></div>
             <div id="bar-i" style="background: #38BDF8; height: 100%; width: 30%; transition: width 0.3s ease;"></div>
@@ -193,7 +193,8 @@
             <span><span style="display:inline-block;width:8px;height:8px;background:#C89B3C;border-radius:50%;margin-right:4px;"></span> Principal</span>
             <span><span style="display:inline-block;width:8px;height:8px;background:#38BDF8;border-radius:50%;margin-right:4px;"></span> Interest</span>
           </div>
-          <div class="calc-divider" style="border-bottom: 1px solid rgba(255, 255, 255, 0.12); margin-bottom: 20px;"></div>
+
+          <div class="calc-divider" style="border-bottom: 1px solid rgba(255, 255, 255, 0.12); margin-bottom: 16px;"></div>
           <div class="calc-metrics-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
             <div class="calc-metric-item">
               <div class="m-label" style="font-size: 12px; color: #94A3B8; margin-bottom: 4px;">Total Interest</div>
@@ -205,7 +206,7 @@
             </div>
           </div>
         </div>
-        <a href="#apply" class="calc-apply-btn" style="display: block; width: 100%; text-align: center; background: #C89B3C; color: #0B1F3A; font-weight: 700; font-size: 15px; padding: 14px 20px; border-radius: 10px; text-decoration: none; margin-top: 16px;">Apply for In-Principle Sanction &rarr;</a>
+        <a href="#apply" class="calc-apply-btn" style="display: block; width: 100%; text-align: center; background: linear-gradient(135deg, #C89B3C 0%, #B8860B 100%); color: #0B1F3A; font-weight: 700; font-size: 15px; padding: 14px 20px; border-radius: 10px; text-decoration: none; margin-top: 16px; box-shadow: 0 6px 20px rgba(184,134,11,0.3);">Apply for In-Principle Sanction &rarr;</a>
         
                       </div>
                     </div>
@@ -214,6 +215,8 @@
                     </div>
                   </div>
                 </div>
+
+                <!-- 6. SOCIAL PROOF (REVIEWS) -->
 
                 <div class="service-section" id="faq">
                   <span class="eyebrow">COMMON OBJECTS</span>

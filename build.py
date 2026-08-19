@@ -44,6 +44,8 @@ PRODUCTS = [
         ],
         "calcType": "emi",
         "calcDefaults": {"principal": 2000000, "rate": 18, "years": 3, "minP": 200000, "maxP": 50000000, "minR": 10.5, "maxR": 26, "minY": 1, "maxY": 5},
+        "calcTitle": "Unsecured Working Capital & Drop-Line OD Estimator",
+        "calcLabels": {'pLabel': 'Turnover / Working Capital Credit Limit', 'rLabel': 'Unsecured Interest Rate (p.a. indicative)', 'yLabel': 'Repayment / OD Limit Tenure', 'outHead': 'ESTIMATED MONTHLY EMI / OD INTEREST'},
         "reviews": {
             "rating": 4.6,
             "count": 212,
@@ -101,6 +103,8 @@ PRODUCTS = [
         ],
         "calcType": "emi",
         "calcDefaults": {"principal": 10000000, "rate": 11, "years": 10, "minP": 2000000, "maxP": 100000000, "minR": 8.5, "maxR": 14, "minY": 3, "maxY": 15},
+        "calcTitle": "Commercial & Industrial Property Purchase Loan Calculator",
+        "calcLabels": {'pLabel': 'Commercial Property Valuation / Price', 'rLabel': 'Commercial Loan Interest Rate (% p.a.)', 'yLabel': 'Commercial Property Loan Tenure', 'outHead': 'ESTIMATED MONTHLY PROPERTY EMI'},
         "reviews": {
             "rating": 4.9,
             "count": 158,
@@ -158,6 +162,8 @@ PRODUCTS = [
         ],
         "calcType": "emi",
         "calcDefaults": {"principal": 5000000, "rate": 9.5, "years": 5, "minP": 500000, "maxP": 30000000, "minR": 8.8, "maxR": 10.5, "minY": 2, "maxY": 5},
+        "calcTitle": "SIDBI SPEED & SPEED Plus Machinery Finance Estimator",
+        "calcLabels": {'pLabel': 'New Machinery Invoice Outlay', 'rLabel': 'SIDBI Scheme Rate (% p.a.)', 'yLabel': 'Machinery Loan Tenure', 'outHead': 'ESTIMATED SIDBI MACHINERY EMI'},
         "reviews": {
             "rating": 4.8,
             "count": 96,
@@ -215,6 +221,8 @@ PRODUCTS = [
         ],
         "calcType": "emi",
         "calcDefaults": {"principal": 4000000, "rate": 11, "years": 5, "minP": 500000, "maxP": 20000000, "minR": 9, "maxR": 13, "minY": 3, "maxY": 7},
+        "calcTitle": "Bank Equipment & Machinery Purchase Loan Calculator",
+        "calcLabels": {'pLabel': 'Total Machinery Invoice Value', 'rLabel': 'Bank Loan Interest Rate (% p.a.)', 'yLabel': 'Machinery Loan Tenure', 'outHead': 'ESTIMATED BANK MACHINERY EMI'},
         "reviews": {
             "rating": 4.5,
             "count": 134,
@@ -272,6 +280,8 @@ PRODUCTS = [
         ],
         "calcType": "invoice",
         "calcDefaults": {"invoiceValue": 1000000, "advancePct": 85, "monthlyRate": 2, "days": 60},
+        "calcTitle": "Supply Chain Invoice & Receivable Discounting Estimator",
+        "calcLabels": {'pLabel': 'Outstanding Approved Invoice Value', 'rLabel': 'Upfront Advance Percentage', 'yLabel': 'Credit Due Period (Days)', 'outHead': 'IMMEDIATE LIQUID CASH ADVANCE'},
         "reviews": {
             "rating": 4.9,
             "count": 87,
@@ -329,6 +339,8 @@ PRODUCTS = [
         ],
         "calcType": "emi",
         "calcDefaults": {"principal": 20000000, "rate": 12, "years": 10, "minP": 2000000, "maxP": 250000000, "minR": 10.5, "maxR": 14, "minY": 3, "maxY": 15},
+        "calcTitle": "Educational Campus Expansion & Building Loan Estimator",
+        "calcLabels": {'pLabel': 'Campus Infrastructure Project Outlay', 'rLabel': 'Institutional Loan Rate (% p.a.)', 'yLabel': 'Infrastructure Loan Tenure', 'outHead': 'ESTIMATED INSTITUTIONAL EMI'},
         "reviews": {
             "rating": 4.6,
             "count": 41,
@@ -386,6 +398,8 @@ PRODUCTS = [
         ],
         "calcType": "emi",
         "calcDefaults": {"principal": 50000000, "rate": 13, "years": 5, "minP": 5000000, "maxP": 500000000, "minR": 11, "maxR": 16, "minY": 1, "maxY": 5},
+        "calcTitle": "Real Estate Construction & Builder Debt Sizing Estimator",
+        "calcLabels": {'pLabel': 'Project Construction Outlay', 'rLabel': 'Construction Debt Rate (% p.a.)', 'yLabel': 'Construction Loan Tenure', 'outHead': 'ESTIMATED MONTHLY PROJECT EMI'},
         "reviews": {
             "rating": 4.5,
             "count": 33,
@@ -443,6 +457,8 @@ PRODUCTS = [
         ],
         "calcType": "emi",
         "calcDefaults": {"principal": 7500000, "rate": 11, "years": 7, "minP": 1000000, "maxP": 150000000, "minR": 8.75, "maxR": 16, "minY": 1, "maxY": 7},
+        "calcTitle": "Hospital Medical Equipment & Building Expansion Finance Estimator",
+        "calcLabels": {'pLabel': 'Medical Equipment & Facility Outlay', 'rLabel': 'Healthcare Loan Rate (% p.a.)', 'yLabel': 'Healthcare Loan Tenure', 'outHead': 'ESTIMATED HEALTHCARE EMI'},
         "reviews": {
             "rating": 4.9,
             "count": 64,
@@ -500,6 +516,8 @@ PRODUCTS = [
         ],
         "calcType": "emi",
         "calcDefaults": {"principal": 30000000, "rate": 11, "years": 10, "minP": 2500000, "maxP": 300000000, "minR": 9, "maxR": 14, "minY": 2, "maxY": 12},
+        "calcTitle": "Hospitality & Resort Infrastructure Finance Calculator",
+        "calcLabels": {'pLabel': 'Hotel Property Purchase / Renovation Cost', 'rLabel': 'Hospitality Loan Rate (% p.a.)', 'yLabel': 'Hospitality Repayment Tenure', 'outHead': 'ESTIMATED HOSPITALITY EMI'},
         "reviews": {
             "rating": 4.6,
             "count": 29,
@@ -557,6 +575,8 @@ PRODUCTS = [
         ],
         "calcType": "settlement",
         "calcDefaults": {"outstanding": 5000000, "settlePct": 60, "tokenPct": 8},
+        "calcTitle": "NPA One-Time Settlement (OTS) Savings & Debt Restructuring Estimator",
+        "calcLabels": {'pLabel': 'Total Outstanding Bank Dues (Principal + Interest)', 'rLabel': 'Target OTS Settlement Percentage (% of Dues)', 'yLabel': 'Upfront Token Payment Required (% of OTS)', 'outHead': 'ESTIMATED OTS SETTLEMENT AMOUNT'},
         "reviews": {
             "rating": 4.5,
             "count": 22,
@@ -614,6 +634,8 @@ PRODUCTS = [
         ],
         "calcType": "emi",
         "calcDefaults": {"principal": 30000000, "rate": 13, "years": 5, "minP": 5000000, "maxP": 500000000, "minR": 10.5, "maxR": 15, "minY": 1, "maxY": 7},
+        "calcTitle": "Infrastructure & Solar Renewable Project Debt Calculator",
+        "calcLabels": {'pLabel': 'Total Infrastructure Project Outlay', 'rLabel': 'Project Debt Interest Rate (% p.a.)', 'yLabel': 'Project Finance Tenure', 'outHead': 'ESTIMATED INFRASTRUCTURE EMI'},
         "reviews": {
             "rating": 4.4,
             "count": 19,
@@ -671,6 +693,8 @@ PRODUCTS = [
         ],
         "calcType": "dilution",
         "calcDefaults": {"raise": 70000000, "preMoney": 200000000},
+        "calcTitle": "Venture Equity Raise & Growth Dilution Estimator",
+        "calcLabels": {'pLabel': 'Target Growth Capital Raise', 'rLabel': 'Agreed Pre-Money Valuation', 'outHead': 'POST-MONEY ENTERPRISE VALUATION'},
         "reviews": {
             "rating": 4.8,
             "count": 17,
@@ -728,6 +752,8 @@ PRODUCTS = [
         ],
         "calcType": "valuation",
         "calcDefaults": {"ebitda": 15000000, "multipleLow": 6, "multipleHigh": 10},
+        "calcTitle": "EBITDA Multiple Corporate Valuation Calculator",
+        "calcLabels": {'pLabel': 'Normalized Annualised EBITDA', 'rLabel': 'Sector Multiple — Low Bound', 'yLabel': 'Sector Multiple — High Bound', 'outHead': 'ESTIMATED ENTERPRISE VALUATION (LOW)'},
         "reviews": {
             "rating": 4.9,
             "count": 38,
@@ -843,6 +869,8 @@ PRODUCTS = [
         ],
         "calcType": "ipo",
         "calcDefaults": {"raise": 80000000, "preMoney": 250000000},
+        "calcTitle": "SME Public Listing (IPO) Fresh Issue Valuation Estimator",
+        "calcLabels": {'pLabel': 'Fresh Issue Capital Sizing', 'rLabel': 'Pre-Issue Business Valuation', 'outHead': 'POST-ISSUE SME LISTING VALUATION'},
         "reviews": {
             "rating": 4.5,
             "count": 21,
@@ -901,6 +929,8 @@ PRODUCTS = [
         ],
         "calcType": "ipo",
         "calcDefaults": {"raise": 500000000, "preMoney": 2000000000},
+        "calcTitle": "Mainboard Public IPO Capital Issue & Valuation Calculator",
+        "calcLabels": {'pLabel': 'Public Issue Size (Fresh Issue + OFS)', 'rLabel': 'Pre-Issue Enterprise Valuation', 'outHead': 'POST-IPO ENTERPRISE VALUATION'},
         "reviews": {
             "rating": 4.8,
             "count": 11,
@@ -958,6 +988,8 @@ PRODUCTS = [
         ],
         "calcType": "subsidy",
         "calcDefaults": {"cost": 2000000, "rate": 20, "cap": 1500000, "capLabel": "₹15L (small unit cap)"},
+        "calcTitle": "UP TUS 50% Capital Subsidy Claim Estimator",
+        "calcLabels": {'pLabel': 'Total Machinery Purchase Invoice Cost', 'rLabel': 'Policy Subsidy Claim Rate', 'outHead': 'MAXIMUM TUS SUBSIDY CLAIMABLE'},
         "reviews": {
             "rating": 4.5,
             "count": 26,
@@ -1015,6 +1047,8 @@ PRODUCTS = [
         ],
         "calcType": "subsidy",
         "calcDefaults": {"cost": 20000000, "rate": 15, "cap": 4000000, "capLabel": "₹4Cr per-unit cap"},
+        "calcTitle": "UP MSME Promotion Policy Capital Grant Calculator",
+        "calcLabels": {'pLabel': 'Total Industrial Plant / Project Outlay', 'rLabel': 'Subsidy Percentage Category', 'outHead': 'ESTIMATED CAPITAL SUBSIDY CLAIM'},
         "reviews": {
             "rating": 4.6,
             "count": 33,
@@ -1072,6 +1106,8 @@ PRODUCTS = [
         ],
         "calcType": "subsidy",
         "calcDefaults": {"cost": 500000, "rate": 10, "cap": 50000, "capLabel": "10% margin-money on a ₹5L project"},
+        "calcTitle": "UP Mukhyamantri Yuva Swarojgar Yojana (MSMY) Grant Estimator",
+        "calcLabels": {'pLabel': 'Micro-Unit Project Outlay', 'rLabel': 'State Margin Money Subsidy Rate', 'outHead': 'MARGIN MONEY SUBSIDY GRANT'},
         "reviews": {
             "rating": 4.4,
             "count": 19,
@@ -1141,26 +1177,27 @@ def get_blueprint_svg(glyph):
 def render_calculator_html(p):
     calc_type = p["calcType"]
     d = p["calcDefaults"]
+    l = p.get("calcLabels", {})
     
     if calc_type == "invoice":
         return f"""
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Outstanding Invoice Value</span>
+            <span>{l.get("pLabel", "Outstanding Invoice Value")}</span>
             <span class="value-output" id="inv-val-val">₹10,00,000</span>
           </div>
           <input type="range" class="calc-slider" id="inv-val" min="100000" max="10000000" step="50000" value="{d['invoiceValue']}" oninput="updateInvoiceCalc()" onchange="updateInvoiceCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Advance Percentage</span>
+            <span>{l.get("rLabel", "Advance Percentage")}</span>
             <span class="value-output" id="inv-adv-val">{d['advancePct']}%</span>
           </div>
           <input type="range" class="calc-slider" id="inv-adv" min="60" max="90" step="1" value="{d['advancePct']}" oninput="updateInvoiceCalc()" onchange="updateInvoiceCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Days Until Buyer Payment</span>
+            <span>{l.get("yLabel", "Days Until Buyer Payment")}</span>
             <span class="value-output" id="inv-days-val">{d['days']} days</span>
           </div>
           <input type="range" class="calc-slider" id="inv-days" min="15" max="120" step="5" value="{d['days']}" oninput="updateInvoiceCalc()" onchange="updateInvoiceCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
@@ -1172,21 +1209,21 @@ def render_calculator_html(p):
         return f"""
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Outstanding Loan Dues</span>
+            <span>{l.get("pLabel", "Outstanding Loan Dues")}</span>
             <span class="value-output" id="set-dues-val">₹50,00,000</span>
           </div>
           <input type="range" class="calc-slider" id="set-dues" min="500000" max="50000000" step="100000" value="{d['outstanding']}" oninput="updateSettlementCalc()" onchange="updateSettlementCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Proposed OTS Percentage</span>
+            <span>{l.get("rLabel", "Proposed OTS Percentage")}</span>
             <span class="value-output" id="set-pct-val">{d['settlePct']}% of dues</span>
           </div>
           <input type="range" class="calc-slider" id="set-pct" min="30" max="90" step="1" value="{d['settlePct']}" oninput="updateSettlementCalc()" onchange="updateSettlementCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Upfront Token Payment Required</span>
+            <span>{l.get("yLabel", "Upfront Token Payment Required")}</span>
             <span class="value-output" id="set-tok-val">{d['tokenPct']}% of settlement</span>
           </div>
           <input type="range" class="calc-slider" id="set-tok" min="5" max="10" step="1" value="{d['tokenPct']}" oninput="updateSettlementCalc()" onchange="updateSettlementCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
@@ -1197,14 +1234,14 @@ def render_calculator_html(p):
         return f"""
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Target Raise Amount</span>
+            <span>{l.get("pLabel", "Target Raise Amount")}</span>
             <span class="value-output" id="dil-raise-val">₹7,00,000</span>
           </div>
           <input type="range" class="calc-slider" id="dil-raise" min="5000000" max="300000000" step="5000000" value="{d['raise']}" oninput="updateDilutionCalc()" onchange="updateDilutionCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Pre-Money Valuation</span>
+            <span>{l.get("rLabel", "Pre-Money Valuation")}</span>
             <span class="value-output" id="dil-pre-val">₹20,00,00,000</span>
           </div>
           <input type="range" class="calc-slider" id="dil-pre" min="20000000" max="1000000000" step="5000000" value="{d['preMoney']}" oninput="updateDilutionCalc()" onchange="updateDilutionCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
@@ -1215,14 +1252,14 @@ def render_calculator_html(p):
         return f"""
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Fresh Issue Size</span>
+            <span>{l.get("pLabel", "Fresh Issue Size")}</span>
             <span class="value-output" id="ipo-issue-val">₹8,00,00,000</span>
           </div>
           <input type="range" class="calc-slider" id="ipo-issue" min="10000000" max="1000000000" step="5000000" value="{d['raise']}" oninput="updateIpoCalc()" onchange="updateIpoCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Pre-Issue Business Valuation</span>
+            <span>{l.get("rLabel", "Pre-Issue Business Valuation")}</span>
             <span class="value-output" id="ipo-pre-val">₹25,00,00,000</span>
           </div>
           <input type="range" class="calc-slider" id="ipo-pre" min="50000000" max="4000000000" step="10000000" value="{d['preMoney']}" oninput="updateIpoCalc()" onchange="updateIpoCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
@@ -1233,21 +1270,21 @@ def render_calculator_html(p):
         return f"""
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Annualised EBITDA</span>
+            <span>{l.get("pLabel", "Annualised EBITDA")}</span>
             <span class="value-output" id="val-ebitda-val">₹1,50,00,000</span>
           </div>
           <input type="range" class="calc-slider" id="val-ebitda" min="1000000" max="100000000" step="500000" value="{d['ebitda']}" oninput="updateValuationCalc()" onchange="updateValuationCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Sector Multiple — Low Bound</span>
+            <span>{l.get("rLabel", "Sector Multiple — Low Bound")}</span>
             <span class="value-output" id="val-mlo-val">{d['multipleLow']}x</span>
           </div>
           <input type="range" class="calc-slider" id="val-mlo" min="3" max="12" step="0.5" value="{d['multipleLow']}" oninput="updateValuationCalc()" onchange="updateValuationCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Sector Multiple — High Bound</span>
+            <span>{l.get("yLabel", "Sector Multiple — High Bound")}</span>
             <span class="value-output" id="val-mhi-val">{d['multipleHigh']}x</span>
           </div>
           <input type="range" class="calc-slider" id="val-mhi" min="4" max="18" step="0.5" value="{d['multipleHigh']}" oninput="updateValuationCalc()" onchange="updateValuationCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
@@ -1258,14 +1295,14 @@ def render_calculator_html(p):
         return f"""
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Total Project / Machine Cost</span>
+            <span>{l.get("pLabel", "Total Project / Machine Cost")}</span>
             <span class="value-output" id="sub-cost-val">₹20,00,000</span>
           </div>
           <input type="range" class="calc-slider" id="sub-cost" min="100000" max="50000000" step="100000" value="{d['cost']}" oninput="updateSubsidyCalc()" onchange="updateSubsidyCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Policy Subsidy Rate</span>
+            <span>{l.get("rLabel", "Policy Subsidy Rate")}</span>
             <span class="value-output" id="sub-rate-val">{d['rate']}%</span>
           </div>
           <input type="range" class="calc-slider" id="sub-rate" min="5" max="30" step="1" value="{d['rate']}" oninput="updateSubsidyCalc()" onchange="updateSubsidyCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
@@ -1277,21 +1314,21 @@ def render_calculator_html(p):
         return f"""
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Desired Loan Amount</span>
+            <span>{l.get("pLabel", "Desired Loan Amount")}</span>
             <span class="value-output" id="emi-p-val">₹50,00,000</span>
           </div>
           <input type="range" class="calc-slider" id="emi-p" min="{d['minP']}" max="{d['maxP']}" step="{max(10000, round(d['maxP']/100))}" value="{d['principal']}" oninput="updateEmiCalc()" onchange="updateEmiCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Interest Rate (p.a. indicative)</span>
+            <span>{l.get("rLabel", "Interest Rate (p.a. indicative)")}</span>
             <span class="value-output" id="emi-r-val">{d['rate']}%</span>
           </div>
           <input type="range" class="calc-slider" id="emi-r" min="{d['minR']}" max="{d['maxR']}" step="0.1" value="{d['rate']}" oninput="updateEmiCalc()" onchange="updateEmiCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Repayment Tenure</span>
+            <span>{l.get("yLabel", "Repayment Tenure")}</span>
             <span class="value-output" id="emi-y-val">{d['years']} yrs</span>
           </div>
           <input type="range" class="calc-slider" id="emi-y" min="{d['minY']}" max="{d['maxY']}" step="1" value="{d['years']}" oninput="updateEmiCalc()" onchange="updateEmiCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
@@ -1412,9 +1449,10 @@ def render_calculator_outputs_html(p):
         <a href="#apply" class="calc-apply-btn" style="display: block; width: 100%; text-align: center; background: #C89B3C; color: #0B1F3A; font-weight: 700; font-size: 15px; padding: 14px 20px; border-radius: 10px; text-decoration: none; margin-top: 16px;">Apply for In-Principle Sanction &rarr;</a>
         """
     else: # Term Loan EMI
-        return """
+        out_head = p.get("calcLabels", {}).get("outHead", "MONTHLY EMI PAIRED")
+        return f"""
         <div>
-          <div class="calc-output-head" style="font-size: 11.5px; font-weight: 700; color: #C89B3C; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">MONTHLY EMI PAIRED</div>
+          <div class="calc-output-head" style="font-size: 11.5px; font-weight: 700; color: #C89B3C; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">{out_head}</div>
           <div class="calc-output-main-val" id="res-emi" style="font-family: 'Newsreader', Georgia, serif; font-size: clamp(2.2rem, 3.5vw, 2.6rem); font-weight: 700; color: #ffffff; line-height: 1.1; margin-bottom: 14px;">—</div>
           
           <div style="background: rgba(255,255,255,0.12); height: 8px; border-radius: 4px; overflow: hidden; display: flex; margin: 10px 0 6px 0;">
@@ -3767,7 +3805,7 @@ def generate_service_pages():
             "valuation": "EBITDA Comparable Multiple Valuation Range",
             "subsidy": "UP Policy Scheme Subsidy Estimator"
         }
-        calc_title = calc_titles.get(p["calcType"], "Indicative Repayment (EMI) Calculator")
+        calc_title = p.get("calcTitle", calc_titles.get(p["calcType"], "Indicative Repayment (EMI) Calculator"))
 
         # Combine content layout
         service_content = f"""

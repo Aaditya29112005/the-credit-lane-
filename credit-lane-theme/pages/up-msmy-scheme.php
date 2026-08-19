@@ -148,7 +148,7 @@
                 <!-- 5. EMI CALCULATOR / ESTIMATOR -->
                 <div class="service-section" id="calculator">
                   <span class="eyebrow">INDICATIVE ESTIMATES</span>
-                  <h2 style="margin-top:8px; margin-bottom:12px;">UP Policy Scheme Subsidy Estimator</h2>
+                  <h2 style="margin-top:8px; margin-bottom:12px;">UP Mukhyamantri Yuva Swarojgar Yojana (MSMY) Grant Estimator</h2>
                   <p style="font-size:14.5px; color:var(--slate); margin-bottom:24px;">Use the sliders below to get an indicative estimate. Final terms are subject to formal underwriting and lender / investor committee assessment.</p>
                   
                   <div class="calc-container">
@@ -158,14 +158,14 @@
                         
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Total Project / Machine Cost</span>
+            <span>Micro-Unit Project Outlay</span>
             <span class="value-output" id="sub-cost-val">₹20,00,000</span>
           </div>
           <input type="range" class="calc-slider" id="sub-cost" min="100000" max="50000000" step="100000" value="500000" oninput="updateSubsidyCalc()" onchange="updateSubsidyCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Policy Subsidy Rate</span>
+            <span>State Margin Money Subsidy Rate</span>
             <span class="value-output" id="sub-rate-val">10%</span>
           </div>
           <input type="range" class="calc-slider" id="sub-rate" min="5" max="30" step="1" value="10" oninput="updateSubsidyCalc()" onchange="updateSubsidyCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
@@ -175,7 +175,7 @@
                       </div>
                       
                       <!-- Right Outputs -->
-                      <div class="calc-outputs" style="background: #08192E !important; color: #FFFFFF !important; padding: 32px 28px !important; border-radius: 18px !important; display: flex; flex-direction: column; justify-content: space-between; gap: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); width: 100%; box-sizing: border-box;">
+                      <div class="calc-outputs">
                         
         <div>
           <div class="calc-output-head" style="font-size: 11.5px; font-weight: 700; color: #C89B3C; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">ESTIMATED SUBSIDY CLAIMABLE</div>
@@ -197,6 +197,8 @@
                     </div>
                   </div>
                 </div>
+
+                <!-- 6. SOCIAL PROOF (REVIEWS) -->
 
                 <div class="service-section" id="faq">
                   <span class="eyebrow">COMMON OBJECTS</span>

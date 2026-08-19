@@ -605,7 +605,7 @@
                 <!-- 5. EMI CALCULATOR / ESTIMATOR -->
                 <div class="service-section" id="calculator">
                   <span class="eyebrow">INDICATIVE ESTIMATES</span>
-                  <h2 style="margin-top:8px; margin-bottom:12px;">OTS Settlement Savings Estimator</h2>
+                  <h2 style="margin-top:8px; margin-bottom:12px;">NPA One-Time Settlement (OTS) Savings & Debt Restructuring Estimator</h2>
                   <p style="font-size:14.5px; color:var(--slate); margin-bottom:24px;">Use the sliders below to get an indicative estimate. Final terms are subject to formal underwriting and lender / investor committee assessment.</p>
                   
                   <div class="calc-container">
@@ -615,21 +615,21 @@
                         
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Outstanding Loan Dues</span>
+            <span>Total Outstanding Bank Dues (Principal + Interest)</span>
             <span class="value-output" id="set-dues-val">₹50,00,000</span>
           </div>
           <input type="range" class="calc-slider" id="set-dues" min="500000" max="50000000" step="100000" value="5000000" oninput="updateSettlementCalc()" onchange="updateSettlementCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Proposed OTS Percentage</span>
+            <span>Target OTS Settlement Percentage (% of Dues)</span>
             <span class="value-output" id="set-pct-val">60% of dues</span>
           </div>
           <input type="range" class="calc-slider" id="set-pct" min="30" max="90" step="1" value="60" oninput="updateSettlementCalc()" onchange="updateSettlementCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
-            <span>Upfront Token Payment Required</span>
+            <span>Upfront Token Payment Required (% of OTS)</span>
             <span class="value-output" id="set-tok-val">8% of settlement</span>
           </div>
           <input type="range" class="calc-slider" id="set-tok" min="5" max="10" step="1" value="8" oninput="updateSettlementCalc()" onchange="updateSettlementCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
