@@ -72,12 +72,38 @@ get_header();
     </section>
 
     <!-- ============ TRUST MARQUEE ============ -->
+    <style>
+    @keyframes creditLaneMarqueeLoop {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @-webkit-keyframes creditLaneMarqueeLoop {
+      0% { -webkit-transform: translateX(0); }
+      100% { -webkit-transform: translateX(-50%); }
+    }
+    #marqueeRail, .marquee-rail {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      white-space: nowrap !important;
+      width: max-content !important;
+      will-change: transform !important;
+      align-items: center !important;
+      animation: creditLaneMarqueeLoop 22s linear infinite !important;
+      -webkit-animation: creditLaneMarqueeLoop 22s linear infinite !important;
+    }
+    #marqueeRail:hover, .marquee-rail:hover {
+      animation-play-state: paused !important;
+      -webkit-animation-play-state: paused !important;
+    }
+    </style>
+
     <div class="marquee-band">
       <div class="marquee-eyebrow">
         <span class="eyebrow">TRUSTED CHANNEL PARTNER TO PLATFORMS</span>
       </div>
-      <div class="marquee-track-wrap">
-        <div class="marquee-rail" id="marqueeRail">
+      <div class="marquee-track-wrap" style="overflow: hidden !important; width: 100% !important; position: relative !important;">
+        <div class="marquee-rail" id="marqueeRail" style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; white-space: nowrap !important; width: max-content !important; animation: creditLaneMarqueeLoop 22s linear infinite !important; -webkit-animation: creditLaneMarqueeLoop 22s linear infinite !important;">
           <span>HDFC BANK</span><span class="marquee-sep">·</span>
           <span>AXIS BANK</span><span class="marquee-sep">·</span>
           <span>DCB BANK</span><span class="marquee-sep">·</span>
@@ -109,6 +135,38 @@ get_header();
         </div>
       </div>
     </div>
+
+    <script>
+    (function() {
+      var rail = document.getElementById("marqueeRail");
+      if (!rail) return;
+      var pos = 0;
+      var speed = 1.2;
+      var isHovered = false;
+      
+      rail.addEventListener("mouseenter", function() { isHovered = true; });
+      rail.addEventListener("mouseleave", function() { isHovered = false; });
+
+      function tick() {
+        if (!isHovered) {
+          pos -= speed;
+          var halfWidth = rail.scrollWidth / 2;
+          if (halfWidth > 0 && Math.abs(pos) >= halfWidth) {
+            pos = 0;
+          }
+          rail.style.transform = "translateX(" + pos + "px)";
+        }
+        requestAnimationFrame(tick);
+      }
+
+      setTimeout(function() {
+        var computed = window.getComputedStyle(rail).animationName;
+        if (!computed || computed === "none") {
+          tick();
+        }
+      }, 300);
+    })();
+    </script>
 
     <!-- ============ TRUST / AUTHORITY SECTION ============ -->
     <section>

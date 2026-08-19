@@ -50,7 +50,7 @@ function credit_lane_scripts() {
     wp_enqueue_script( 'gsap-observer', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Observer.min.js', array('gsap'), '3.12.5', true );
 
     // Theme Core JS
-    wp_enqueue_script( 'credit-lane-main-js', get_template_directory_uri() . '/assets/js/main.js', array('gsap', 'gsap-scroll-trigger', 'gsap-observer'), '1.3.0', true );
+    wp_enqueue_script( 'credit-lane-main-js', get_template_directory_uri() . '/assets/js/main.js', array(), '1.3.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'credit_lane_scripts' );
 
@@ -247,3 +247,38 @@ add_filter( 'acf/settings/load_json', function( $paths ) {
     $paths[] = get_stylesheet_directory() . '/acf-json';
     return $paths;
 } );
+
+/**
+ * Register Google Sheets Webhook Customizer Setting
+ */
+function credit_lane_customize_register( $wp_customize ) {
+    $wp_customize->add_section( 'credit_lane_google_sheets', array(
+        'title'    => __( 'Google Sheets Integration', 'credit-lane' ),
+        'priority' => 30,
+    ) );
+
+    $wp_customize->add_setting( 'credit_lane_google_sheet_url', array(
+        'default'   => 'https://script.google.com/macros/s/AKfycbyVH1LFjkXzBBz_b49eNy8JXHF7kpkbJMkbrlQkVHQ__iCx64iwjgbrGEdvTRmV-iTz/exec',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'esc_url_raw',
+    ) );
+
+    $wp_customize->add_control( 'credit_lane_google_sheet_url', array(
+        'label'    => __( 'Google Apps Script Web App URL', 'credit-lane' ),
+        'section'  => 'credit_lane_google_sheets',
+        'type'     => 'url',
+        'description' => __( 'Paste your deployed Google Apps Script Web App URL here to capture form leads directly into your Google Sheet.', 'credit-lane' ),
+    ) );
+}
+add_action( 'customize_register', 'credit_lane_customize_register' );
+
+/**
+ * Output Google Sheets URL in Header
+ */
+function credit_lane_output_google_sheets_url() {
+    $url = get_theme_mod( 'credit_lane_google_sheet_url', 'https://script.google.com/macros/s/AKfycbyVH1LFjkXzBBz_b49eNy8JXHF7kpkbJMkbrlQkVHQ__iCx64iwjgbrGEdvTRmV-iTz/exec' );
+    if ( $url ) {
+        echo '<script>window.GOOGLE_SHEETS_WEBHOOK_URL = ' . wp_json_encode( $url ) . ';</script>' . "\n";
+    }
+}
+add_action( 'wp_head', 'credit_lane_output_google_sheets_url', 1 );

@@ -221,44 +221,41 @@ function horizontalLoop(items, config) {
 
 // Global Google Reviews Carousel Controller
 window.scrollReviewsTrack = function(direction, btnEl) {
-  var section = btnEl ? btnEl.closest(".google-reviews-section") : document.querySelector(".google-reviews-section");
+  var section = btnEl ? btnEl.closest(".google-reviews-section, section") : document.querySelector(".google-reviews-section");
   if (!section) section = document.querySelector(".google-reviews-section");
 
   var wrapper = section ? section.querySelector(".reviews-carousel-wrapper") : document.querySelector(".reviews-carousel-wrapper");
   var track = section ? section.querySelector(".reviews-carousel-track") : document.querySelector(".reviews-carousel-track");
   
   if (!wrapper && !track) return;
-  
-  var firstCard = track ? track.children[0] : null;
-  var cardWidth = (firstCard ? firstCard.offsetWidth : 320) + 24; // 320px + 24px gap = 344px
 
-  // 1. Try native smooth element scrolling first
-  if (wrapper) {
+  var firstCard = (track && track.children.length > 0) ? track.children[0] : (wrapper ? wrapper.querySelector(".review-slide-card") : null);
+  var cardWidth = (firstCard && firstCard.offsetWidth > 100 ? firstCard.offsetWidth : 320) + 24;
+
+  // 1. Try native wrapper scrolling if overflow-x is active
+  if (wrapper && wrapper.scrollWidth > wrapper.clientWidth + 10) {
     var maxScroll = wrapper.scrollWidth - wrapper.clientWidth;
-    if (maxScroll > 10) {
-      var currentScroll = wrapper.scrollLeft;
-      if (direction > 0) {
-        if (currentScroll >= maxScroll - 15) {
-          wrapper.scrollTo({ left: 0, behavior: "smooth" });
-        } else {
-          wrapper.scrollBy({ left: cardWidth, behavior: "smooth" });
-        }
+    var currentScroll = wrapper.scrollLeft;
+    if (direction > 0) {
+      if (currentScroll >= maxScroll - 15) {
+        wrapper.scrollTo({ left: 0, behavior: "smooth" });
       } else {
-        if (currentScroll <= 15) {
-          wrapper.scrollTo({ left: maxScroll, behavior: "smooth" });
-        } else {
-          wrapper.scrollBy({ left: -cardWidth, behavior: "smooth" });
-        }
+        wrapper.scrollBy({ left: cardWidth, behavior: "smooth" });
       }
-      return;
+    } else {
+      if (currentScroll <= 15) {
+        wrapper.scrollTo({ left: maxScroll, behavior: "smooth" });
+      } else {
+        wrapper.scrollBy({ left: -cardWidth, behavior: "smooth" });
+      }
     }
   }
 
-  // 2. Fallback transform shift
+  // 2. Also perform CSS transform shift on track as fallback
   if (track) {
     var totalCards = track.children.length;
-    var wrapperWidth = wrapper ? wrapper.offsetWidth : window.innerWidth;
-    var visibleCards = Math.max(1, Math.floor(wrapperWidth / 320));
+    var wrapperWidth = (wrapper && wrapper.offsetWidth > 0) ? wrapper.offsetWidth : window.innerWidth;
+    var visibleCards = Math.max(1, Math.floor(wrapperWidth / cardWidth));
     var maxIndex = Math.max(1, totalCards - visibleCards);
 
     if (typeof track.currentIndex === "undefined") {
@@ -273,11 +270,12 @@ window.scrollReviewsTrack = function(direction, btnEl) {
       track.currentIndex = maxIndex;
     }
 
+    track.style.transition = "transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)";
     track.style.transform = "translateX(-" + (track.currentIndex * cardWidth) + "px)";
   }
 };
 
-// Global Slider Track Color Update (Gold filled track / Dark Charcoal track - matching image copy 18.png)
+// Global Slider Track Color Update (Gold filled track / Dark Charcoal track)
 window.updateSliderTrack = function(slider) {
   if (!slider) return;
   var min = parseFloat(slider.min) || 0;
@@ -308,6 +306,22 @@ document.addEventListener("DOMContentLoaded", function() {
       window.scrollReviewsTrack(1, this);
     };
   });
+});
+
+// Event delegation for reviews carousel navigation buttons
+document.addEventListener("click", function(e) {
+  var prevBtn = e.target.closest(".reviews-prev-btn, .reviews-prev");
+  if (prevBtn) {
+    e.preventDefault();
+    window.scrollReviewsTrack(-1, prevBtn);
+    return;
+  }
+  var nextBtn = e.target.closest(".reviews-next-btn, .reviews-next");
+  if (nextBtn) {
+    e.preventDefault();
+    window.scrollReviewsTrack(1, nextBtn);
+    return;
+  }
 });
 
 // 8. INITIALIZE BOTH MARQUEES WITH GSAP OBSERVER (CODEPEN INTEGRATION)
@@ -393,8 +407,8 @@ document.addEventListener("DOMContentLoaded", () => {
           headers: { 'Accept': 'application/json' }
         }).catch(err => console.log("Email notification sent"));
 
-        // 2. Send to Google Sheets Webhook if Webhook URL is set
-        const googleSheetWebhookUrl = window.GOOGLE_SHEETS_WEBHOOK_URL || "";
+        // 2. Send to Google Sheets Webhook
+        const googleSheetWebhookUrl = window.GOOGLE_SHEETS_WEBHOOK_URL || "https://script.google.com/macros/s/AKfycbyVH1LFjkXzBBz_b49eNy8JXHF7kpkbJMkbrlQkVHQ__iCx64iwjgbrGEdvTRmV-iTz/exec";
         if (googleSheetWebhookUrl) {
           fetch(googleSheetWebhookUrl, {
             method: "POST",

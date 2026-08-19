@@ -13,12 +13,12 @@
           </div>
         </div>
         <div style="display: flex; gap: 12px;">
-          <button class="reviews-prev-btn" aria-label="Previous Review" type="button" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">‹</button>
-          <button class="reviews-next-btn" aria-label="Next Review" type="button" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">›</button>
+          <button class="reviews-prev-btn" aria-label="Previous Review" type="button" onclick="scrollReviewsTrack(-1, this)" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">‹</button>
+          <button class="reviews-next-btn" aria-label="Next Review" type="button" onclick="scrollReviewsTrack(1, this)" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">›</button>
         </div>
       </div>
 
-      <div class="reviews-carousel-wrapper" style="overflow: hidden; width: 100%; border-radius: 16px;">
+      <div class="reviews-carousel-wrapper" style="overflow-x: auto !important; overflow-y: hidden !important; width: 100%; border-radius: 16px; scrollbar-width: none; -ms-overflow-style: none;">
         <div class="reviews-carousel-track" style="display: flex; gap: 24px; transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); will-change: transform;">
 
             <!-- Card 1 -->
@@ -564,6 +564,81 @@
       </div>
     </div>
   </section>
+
+  <script>
+  (function() {
+    window.scrollReviewsTrack = function(direction, btnEl) {
+      var section = btnEl ? btnEl.closest(".google-reviews-section, section") : document.querySelector(".google-reviews-section");
+      if (!section) section = document.querySelector(".google-reviews-section");
+
+      var wrapper = section ? section.querySelector(".reviews-carousel-wrapper") : document.querySelector(".reviews-carousel-wrapper");
+      var track = section ? section.querySelector(".reviews-carousel-track") : document.querySelector(".reviews-carousel-track");
+
+      if (!wrapper && !track) return;
+
+      var firstCard = (track && track.children.length > 0) ? track.children[0] : (wrapper ? wrapper.querySelector(".review-slide-card") : null);
+      var cardWidth = (firstCard && firstCard.offsetWidth > 100 ? firstCard.offsetWidth : 320) + 24;
+
+      // 1. Native Smooth Scroll Engine
+      if (wrapper && wrapper.scrollWidth > wrapper.clientWidth + 10) {
+        var maxScroll = wrapper.scrollWidth - wrapper.clientWidth;
+        var currentScroll = wrapper.scrollLeft;
+
+        if (direction > 0) {
+          if (currentScroll >= maxScroll - 15) {
+            wrapper.scrollTo({ left: 0, behavior: "smooth" });
+          } else {
+            wrapper.scrollBy({ left: cardWidth, behavior: "smooth" });
+          }
+        } else {
+          if (currentScroll <= 15) {
+            wrapper.scrollTo({ left: maxScroll, behavior: "smooth" });
+          } else {
+            wrapper.scrollBy({ left: -cardWidth, behavior: "smooth" });
+          }
+        }
+      }
+
+      // 2. CSS Transform Shift Engine
+      if (track) {
+        var totalCards = track.children.length;
+        var wrapperWidth = (wrapper && wrapper.offsetWidth > 0) ? wrapper.offsetWidth : window.innerWidth;
+        var visibleCards = Math.max(1, Math.floor(wrapperWidth / cardWidth));
+        var maxIndex = Math.max(1, totalCards - visibleCards);
+
+        if (typeof track.currentIndex === "undefined") {
+          track.currentIndex = 0;
+        }
+
+        track.currentIndex += direction;
+
+        if (track.currentIndex > maxIndex) {
+          track.currentIndex = 0;
+        } else if (track.currentIndex < 0) {
+          track.currentIndex = maxIndex;
+        }
+
+        track.style.transition = "transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)";
+        track.style.transform = "translateX(-" + (track.currentIndex * cardWidth) + "px)";
+      }
+    };
+
+    document.addEventListener("click", function(e) {
+      var prevBtn = e.target.closest(".reviews-prev-btn, .reviews-prev");
+      if (prevBtn) {
+        e.preventDefault();
+        window.scrollReviewsTrack(-1, prevBtn);
+        return;
+      }
+      var nextBtn = e.target.closest(".reviews-next-btn, .reviews-next");
+      if (nextBtn) {
+        e.preventDefault();
+        window.scrollReviewsTrack(1, nextBtn);
+        return;
+      }
+    });
+  })();
+  </script>
 
   <!-- ============ FOOTER ============ -->
   <footer>

@@ -2184,12 +2184,38 @@ def generate_homepage():
     </section>
 
     <!-- ============ TRUST MARQUEE ============ -->
+    <style>
+    @keyframes creditLaneMarqueeLoop {{
+      0% {{ transform: translateX(0); }}
+      100% {{ transform: translateX(-50%); }}
+    }}
+    @-webkit-keyframes creditLaneMarqueeLoop {{
+      0% {{ -webkit-transform: translateX(0); }}
+      100% {{ -webkit-transform: translateX(-50%); }}
+    }}
+    #marqueeRail, .marquee-rail {{
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      white-space: nowrap !important;
+      width: max-content !important;
+      will-change: transform !important;
+      align-items: center !important;
+      animation: creditLaneMarqueeLoop 22s linear infinite !important;
+      -webkit-animation: creditLaneMarqueeLoop 22s linear infinite !important;
+    }}
+    #marqueeRail:hover, .marquee-rail:hover {{
+      animation-play-state: paused !important;
+      -webkit-animation-play-state: paused !important;
+    }}
+    </style>
+
     <div class="marquee-band">
       <div class="marquee-eyebrow">
         <span class="eyebrow">TRUSTED CHANNEL PARTNER TO PLATFORMS</span>
       </div>
-      <div class="marquee-track-wrap">
-        <div class="marquee-rail" id="marqueeRail">
+      <div class="marquee-track-wrap" style="overflow: hidden !important; width: 100% !important; position: relative !important;">
+        <div class="marquee-rail" id="marqueeRail" style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; white-space: nowrap !important; width: max-content !important; animation: creditLaneMarqueeLoop 22s linear infinite !important; -webkit-animation: creditLaneMarqueeLoop 22s linear infinite !important;">
           <span>HDFC BANK</span><span class="marquee-sep">·</span>
           <span>AXIS BANK</span><span class="marquee-sep">·</span>
           <span>DCB BANK</span><span class="marquee-sep">·</span>
@@ -2221,6 +2247,38 @@ def generate_homepage():
         </div>
       </div>
     </div>
+
+    <script>
+    (function() {{
+      var rail = document.getElementById("marqueeRail");
+      if (!rail) return;
+      var pos = 0;
+      var speed = 1.2;
+      var isHovered = false;
+      
+      rail.addEventListener("mouseenter", function() {{ isHovered = true; }});
+      rail.addEventListener("mouseleave", function() {{ isHovered = false; }});
+
+      function tick() {{
+        if (!isHovered) {{
+          pos -= speed;
+          var halfWidth = rail.scrollWidth / 2;
+          if (halfWidth > 0 && Math.abs(pos) >= halfWidth) {{
+            pos = 0;
+          }}
+          rail.style.transform = "translateX(" + pos + "px)";
+        }}
+        requestAnimationFrame(tick);
+      }}
+
+      setTimeout(function() {{
+        var computed = window.getComputedStyle(rail).animationName;
+        if (!computed || computed === "none") {{
+          tick();
+        }}
+      }}, 300);
+    }})();
+    </script>
 
     <!-- ============ TRUST / AUTHORITY SECTION ============ -->
     <section>
@@ -2572,12 +2630,12 @@ def generate_homepage():
             </div>
           </div>
           <div style="display: flex; gap: 12px;">
-            <button class="reviews-prev-btn" aria-label="Previous Review" type="button" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">‹</button>
-            <button class="reviews-next-btn" aria-label="Next Review" type="button" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">›</button>
+            <button class="reviews-prev-btn" aria-label="Previous Review" type="button" onclick="scrollReviewsTrack(-1, this)" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">‹</button>
+            <button class="reviews-next-btn" aria-label="Next Review" type="button" onclick="scrollReviewsTrack(1, this)" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">›</button>
           </div>
         </div>
 
-        <div class="reviews-carousel-wrapper" style="overflow: hidden; width: 100%; border-radius: 16px;">
+        <div class="reviews-carousel-wrapper" style="overflow-x: auto; width: 100%; border-radius: 16px;">
           <div class="reviews-carousel-track" style="display: flex; gap: 24px; transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); will-change: transform;">
 
             <!-- Card 1 -->
@@ -3124,6 +3182,81 @@ def generate_homepage():
       </div>
     </section>
 
+    <script>
+    (function() {{
+      window.scrollReviewsTrack = function(direction, btnEl) {{
+        var section = btnEl ? btnEl.closest(".google-reviews-section, section") : document.querySelector(".google-reviews-section");
+        if (!section) section = document.querySelector(".google-reviews-section");
+
+        var wrapper = section ? section.querySelector(".reviews-carousel-wrapper") : document.querySelector(".reviews-carousel-wrapper");
+        var track = section ? section.querySelector(".reviews-carousel-track") : document.querySelector(".reviews-carousel-track");
+
+        if (!wrapper && !track) return;
+
+        var firstCard = (track && track.children.length > 0) ? track.children[0] : (wrapper ? wrapper.querySelector(".review-slide-card") : null);
+        var cardWidth = (firstCard && firstCard.offsetWidth > 100 ? firstCard.offsetWidth : 320) + 24;
+
+        // 1. Native Smooth Scroll Engine
+        if (wrapper && wrapper.scrollWidth > wrapper.clientWidth + 10) {{
+          var maxScroll = wrapper.scrollWidth - wrapper.clientWidth;
+          var currentScroll = wrapper.scrollLeft;
+
+          if (direction > 0) {{
+            if (currentScroll >= maxScroll - 15) {{
+              wrapper.scrollTo({{ left: 0, behavior: "smooth" }});
+            }} else {{
+              wrapper.scrollBy({{ left: cardWidth, behavior: "smooth" }});
+            }}
+          }} else {{
+            if (currentScroll <= 15) {{
+              wrapper.scrollTo({{ left: maxScroll, behavior: "smooth" }});
+            }} else {{
+              wrapper.scrollBy({{ left: -cardWidth, behavior: "smooth" }});
+            }}
+          }}
+        }}
+
+        // 2. CSS Transform Shift Engine
+        if (track) {{
+          var totalCards = track.children.length;
+          var wrapperWidth = (wrapper && wrapper.offsetWidth > 0) ? wrapper.offsetWidth : window.innerWidth;
+          var visibleCards = Math.max(1, Math.floor(wrapperWidth / cardWidth));
+          var maxIndex = Math.max(1, totalCards - visibleCards);
+
+          if (typeof track.currentIndex === "undefined") {{
+            track.currentIndex = 0;
+          }}
+
+          track.currentIndex += direction;
+
+          if (track.currentIndex > maxIndex) {{
+            track.currentIndex = 0;
+          }} else if (track.currentIndex < 0) {{
+            track.currentIndex = maxIndex;
+          }}
+
+          track.style.transition = "transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)";
+          track.style.transform = "translateX(-" + (track.currentIndex * cardWidth) + "px)";
+        }}
+      }};
+
+      document.addEventListener("click", function(e) {{
+        var prevBtn = e.target.closest(".reviews-prev-btn, .reviews-prev");
+        if (prevBtn) {{
+          e.preventDefault();
+          window.scrollReviewsTrack(-1, prevBtn);
+          return;
+        }}
+        var nextBtn = e.target.closest(".reviews-next-btn, .reviews-next");
+        if (nextBtn) {{
+          e.preventDefault();
+          window.scrollReviewsTrack(1, nextBtn);
+          return;
+        }}
+      }});
+    }})();
+    </script>
+
     <!-- ============ FINAL CTA ============ -->
     <section class="final-cta">
       <div class="wrap">
@@ -3147,32 +3280,32 @@ def generate_homepage():
 def generate_aboutpage():
     content = """
     <!-- ============ HERO BANNER ============ -->
-    <section class="about-hero-section">
-      <div class="wrap">
+    <section class="about-hero-section" style="padding: 80px 0 60px !important; background: linear-gradient(135deg, #0B1F3A 0%, #071529 100%) !important; color: #FFFFFF !important; position: relative !important; overflow: hidden !important;">
+      <div class="wrap" style="display: grid !important; grid-template-columns: 1.05fr 0.95fr !important; gap: 48px !important; align-items: center !important; width: 100% !important;">
         <div style="text-align: left;">
-          <span class="eyebrow" style="color: var(--gold-light); display: inline-block; margin-bottom: 12px; font-weight: 700; letter-spacing: 0.1em;">OUR PROFILE</span>
-          <h1 style="font-size: clamp(32px, 4vw, 48px); line-height: 1.2; color: #FFFFFF; font-family: var(--font-serif); margin-bottom: 20px;">Capital decisions deserve more than a generic answer.</h1>
-          <p class="lead" style="font-size: 16.5px; color: rgba(255,255,255,0.85); line-height: 1.65; margin-bottom: 28px;">
+          <span class="eyebrow" style="color: #E4C878 !important; display: inline-block; margin-bottom: 12px; font-weight: 700; letter-spacing: 0.1em;">OUR PROFILE</span>
+          <h1 style="font-size: clamp(32px, 4vw, 48px); line-height: 1.2; color: #FFFFFF !important; font-family: var(--font-serif); margin-bottom: 20px;">Capital decisions deserve more than a generic answer.</h1>
+          <p class="lead" style="font-size: 16.5px; color: rgba(255,255,255,0.85) !important; line-height: 1.65; margin-bottom: 28px;">
             Meet our advisory team of Chartered Accountants, Company Secretaries, and Legal Advocates driving transparent corporate capitalization, debt syndication, equity advisory, and government subsidy filings across India.
           </p>
           
           <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px;">
-            <a href="#promoters" class="btn btn-primary" style="padding: 14px 28px; font-size: 15px; font-weight: 700; box-shadow: 0 6px 20px rgba(184,134,11,0.3);">Meet Our Leadership &rarr;</a>
-            <a href="#mandate" class="btn btn-outline" style="padding: 14px 28px; font-size: 15px; font-weight: 600;">Our Advisory Mandate</a>
+            <a href="#promoters" class="btn btn-primary" style="padding: 14px 28px; font-size: 15px; font-weight: 700; background: #C89B3C !important; color: #0B1F3A !important; border-radius: 8px; text-decoration: none; box-shadow: 0 6px 20px rgba(184,134,11,0.3);">Meet Our Leadership &rarr;</a>
+            <a href="#mandate" class="btn btn-outline" style="padding: 14px 28px; font-size: 15px; font-weight: 600; color: #FFFFFF !important; border: 1px solid rgba(255,255,255,0.3) !important; border-radius: 8px; text-decoration: none;">Our Advisory Mandate</a>
           </div>
 
-          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 18px; text-align: center;">
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; background: rgba(255,255,255,0.06) !important; border: 1px solid rgba(255,255,255,0.15) !important; border-radius: 16px; padding: 18px; text-align: center;">
             <div>
-              <div style="color: var(--gold-light); font-size: 22px; font-weight: 800; font-family: var(--font-serif);">₹500+ Cr</div>
-              <div style="color: rgba(255,255,255,0.7); font-size: 11.5px; margin-top: 2px;">Capital Structured</div>
+              <div style="color: #E4C878 !important; font-size: 22px; font-weight: 800; font-family: var(--font-serif);">₹500+ Cr</div>
+              <div style="color: rgba(255,255,255,0.7) !important; font-size: 11.5px; margin-top: 2px;">Capital Structured</div>
             </div>
-            <div style="border-left: 1px solid rgba(255,255,255,0.1); border-right: 1px solid rgba(255,255,255,0.1);">
-              <div style="color: var(--gold-light); font-size: 22px; font-weight: 800; font-family: var(--font-serif);">CA / CS / Law</div>
-              <div style="color: rgba(255,255,255,0.7); font-size: 11.5px; margin-top: 2px;">Direct Oversight</div>
+            <div style="border-left: 1px solid rgba(255,255,255,0.15); border-right: 1px solid rgba(255,255,255,0.15);">
+              <div style="color: #E4C878 !important; font-size: 22px; font-weight: 800; font-family: var(--font-serif);">CA / CS / Law</div>
+              <div style="color: rgba(255,255,255,0.7) !important; font-size: 11.5px; margin-top: 2px;">Direct Oversight</div>
             </div>
             <div>
-              <div style="color: var(--gold-light); font-size: 22px; font-weight: 800; font-family: var(--font-serif);">100+</div>
-              <div style="color: rgba(255,255,255,0.7); font-size: 11.5px; margin-top: 2px;">Lender Empanelments</div>
+              <div style="color: #E4C878 !important; font-size: 22px; font-weight: 800; font-family: var(--font-serif);">100+</div>
+              <div style="color: rgba(255,255,255,0.7) !important; font-size: 11.5px; margin-top: 2px;">Lender Empanelments</div>
             </div>
           </div>
         </div>
