@@ -319,22 +319,7 @@ function initMarqueesWithObserver() {
   let tlReviews = null;
   let tlPartners = null;
 
-  // 8B. Trusted Channel Partner Logo Marquee
-  const partnerRail = document.querySelector("#marqueeRail, .marquee-rail");
-  if (partnerRail) {
-    if (!partnerRail.dataset.duplicated) {
-      partnerRail.innerHTML += partnerRail.innerHTML;
-      partnerRail.dataset.duplicated = "true";
-    }
-    const partnerSpans = gsap.utils.toArray("#marqueeRail span, .marquee-rail span");
-    if (partnerSpans.length) {
-      tlPartners = horizontalLoop(partnerSpans, {
-        repeat: -1,
-        paddingRight: 28,
-        speed: 0.8
-      });
-    }
-  }
+  // Pure CSS animation engine handles #marqueeRail continuous scrolling
 
   // 8C. GSAP Observer for Scroll Direction & Velocity Switch
   if (typeof Observer !== "undefined") {

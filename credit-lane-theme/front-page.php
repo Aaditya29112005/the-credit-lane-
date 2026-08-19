@@ -78,34 +78,34 @@ get_header();
       </div>
       <div class="marquee-track-wrap">
         <div class="marquee-rail" id="marqueeRail">
-          <span>HDFC BANK</span>
-          <span class="marquee-sep">·</span>
-          <span>AXIS BANK</span>
-          <span class="marquee-sep">·</span>
-          <span>DCB BANK</span>
-          <span class="marquee-sep">·</span>
-          <span>BAJAJ FINSERV</span>
-          <span class="marquee-sep">·</span>
-          <span>ADITYA BIRLA</span>
-          <span class="marquee-sep">·</span>
-          <span>SIDBI CO-LOAN</span>
-          <span class="marquee-sep">·</span>
-          <span>TATA CAPITAL</span>
-          <span class="marquee-sep">·</span>
-          <span>HDFC BANK</span>
-          <span class="marquee-sep">·</span>
-          <span>AXIS BANK</span>
-          <span class="marquee-sep">·</span>
-          <span>DCB BANK</span>
-          <span class="marquee-sep">·</span>
-          <span>BAJAJ FINSERV</span>
-          <span class="marquee-sep">·</span>
-          <span>ADITYA BIRLA</span>
-          <span class="marquee-sep">·</span>
-          <span>SIDBI CO-LOAN</span>
-          <span class="marquee-sep">·</span>
-          <span>TATA CAPITAL</span>
-          <span class="marquee-sep">·</span>
+          <span>HDFC BANK</span><span class="marquee-sep">·</span>
+          <span>AXIS BANK</span><span class="marquee-sep">·</span>
+          <span>DCB BANK</span><span class="marquee-sep">·</span>
+          <span>BAJAJ FINSERV</span><span class="marquee-sep">·</span>
+          <span>ADITYA BIRLA</span><span class="marquee-sep">·</span>
+          <span>SIDBI CO-LOAN</span><span class="marquee-sep">·</span>
+          <span>TATA CAPITAL</span><span class="marquee-sep">·</span>
+          <span>HDFC BANK</span><span class="marquee-sep">·</span>
+          <span>AXIS BANK</span><span class="marquee-sep">·</span>
+          <span>DCB BANK</span><span class="marquee-sep">·</span>
+          <span>BAJAJ FINSERV</span><span class="marquee-sep">·</span>
+          <span>ADITYA BIRLA</span><span class="marquee-sep">·</span>
+          <span>SIDBI CO-LOAN</span><span class="marquee-sep">·</span>
+          <span>TATA CAPITAL</span><span class="marquee-sep">·</span>
+          <span>HDFC BANK</span><span class="marquee-sep">·</span>
+          <span>AXIS BANK</span><span class="marquee-sep">·</span>
+          <span>DCB BANK</span><span class="marquee-sep">·</span>
+          <span>BAJAJ FINSERV</span><span class="marquee-sep">·</span>
+          <span>ADITYA BIRLA</span><span class="marquee-sep">·</span>
+          <span>SIDBI CO-LOAN</span><span class="marquee-sep">·</span>
+          <span>TATA CAPITAL</span><span class="marquee-sep">·</span>
+          <span>HDFC BANK</span><span class="marquee-sep">·</span>
+          <span>AXIS BANK</span><span class="marquee-sep">·</span>
+          <span>DCB BANK</span><span class="marquee-sep">·</span>
+          <span>BAJAJ FINSERV</span><span class="marquee-sep">·</span>
+          <span>ADITYA BIRLA</span><span class="marquee-sep">·</span>
+          <span>SIDBI CO-LOAN</span><span class="marquee-sep">·</span>
+          <span>TATA CAPITAL</span><span class="marquee-sep">·</span>
         </div>
       </div>
     </div>
