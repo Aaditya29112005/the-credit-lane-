@@ -160,28 +160,28 @@
             <span>Outstanding Invoice Value</span>
             <span class="value-output" id="inv-val-val">₹10,00,000</span>
           </div>
-          <input type="range" class="calc-slider" id="inv-val" min="100000" max="10000000" step="50000" value="1000000" oninput="updateInvoiceCalc()" onchange="updateInvoiceCalc()">
+          <input type="range" class="calc-slider" id="inv-val" min="100000" max="10000000" step="50000" value="1000000" oninput="updateInvoiceCalc()" onchange="updateInvoiceCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
             <span>Advance Percentage</span>
             <span class="value-output" id="inv-adv-val">85%</span>
           </div>
-          <input type="range" class="calc-slider" id="inv-adv" min="60" max="90" step="1" value="85" oninput="updateInvoiceCalc()" onchange="updateInvoiceCalc()">
+          <input type="range" class="calc-slider" id="inv-adv" min="60" max="90" step="1" value="85" oninput="updateInvoiceCalc()" onchange="updateInvoiceCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
             <span>Days Until Buyer Payment</span>
             <span class="value-output" id="inv-days-val">60 days</span>
           </div>
-          <input type="range" class="calc-slider" id="inv-days" min="15" max="120" step="5" value="60" oninput="updateInvoiceCalc()" onchange="updateInvoiceCalc()">
+          <input type="range" class="calc-slider" id="inv-days" min="15" max="120" step="5" value="60" oninput="updateInvoiceCalc()" onchange="updateInvoiceCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <input type="hidden" id="inv-mrate" value="2">
         
                       </div>
                       
                       <!-- Right Outputs -->
-                      <div class="calc-outputs">
+                      <div class="calc-outputs" style="background: #08192E !important; color: #FFFFFF !important; padding: 32px 28px !important; border-radius: 18px !important; display: flex; flex-direction: column; justify-content: space-between; gap: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); width: 100%; box-sizing: border-box;">
                         
         <div>
           <div class="calc-output-head" style="font-size: 11.5px; font-weight: 700; color: #C89B3C; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">ESTIMATED ADVANCE</div>

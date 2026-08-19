@@ -1987,27 +1987,35 @@ footer h5 {
 }
 
 /* ==========================================================================
-   PERFECT CALCULATOR SYSTEM (100% MATCH TO DESIGN)
+   PERFECT CALCULATOR SYSTEM (100% GOLD ACCENT & DEEP NAVY OUTPUT CARD)
    ========================================================================== */
 .calc-container {
   background: #FFFFFF !important;
   border: 1px solid #E2DDD5 !important;
   border-radius: 20px !important;
-  box-shadow: 0 10px 35px rgba(11, 31, 58, 0.05) !important;
+  box-shadow: 0 10px 35px rgba(11, 31, 58, 0.06) !important;
   margin-top: 24px !important;
   overflow: hidden !important;
   width: 100% !important;
   box-sizing: border-box !important;
 }
 
-.calc-grid {
+.calc-grid, .calculator-card-grid {
   display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
+  grid-template-columns: 1.15fr 0.85fr !important;
   gap: 32px !important;
   padding: 32px !important;
   align-items: stretch !important;
   width: 100% !important;
   box-sizing: border-box !important;
+}
+
+@media (max-width: 850px) {
+  .calc-grid, .calculator-card-grid {
+    grid-template-columns: 1fr !important;
+    padding: 20px !important;
+    gap: 24px !important;
+  }
 }
 
 .calc-inputs {
@@ -2017,6 +2025,7 @@ footer h5 {
   justify-content: center !important;
   width: 100% !important;
   box-sizing: border-box !important;
+  background: #FFFFFF !important;
 }
 
 .calc-input-group {
@@ -2035,15 +2044,20 @@ footer h5 {
   color: #0B1F3A !important;
 }
 
-.calc-input-label span.value-output {
-  font-family: var(--font-sans) !important;
+.calc-input-label span.value-output,
+.calc-input-label span[id$="-val"] {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
   font-size: 16px !important;
   font-weight: 700 !important;
   color: #C89B3C !important;
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
 }
 
-/* CUSTOM RANGE SLIDER (FORCE GOLD COLOR, NO BROWSER BLUE) */
-.calc-slider {
+/* CUSTOM RANGE SLIDER - STRICT GOLD OVERRIDE */
+input[type="range"].calc-slider,
+input[type="range"] {
   width: 100% !important;
   height: 8px !important;
   border-radius: 4px !important;
@@ -2053,47 +2067,55 @@ footer h5 {
   background: #E2DDD5 !important;
   cursor: pointer !important;
   margin: 6px 0 !important;
+  accent-color: #C89B3C !important;
 }
 
-.calc-slider::-webkit-slider-runnable-track {
+input[type="range"].calc-slider::-webkit-slider-runnable-track,
+input[type="range"]::-webkit-slider-runnable-track {
   width: 100% !important;
   height: 8px !important;
   border-radius: 4px !important;
-  background: #E2DDD5 !important;
+  background: transparent !important;
+  border: none !important;
 }
 
-.calc-slider::-webkit-slider-thumb {
+input[type="range"].calc-slider::-webkit-slider-thumb,
+input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none !important;
   appearance: none !important;
-  width: 22px !important;
-  height: 22px !important;
+  width: 24px !important;
+  height: 24px !important;
   border-radius: 50% !important;
   background: #C89B3C !important;
   border: 3px solid #FFFFFF !important;
-  box-shadow: 0 3px 8px rgba(11, 31, 58, 0.3) !important;
+  box-shadow: 0 4px 10px rgba(11, 31, 58, 0.3) !important;
   cursor: pointer !important;
-  margin-top: -7px !important;
-  transition: transform 0.15s ease !important;
+  margin-top: -8px !important;
+  transition: transform 0.15s ease, background 0.15s ease !important;
 }
 
-.calc-slider::-moz-range-track {
+input[type="range"].calc-slider::-moz-range-track,
+input[type="range"]::-moz-range-track {
   width: 100% !important;
   height: 8px !important;
   border-radius: 4px !important;
-  background: #E2DDD5 !important;
+  background: transparent !important;
+  border: none !important;
 }
 
-.calc-slider::-moz-range-thumb {
-  width: 22px !important;
-  height: 22px !important;
+input[type="range"].calc-slider::-moz-range-thumb,
+input[type="range"]::-moz-range-thumb {
+  width: 24px !important;
+  height: 24px !important;
   border-radius: 50% !important;
   background: #C89B3C !important;
   border: 3px solid #FFFFFF !important;
-  box-shadow: 0 3px 8px rgba(11, 31, 58, 0.3) !important;
+  box-shadow: 0 4px 10px rgba(11, 31, 58, 0.3) !important;
   cursor: pointer !important;
 }
 
-.calc-slider::-webkit-slider-thumb:hover {
+input[type="range"].calc-slider::-webkit-slider-thumb:hover,
+input[type="range"]::-webkit-slider-thumb:hover {
   transform: scale(1.15) !important;
   background: #D4A748 !important;
 }
@@ -2108,13 +2130,13 @@ footer h5 {
   flex-direction: column !important;
   justify-content: space-between !important;
   gap: 20px !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
   width: 100% !important;
   box-sizing: border-box !important;
 }
 
 .calc-output-head {
-  font-family: var(--font-sans) !important;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
   font-size: 11.5px !important;
   font-weight: 700 !important;
   color: #C89B3C !important;
@@ -2124,8 +2146,8 @@ footer h5 {
 }
 
 .calc-output-main-val {
-  font-family: var(--font-serif) !important;
-  font-size: 36px !important;
+  font-family: 'Newsreader', Georgia, serif !important;
+  font-size: clamp(2.2rem, 3.5vw, 2.6rem) !important;
   font-weight: 700 !important;
   color: #FFFFFF !important;
   line-height: 1.1 !important;
@@ -2160,7 +2182,7 @@ footer h5 {
   width: 100% !important;
   text-align: center !important;
   background: linear-gradient(135deg, #C89B3C 0%, #B8860B 100%) !important;
-  color: #FFFFFF !important;
+  color: #0B1F3A !important;
   font-weight: 700 !important;
   font-size: 15px !important;
   padding: 14px 20px !important;
@@ -2183,6 +2205,8 @@ footer h5 {
   border-top: 1px solid #E2DDD5 !important;
   font-size: 12.5px !important;
   color: #5B6472 !important;
+  line-height: 1.5 !important;
+}
   line-height: 1.5 !important;
 }
 

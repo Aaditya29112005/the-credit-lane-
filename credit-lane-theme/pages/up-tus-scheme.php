@@ -161,21 +161,21 @@
             <span>Total Project / Machine Cost</span>
             <span class="value-output" id="sub-cost-val">₹20,00,000</span>
           </div>
-          <input type="range" class="calc-slider" id="sub-cost" min="100000" max="50000000" step="100000" value="2000000" oninput="updateSubsidyCalc()" onchange="updateSubsidyCalc()">
+          <input type="range" class="calc-slider" id="sub-cost" min="100000" max="50000000" step="100000" value="2000000" oninput="updateSubsidyCalc()" onchange="updateSubsidyCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
             <span>Policy Subsidy Rate</span>
             <span class="value-output" id="sub-rate-val">20%</span>
           </div>
-          <input type="range" class="calc-slider" id="sub-rate" min="5" max="30" step="1" value="20" oninput="updateSubsidyCalc()" onchange="updateSubsidyCalc()">
+          <input type="range" class="calc-slider" id="sub-rate" min="5" max="30" step="1" value="20" oninput="updateSubsidyCalc()" onchange="updateSubsidyCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <input type="hidden" id="sub-cap" value="1500000">
         
                       </div>
                       
                       <!-- Right Outputs -->
-                      <div class="calc-outputs">
+                      <div class="calc-outputs" style="background: #08192E !important; color: #FFFFFF !important; padding: 32px 28px !important; border-radius: 18px !important; display: flex; flex-direction: column; justify-content: space-between; gap: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); width: 100%; box-sizing: border-box;">
                         
         <div>
           <div class="calc-output-head" style="font-size: 11.5px; font-weight: 700; color: #C89B3C; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">ESTIMATED SUBSIDY CLAIMABLE</div>

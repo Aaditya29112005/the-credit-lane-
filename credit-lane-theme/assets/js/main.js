@@ -236,20 +236,22 @@ window.scrollReviewsTrack = function(direction) {
   track.style.transform = "translateX(-" + (window.reviewCurrentIndex * cardWidth) + "px)";
 };
 
-// Global Slider Track Color Update (Gold filled track / Dark Grey unfilled track)
+// Global Slider Track Color Update (Gold filled track / Soft Cream track)
 window.updateSliderTrack = function(slider) {
   if (!slider) return;
   var min = parseFloat(slider.min) || 0;
   var max = parseFloat(slider.max) || 100;
   var val = parseFloat(slider.value) || 0;
-  var pct = ((val - min) / (max - min)) * 100;
-  slider.style.background = "linear-gradient(to right, #C89B3C 0%, #C89B3C " + pct + "%, #4A4A4A " + pct + "%, #4A4A4A 100%)";
+  var pct = max > min ? ((val - min) / (max - min)) * 100 : 50;
+  slider.style.background = "linear-gradient(to right, #C89B3C 0%, #C89B3C " + pct + "%, #E2DDD5 " + pct + "%, #E2DDD5 100%)";
 };
 
 document.addEventListener("DOMContentLoaded", function() {
-  var sliders = document.querySelectorAll(".calc-slider");
+  var sliders = document.querySelectorAll(".calc-slider, input[type='range']");
   sliders.forEach(function(s) {
     window.updateSliderTrack(s);
+    s.addEventListener("input", function() { window.updateSliderTrack(s); });
+    s.addEventListener("change", function() { window.updateSliderTrack(s); });
   });
   
   var prevBtn = document.querySelector(".reviews-prev-btn, .reviews-prev");

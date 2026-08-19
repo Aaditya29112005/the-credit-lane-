@@ -160,27 +160,27 @@
             <span>Outstanding Loan Dues</span>
             <span class="value-output" id="set-dues-val">₹50,00,000</span>
           </div>
-          <input type="range" class="calc-slider" id="set-dues" min="500000" max="50000000" step="100000" value="5000000" oninput="updateSettlementCalc()" onchange="updateSettlementCalc()">
+          <input type="range" class="calc-slider" id="set-dues" min="500000" max="50000000" step="100000" value="5000000" oninput="updateSettlementCalc()" onchange="updateSettlementCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
             <span>Proposed OTS Percentage</span>
             <span class="value-output" id="set-pct-val">60% of dues</span>
           </div>
-          <input type="range" class="calc-slider" id="set-pct" min="30" max="90" step="1" value="60" oninput="updateSettlementCalc()" onchange="updateSettlementCalc()">
+          <input type="range" class="calc-slider" id="set-pct" min="30" max="90" step="1" value="60" oninput="updateSettlementCalc()" onchange="updateSettlementCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
             <span>Upfront Token Payment Required</span>
             <span class="value-output" id="set-tok-val">8% of settlement</span>
           </div>
-          <input type="range" class="calc-slider" id="set-tok" min="5" max="10" step="1" value="8" oninput="updateSettlementCalc()" onchange="updateSettlementCalc()">
+          <input type="range" class="calc-slider" id="set-tok" min="5" max="10" step="1" value="8" oninput="updateSettlementCalc()" onchange="updateSettlementCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         
                       </div>
                       
                       <!-- Right Outputs -->
-                      <div class="calc-outputs">
+                      <div class="calc-outputs" style="background: #08192E !important; color: #FFFFFF !important; padding: 32px 28px !important; border-radius: 18px !important; display: flex; flex-direction: column; justify-content: space-between; gap: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); width: 100%; box-sizing: border-box;">
                         
         <div>
           <div class="calc-output-head" style="font-size: 11.5px; font-weight: 700; color: #C89B3C; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">ESTIMATED SETTLEMENT (OTS)</div>

@@ -76,11 +76,23 @@
       return "₹" + Math.round(n).toLocaleString("en-IN");
     }
 
+    function updateSliderFill(slider) {
+      if (!slider) return;
+      var min = parseFloat(slider.min) || 0;
+      var max = parseFloat(slider.max) || 100;
+      var val = parseFloat(slider.value) || 0;
+      var pct = max > min ? ((val - min) / (max - min)) * 100 : 50;
+      slider.style.background = 'linear-gradient(to right, #C89B3C 0%, #C89B3C ' + pct + '%, #E2DDD5 ' + pct + '%, #E2DDD5 100%)';
+    }
+
     function updateEmiCalc() {
       var pInput = document.getElementById("emi-p");
       var rInput = document.getElementById("emi-r");
       var yInput = document.getElementById("emi-y");
       if (!pInput || !rInput || !yInput) return;
+      updateSliderFill(pInput);
+      updateSliderFill(rInput);
+      updateSliderFill(yInput);
 
       var P = parseFloat(pInput.value) || 0;
       var annR = parseFloat(rInput.value) || 0;
@@ -129,6 +141,9 @@
       var advInput = document.getElementById("inv-adv");
       var daysInput = document.getElementById("inv-days");
       if (!valInput || !advInput || !daysInput) return;
+      updateSliderFill(valInput);
+      updateSliderFill(advInput);
+      updateSliderFill(daysInput);
 
       var mRate = parseFloat(document.getElementById("inv-mrate") ? document.getElementById("inv-mrate").value : "2");
       var val = parseFloat(valInput.value) || 0;
@@ -161,6 +176,9 @@
       var setPctInput = document.getElementById("set-pct");
       var tokPctInput = document.getElementById("set-tok");
       if (!duesInput || !setPctInput || !tokPctInput) return;
+      updateSliderFill(duesInput);
+      updateSliderFill(setPctInput);
+      updateSliderFill(tokPctInput);
 
       var dues = parseFloat(duesInput.value) || 0;
       var setPct = parseFloat(setPctInput.value) || 0;
@@ -246,6 +264,9 @@
       var multLoInput = document.getElementById("val-mlo");
       var multHiInput = document.getElementById("val-mhi");
       if (!ebitdaInput || !multLoInput || !multHiInput) return;
+      updateSliderFill(ebitdaInput);
+      updateSliderFill(multLoInput);
+      updateSliderFill(multHiInput);
 
       var ebitda = parseFloat(ebitdaInput.value) || 0;
       var lo = parseFloat(multLoInput.value) || 0;
@@ -275,6 +296,8 @@
       var costInput = document.getElementById("sub-cost");
       var rateInput = document.getElementById("sub-rate");
       if (!costInput || !rateInput) return;
+      updateSliderFill(costInput);
+      updateSliderFill(rateInput);
 
       var capVal = parseFloat(document.getElementById("sub-cap") ? document.getElementById("sub-cap").value : "1500000");
       var cost = parseFloat(costInput.value) || 0;
@@ -595,14 +618,14 @@
             <span>Total Project / Machine Cost</span>
             <span class="value-output" id="sub-cost-val">₹20,00,000</span>
           </div>
-          <input type="range" class="calc-slider" id="sub-cost" min="100000" max="50000000" step="100000" value="20000000" oninput="updateSubsidyCalc()" onchange="updateSubsidyCalc()">
+          <input type="range" class="calc-slider" id="sub-cost" min="100000" max="50000000" step="100000" value="20000000" oninput="updateSubsidyCalc()" onchange="updateSubsidyCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
             <span>Policy Subsidy Rate</span>
             <span class="value-output" id="sub-rate-val">15%</span>
           </div>
-          <input type="range" class="calc-slider" id="sub-rate" min="5" max="30" step="1" value="15" oninput="updateSubsidyCalc()" onchange="updateSubsidyCalc()">
+          <input type="range" class="calc-slider" id="sub-rate" min="5" max="30" step="1" value="15" oninput="updateSubsidyCalc()" onchange="updateSubsidyCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
         </div>
         <input type="hidden" id="sub-cap" value="4000000">
         
