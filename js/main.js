@@ -236,14 +236,14 @@ window.scrollReviewsTrack = function(direction) {
   track.style.transform = "translateX(-" + (window.reviewCurrentIndex * cardWidth) + "px)";
 };
 
-// Global Slider Track Color Update (Gold filled track / Soft Cream track)
+// Global Slider Track Color Update (Gold filled track / Dark Charcoal track - matching image copy 18.png)
 window.updateSliderTrack = function(slider) {
   if (!slider) return;
   var min = parseFloat(slider.min) || 0;
   var max = parseFloat(slider.max) || 100;
   var val = parseFloat(slider.value) || 0;
   var pct = max > min ? ((val - min) / (max - min)) * 100 : 50;
-  slider.style.background = "linear-gradient(to right, #C89B3C 0%, #C89B3C " + pct + "%, #E2DDD5 " + pct + "%, #E2DDD5 100%)";
+  slider.style.background = "linear-gradient(to right, #C89B3C 0%, #C89B3C " + pct + "%, #363636 " + pct + "%, #363636 100%)";
 };
 
 document.addEventListener("DOMContentLoaded", function() {

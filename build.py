@@ -1549,7 +1549,7 @@ def get_layout(content, title, description, url_slug, depth=0):
       var max = parseFloat(slider.max) || 100;
       var val = parseFloat(slider.value) || 0;
       var pct = max > min ? ((val - min) / (max - min)) * 100 : 50;
-      slider.style.background = 'linear-gradient(to right, #C89B3C 0%, #C89B3C ' + pct + '%, #E2DDD5 ' + pct + '%, #E2DDD5 100%)';
+      slider.style.background = 'linear-gradient(to right, #C89B3C 0%, #C89B3C ' + pct + '%, #363636 ' + pct + '%, #363636 100%)';
     }}
 
     function updateEmiCalc() {{
