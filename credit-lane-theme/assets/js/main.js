@@ -220,20 +220,35 @@ function horizontalLoop(items, config) {
 }
 
 // Global Google Reviews Carousel Controller
-window.reviewCurrentIndex = 0;
-window.scrollReviewsTrack = function(direction) {
-  var track = document.querySelector(".reviews-carousel-track");
-  if (!track) return;
-  var cardWidth = 344; // 320px width + 24px gap
+window.scrollReviewsTrack = function(direction, btnEl) {
+  var section = btnEl ? btnEl.closest(".google-reviews-section") : null;
+  var track = section ? section.querySelector(".reviews-carousel-track") : document.querySelector(".reviews-carousel-track");
+  
+  if (!track || !track.children.length) return;
+
+  var firstCard = track.children[0];
+  var cardWidth = (firstCard ? firstCard.offsetWidth : 320) + 24; // Card width + 24px gap
+
+  var wrapper = track.parentElement;
+  var wrapperWidth = wrapper ? wrapper.offsetWidth : window.innerWidth;
   var totalCards = track.children.length;
-  var visibleCards = window.innerWidth < 768 ? 1 : (window.innerWidth < 1100 ? 2 : 3);
-  var maxIndex = Math.max(0, totalCards - visibleCards);
+  
+  var visibleCards = Math.max(1, Math.floor(wrapperWidth / 320));
+  var maxIndex = Math.max(1, totalCards - visibleCards);
 
-  window.reviewCurrentIndex = (window.reviewCurrentIndex || 0) + direction;
-  if (window.reviewCurrentIndex < 0) window.reviewCurrentIndex = 0;
-  if (window.reviewCurrentIndex > maxIndex) window.reviewCurrentIndex = maxIndex;
+  if (typeof track.currentIndex === "undefined") {
+    track.currentIndex = 0;
+  }
 
-  track.style.transform = "translateX(-" + (window.reviewCurrentIndex * cardWidth) + "px)";
+  track.currentIndex += direction;
+
+  if (track.currentIndex > maxIndex) {
+    track.currentIndex = 0; // Seamless wrap to start
+  } else if (track.currentIndex < 0) {
+    track.currentIndex = maxIndex; // Seamless wrap to end
+  }
+
+  track.style.transform = "translateX(-" + (track.currentIndex * cardWidth) + "px)";
 };
 
 // Global Slider Track Color Update (Gold filled track / Dark Charcoal track - matching image copy 18.png)
@@ -254,10 +269,19 @@ document.addEventListener("DOMContentLoaded", function() {
     s.addEventListener("change", function() { window.updateSliderTrack(s); });
   });
   
-  var prevBtn = document.querySelector(".reviews-prev-btn, .reviews-prev");
-  var nextBtn = document.querySelector(".reviews-next-btn, .reviews-next");
-  if (prevBtn) prevBtn.onclick = function() { window.scrollReviewsTrack(-1); };
-  if (nextBtn) nextBtn.onclick = function() { window.scrollReviewsTrack(1); };
+  document.querySelectorAll(".reviews-prev-btn, .reviews-prev").forEach(function(btn) {
+    btn.onclick = function(e) {
+      if (e) e.preventDefault();
+      window.scrollReviewsTrack(-1, this);
+    };
+  });
+  
+  document.querySelectorAll(".reviews-next-btn, .reviews-next").forEach(function(btn) {
+    btn.onclick = function(e) {
+      if (e) e.preventDefault();
+      window.scrollReviewsTrack(1, this);
+    };
+  });
 });
 
 // 8. INITIALIZE BOTH MARQUEES WITH GSAP OBSERVER (CODEPEN INTEGRATION)
