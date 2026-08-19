@@ -2579,22 +2579,22 @@ def generate_homepage():
 
         <div class="reviews-carousel-wrapper" style="overflow: hidden; width: 100%; border-radius: 16px;">
           <div class="reviews-carousel-track" style="display: flex; gap: 24px; transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); will-change: transform;">
-            
+
             <!-- Card 1 -->
             <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
               <div>
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
                   <div style="display: flex; align-items: center; gap: 12px;">
-                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #e6b74e; color: #000; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">V</div>
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #4285F4; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">V</div>
                     <div>
-                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Vikram Malhotra</h4>
-                      <span style="color: #94A3B8; font-size: 12px; display: block;">Managing Director, Auto Components</span>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Varun Singhal</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer (12 reviews)</span>
                     </div>
                   </div>
                   <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
                 </div>
                 <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
-                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"The Credit Lane helped us secure ₹8.5 Crore machine loan from SIDBI with 50% TUS Grant sanction in record time. Professional CA, CS &amp; Advocate advisory team!"</p>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"The Credit Lane is a reliable and professional advisory firm specializing in loans and financial solutions. They offer personalized guidance to individuals and businesses seeking the best loan options, including personal & business loans. Highly recommended for trusted loan advice."</p>
               </div>
             </div>
 
@@ -2603,16 +2603,16 @@ def generate_homepage():
               <div>
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
                   <div style="display: flex; align-items: center; gap: 12px;">
-                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #24a148; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">R</div>
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #34A853; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">V</div>
                     <div>
-                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Rajesh Sharma</h4>
-                      <span style="color: #94A3B8; font-size: 12px; display: block;">Founder, Real Estate Infra</span>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Vipul Khandelwal</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer (13 reviews)</span>
                     </div>
                   </div>
                   <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
                 </div>
                 <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
-                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"Very methodical project finance &amp; builder funding team. They structured our corporate finance terms cleanly and got bank committee approvals fast."</p>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"CA Rajat Garg is very Knowledgeable and professional in his work. Would highly recommend anyone to use his services. Very Happy with the quick response of Team The Credit Lane, they are one of the best Loan advisor."</p>
               </div>
             </div>
 
@@ -2621,16 +2621,16 @@ def generate_homepage():
               <div>
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
                   <div style="display: flex; align-items: center; gap: 12px;">
-                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #0072b1; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">A</div>
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #FBBC05; color: #000; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">C</div>
                     <div>
-                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Amitabh Singhania</h4>
-                      <span style="color: #94A3B8; font-size: 12px; display: block;">CEO, Healthcare &amp; Hospital Group</span>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Chandeshwar Sharma</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer</span>
                     </div>
                   </div>
                   <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
                 </div>
                 <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
-                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"The Pre-IPO valuation and UP Govt MSME promotion grant guidance provided by The Credit Lane team was top notch. Highly recommended corporate finance desk!"</p>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"Expanding my business required additional funds, but finding the right business loan felt overwhelming. With their expertise and personalized guidance, they made the entire process smooth and seamless."</p>
               </div>
             </div>
 
@@ -2639,16 +2639,16 @@ def generate_homepage():
               <div>
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
                   <div style="display: flex; align-items: center; gap: 12px;">
-                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #e056fd; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">S</div>
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #EA4335; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">S</div>
                     <div>
-                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Sandeep Verma</h4>
-                      <span style="color: #94A3B8; font-size: 12px; display: block;">Director, Engineering MSME Unit</span>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Shubham Chaudhary</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer (4 reviews)</span>
                     </div>
                   </div>
                   <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
                 </div>
                 <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
-                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"100% transparent and advisory-first execution. Secured unsecured working capital limit &amp; drop-line overdraft without pledging collateral."</p>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"Managing the finances of my business was becoming a challenge, especially when it came to securing a working capital limit. His proactive approach and tailored solutions simplified our entire funding process."</p>
               </div>
             </div>
 
@@ -2657,19 +2657,468 @@ def generate_homepage():
               <div>
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
                   <div style="display: flex; align-items: center; gap: 12px;">
-                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #ff7675; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">M</div>
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #8E44AD; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">S</div>
                     <div>
-                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Manish Gupta</h4>
-                      <span style="color: #94A3B8; font-size: 12px; display: block;">Director, Chemical Processing</span>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Siddarth Sharma</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Local Guide (18 reviews)</span>
                     </div>
                   </div>
                   <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
                 </div>
                 <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
-                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"Fast turnaround on UP MSME promotion policy capital subsidy and interest subvention claims. Highly competent team!"</p>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"Highly confident and highly delighted with the services of Credit Lane. Due diligence in place and most importantly the professional ethos driving the team."</p>
               </div>
             </div>
 
+            <!-- Card 6 -->
+            <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #16A085; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">A</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Ashima Goel</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer (5 reviews)</span>
+                    </div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"A one point solution for all professional services with highly qualified professionals in Ghaziabad. They provide prompt and high quality business consulting services."</p>
+              </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #D35400; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">A</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Abhay Saxena</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer (5 reviews)</span>
+                    </div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"CA Rajat Garg is truly gentleman with lot's of sincerity and dedication towards his work. Highly recommended THE CREDIT LANE for financial requirements."</p>
+              </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #2C3E50; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">A</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Ankit Tyagi</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Local Guide (144 reviews)</span>
+                    </div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"I know this team both personally and professionally. They come with lot of experience and can help you with your varied financial asks. Do give them a try!"</p>
+              </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #27AE60; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">D</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Dreksh Singhal</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer (4 reviews)</span>
+                    </div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"Very content work. One can easily trust this company, very good work."</p>
+              </div>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #2980B9; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">A</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Avneet Sharma</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer (6 reviews)</span>
+                    </div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"I took service, I am satisfied with their services & staff is very supportive."</p>
+              </div>
+            </div>
+
+            <!-- Card 11 -->
+            <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #8E44AD; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">C</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Classic Bindi</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer (2 reviews)</span>
+                    </div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"We availed home loan service from THE CREDIT LANE team. Experience was good."</p>
+              </div>
+            </div>
+
+            <!-- Card 12 -->
+            <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #C0392B; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">N</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Nishat Khan</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer</span>
+                    </div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"Highly qualified professionals that provides the smooth and best service."</p>
+              </div>
+            </div>
+
+            <!-- Card 13 -->
+            <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #D4AC0D; color: #000; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">S</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Subodh Tyagi</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer (3 reviews)</span>
+                    </div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"My experience with Credit Lane was topclass. I got the funding of Rs. 50 lacs that helped me to increase my turnover."</p>
+              </div>
+            </div>
+
+            <!-- Card 14 -->
+            <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #1ABC9C; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">M</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Mayank Tyagi</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer (6 reviews)</span>
+                    </div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"Best credit facility in the area, they are very supportive. You will get the loan quickly."</p>
+              </div>
+            </div>
+
+            <!-- Card 15 -->
+            <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #34495E; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">A</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Akash Srivastava</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer (13 reviews)</span>
+                    </div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"Very honest and dedicated company who always believes in customer satisfaction."</p>
+              </div>
+            </div>
+
+            <!-- Card 16 -->
+            <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #E67E22; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">M</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Mandeep Malik</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer (2 reviews)</span>
+                    </div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"50 lakh funding without any security. The whole experience was great."</p>
+              </div>
+            </div>
+
+            <!-- Card 17 -->
+            <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #9B59B6; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">H</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Harsh</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer (2 reviews)</span>
+                    </div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"Outstanding service. Quick, efficient and impeccable. Highly recommend."</p>
+              </div>
+            </div>
+
+            <!-- Card 18 -->
+            <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #3498DB; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">S</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Sumit Goel</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer (5 reviews)</span>
+                    </div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"Best team, Very easy process and quick to resolve."</p>
+              </div>
+            </div>
+
+            <!-- Card 19 -->
+            <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #F39C12; color: #000; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">G</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">G</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer (4 reviews)</span>
+                    </div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"Genuine Advice, Genuine People and Genuine Work... rare combination... great experience working with the team."</p>
+              </div>
+            </div>
+
+            <!-- Card 20 -->
+            <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #E74C3C; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">A</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Atul Raj</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer (4 reviews)</span>
+                    </div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"This company is very useful for loan, I highly recommend visiting this if you need loan."</p>
+              </div>
+            </div>
+
+            <!-- Card 21 -->
+            <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #16A085; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">A</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Ajay Anand Sharma</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer (9 reviews)</span>
+                    </div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"I am happy with the services. Thank you!"</p>
+              </div>
+            </div>
+
+            <!-- Card 22 -->
+            <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #2980B9; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">A</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Ankit Kumar Ak</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Local Guide (26 reviews)</span>
+                    </div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"Have a nice experience. Easy way to get knowledge about financial services and loan."</p>
+              </div>
+            </div>
+
+            <!-- Card 23 -->
+            <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #8E44AD; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">C</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Chetan Awal</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer (4 reviews)</span>
+                    </div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"Very experienced and specialised in terms of service."</p>
+              </div>
+            </div>
+
+            <!-- Card 24 -->
+            <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #27AE60; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">P</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Puneet Kumar</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer (2 reviews)</span>
+                    </div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"Provides one stop solution to all your Business Finance needs."</p>
+              </div>
+            </div>
+
+            <!-- Card 25 -->
+            <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #D35400; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">R</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Rahul Goyal</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer (3 reviews)</span>
+                    </div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"Excellent Services and recommended to others."</p>
+              </div>
+            </div>
+
+            <!-- Card 26 -->
+            <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #2C3E50; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">R</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Rishabh Goel</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer (3 reviews)</span>
+                    </div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"It is very very good provider of loan."</p>
+              </div>
+            </div>
+
+            <!-- Card 27 -->
+            <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #16A085; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">J</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Jitendra Kumar</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Local Guide (8 reviews)</span>
+                    </div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"Best Services Provided Here."</p>
+              </div>
+            </div>
+
+            <!-- Card 28 -->
+            <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #E67E22; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">A</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Akshay Agarwal</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer (6 reviews)</span>
+                    </div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"Proactive team with trustworthy functioning."</p>
+              </div>
+            </div>
+
+            <!-- Card 29 -->
+            <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #2980B9; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">V</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Vivek Prasad</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer (7 reviews)</span>
+                    </div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"Well educated and experienced people."</p>
+              </div>
+            </div>
+
+            <!-- Card 30 -->
+            <div class="review-slide-card" style="flex: 0 0 320px; width: 320px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 44px; height: 44px; border-radius: 50%; background: #9B59B6; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">S</div>
+                    <div>
+                      <h4 style="color: #fff; font-size: 15px; margin: 0 0 3px 0; font-weight: 600;">Surbhi Garg</h4>
+                      <span style="color: #94A3B8; font-size: 12px; display: block;">Verified Google Reviewer (4 reviews)</span>
+                    </div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                </div>
+                <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"Best service provider for loan."</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
