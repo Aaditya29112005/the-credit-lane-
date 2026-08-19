@@ -3149,7 +3149,7 @@ def generate_aboutpage():
     <!-- ============ HERO BANNER ============ -->
     <section class="service-banner" style="padding: 80px 0 60px; background: linear-gradient(135deg, #0B1F3A 0%, #071529 100%);">
       <div class="wrap">
-        <div class="about-hero-grid">
+        <div class="about-hero-grid" style="display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 40px; align-items: center;">
           <div style="text-align: left;">
             <span class="eyebrow" style="color: var(--gold-light); display: inline-block; margin-bottom: 12px; font-weight: 700; letter-spacing: 0.1em;">OUR PROFILE</span>
             <h1 style="font-size: clamp(32px, 4vw, 48px); line-height: 1.2; color: #FFFFFF; font-family: var(--font-serif); margin-bottom: 20px;">Capital decisions deserve more than a generic answer.</h1>
@@ -3178,9 +3178,9 @@ def generate_aboutpage():
             </div>
           </div>
 
-          <div style="position: relative; width: 100%;">
-            <div style="background: rgba(255, 255, 255, 0.04); border: 1.5px solid rgba(200, 155, 60, 0.4); border-radius: 20px; padding: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); backdrop-filter: blur(10px); cursor: pointer;" onclick="openGalleryModal('../about/image copy 8.png')">
-              <img src="../about/image copy 8.png" alt="The Credit Lane Executive Team &amp; Office" style="width: 100%; height: 420px; object-fit: cover; border-radius: 14px; display: block; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
+          <div style="position: relative; width: 100%; display: flex; justify-content: center; align-items: center;">
+            <div style="width: 100%; background: rgba(255, 255, 255, 0.04); border: 1.5px solid rgba(200, 155, 60, 0.4); border-radius: 20px; padding: 10px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); backdrop-filter: blur(10px); cursor: pointer;" onclick="openGalleryModal('../about/image copy 8.png')">
+              <img src="../about/image copy 8.png" alt="The Credit Lane Executive Exhibition &amp; Office Stall" style="width: 100%; height: 100%; max-height: 460px; object-fit: cover; border-radius: 14px; display: block; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
             </div>
           </div>
         </div>
