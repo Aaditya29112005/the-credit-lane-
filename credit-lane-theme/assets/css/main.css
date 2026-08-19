@@ -3765,6 +3765,21 @@ input[type="range"]::-webkit-slider-thumb:hover {
   height: 0 !important;
 }
 
+/* About Hero Grid layout */
+.about-hero-grid {
+  display: grid !important;
+  grid-template-columns: 1.1fr 0.9fr !important;
+  gap: 48px !important;
+  align-items: center !important;
+}
+
+@media (max-width: 991px) {
+  .about-hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+}
+
 .calc-divider {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
   margin: 16px 0 !important;
