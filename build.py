@@ -1948,7 +1948,7 @@ def get_layout(content, title, description, url_slug, depth=0):
 
         <div class="footer-badges-row" style="margin-top: 28px;">
           <div class="footer-badges">
-            <span>ISO 9001:2015</span>
+            <span>IIA Member</span>
             <span>Corporate Finance Desk</span>
             <span>10+ Yrs Experience</span>
           </div>
@@ -2559,7 +2559,7 @@ def generate_homepage():
                   <svg width="22" height="22" viewBox="0 0 24 24" style="flex-shrink: 0;"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
                 </div>
                 <div style="color: #FFD700; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
-                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"The Pre-IPO valuation and UP Govt MSME promotion grant guidance provided by Rajat Garg Sir &amp; team was top notch. Highly recommended corporate finance desk!"</p>
+                <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">"The Pre-IPO valuation and UP Govt MSME promotion grant guidance provided by The Credit Lane team was top notch. Highly recommended corporate finance desk!"</p>
               </div>
             </div>
 
@@ -2681,7 +2681,7 @@ def generate_aboutpage():
             <h3 style="font-family: var(--font-serif); font-size: 22px; color: var(--navy-dark); text-align: center; margin-bottom: 12px;">Transparent. Methodical. Advisory-First.</h3>
             <p style="color: var(--slate); font-size: 14px; line-height: 1.65; text-align: center; margin: 0 0 20px;">Empaneled advisory channel to 100+ scheduled banks, industrial NBFCs, equity syndicates, and government grant portals across Delhi NCR and India.</p>
             <div style="background: #FAF8F5; border-radius: 12px; padding: 16px; border: 1px solid #E2DDD5; text-align: center;">
-              <span style="font-size: 12px; font-weight: 700; color: #C89B3C; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">ISO 9001:2015 CERTIFIED DESK</span>
+              <span style="font-size: 12px; font-weight: 700; color: #C89B3C; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 4px;">EXECUTIVE ADVISORY DESK</span>
               <span style="font-size: 13px; color: #0B1F3A; font-weight: 600;">HQ: B 31 First Floor, Raj Nagar, Ghaziabad 201001</span>
             </div>
           </div>
@@ -2895,7 +2895,7 @@ def generate_aboutpage():
           </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-top: 40px;">
+        <div class="overview-4grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px;">
           <!-- Card 1: Corporate Profile & Advisory Desk -->
           <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 18px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
             <div>
@@ -2906,7 +2906,7 @@ def generate_aboutpage():
                 <li><strong>HQ Address:</strong> B 31 First Floor, Raj Nagar, Ghaziabad 201001</li>
                 <li><strong>Official Email:</strong> Info@thecreditlane.in</li>
                 <li><strong>Helplines:</strong> +91 9217924499 / 9818709747</li>
-                <li><strong>Credentials:</strong> ISO 9001:2015 Quality Certified</li>
+                <li><strong>Credentials:</strong> IIA Member &amp; Expo Certified</li>
               </ul>
             </div>
             <a href="tel:9217924499" style="color: var(--gold-light); font-weight: 700; font-size: 13.5px; text-decoration: none;">📞 Contact Desk Directly &rarr;</a>
@@ -2926,15 +2926,15 @@ def generate_aboutpage():
             <a href="../loans/index.html" style="color: var(--gold-light); font-weight: 700; font-size: 13.5px; text-decoration: none; margin-top: 16px;">Explore All Services &rarr;</a>
           </div>
 
-          <!-- Card 3: 3 Co-Founders Leadership Team -->
+          <!-- Card 3: Executive Leadership Team -->
           <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 18px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
             <div>
               <span style="color: var(--gold-light); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 8px;">EXECUTIVE LEADERSHIP</span>
-              <h3 style="color: #fff; font-size: 20px; font-family: var(--font-serif); margin-bottom: 12px;">3 Co-Founders Desk</h3>
-              <div style="width: 100%; height: 150px; border-radius: 12px; overflow: hidden; margin-bottom: 14px; border: 1px solid rgba(255,255,255,0.15); cursor: pointer;" onclick="openGalleryModal('../about/WhatsApp Image 2026-08-11 at 10.10.23.jpeg')">
-                <img src="../about/WhatsApp Image 2026-08-11 at 10.10.23.jpeg" alt="The Credit Lane 3 Co-Founders" style="width: 100%; height: 100%; object-fit: cover;">
+              <h3 style="color: #fff; font-size: 20px; font-family: var(--font-serif); margin-bottom: 12px;">Promoter &amp; Leadership Desk</h3>
+              <div style="width: 100%; height: 140px; border-radius: 12px; overflow: hidden; margin-bottom: 14px; border: 1px solid rgba(255,255,255,0.15); cursor: pointer;" onclick="openGalleryModal('../about/WhatsApp Image 2026-08-11 at 10.10.23.jpeg')">
+                <img src="../about/WhatsApp Image 2026-08-11 at 10.10.23.jpeg" alt="The Credit Lane Executive Leadership Team" style="width: 100%; height: 100%; object-fit: cover;">
               </div>
-              <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">Led by <strong>Rajat Garg</strong> (Founder &amp; MD) together with Co-Founders heading Credit Committee Structuring &amp; Legal Compliance Chambers.</p>
+              <p style="color: #CBD5E1; font-size: 13.5px; line-height: 1.6; margin: 0;">Led by Chartered Accountants, Business Strategists, and Legal Advocates heading Credit Committee Structuring, Finance, Taxation, and Growth Divisions.</p>
             </div>
             <span style="color: var(--gold-light); font-weight: 700; font-size: 13.5px; cursor: pointer; margin-top: 14px;" onclick="openGalleryModal('../about/WhatsApp Image 2026-08-11 at 10.10.23.jpeg')">🔍 View Leadership Photo &rarr;</span>
           </div>
@@ -2942,19 +2942,12 @@ def generate_aboutpage():
           <!-- Card 4: Certificates & National Recognition Showcase -->
           <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 18px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
             <div>
-              <span style="color: var(--gold-light); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 8px;">ALL CERTIFICATES &amp; RECOGNITIONS</span>
-              <h3 style="color: #fff; font-size: 20px; font-family: var(--font-serif); margin-bottom: 12px;">Certificates &amp; Awards</h3>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px;">
-                <div style="height: 100px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.2); cursor: pointer;" onclick="openGalleryModal('../about/BRT CorporateBBE Participation Certificate_page-0001.jpg')">
-                  <img src="../about/BRT CorporateBBE Participation Certificate_page-0001.jpg" alt="IIA Build Bharat Expo 2025 Certificate" style="width: 100%; height: 100%; object-fit: cover; object-position: top;" title="IIA Build Bharat Expo 2025 Certificate">
-                </div>
-                <div style="height: 100px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.08); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8px; text-align: center;">
-                  <span style="font-size: 22px;">🏅</span>
-                  <span style="font-size: 11px; font-weight: 700; color: var(--gold-light);">ISO 9001:2015</span>
-                  <span style="font-size: 10px; color: #CBD5E1;">Corporate Quality</span>
-                </div>
+              <span style="color: var(--gold-light); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 8px;">EXPO RECOGNITION</span>
+              <h3 style="color: #fff; font-size: 20px; font-family: var(--font-serif); margin-bottom: 12px;">Official Certification</h3>
+              <div style="height: 130px; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.2); margin-bottom: 14px; cursor: pointer;" onclick="openGalleryModal('../about/BRT CorporateBBE Participation Certificate_page-0001.jpg')">
+                <img src="../about/BRT CorporateBBE Participation Certificate_page-0001.jpg" alt="IIA Build Bharat Expo 2025 Certificate" style="width: 100%; height: 100%; object-fit: cover; object-position: top;" title="IIA Build Bharat Expo 2025 Certificate">
               </div>
-              <p style="color: #CBD5E1; font-size: 13px; line-height: 1.5; margin: 0;">Includes IIA Build Bharat Expo 2025 Participation Certificate (Bharat Mandapam, New Delhi) and ISO 9001:2015 Quality Standards.</p>
+              <p style="color: #CBD5E1; font-size: 13px; line-height: 1.5; margin: 0;">Certified by Indian Industries Association (IIA) for participating at Build Bharat Expo 2025, Hall 6 Stall D19, Bharat Mandapam, New Delhi.</p>
             </div>
             <span style="color: var(--gold-light); font-weight: 700; font-size: 13.5px; cursor: pointer; margin-top: 14px;" onclick="openGalleryModal('../about/BRT CorporateBBE Participation Certificate_page-0001.jpg')">📜 View IIA Certificate &rarr;</span>
           </div>

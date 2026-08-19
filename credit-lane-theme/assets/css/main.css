@@ -27,6 +27,22 @@
   --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.overview-4grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 24px;
+}
+@media (max-width: 1200px) {
+  .overview-4grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 640px) {
+  .overview-4grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 /* Reset and Defaults */
 * {
   box-sizing: border-box;

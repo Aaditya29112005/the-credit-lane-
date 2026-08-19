@@ -158,7 +158,7 @@ get_header();
           <div class="wcu-left">
             <span class="eyebrow">WHY CHOOSE US</span>
             <h2>Tailored financial solutions for every stage of growth.</h2>
-            <p class="lead">At <strong>The Credit Lane</strong>, Rajat Garg and our team of CA, CS, and Advocate advisors specialize in providing tailored financial solutions for MSMEs, mid-corporates, and promoters. Whether you need funding for business expansion, working capital, SIDBI machinery purchase, loan against property, or equity fundraising, we help you secure financing from leading Banks, NBFCs, and investors with ease.</p>
+            <p class="lead">At <strong>The Credit Lane</strong>, our team of CA, CS, and Advocate advisors specialize in providing tailored financial solutions for MSMEs, mid-corporates, and promoters. Whether you need funding for business expansion, working capital, SIDBI machinery purchase, loan against property, or equity fundraising, we help you secure financing from leading Banks, NBFCs, and investors with ease.</p>
             <p style="font-size: 14px; color: var(--slate); line-height: 1.7; margin-top: 16px;">Our expertise lies in empowering MSMEs, ensuring they get the financial backing and state grants needed to scale, innovate, and succeed. Let's connect to find the right loan or grant solution for your business goals.</p>
             <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="btn btn-primary" style="margin-top: 28px; display: inline-flex;">Connect With Us &rarr;</a>
           </div>
