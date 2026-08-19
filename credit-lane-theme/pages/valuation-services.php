@@ -159,21 +159,21 @@
             <span>Normalized Annualised EBITDA</span>
             <span class="value-output" id="val-ebitda-val">₹1,50,00,000</span>
           </div>
-          <input type="range" class="calc-slider" id="val-ebitda" min="1000000" max="100000000" step="500000" value="15000000" oninput="updateValuationCalc()" onchange="updateValuationCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="val-ebitda" min="1000000" max="100000000" step="500000" value="15000000" oninput="updateValuationCalc()" onchange="updateValuationCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
             <span>Sector Multiple — Low Bound</span>
             <span class="value-output" id="val-mlo-val">6x</span>
           </div>
-          <input type="range" class="calc-slider" id="val-mlo" min="3" max="12" step="0.5" value="6" oninput="updateValuationCalc()" onchange="updateValuationCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="val-mlo" min="3" max="12" step="0.5" value="6" oninput="updateValuationCalc()" onchange="updateValuationCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
             <span>Sector Multiple — High Bound</span>
             <span class="value-output" id="val-mhi-val">10x</span>
           </div>
-          <input type="range" class="calc-slider" id="val-mhi" min="4" max="18" step="0.5" value="10" oninput="updateValuationCalc()" onchange="updateValuationCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="val-mhi" min="4" max="18" step="0.5" value="10" oninput="updateValuationCalc()" onchange="updateValuationCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         
                       </div>

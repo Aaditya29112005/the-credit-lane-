@@ -159,14 +159,14 @@
             <span>Target Growth Capital Raise</span>
             <span class="value-output" id="dil-raise-val">₹7,00,000</span>
           </div>
-          <input type="range" class="calc-slider" id="dil-raise" min="5000000" max="300000000" step="5000000" value="70000000" oninput="updateDilutionCalc()" onchange="updateDilutionCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="dil-raise" min="5000000" max="300000000" step="5000000" value="70000000" oninput="updateDilutionCalc()" onchange="updateDilutionCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
             <span>Agreed Pre-Money Valuation</span>
             <span class="value-output" id="dil-pre-val">₹20,00,00,000</span>
           </div>
-          <input type="range" class="calc-slider" id="dil-pre" min="20000000" max="1000000000" step="5000000" value="200000000" oninput="updateDilutionCalc()" onchange="updateDilutionCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="dil-pre" min="20000000" max="1000000000" step="5000000" value="200000000" oninput="updateDilutionCalc()" onchange="updateDilutionCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         
                       </div>

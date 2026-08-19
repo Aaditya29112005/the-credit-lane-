@@ -1186,21 +1186,21 @@ def render_calculator_html(p):
             <span>{l.get("pLabel", "Outstanding Invoice Value")}</span>
             <span class="value-output" id="inv-val-val">₹10,00,000</span>
           </div>
-          <input type="range" class="calc-slider" id="inv-val" min="100000" max="10000000" step="50000" value="{d['invoiceValue']}" oninput="updateInvoiceCalc()" onchange="updateInvoiceCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="inv-val" min="100000" max="10000000" step="50000" value="{d['invoiceValue']}" oninput="updateInvoiceCalc()" onchange="updateInvoiceCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
             <span>{l.get("rLabel", "Advance Percentage")}</span>
             <span class="value-output" id="inv-adv-val">{d['advancePct']}%</span>
           </div>
-          <input type="range" class="calc-slider" id="inv-adv" min="60" max="90" step="1" value="{d['advancePct']}" oninput="updateInvoiceCalc()" onchange="updateInvoiceCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="inv-adv" min="60" max="90" step="1" value="{d['advancePct']}" oninput="updateInvoiceCalc()" onchange="updateInvoiceCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
             <span>{l.get("yLabel", "Days Until Buyer Payment")}</span>
             <span class="value-output" id="inv-days-val">{d['days']} days</span>
           </div>
-          <input type="range" class="calc-slider" id="inv-days" min="15" max="120" step="5" value="{d['days']}" oninput="updateInvoiceCalc()" onchange="updateInvoiceCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="inv-days" min="15" max="120" step="5" value="{d['days']}" oninput="updateInvoiceCalc()" onchange="updateInvoiceCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         <input type="hidden" id="inv-mrate" value="{d['monthlyRate']}">
         """
@@ -1212,21 +1212,21 @@ def render_calculator_html(p):
             <span>{l.get("pLabel", "Outstanding Loan Dues")}</span>
             <span class="value-output" id="set-dues-val">₹50,00,000</span>
           </div>
-          <input type="range" class="calc-slider" id="set-dues" min="500000" max="50000000" step="100000" value="{d['outstanding']}" oninput="updateSettlementCalc()" onchange="updateSettlementCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="set-dues" min="500000" max="50000000" step="100000" value="{d['outstanding']}" oninput="updateSettlementCalc()" onchange="updateSettlementCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
             <span>{l.get("rLabel", "Proposed OTS Percentage")}</span>
             <span class="value-output" id="set-pct-val">{d['settlePct']}% of dues</span>
           </div>
-          <input type="range" class="calc-slider" id="set-pct" min="30" max="90" step="1" value="{d['settlePct']}" oninput="updateSettlementCalc()" onchange="updateSettlementCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="set-pct" min="30" max="90" step="1" value="{d['settlePct']}" oninput="updateSettlementCalc()" onchange="updateSettlementCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
             <span>{l.get("yLabel", "Upfront Token Payment Required")}</span>
             <span class="value-output" id="set-tok-val">{d['tokenPct']}% of settlement</span>
           </div>
-          <input type="range" class="calc-slider" id="set-tok" min="5" max="10" step="1" value="{d['tokenPct']}" oninput="updateSettlementCalc()" onchange="updateSettlementCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="set-tok" min="5" max="10" step="1" value="{d['tokenPct']}" oninput="updateSettlementCalc()" onchange="updateSettlementCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         """
         
@@ -1237,14 +1237,14 @@ def render_calculator_html(p):
             <span>{l.get("pLabel", "Target Raise Amount")}</span>
             <span class="value-output" id="dil-raise-val">₹7,00,000</span>
           </div>
-          <input type="range" class="calc-slider" id="dil-raise" min="5000000" max="300000000" step="5000000" value="{d['raise']}" oninput="updateDilutionCalc()" onchange="updateDilutionCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="dil-raise" min="5000000" max="300000000" step="5000000" value="{d['raise']}" oninput="updateDilutionCalc()" onchange="updateDilutionCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
             <span>{l.get("rLabel", "Pre-Money Valuation")}</span>
             <span class="value-output" id="dil-pre-val">₹20,00,00,000</span>
           </div>
-          <input type="range" class="calc-slider" id="dil-pre" min="20000000" max="1000000000" step="5000000" value="{d['preMoney']}" oninput="updateDilutionCalc()" onchange="updateDilutionCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="dil-pre" min="20000000" max="1000000000" step="5000000" value="{d['preMoney']}" oninput="updateDilutionCalc()" onchange="updateDilutionCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         """
         
@@ -1255,14 +1255,14 @@ def render_calculator_html(p):
             <span>{l.get("pLabel", "Fresh Issue Size")}</span>
             <span class="value-output" id="ipo-issue-val">₹8,00,00,000</span>
           </div>
-          <input type="range" class="calc-slider" id="ipo-issue" min="10000000" max="1000000000" step="5000000" value="{d['raise']}" oninput="updateIpoCalc()" onchange="updateIpoCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="ipo-issue" min="10000000" max="1000000000" step="5000000" value="{d['raise']}" oninput="updateIpoCalc()" onchange="updateIpoCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
             <span>{l.get("rLabel", "Pre-Issue Business Valuation")}</span>
             <span class="value-output" id="ipo-pre-val">₹25,00,00,000</span>
           </div>
-          <input type="range" class="calc-slider" id="ipo-pre" min="50000000" max="4000000000" step="10000000" value="{d['preMoney']}" oninput="updateIpoCalc()" onchange="updateIpoCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="ipo-pre" min="50000000" max="4000000000" step="10000000" value="{d['preMoney']}" oninput="updateIpoCalc()" onchange="updateIpoCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         """
         
@@ -1273,21 +1273,21 @@ def render_calculator_html(p):
             <span>{l.get("pLabel", "Annualised EBITDA")}</span>
             <span class="value-output" id="val-ebitda-val">₹1,50,00,000</span>
           </div>
-          <input type="range" class="calc-slider" id="val-ebitda" min="1000000" max="100000000" step="500000" value="{d['ebitda']}" oninput="updateValuationCalc()" onchange="updateValuationCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="val-ebitda" min="1000000" max="100000000" step="500000" value="{d['ebitda']}" oninput="updateValuationCalc()" onchange="updateValuationCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
             <span>{l.get("rLabel", "Sector Multiple — Low Bound")}</span>
             <span class="value-output" id="val-mlo-val">{d['multipleLow']}x</span>
           </div>
-          <input type="range" class="calc-slider" id="val-mlo" min="3" max="12" step="0.5" value="{d['multipleLow']}" oninput="updateValuationCalc()" onchange="updateValuationCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="val-mlo" min="3" max="12" step="0.5" value="{d['multipleLow']}" oninput="updateValuationCalc()" onchange="updateValuationCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
             <span>{l.get("yLabel", "Sector Multiple — High Bound")}</span>
             <span class="value-output" id="val-mhi-val">{d['multipleHigh']}x</span>
           </div>
-          <input type="range" class="calc-slider" id="val-mhi" min="4" max="18" step="0.5" value="{d['multipleHigh']}" oninput="updateValuationCalc()" onchange="updateValuationCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="val-mhi" min="4" max="18" step="0.5" value="{d['multipleHigh']}" oninput="updateValuationCalc()" onchange="updateValuationCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         """
         
@@ -1298,14 +1298,14 @@ def render_calculator_html(p):
             <span>{l.get("pLabel", "Total Project / Machine Cost")}</span>
             <span class="value-output" id="sub-cost-val">₹20,00,000</span>
           </div>
-          <input type="range" class="calc-slider" id="sub-cost" min="100000" max="50000000" step="100000" value="{d['cost']}" oninput="updateSubsidyCalc()" onchange="updateSubsidyCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="sub-cost" min="100000" max="50000000" step="100000" value="{d['cost']}" oninput="updateSubsidyCalc()" onchange="updateSubsidyCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
             <span>{l.get("rLabel", "Policy Subsidy Rate")}</span>
             <span class="value-output" id="sub-rate-val">{d['rate']}%</span>
           </div>
-          <input type="range" class="calc-slider" id="sub-rate" min="5" max="30" step="1" value="{d['rate']}" oninput="updateSubsidyCalc()" onchange="updateSubsidyCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="sub-rate" min="5" max="30" step="1" value="{d['rate']}" oninput="updateSubsidyCalc()" onchange="updateSubsidyCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         <input type="hidden" id="sub-cap" value="{d['cap']}">
         """
@@ -1317,21 +1317,21 @@ def render_calculator_html(p):
             <span>{l.get("pLabel", "Desired Loan Amount")}</span>
             <span class="value-output" id="emi-p-val">₹50,00,000</span>
           </div>
-          <input type="range" class="calc-slider" id="emi-p" min="{d['minP']}" max="{d['maxP']}" step="{max(10000, round(d['maxP']/100))}" value="{d['principal']}" oninput="updateEmiCalc()" onchange="updateEmiCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="emi-p" min="{d['minP']}" max="{d['maxP']}" step="{max(10000, round(d['maxP']/100))}" value="{d['principal']}" oninput="updateEmiCalc()" onchange="updateEmiCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
             <span>{l.get("rLabel", "Interest Rate (p.a. indicative)")}</span>
             <span class="value-output" id="emi-r-val">{d['rate']}%</span>
           </div>
-          <input type="range" class="calc-slider" id="emi-r" min="{d['minR']}" max="{d['maxR']}" step="0.1" value="{d['rate']}" oninput="updateEmiCalc()" onchange="updateEmiCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="emi-r" min="{d['minR']}" max="{d['maxR']}" step="0.1" value="{d['rate']}" oninput="updateEmiCalc()" onchange="updateEmiCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
             <span>{l.get("yLabel", "Repayment Tenure")}</span>
             <span class="value-output" id="emi-y-val">{d['years']} yrs</span>
           </div>
-          <input type="range" class="calc-slider" id="emi-y" min="{d['minY']}" max="{d['maxY']}" step="1" value="{d['years']}" oninput="updateEmiCalc()" onchange="updateEmiCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="emi-y" min="{d['minY']}" max="{d['maxY']}" step="1" value="{d['years']}" oninput="updateEmiCalc()" onchange="updateEmiCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         """
 

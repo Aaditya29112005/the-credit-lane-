@@ -159,21 +159,21 @@
             <span>Project Construction Outlay</span>
             <span class="value-output" id="emi-p-val">₹50,00,000</span>
           </div>
-          <input type="range" class="calc-slider" id="emi-p" min="5000000" max="500000000" step="5000000" value="50000000" oninput="updateEmiCalc()" onchange="updateEmiCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="emi-p" min="5000000" max="500000000" step="5000000" value="50000000" oninput="updateEmiCalc()" onchange="updateEmiCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
             <span>Construction Debt Rate (% p.a.)</span>
             <span class="value-output" id="emi-r-val">13%</span>
           </div>
-          <input type="range" class="calc-slider" id="emi-r" min="11" max="16" step="0.1" value="13" oninput="updateEmiCalc()" onchange="updateEmiCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="emi-r" min="11" max="16" step="0.1" value="13" oninput="updateEmiCalc()" onchange="updateEmiCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         <div class="calc-input-group">
           <div class="calc-input-label">
             <span>Construction Loan Tenure</span>
             <span class="value-output" id="emi-y-val">5 yrs</span>
           </div>
-          <input type="range" class="calc-slider" id="emi-y" min="1" max="5" step="1" value="5" oninput="updateEmiCalc()" onchange="updateEmiCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: #E2DDD5; cursor: pointer; accent-color: #C89B3C;">
+          <input type="range" class="calc-slider" id="emi-y" min="1" max="5" step="1" value="5" oninput="updateEmiCalc()" onchange="updateEmiCalc()" style="width: 100%; height: 8px; border-radius: 4px; outline: none; -webkit-appearance: none; appearance: none; background: linear-gradient(to right, #C89B3C 0%, #C89B3C 50%, #363636 50%, #363636 100%); cursor: pointer; accent-color: #C89B3C;">
         </div>
         
                       </div>
