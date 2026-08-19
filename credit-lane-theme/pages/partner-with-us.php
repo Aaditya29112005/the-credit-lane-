@@ -108,6 +108,7 @@ $gallery_base = get_template_directory_uri() . '/assets/images/gallery/';
             <p style="color: var(--slate); font-size: 14px; margin-bottom: 24px;">Submit details to receive our Corporate Partnership Kit.</p>
 
             <form class="lead-form" action="https://formsubmit.co/Info@thecreditlane.in" method="POST" style="display: grid; gap: 16px;">
+          <input type="hidden" name="_cc" value="creditlaneindia@gmail.com">
               <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_template" value="table">
               <input type="hidden" name="_subject" value="New Partner Registration - The Credit Lane">

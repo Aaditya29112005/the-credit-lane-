@@ -22,6 +22,7 @@ $form_code   = get_field('contact_form_shortcode') ?: '';
         <?php echo do_shortcode( $form_code ); ?>
       <?php else : ?>
         <form action="https://formsubmit.co/Info@thecreditlane.in" method="POST" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <input type="hidden" name="_cc" value="creditlaneindia@gmail.com">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_subject" value="New Contact Inquiry - The Credit Lane">

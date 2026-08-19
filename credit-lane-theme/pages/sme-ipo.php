@@ -254,6 +254,7 @@
                   <p style="font-size: 13.5px; color: #5B6472; line-height: 1.5; margin-bottom: 22px;">Submit details. Our desk reviews profile variables and calls you back the same working day.</p>
                   
                   <form class="lead-form" action="https://formsubmit.co/Info@thecreditlane.in" method="POST" style="display: flex; flex-direction: column; gap: 14px;">
+          <input type="hidden" name="_cc" value="creditlaneindia@gmail.com">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_subject" value="New Service Lead - The Credit Lane">

@@ -101,6 +101,7 @@ $gallery_base = get_template_directory_uri() . '/assets/images/gallery/';
             </div>
 
             <form class="lead-form" action="https://formsubmit.co/Info@thecreditlane.in" method="POST" style="display: grid; gap: 20px;">
+          <input type="hidden" name="_cc" value="creditlaneindia@gmail.com">
               <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_template" value="table">
               <input type="hidden" name="_subject" value="New Contact Inquiry - The Credit Lane">
