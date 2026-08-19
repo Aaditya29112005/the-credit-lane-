@@ -221,34 +221,60 @@ function horizontalLoop(items, config) {
 
 // Global Google Reviews Carousel Controller
 window.scrollReviewsTrack = function(direction, btnEl) {
-  var section = btnEl ? btnEl.closest(".google-reviews-section") : null;
+  var section = btnEl ? btnEl.closest(".google-reviews-section") : document.querySelector(".google-reviews-section");
+  if (!section) section = document.querySelector(".google-reviews-section");
+
+  var wrapper = section ? section.querySelector(".reviews-carousel-wrapper") : document.querySelector(".reviews-carousel-wrapper");
   var track = section ? section.querySelector(".reviews-carousel-track") : document.querySelector(".reviews-carousel-track");
   
-  if (!track || !track.children.length) return;
-
-  var firstCard = track.children[0];
-  var cardWidth = (firstCard ? firstCard.offsetWidth : 320) + 24; // Card width + 24px gap
-
-  var wrapper = track.parentElement;
-  var wrapperWidth = wrapper ? wrapper.offsetWidth : window.innerWidth;
-  var totalCards = track.children.length;
+  if (!wrapper && !track) return;
   
-  var visibleCards = Math.max(1, Math.floor(wrapperWidth / 320));
-  var maxIndex = Math.max(1, totalCards - visibleCards);
+  var firstCard = track ? track.children[0] : null;
+  var cardWidth = (firstCard ? firstCard.offsetWidth : 320) + 24; // 320px + 24px gap = 344px
 
-  if (typeof track.currentIndex === "undefined") {
-    track.currentIndex = 0;
+  // 1. Try native smooth element scrolling first
+  if (wrapper) {
+    var maxScroll = wrapper.scrollWidth - wrapper.clientWidth;
+    if (maxScroll > 10) {
+      var currentScroll = wrapper.scrollLeft;
+      if (direction > 0) {
+        if (currentScroll >= maxScroll - 15) {
+          wrapper.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+          wrapper.scrollBy({ left: cardWidth, behavior: "smooth" });
+        }
+      } else {
+        if (currentScroll <= 15) {
+          wrapper.scrollTo({ left: maxScroll, behavior: "smooth" });
+        } else {
+          wrapper.scrollBy({ left: -cardWidth, behavior: "smooth" });
+        }
+      }
+      return;
+    }
   }
 
-  track.currentIndex += direction;
+  // 2. Fallback transform shift
+  if (track) {
+    var totalCards = track.children.length;
+    var wrapperWidth = wrapper ? wrapper.offsetWidth : window.innerWidth;
+    var visibleCards = Math.max(1, Math.floor(wrapperWidth / 320));
+    var maxIndex = Math.max(1, totalCards - visibleCards);
 
-  if (track.currentIndex > maxIndex) {
-    track.currentIndex = 0; // Seamless wrap to start
-  } else if (track.currentIndex < 0) {
-    track.currentIndex = maxIndex; // Seamless wrap to end
+    if (typeof track.currentIndex === "undefined") {
+      track.currentIndex = 0;
+    }
+
+    track.currentIndex += direction;
+
+    if (track.currentIndex > maxIndex) {
+      track.currentIndex = 0;
+    } else if (track.currentIndex < 0) {
+      track.currentIndex = maxIndex;
+    }
+
+    track.style.transform = "translateX(-" + (track.currentIndex * cardWidth) + "px)";
   }
-
-  track.style.transform = "translateX(-" + (track.currentIndex * cardWidth) + "px)";
 };
 
 // Global Slider Track Color Update (Gold filled track / Dark Charcoal track - matching image copy 18.png)

@@ -13,8 +13,8 @@
           </div>
         </div>
         <div style="display: flex; gap: 12px;">
-          <button class="reviews-prev-btn" aria-label="Previous Review" type="button" onclick="scrollReviewsTrack(-1, this)" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">‹</button>
-          <button class="reviews-next-btn" aria-label="Next Review" type="button" onclick="scrollReviewsTrack(1, this)" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">›</button>
+          <button class="reviews-prev-btn" aria-label="Previous Review" type="button" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">‹</button>
+          <button class="reviews-next-btn" aria-label="Next Review" type="button" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #fff; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">›</button>
         </div>
       </div>
 
