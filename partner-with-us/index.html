@@ -583,9 +583,27 @@
                 </div>
               </div>
 
-              <div>
-                <label style="display: block; font-size: 13px; font-weight: 700; color: var(--navy-dark); margin-bottom: 4px;">City / State *</label>
-                <input type="text" name="City State" placeholder="e.g. Ghaziabad, Uttar Pradesh" required style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1.5px solid var(--line); font-size: 14px; background: var(--offwhite);">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div>
+                  <label style="display: block; font-size: 13px; font-weight: 700; color: var(--navy-dark); margin-bottom: 4px;">City *</label>
+                  <input type="text" name="City" placeholder="e.g. Ghaziabad, Noida, Delhi" required style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1.5px solid var(--line); font-size: 14px; background: var(--offwhite);">
+                </div>
+                <div>
+                  <label style="display: block; font-size: 13px; font-weight: 700; color: var(--navy-dark); margin-bottom: 4px;">Business Type *</label>
+                  <select name="Business Type" required style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 1.5px solid var(--line); font-size: 14px; background: var(--offwhite);">
+                    <option value="">Select Business Type...</option>
+                    <option value="Manufacturing">Manufacturing</option>
+                    <option value="Trading / Wholesale / Retail">Trading / Wholesale / Retail</option>
+                    <option value="Services / IT / Professional">Services / IT / Professional</option>
+                    <option value="Infrastructure / Construction">Infrastructure / Construction</option>
+                    <option value="Healthcare / Hospital / Medical">Healthcare / Hospital / Medical</option>
+                    <option value="Education / Institution">Education / Institution</option>
+                    <option value="Hospitality / Hotel / Restaurant">Hospitality / Hotel / Restaurant</option>
+                    <option value="Real Estate Developer">Real Estate Developer</option>
+                    <option value="Agriculture / Food Processing">Agriculture / Food Processing</option>
+                    <option value="Others">Others</option>
+                  </select>
+                </div>
               </div>
 
               <div>
@@ -598,6 +616,7 @@
                   <option value="Unsecured & Working Capital">Unsecured &amp; Working Capital Debt</option>
                   <option value="Builder / Hospital / Infra Funding">Builder / Hospital / Infra Funding</option>
                   <option value="NPA Debt Restructuring">NPA Debt Restructuring &amp; OTS</option>
+                  <option value="Others">Others</option>
                 </select>
               </div>
 

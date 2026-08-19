@@ -130,6 +130,29 @@ $gallery_base = get_template_directory_uri() . '/assets/images/gallery/';
 
               <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                 <div>
+                  <label style="display: block; font-size: 13px; font-weight: 700; color: var(--navy-dark); margin-bottom: 6px;">City *</label>
+                  <input type="text" name="City" placeholder="e.g. Ghaziabad, Noida, Delhi" required style="width: 100%; padding: 13px 16px; border-radius: 10px; border: 1px solid var(--line); font-size: 14.5px; background: var(--white);">
+                </div>
+                <div>
+                  <label style="display: block; font-size: 13px; font-weight: 700; color: var(--navy-dark); margin-bottom: 6px;">Business Type *</label>
+                  <select name="Business Type" required style="width: 100%; padding: 13px 16px; border-radius: 10px; border: 1px solid var(--line); font-size: 14.5px; background: var(--white);">
+                    <option value="">Select Business Type...</option>
+                    <option value="Manufacturing">Manufacturing</option>
+                    <option value="Trading / Wholesale / Retail">Trading / Wholesale / Retail</option>
+                    <option value="Services / IT / Professional">Services / IT / Professional</option>
+                    <option value="Infrastructure / Construction">Infrastructure / Construction</option>
+                    <option value="Healthcare / Hospital / Medical">Healthcare / Hospital / Medical</option>
+                    <option value="Education / Institution">Education / Institution</option>
+                    <option value="Hospitality / Hotel / Restaurant">Hospitality / Hotel / Restaurant</option>
+                    <option value="Real Estate Developer">Real Estate Developer</option>
+                    <option value="Agriculture / Food Processing">Agriculture / Food Processing</option>
+                    <option value="Others">Others</option>
+                  </select>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div>
                   <label style="display: block; font-size: 13px; font-weight: 700; color: var(--navy-dark); margin-bottom: 6px;">Facility Required *</label>
                   <select name="Facility Required" required style="width: 100%; padding: 13px 16px; border-radius: 10px; border: 1px solid var(--line); font-size: 14.5px; background: var(--white);">
                     <option value="">Select Service Category...</option>
@@ -143,6 +166,7 @@ $gallery_base = get_template_directory_uri() . '/assets/images/gallery/';
                     <option value="SME IPO & Mainboard IPO">SME IPO &amp; Mainboard IPO Listing Advisory</option>
                     <option value="Pre-IPO & Valuation Services">Pre-IPO Funding &amp; Valuation Services</option>
                     <option value="CA/CS Partnership">CA / CS / Advocate Professional Collaboration</option>
+                    <option value="Others">Others</option>
                   </select>
                 </div>
                 <div>

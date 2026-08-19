@@ -271,20 +271,41 @@
                     
                     <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
                       <label style="display: block; font-size: 13px; font-weight: 700; color: #0B1F3A; margin-bottom: 0;">City *</label>
-                      <input type="text" name="City" placeholder="e.g. Ghaziabad" required style="width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid #DFD9CE; font-size: 14px; color: #0B1F3A; background: #F2EFE9; outline: none;">
+                      <input type="text" name="City" placeholder="e.g. Ghaziabad, Noida, Delhi" required style="width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid #DFD9CE; font-size: 14px; color: #0B1F3A; background: #F2EFE9; outline: none;">
+                    </div>
+
+                    <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+                      <label style="display: block; font-size: 13px; font-weight: 700; color: #0B1F3A; margin-bottom: 0;">Facility Required *</label>
+                      <select name="Facility Required" required style="width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid #DFD9CE; font-size: 14px; color: #0B1F3A; background: #F2EFE9; outline: none;">
+                        <option value="">Select Service Category...</option>
+                        <option value="Unsecured Business Loan & DOD">Unsecured Business Loan &amp; Drop-Line OD</option>
+                        <option value="SIDBI / Bank Machinery Loan">SIDBI / Bank Machinery Purchase Loan</option>
+                        <option value="Commercial & Industrial Loan">Commercial / Industrial Property Purchase Loan</option>
+                        <option value="Invoice Discounting">Invoice &amp; Receivable Discounting</option>
+                        <option value="Infrastructure Funding">School / Hospital / Hotel / Real Estate Funding</option>
+                        <option value="NPA Resolution Funding">NPA Resolution &amp; OTS Debt Restructuring</option>
+                        <option value="UP Govt MSME / TUS Subsidy">UP Government Incentive / Subsidy Claim (MSME / TUS)</option>
+                        <option value="SME IPO & Mainboard IPO">SME IPO &amp; Mainboard IPO Listing Advisory</option>
+                        <option value="Pre-IPO & Valuation Services">Pre-IPO Funding &amp; Valuation Services</option>
+                        <option value="CA/CS Partnership">CA / CS / Advocate Professional Collaboration</option>
+                        <option value="Others">Others</option>
+                      </select>
                     </div>
                     
                     <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
                       <label style="display: block; font-size: 13px; font-weight: 700; color: #0B1F3A; margin-bottom: 0;">Business Type *</label>
                       <select name="Business Type" required style="width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid #DFD9CE; font-size: 14px; color: #0B1F3A; background: #F2EFE9; outline: none;">
-                        <option value="">Select your type</option>
-                        <option value="Manufacturing / Industrial">Manufacturing / Industrial</option>
+                        <option value="">Select Business Type...</option>
+                        <option value="Manufacturing">Manufacturing</option>
+                        <option value="Trading / Wholesale / Retail">Trading / Wholesale / Retail</option>
+                        <option value="Services / IT / Professional">Services / IT / Professional</option>
+                        <option value="Infrastructure / Construction">Infrastructure / Construction</option>
+                        <option value="Healthcare / Hospital / Medical">Healthcare / Hospital / Medical</option>
+                        <option value="Education / Institution">Education / Institution</option>
+                        <option value="Hospitality / Hotel / Restaurant">Hospitality / Hotel / Restaurant</option>
                         <option value="Real Estate Developer">Real Estate Developer</option>
-                        <option value="Healthcare / Hospital">Healthcare / Hospital</option>
-                        <option value="Education / Trust">Education / Trust</option>
-                        <option value="Hospitality / Hotel">Hospitality / Hotel</option>
-                        <option value="Infrastructure Contractor">Infrastructure Contractor</option>
-                        <option value="B2B Trade & Services">B2B Trade &amp; Services</option>
+                        <option value="Agriculture / Food Processing">Agriculture / Food Processing</option>
+                        <option value="Others">Others</option>
                       </select>
                     </div>
                     
