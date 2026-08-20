@@ -416,7 +416,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }).catch(err => console.log("Email sent to creditlaneindia@gmail.com"));
 
         // 2. Send to Google Sheets Webhook
-        const googleSheetWebhookUrl = window.GOOGLE_SHEETS_WEBHOOK_URL || "https://script.google.com/macros/s/AKfycbyVH1LFjkXzBBz_b49eNy8JXHF7kpkbJMkbrlQkVHQ__iCx64iwjgbrGEdvTRmV-iTz/exec";
+        const googleSheetWebhookUrl = window.GOOGLE_SHEETS_WEBHOOK_URL || "https://script.google.com/macros/s/AKfycbzc4tsri7L3-eBKhs1K-kXfTVVpVPn6vqGqVUToOuOLETPks6QtFwY0nFhMiS7fTS4/exec";
         if (googleSheetWebhookUrl) {
           fetch(googleSheetWebhookUrl, {
             method: "POST",
