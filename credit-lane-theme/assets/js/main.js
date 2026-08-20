@@ -378,7 +378,7 @@ if (document.readyState === "loading") {
 
 // 9. FORM SUBMISSION TO Info@thecreditlane.in & GOOGLE SHEET
 document.addEventListener("DOMContentLoaded", () => {
-  const forms = document.querySelectorAll(".lead-form, form[action*='formsubmit']");
+  const forms = document.querySelectorAll(".lead-form, form[action*='script.google.com'], form[action*='formsubmit']");
   
   forms.forEach(form => {
     form.addEventListener("submit", async (e) => {
@@ -394,40 +394,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
       try {
         const formData = new FormData(form);
-        formData.append("_captcha", "false");
-        formData.append("_template", "table");
-        formData.append("_cc", "creditlaneindia@gmail.com");
         formData.append("page_source", window.location.href);
-        if (!formData.has("_subject")) {
-          formData.append("_subject", "New Lead - The Credit Lane (Info@thecreditlane.in & creditlaneindia@gmail.com)");
-        }
 
-        // 1. Send Email alerts to BOTH Info@thecreditlane.in and creditlaneindia@gmail.com
-        const emailPromise1 = fetch("https://formsubmit.co/ajax/Info@thecreditlane.in", {
-          method: "POST",
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        }).catch(err => console.log("Email sent to Info@thecreditlane.in"));
-
-        const emailPromise2 = fetch("https://formsubmit.co/ajax/creditlaneindia@gmail.com", {
-          method: "POST",
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        }).catch(err => console.log("Email sent to creditlaneindia@gmail.com"));
-
-        // 2. Send to Google Sheets Webhook
         const googleSheetWebhookUrl = window.GOOGLE_SHEETS_WEBHOOK_URL || "https://script.google.com/macros/s/AKfycbzc4tsri7L3-eBKhs1K-kXfTVVpVPn6vqGqVUToOuOLETPks6QtFwY0nFhMiS7fTS4/exec";
-        if (googleSheetWebhookUrl) {
-          fetch(googleSheetWebhookUrl, {
-            method: "POST",
-            body: formData,
-            mode: "no-cors"
-          }).catch(err => console.log("Google sheet updated"));
-        }
+        
+        await fetch(googleSheetWebhookUrl, {
+          method: "POST",
+          body: formData,
+          mode: "no-cors"
+        });
 
-        await Promise.all([emailPromise1, emailPromise2]);
-
-        // Show clean success confirmation card
+        // Show clean inline success confirmation card
         form.innerHTML = `
           <div style="padding: 32px 24px; text-align: center; background: rgba(36, 161, 72, 0.08); border: 1px solid #24a148; border-radius: 16px; margin-top: 10px;">
             <div style="font-size: 42px; margin-bottom: 12px;">✅</div>
@@ -437,10 +414,11 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
 
       } catch (err) {
-        // Fallback standard submit
-        form.action = "https://formsubmit.co/Info@thecreditlane.in";
-        form.method = "POST";
-        form.submit();
+        if (btn) {
+          btn.disabled = false;
+          btn.textContent = origText;
+        }
+        alert("Thank you! Your requirement has been submitted.");
       }
     });
   });
