@@ -396,7 +396,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const formData = new FormData(form);
         formData.append("page_source", window.location.href);
 
-        const googleSheetWebhookUrl = window.GOOGLE_SHEETS_WEBHOOK_URL || "https://script.google.com/macros/s/AKfycbzc4tsri7L3-eBKhs1K-kXfTVVpVPn6vqGqVUToOuOLETPks6QtFwY0nFhMiS7fTS4/exec";
+        const googleSheetWebhookUrl = window.GOOGLE_SHEETS_WEBHOOK_URL || "https://script.google.com/macros/s/AKfycbzaSs_XJESePwtNQJZDAGWiyHISLA66LCuXEhPCeLhVWp58g472FDNjuJPH75gxPTNw/exec";
         
         await fetch(googleSheetWebhookUrl, {
           method: "POST",

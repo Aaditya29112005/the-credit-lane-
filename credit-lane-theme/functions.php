@@ -258,7 +258,7 @@ function credit_lane_customize_register( $wp_customize ) {
     ) );
 
     $wp_customize->add_setting( 'credit_lane_google_sheet_url', array(
-        'default'   => 'https://script.google.com/macros/s/AKfycbzc4tsri7L3-eBKhs1K-kXfTVVpVPn6vqGqVUToOuOLETPks6QtFwY0nFhMiS7fTS4/exec',
+        'default'   => 'https://script.google.com/macros/s/AKfycbzaSs_XJESePwtNQJZDAGWiyHISLA66LCuXEhPCeLhVWp58g472FDNjuJPH75gxPTNw/exec',
         'transport' => 'refresh',
         'sanitize_callback' => 'esc_url_raw',
     ) );
@@ -276,7 +276,7 @@ add_action( 'customize_register', 'credit_lane_customize_register' );
  * Output Google Sheets URL in Header
  */
 function credit_lane_output_google_sheets_url() {
-    $url = get_theme_mod( 'credit_lane_google_sheet_url', 'https://script.google.com/macros/s/AKfycbzc4tsri7L3-eBKhs1K-kXfTVVpVPn6vqGqVUToOuOLETPks6QtFwY0nFhMiS7fTS4/exec' );
+    $url = get_theme_mod( 'credit_lane_google_sheet_url', 'https://script.google.com/macros/s/AKfycbzaSs_XJESePwtNQJZDAGWiyHISLA66LCuXEhPCeLhVWp58g472FDNjuJPH75gxPTNw/exec' );
     if ( $url ) {
         echo '<script>window.GOOGLE_SHEETS_WEBHOOK_URL = ' . wp_json_encode( $url ) . ';</script>' . "\n";
     }

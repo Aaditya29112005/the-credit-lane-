@@ -3767,7 +3767,7 @@ def generate_contactpage():
               <p style="color: var(--slate); font-size: 14.5px; margin-top: 6px;">Fill out the form below. All details route directly to <strong style="color: var(--navy-dark);">Info@thecreditlane.in</strong>.</p>
             </div>
 
-            <form class="lead-form" action="https://script.google.com/macros/s/AKfycbzc4tsri7L3-eBKhs1K-kXfTVVpVPn6vqGqVUToOuOLETPks6QtFwY0nFhMiS7fTS4/exec" method="POST" style="display: grid; gap: 20px;">
+            <form class="lead-form" action="https://script.google.com/macros/s/AKfycbzaSs_XJESePwtNQJZDAGWiyHISLA66LCuXEhPCeLhVWp58g472FDNjuJPH75gxPTNw/exec" method="POST" style="display: grid; gap: 20px;">
               <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_template" value="table">
               <input type="hidden" name="_subject" value="New Contact Inquiry - The Credit Lane">
@@ -3983,7 +3983,7 @@ def generate_partnerpage():
             <h3 style="font-family: var(--font-serif); font-size: 24px; color: var(--navy-dark); margin-bottom: 8px;">Partner Registration Form</h3>
             <p style="color: var(--slate); font-size: 14px; margin-bottom: 24px;">Submit details to receive our Corporate Partnership Kit.</p>
 
-            <form class="lead-form" action="https://script.google.com/macros/s/AKfycbzc4tsri7L3-eBKhs1K-kXfTVVpVPn6vqGqVUToOuOLETPks6QtFwY0nFhMiS7fTS4/exec" method="POST" style="display: grid; gap: 16px;">
+            <form class="lead-form" action="https://script.google.com/macros/s/AKfycbzaSs_XJESePwtNQJZDAGWiyHISLA66LCuXEhPCeLhVWp58g472FDNjuJPH75gxPTNw/exec" method="POST" style="display: grid; gap: 16px;">
               <input type="hidden" name="form_type" value="partner">
               <input type="hidden" name="_cc" value="creditlaneindia@gmail.com">
               <input type="hidden" name="_captcha" value="false">
@@ -4547,7 +4547,7 @@ def generate_service_pages():
                   <h3 style="font-family: var(--font-serif); font-size: 24px; font-weight: 700; color: #0B1F3A; margin-bottom: 6px;">Check Eligibility</h3>
                   <p style="font-size: 13.5px; color: #5B6472; line-height: 1.5; margin-bottom: 22px;">Submit details. Our desk reviews profile variables and calls you back the same working day.</p>
                   
-                  <form class="lead-form" action="https://script.google.com/macros/s/AKfycbzc4tsri7L3-eBKhs1K-kXfTVVpVPn6vqGqVUToOuOLETPks6QtFwY0nFhMiS7fTS4/exec" method="POST" style="display: flex; flex-direction: column; gap: 14px;">
+                  <form class="lead-form" action="https://script.google.com/macros/s/AKfycbzaSs_XJESePwtNQJZDAGWiyHISLA66LCuXEhPCeLhVWp58g472FDNjuJPH75gxPTNw/exec" method="POST" style="display: flex; flex-direction: column; gap: 14px;">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_subject" value="New Service Lead: {p['name']} - The Credit Lane">

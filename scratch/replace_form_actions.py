@@ -1,7 +1,7 @@
 import os, re
 
 base_dir = "/Users/aadityamohansamadhiya/the credit lane"
-google_script_url = "https://script.google.com/macros/s/AKfycbzc4tsri7L3-eBKhs1K-kXfTVVpVPn6vqGqVUToOuOLETPks6QtFwY0nFhMiS7fTS4/exec"
+google_script_url = "https://script.google.com/macros/s/AKfycbzaSs_XJESePwtNQJZDAGWiyHISLA66LCuXEhPCeLhVWp58g472FDNjuJPH75gxPTNw/exec"
 
 count = 0
 for root, dirs, files in os.walk(base_dir):

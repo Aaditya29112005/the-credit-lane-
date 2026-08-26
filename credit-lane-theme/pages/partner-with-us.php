@@ -107,7 +107,7 @@ $gallery_base = get_template_directory_uri() . '/assets/images/gallery/';
             <h3 style="font-family: var(--font-serif); font-size: 24px; color: var(--navy-dark); margin-bottom: 8px;">Partner Registration Form</h3>
             <p style="color: var(--slate); font-size: 14px; margin-bottom: 24px;">Submit details to receive our Corporate Partnership Kit.</p>
 
-            <form class="lead-form" action="https://script.google.com/macros/s/AKfycbzc4tsri7L3-eBKhs1K-kXfTVVpVPn6vqGqVUToOuOLETPks6QtFwY0nFhMiS7fTS4/exec" method="POST" style="display: grid; gap: 16px;">
+            <form class="lead-form" action="https://script.google.com/macros/s/AKfycbzaSs_XJESePwtNQJZDAGWiyHISLA66LCuXEhPCeLhVWp58g472FDNjuJPH75gxPTNw/exec" method="POST" style="display: grid; gap: 16px;">
               <input type="hidden" name="form_type" value="partner">
               <input type="hidden" name="_cc" value="creditlaneindia@gmail.com">
               <input type="hidden" name="_captcha" value="false">
