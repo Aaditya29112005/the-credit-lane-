@@ -32,8 +32,16 @@ $form_code   = get_field('contact_form_shortcode') ?: '';
             <input type="text" name="full_name" placeholder="Full Name" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); background: rgba(0,0,0,0.3); color: #fff;">
           </div>
           <div>
+            <label style="color: #ffffff; font-size: 13.5px; font-weight: 600; display: block; margin-bottom: 6px;">Company / Firm Name *</label>
+            <input type="text" name="company_name" placeholder="Company / Firm Name" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); background: rgba(0,0,0,0.3); color: #fff;">
+          </div>
+          <div>
             <label style="color: #ffffff; font-size: 13.5px; font-weight: 600; display: block; margin-bottom: 6px;">Phone Number *</label>
             <input type="tel" name="phone" placeholder="10-digit Mobile Number" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); background: rgba(0,0,0,0.3); color: #fff;">
+          </div>
+          <div>
+            <label style="color: #ffffff; font-size: 13.5px; font-weight: 600; display: block; margin-bottom: 6px;">Email Address *</label>
+            <input type="email" name="email" placeholder="name@company.com" required style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); background: rgba(0,0,0,0.3); color: #fff;">
           </div>
           <div>
             <label style="color: #ffffff; font-size: 13.5px; font-weight: 600; display: block; margin-bottom: 6px;">Business Type *</label>
